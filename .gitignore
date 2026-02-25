@@ -2,3 +2,6 @@ venv
 .env
 .env/
 notebooks
+real_estate_data/
+artifact/
+logs/

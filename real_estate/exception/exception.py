@@ -1,13 +1,12 @@
 import sys
 from real_estate.logging import logger
 
-
 class RealEstateException(Exception):
     def __init__(self, error_message, error_details: sys):
         self.error_message = error_message
         _, _, exe_tb = (
             error_details.exc_info()
-        )  ## gives entire error details or traceback
+        )
 
         self.lineno = exe_tb.tb_lineno
         self.filename = exe_tb.tb_frame.f_code.co_filename
