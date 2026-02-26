@@ -18,10 +18,12 @@ def extract_bhk(text: str) -> float | None:
         return None
     m = re.search(r'(\d+)\s*bhk', text, re.I)
     if m:
-        return float(m.group(1))
+        val = float(m.group(1))
+        return val if val <= 12 else None
     m = re.search(r'bedrooms?\s*(\d+)', text, re.I)
     if m:
-        return float(m.group(1))
+        val = float(m.group(1))
+        return val if val <= 12 else None
     return None
 
 
@@ -31,10 +33,12 @@ def extract_bathrooms(text: str) -> float | None:
         return None
     m = re.search(r'bathrooms?\s*(\d+)', text, re.I)
     if m:
-        return float(m.group(1))
+        val = float(m.group(1))
+        return val if val <= 12 else None
     m = re.search(r'(\d+)\s*bathrooms?', text, re.I)
     if m:
-        return float(m.group(1))
+        val = float(m.group(1))
+        return val if val <= 12 else None
     return None
 
 
@@ -44,10 +48,12 @@ def extract_balconies(text: str) -> float | None:
         return None
     m = re.search(r'(\d+)\s*balcon', text, re.I)
     if m:
-        return float(m.group(1))
+        val = float(m.group(1))
+        return val if val <= 12 else None
     m = re.search(r'balcon\w*\s*(\d+)', text, re.I)
     if m:
-        return float(m.group(1))
+        val = float(m.group(1))
+        return val if val <= 12 else None
     return None
 
 
@@ -75,26 +81,27 @@ def extract_price(text: str) -> float | None:
     return None
 
 
-# ────────────────────────────────────────────────────────────────
-#  AREA EXTRACTORS
-# ────────────────────────────────────────────────────────────────
+import re
 
 # ────────────────────────────────────────────────────────────────
 #  AREA CONVERSION FACTORS  →  everything to Sq-ft
 # ────────────────────────────────────────────────────────────────
 
+_SQFT_RE = r"(?:sq(?:uare)?[\s.\-_]{0,4}(?:ft|feet|foot)\.?|\bsft\b)"
+_SQYRD_RE = r"(?:sq(?:uare)?[\s.\-_]{0,4}(?:y(?:a?r?ds?|d)\.?s?\.?)|\bsqyrd\.?)"
+_SQM_RE = r"(?:sq(?:uare)?[\s.\-_]{0,4}(?:m(?:e?t(?:er|re)?r?s?)?\.?)|\bsqm(?:tr?)?\.?)"
+
 _AREA_UNIT_PATTERNS = [
-    # (regex pattern for the unit, conversion factor to sqft)
-    (r'sq[\s\-\.]*(?:ft|feet)', 1.0),        # Sq-ft, sq.ft, sqft
-    (r'sq[\s\-\.]*(?:yrd|yard|yd)', 9.0),    # Sq-yrd, sq.yd
-    (r'sq[\s\-\.]*(?:m|meter|metre)', 10.7639),  # Sq-m
-    (r'acres?', 43560.0),
-    (r'bigha', 27000.0),
-    (r'hectares?', 107639.0),
-    (r'marla', 272.25),
-    (r'grounds?', 2400.0),
-    (r'roods?', 10890.0),
-    (r'biswa', 1350.0),
+    (_SQFT_RE, 1.0),
+    (_SQYRD_RE, 9.0),
+    (_SQM_RE, 10.7639),
+    (r"acres?", 43560.0),
+    (r"bigha", 27000.0),
+    (r"hectares?", 107639.0),
+    (r"marla", 272.25),
+    (r"grounds?", 2400.0),
+    (r"roods?", 10890.0),
+    (r"biswa\d?", 1350.0),
 ]
 
 
@@ -106,9 +113,13 @@ def extract_area_sqft(text: str) -> float | None:
     if not isinstance(text, str):
         return None
     for unit_pattern, factor in _AREA_UNIT_PATTERNS:
-        m = re.search(r'(\d+\.?\d*)\s*' + unit_pattern, text, re.I)
+        # Updated regex: \d[\d,]* allows for commas within the number
+        m = re.search(r"(\d[\d,]*\.?\d*)\s*" + unit_pattern, text, re.I)
         if m:
-            return float(m.group(1)) * factor
+            # Strip commas out before converting to float
+            clean_number = m.group(1).replace(",", "")
+            sqft = float(clean_number) * factor
+            return sqft if sqft >= 225 else None
     return None
 
 
@@ -120,24 +131,26 @@ def extract_area_value_and_unit(text: str) -> tuple[float | None, str | None]:
     """
     if not isinstance(text, str):
         return (None, None)
-    
+
     unit_map = {
-        r'sq[\s\-\.]*(?:ft|feet)': 'Sq-ft',
-        r'sq[\s\-\.]*(?:yrd|yard|yd)': 'Sq-yrd',
-        r'sq[\s\-\.]*(?:m|meter|metre)': 'Sq-m',
-        r'acres?': 'Acre',
-        r'bigha': 'Bigha',
-        r'hectares?': 'Hectare',
-        r'marla': 'Marla',
-        r'grounds?': 'Ground',
-        r'roods?': 'Rood',
-        r'biswa': 'Biswa',
+        _SQFT_RE: "Sq-ft",
+        _SQYRD_RE: "Sq-yrd",
+        _SQM_RE: "Sq-m",
+        r"acres?": "Acre",
+        r"bigha": "Bigha",
+        r"hectares?": "Hectare",
+        r"marla": "Marla",
+        r"grounds?": "Ground",
+        r"roods?": "Rood",
+        r"biswa\d?": "Biswa",
     }
-    
+
     for unit_pattern, unit_name in unit_map.items():
-        m = re.search(r'(\d+\.?\d*)\s*' + unit_pattern, text, re.I)
+        # Updated regex here as well
+        m = re.search(r"(\d[\d,]*\.?\d*)\s*" + unit_pattern, text, re.I)
         if m:
-            return (float(m.group(1)), unit_name)
+            clean_number = m.group(1).replace(",", "")
+            return (float(clean_number), unit_name)
     return (None, None)
 
 

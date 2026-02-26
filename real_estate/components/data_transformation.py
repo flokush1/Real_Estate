@@ -40,21 +40,34 @@ from real_estate.utils.locality_matcher import LocalityMatcher
 #  AREA CONVERSION FACTORS  →  everything to Sq-ft
 # ────────────────────────────────────────────────────────────────
 _SQFT_CONVERSION = {
-    "sq-ft": 1.0,
-    "sq.ft": 1.0,
-    "sqft": 1.0,
-    "sq-yrd": 9.0,
-    "sq.yd": 9.0,
-    "sq-m": 10.7639,
+    # ── square feet variants ──────────────────────────────────
+    "sq-ft": 1.0, "sq.ft": 1.0, "sqft": 1.0, "sq ft": 1.0,
+    "sq. ft": 1.0, "sq. ft.": 1.0, "sq.ft.": 1.0, "sqft.": 1.0,
+    "sft": 1.0, "square feet": 1.0, "square ft": 1.0, "square foot": 1.0,
+    # ── square yard variants ──────────────────────────────────
+    "sq-yrd": 9.0, "sq.yd": 9.0, "sqyd": 9.0, "sq yd": 9.0,
+    "sq. yd": 9.0, "sq. yd.": 9.0, "sq.yd.": 9.0, "sqyrd": 9.0,
+    "sqyrd.": 9.0, "sq yds": 9.0, "sq. yds": 9.0, "sq. yds.": 9.0,
+    "sq yards": 9.0, "sq. yards": 9.0, "sq. yards.": 9.0, "sq.yards.": 9.0,
+    "sq-yard": 9.0, "sq yard": 9.0, "sqyds": 9.0,
+    "square yard": 9.0, "square yards": 9.0, "square yd": 9.0,
+    # ── square metre variants ─────────────────────────────────
+    "sq-m": 10.7639, "sq.m": 10.7639, "sqm": 10.7639, "sq m": 10.7639,
+    "sq.m.": 10.7639, "sq. m": 10.7639, "sq. m.": 10.7639, "sqm.": 10.7639,
+    "sq.mt": 10.7639, "sq. mt": 10.7639, "sq. mt.": 10.7639, "sqmt": 10.7639,
+    "sq mtr": 10.7639, "sq. mtr": 10.7639, "sq. mtr.": 10.7639, "sqmtr": 10.7639,
+    "sq meter": 10.7639, "sq-meter": 10.7639, "sq. meter": 10.7639,
+    "sq. meters": 10.7639, "sq metre": 10.7639, "sq. metre": 10.7639,
+    "square meter": 10.7639, "square meters": 10.7639,
+    "square metre": 10.7639, "square metres": 10.7639,
+    # ── others ────────────────────────────────────────────────
     "acre": 43560.0,
     "bigha": 27000.0,
     "hectare": 107639.0,
     "marla": 272.25,
     "ground": 2400.0,
     "rood": 10890.0,
-    "biswa": 1350.0,
-    "biswa1": 1350.0,
-    "biswa2": 1350.0,
+    "biswa": 1350.0, "biswa1": 1350.0, "biswa2": 1350.0,
 }
 
 
@@ -190,6 +203,13 @@ class DataTransformation:
         original_balconies_na = df["balconies"].isna().sum()
         df["balconies"] = df["desc_balconies"].fillna(df["balconies"])
         logging.info(f"    balconies: replaced with desc_balconies (filled {df['balconies'].notna().sum() - (len(df) - original_balconies_na)} additional)")
+
+        # ── Bounds sanity: null out unreasonable values ──────────
+        for col, cap in [("bhk", 12), ("bathrooms", 12), ("balconies", 12)]:
+            bad = df[col].notna() & (df[col] > cap)
+            if bad.any():
+                logging.info(f"    {col}: nulled {bad.sum()} rows with value > {cap}")
+                df.loc[bad, col] = np.nan
         
         original_price_na = df["price_numeric"].isna().sum()
         df["price_numeric"] = df["desc_price"].fillna(df["price_numeric"])
@@ -274,13 +294,24 @@ class DataTransformation:
             unit = row["covered_area_unit"]
             if pd.isna(val) or pd.isna(unit):
                 return val
-            factor = _SQFT_CONVERSION.get(str(unit).lower().strip(), None)
+            unit_key = str(unit).lower().strip().rstrip(".")
+            factor = _SQFT_CONVERSION.get(unit_key, None)
+            if factor is None:
+                # try with trailing dot preserved
+                factor = _SQFT_CONVERSION.get(str(unit).lower().strip(), None)
             if factor is None:
                 logging.warning(f"  Unknown unit '{unit}', keeping as-is")
                 return val
             return val * factor
 
         df["covered_area_sqft"] = df.apply(_to_sqft, axis=1)
+
+        # Null out area < 225 sqft (unreasonably small)
+        bad_area = df["covered_area_sqft"].notna() & (df["covered_area_sqft"] < 225)
+        if bad_area.any():
+            logging.info(f"  Nulled {bad_area.sum()} rows with covered_area_sqft < 225")
+            df.loc[bad_area, "covered_area_sqft"] = np.nan
+
         df["covered_area_unit"] = df["covered_area_unit"].where(
             df["covered_area_sqft"].isna(), "Sq-ft"
         )
