@@ -372,6 +372,120 @@ def has_garden_park(text: str) -> bool:
 
 
 # ────────────────────────────────────────────────────────────────
+#  GATED / CORNER / ROAD-WIDTH EXTRACTORS
+# ────────────────────────────────────────────────────────────────
+
+def is_gated(text: str) -> bool:
+    """
+    True if the property is in a gated community / society / complex.
+    Covers:
+      - gated society / gated community / gated complex / gated colony
+      - gated township / gated enclave / gated compound
+      - boundary wall / enclosed society / secure compound
+      - gated (standalone, preceded/followed by whitespace)
+    """
+    if not isinstance(text, str):
+        return False
+    return bool(re.search(
+        r'\bgated\b'                               # gated (any context)
+        r'|\bboundary\s*wall\b'                    # boundary wall
+        r'|\benclosed\s*(?:communit|societ|colony|complex)\b'
+        r'|\bsecure[d]?\s*(?:compound|complex|societ|communit)\b'
+        r'|\bguarded\s*(?:complex|societ|communit|colony)\b',
+        text, re.I,
+    ))
+
+
+def is_corner(text: str) -> bool:
+    """
+    True if the property is a corner plot / corner property / corner house.
+    Covers:
+      - corner plot / corner property / corner flat / corner house
+      - corner floor / corner apartment / corner unit
+      - 3 side corner / three side corner / two side corner
+      - L-type corner / L type corner
+      - corner facing / corner location
+    """
+    if not isinstance(text, str):
+        return False
+    return bool(re.search(
+        r'\bcorner\s*(?:plot|propert|flat|house|floor|apartment'
+        r'|unit|villa|bungalow|build)\b'            # corner + property noun
+        r'|(?:3|three|two|2|4|four)\s*side\s*corner\b'  # N-side corner
+        r'|\bl[\s\-]?type\s*corner\b'              # L-type corner
+        r'|\bcorner\s*(?:facing|location|side)\b'   # corner facing/location
+        r'|\bcorner\s*(?:1st|2nd|3rd|first|second|third|ground)\b'  # corner + floor
+        r'|\b(?:plot|propert|flat|house|floor|apartment)\s*(?:on|at|in)?\s*corner\b',  # noun + corner
+        text, re.I,
+    ))
+
+
+# Conversion from common units to feet
+_ROAD_UNIT_TO_FT = {
+    'm':      3.28084,
+    'meter':  3.28084,
+    'metre':  3.28084,
+    'mtr':    3.28084,
+    'ft':     1.0,
+    'feet':   1.0,
+    'foot':   1.0,
+}
+
+# Ordered patterns – first match wins
+_ROAD_WIDTH_PATTERNS = [
+    # "30 ft wide road", "9 mtr wide road", "100 meter road"
+    re.compile(
+        r'(\d+\.?\d*)\s*(meter|metre|mtr|feet|ft|foot|m)\s*(?:wide\s*)?road',
+        re.I,
+    ),
+    # "road width 20m", "road width: 30 ft"
+    re.compile(
+        r'road\s*width[:\s]*(\d+\.?\d*)\s*(meter|metre|mtr|feet|ft|foot|m)?',
+        re.I,
+    ),
+    # "width of 20 m road"
+    re.compile(
+        r'width\s*(?:of\s*)?\s*(\d+\.?\d*)\s*(meter|metre|mtr|feet|ft|foot|m)',
+        re.I,
+    ),
+    # compact: "9m road", "30ft road"
+    re.compile(
+        r'(\d+\.?\d*)\s*(m|ft|mtr)\s*road',
+        re.I,
+    ),
+    # "frontage of 70 metres", "frontage is 100 feet"
+    re.compile(
+        r'frontage\s*(?:of|is)?\s*(\d+\.?\d*)\s*(meter|metre|mtr|feet|ft|foot|m)',
+        re.I,
+    ),
+]
+
+
+def extract_road_width_ft(text: str) -> float | None:
+    """
+    Extract road / frontage width from text and return it in **feet**.
+    Returns None when no numeric width is found.
+
+    Examples
+    --------
+    >>> extract_road_width_ft('9m road facing north')
+    29.53  (≈ 9 × 3.28084)
+    >>> extract_road_width_ft('30 ft wide road')
+    30.0
+    """
+    if not isinstance(text, str):
+        return None
+    for pat in _ROAD_WIDTH_PATTERNS:
+        m = pat.search(text)
+        if m:
+            value = float(m.group(1))
+            unit_str = (m.group(2) or 'm').lower().strip()
+            factor = _ROAD_UNIT_TO_FT.get(unit_str, 1.0)
+            return round(value * factor, 2)
+    return None
+
+
+# ────────────────────────────────────────────────────────────────
 #  COMBINED TEXT HELPER
 # ────────────────────────────────────────────────────────────────
 

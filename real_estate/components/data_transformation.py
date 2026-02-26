@@ -1,6 +1,8 @@
 import os
 import re
 import sys
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 import pandas as pd
 import numpy as np
 
@@ -23,10 +25,13 @@ from real_estate.utils.description_parser import (
     extract_facing,
     extract_furnishing,
     extract_price,
+    extract_road_width_ft,
     has_garden_park,
     has_main_road,
     has_parking,
     has_pool,
+    is_corner,
+    is_gated,
 )
 from real_estate.utils.locality_matcher import LocalityMatcher
 
@@ -84,6 +89,17 @@ class DataTransformation:
         except Exception as e:
             logging.warning(f"Could not load city localities JSON: {e}. Locality filling will be skipped.")
             self.locality_matcher = None
+
+    # ============================================================
+    #  STEP 0b – drop unwanted columns
+    # ============================================================
+    def _drop_columns(self, df: pd.DataFrame) -> pd.DataFrame:
+        logging.info("Step 0b: Drop unwanted columns")
+        cols_to_drop = ["backlane", "rectangular_plot", "source"]
+        existing = [c for c in cols_to_drop if c in df.columns]
+        df = df.drop(columns=existing)
+        logging.info(f"  Dropped columns: {existing}")
+        return df
 
     # ============================================================
     #  STEP 1 – basic clean
@@ -214,7 +230,7 @@ class DataTransformation:
     #  STEP 3 – age_of_property → standardise + bucket dummies
     # ============================================================
     def _transform_age(self, df: pd.DataFrame) -> pd.DataFrame:
-        logging.info("Step 3: age_of_property -> standardise & bucket dummies")
+        logging.info("Step 3: age_of_property -> standardise (no OHE dummies)")
 
         def _standardise_age(val):
             if not isinstance(val, str):
@@ -244,20 +260,7 @@ class DataTransformation:
             return np.nan
 
         df["age_of_property"] = df["age_of_property"].apply(_standardise_age)
-
-        # Bucket dummies
-        age_buckets = [
-            "New Construction",
-            "Less than 5 years",
-            "5 to 10 years",
-            "10 to 20 years",
-            "Above 20 years",
-        ]
-        for bucket in age_buckets:
-            col_name = "age_" + bucket.lower().replace(" ", "_").replace("+", "plus")
-            df[col_name] = (df["age_of_property"] == bucket).astype(int)
-
-        logging.info(f"  Created age bucket columns: {[c for c in df.columns if c.startswith('age_')]}")
+        logging.info(f"  age_of_property standardised. value counts:\n{df['age_of_property'].value_counts(dropna=False).to_string()}")
         return df
 
     # ============================================================
@@ -285,33 +288,59 @@ class DataTransformation:
         return df
 
     # ============================================================
-    #  STEP 5 – furnishing dummies
+    #  STEP 5 – furnishing type → 3-category standardise (no OHE)
     # ============================================================
     def _furnishing_dummies(self, df: pd.DataFrame) -> pd.DataFrame:
-        logging.info("Step 5: Furnishing type -> dummies")
+        logging.info("Step 5: Furnishing type -> 3-category standardise")
 
         furn_map = {
-            "Furnished": "Furnished",
+            "Furnished":       "Furnished",
             "Fully Furnished": "Furnished",
-            "Semi-Furnished": "Semi-Furnished",
-            "Semi Furnished": "Semi-Furnished",
-            "Unfurnished": "Unfurnished",
+            "Semi-Furnished":  "Semi-Furnished",
+            "Semi Furnished":  "Semi-Furnished",
+            "Unfurnished":     "Unfurnished",
         }
         df["furnishing_type"] = df["furnishing_type"].map(furn_map)
-
-        dummies = pd.get_dummies(df["furnishing_type"], prefix="furnish", dtype=int)
-        df = pd.concat([df, dummies], axis=1)
-        logging.info(f"  Created furnishing columns: {list(dummies.columns)}")
+        logging.info(f"  furnishing_type value counts:\n{df['furnishing_type'].value_counts(dropna=False).to_string()}")
         return df
 
     # ============================================================
-    #  STEP 5b – property_type dummies
+    #  STEP 5b – property_type → consolidated OHE
     # ============================================================
     def _property_type_dummies(self, df: pd.DataFrame) -> pd.DataFrame:
-        logging.info("Step 5b: property_type -> dummies")
-        dummies = pd.get_dummies(df["property_type"], prefix="prop_type", dtype=int)
+        logging.info("Step 5b: property_type -> keep 5 types, drop others, OHE")
+
+        # ── Consolidation map ────────────────────────────────────
+        _CONSOLIDATION = {
+            "Apartment":               "apartment",
+            "Studio Apartment":        "apartment",
+            "Studio":                  "apartment",
+            "Builder Floor Apartment": "builder_floor",
+            "Builder Floor":           "builder_floor",
+            "Independent Floor":       "builder_floor",
+            "Independent House":       "res_house",
+            "Residential House":       "res_house",
+            "Farm House":              "res_house",
+            "Plot":                    "plot",
+            "Residential Plot":        "plot",
+            "Villa":                   "villa",
+        }
+
+        _KEEP = {"apartment", "builder_floor", "villa", "plot", "res_house"}
+
+        df["property_type_grouped"] = df["property_type"].map(_CONSOLIDATION).fillna(
+            df["property_type"].str.lower().str.replace(" ", "_", regex=False)
+        )
+
+        # Drop rows whose property type is not in the 5 kept categories
+        before = len(df)
+        df = df[df["property_type_grouped"].isin(_KEEP)].copy()
+        logging.info(f"  Dropped {before - len(df)} rows with non-target property types. Remaining: {len(df)}")
+        logging.info(f"  property_type_grouped value counts:\n{df['property_type_grouped'].value_counts().to_string()}")
+
+        dummies = pd.get_dummies(df["property_type_grouped"], prefix="prop_type", dtype=int)
         df = pd.concat([df, dummies], axis=1)
-        logging.info(f"  Created property_type columns: {list(dummies.columns)}")
+        logging.info(f"  prop_type OHE columns: {list(dummies.columns)}")
         return df
 
     # ============================================================
@@ -320,8 +349,9 @@ class DataTransformation:
     def _add_price_per_sqft(self, df: pd.DataFrame) -> pd.DataFrame:
         logging.info("Step 6: Create price_per_sqft column")
         df["price_per_sqft"] = df["price_numeric"] / df["covered_area_sqft"].replace(0, np.nan)
-        nulls = df["price_per_sqft"].isna().sum()
-        logging.info(f"  price_per_sqft nulls: {nulls}")
+        before = len(df)
+        df = df.dropna(subset=["price_per_sqft"]).copy()
+        logging.info(f"  Dropped {before - len(df)} rows with null price_per_sqft. Remaining: {len(df)}")
         return df
 
     # ============================================================
@@ -335,9 +365,15 @@ class DataTransformation:
         df["is_pool"] = text.apply(has_pool).astype(int)
         df["is_main_road"] = text.apply(has_main_road).astype(int)
         df["is_garden_park"] = text.apply(has_garden_park).astype(int)
+        df["is_gated"] = text.apply(is_gated).astype(int)
+        df["is_corner"] = text.apply(is_corner).astype(int)
+        df["road_width_ft"] = text.apply(extract_road_width_ft)
 
-        for col in ["is_parking", "is_pool", "is_main_road", "is_garden_park"]:
+        for col in ["is_parking", "is_pool", "is_main_road", "is_garden_park",
+                    "is_gated", "is_corner"]:
             logging.info(f"  {col}: {df[col].sum()} / {len(df)} = {df[col].mean():.2%}")
+        non_null = df["road_width_ft"].notna().sum()
+        logging.info(f"  road_width_ft: {non_null} non-null / {len(df)} = {non_null/len(df):.2%}")
         return df
 
     # ============================================================
@@ -362,6 +398,64 @@ class DataTransformation:
         }
         df["facing_direction"] = df["facing_direction"].map(face_map)
         logging.info(f"  facing_direction nulls after standardise: {df['facing_direction'].isna().sum()}")
+        return df
+
+    # ============================================================
+    #  STEP 8b – possession_status → Ready to Move / Under Construction
+    # ============================================================
+    def _standardise_possession(self, df: pd.DataFrame) -> pd.DataFrame:
+        logging.info("Step 8b: Standardise possession_status")
+
+        if "possession_status" not in df.columns:
+            logging.warning("  possession_status column not found, skipping")
+            return df
+
+        today = datetime.now()
+        cutoff = today + relativedelta(months=6)
+
+        # Ordinal suffixes for day parsing: "29th", "1st", "23rd", "2nd"
+        _ORD_RE = re.compile(r"(\d+)(?:st|nd|rd|th)")
+
+        def _parse_possession(val):
+            if not isinstance(val, str) or not val.strip():
+                return np.nan
+
+            v = val.strip()
+            vl = v.lower()
+
+            # ── keyword matches ──────────────────────────────
+            if vl in ("ready to move", "ready to move in",
+                      "immediate", "immediately", "completed"):
+                return "Ready to Move"
+            if vl == "under construction":
+                return "Under Construction"
+
+            # ── try full date: "29th Jan, 2026" ──────────────
+            clean = _ORD_RE.sub(r"\1", v)          # strip ordinal suffix
+            clean = clean.replace(",", "").strip()  # drop comma
+            for fmt in ("%d %b %Y", "%d %B %Y", "%d %b%Y"):
+                try:
+                    dt = datetime.strptime(clean, fmt)
+                    return "Ready to Move" if dt <= cutoff else "Under Construction"
+                except ValueError:
+                    continue
+
+            # ── abbreviated: "Nov '30" → Nov 2030 ────────────
+            m = re.match(r"([A-Za-z]+)\s*['’](\d{2})$", v)
+            if m:
+                try:
+                    month_str = m.group(1)
+                    year_2d = int(m.group(2))
+                    year = 2000 + year_2d
+                    dt = datetime.strptime(f"1 {month_str} {year}", "%d %b %Y")
+                    return "Ready to Move" if dt <= cutoff else "Under Construction"
+                except ValueError:
+                    pass
+
+            return np.nan
+
+        df["possession_status"] = df["possession_status"].apply(_parse_possession)
+        logging.info(f"  possession_status value counts:\n{df['possession_status'].value_counts(dropna=False).to_string()}")
         return df
     
     # ============================================================
@@ -450,6 +544,7 @@ class DataTransformation:
             logging.info(f"Loaded merged data: shape={df.shape}")
 
             df = self._clean(df)
+            df = self._drop_columns(df)
             df = self._fill_from_description(df)
             df = self._transform_age(df)
             df = self._convert_area_to_sqft(df)
@@ -458,6 +553,7 @@ class DataTransformation:
             df = self._add_price_per_sqft(df)
             df = self._add_boolean_features(df)
             df = self._standardise_facing(df)
+            df = self._standardise_possession(df)
             df = self._fill_locality(df)
 
             # Save
@@ -478,6 +574,28 @@ class DataTransformation:
             
             logging.info(f"Final shape: {df.shape}")
             logging.info(f"Columns: {df.columns.tolist()}")
+
+            # ── Split by property type into cleaned_data/ ────────
+            cleaned_data_dir = os.path.join(self.config.transformed_data_dir, "cleaned_data")
+            os.makedirs(cleaned_data_dir, exist_ok=True)
+
+            ohe_cols = [c for c in df.columns if c.startswith("prop_type_")]
+            drop_for_split = ["property_type_grouped"] + ohe_cols
+
+            # Columns irrelevant for plots (no rooms / furnishing / floors)
+            _PLOT_EXTRA_DROP = [
+                "bhk", "balconies", "bathrooms", "floors",
+                "furnishing_type", "possession_status",
+                "desc_bhk", "desc_bathrooms", "desc_balconies",
+            ]
+
+            for prop_type, group_df in df.groupby("property_type_grouped"):
+                extra = _PLOT_EXTRA_DROP if prop_type == "plot" else []
+                split_df = group_df.drop(columns=drop_for_split + extra, errors="ignore")
+                split_path = os.path.join(cleaned_data_dir, f"{prop_type}.csv")
+                split_df.to_csv(split_path, index=False)
+                logging.info(f"  Saved {prop_type}: {len(split_df)} rows -> {split_path}")
+
             logging.info("=" * 60)
             logging.info("DATA TRANSFORMATION COMPLETED")
             logging.info("=" * 60)

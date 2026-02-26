@@ -17,7 +17,7 @@ DATA_INGESTION_MERGED_DIR = "merged"
 MERGED_FILE_NAME = "merged.csv"
 
 DATA_TRANSFORMATION_DIR = "data_transformation"
-TRANSFORMED_FILE_NAME = "transformed.csv"
+TRANSFORMED_FILE_NAME = "cleaned.csv"
 
 MODEL_TRAINER_DIR = "model_trainer"
 MODEL_FILE_NAME = "model.pkl"
