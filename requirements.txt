@@ -4,6 +4,14 @@ numpy
 pymongo
 setuptools
 rapidfuzz
-
+scikit-learn
+xgboost
+lightgbm
+joblib
+matplotlib
+seaborn
+streamlit
+geopy
+psycopg2
 
 ##-e.

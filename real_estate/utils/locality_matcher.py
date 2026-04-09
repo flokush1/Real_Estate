@@ -77,6 +77,7 @@ class LocalityMatcher:
         self._city_localities: Dict[str, Dict[str, str]] = {}
         # city_key → sorted list of original-cased localities (for rapidfuzz)
         self._city_choices: Dict[str, List[str]] = {}
+        self._best_match_cache: Dict[Tuple[str, str], Tuple[Optional[str], float]] = {}
 
         for city_key, locs in self._raw.items():
             lower_map = {}
@@ -207,6 +208,10 @@ class LocalityMatcher:
         if not isinstance(text, str) or not text.strip():
             return (None, 0.0)
 
+        cache_key = (city_key, text.strip().lower())
+        if cache_key in self._best_match_cache:
+            return self._best_match_cache[cache_key]
+
         text_lower = text.lower()
         lower_map = self._city_localities[city_key]
 
@@ -230,14 +235,18 @@ class LocalityMatcher:
                         best_exact_len = len(loc_lower)
 
         if best_exact is not None:
-            return (best_exact, _EXACT_BONUS + best_exact_len)
+            result = (best_exact, _EXACT_BONUS + best_exact_len)
+            self._best_match_cache[cache_key] = result
+            return result
 
         # ── 2. Fuzzy matching on text chunks ──────────────────
         #    Split the text into smaller parts (comma, period, pipe,
         #    newline) so that fuzzy scoring isn't diluted by long text.
         choices = self._city_choices[city_key]
         if not choices:
-            return (None, 0.0)
+            result = (None, 0.0)
+            self._best_match_cache[cache_key] = result
+            return result
 
         chunks = re.split(r"[,.\|\n;]+", text)
         best_fuzzy: Optional[str] = None
@@ -260,6 +269,10 @@ class LocalityMatcher:
                     best_fuzzy_score = score
 
         if best_fuzzy is not None:
-            return (best_fuzzy, best_fuzzy_score)
+            result = (best_fuzzy, best_fuzzy_score)
+            self._best_match_cache[cache_key] = result
+            return result
 
-        return (None, 0.0)
+        result = (None, 0.0)
+        self._best_match_cache[cache_key] = result
+        return result

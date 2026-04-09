@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+import json
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import pandas as pd
@@ -13,7 +14,7 @@ from real_estate.entity import (
 )
 from real_estate.exception.exception import RealEstateException
 from real_estate.logging.logger import logging
-from real_estate.constant import TARGET_COLUMN, CITY_LOCALITIES_JSON
+from real_estate.constant import TARGET_COLUMN, CITY_LOCALITIES_JSON, CIRCLE_RATES_DIR
 from real_estate.utils.description_parser import (
     combine_text,
     extract_age_of_property,
@@ -34,6 +35,7 @@ from real_estate.utils.description_parser import (
     is_gated,
 )
 from real_estate.utils.locality_matcher import LocalityMatcher
+from real_estate.utils.circle_rate_matcher import CircleRateMatcher
 
 
 # ────────────────────────────────────────────────────────────────
@@ -71,6 +73,67 @@ _SQFT_CONVERSION = {
 }
 
 
+def _normalize_city_name(value: str) -> str:
+    value = str(value or "").strip().lower()
+    value = re.sub(r"\s+", " ", value)
+    return value
+
+
+_EXCLUDED_CITY_NAMES = {
+    _normalize_city_name(name)
+    for name in [
+        "Asagarpur Jagir",
+        "Aurangabad",
+        "Baghpat",
+        "Bajidpur",
+        "Bela Kalan",
+        "Bharatpur",
+        "Bhiwadi",
+        "Bisokhar",
+        "Bulandshahr",
+        "Dadri",
+        "Desai Village",
+        "Dharuhera",
+        "Dungarpur Rilka",
+        "Eachachhar",
+        "Garhi Bohar",
+        "Gulistanpur",
+        "Hamjapur",
+        "Hapur",
+        "Hodal Rural",
+        "Jhanjhari",
+        "Jharli",
+        "Jhatta",
+        "Kalyanpura",
+        "Khera Choganpur",
+        "Kulesara",
+        "Malpura",
+        "Mewat",
+        "Mishripur",
+        "Nangla Rudh",
+        "Nangli Umarpur",
+        "Nasirpur",
+        "Neemrana",
+        "Pabhi Sadakpur",
+        "Patli Khurd",
+        "Rampur Jagir",
+        "Rundh Bhakhera",
+        "Sahapur Khurd",
+        "Sankhol",
+        "Sarai Ahmed",
+        "Sarhol",
+        "Shahjahanpur",
+        "Shahpur",
+        "Shahpur Govardhanpur Khadar",
+        "Shamli",
+        "Tilhar",
+        "Uchana",
+        "Ward No 8",
+        "Yusufpur Chak Saberi",
+    ]
+}
+
+
 class DataTransformation:
     """
     Full feature-engineering pipeline on the merged dataset.
@@ -102,6 +165,37 @@ class DataTransformation:
         except Exception as e:
             logging.warning(f"Could not load city localities JSON: {e}. Locality filling will be skipped.")
             self.locality_matcher = None
+
+        # Initialize circle-rate matcher
+        try:
+            self.circle_rate_matcher = CircleRateMatcher(CIRCLE_RATES_DIR)
+            logging.info(f"Loaded {self.circle_rate_matcher.total_entries} circle-rate entries")
+        except Exception as e:
+            logging.warning(f"Could not load circle rates: {e}. Circle rate column will be NaN.")
+            self.circle_rate_matcher = None
+
+    @staticmethod
+    def _coerce_numeric_columns(
+        df: pd.DataFrame,
+        columns: list[str],
+        context: str,
+    ) -> pd.DataFrame:
+        """
+        Force known numeric columns to numeric dtype and null out invalid text.
+        """
+        for column in columns:
+            if column not in df.columns:
+                continue
+
+            before_non_null = df[column].notna().sum()
+            df[column] = pd.to_numeric(df[column], errors="coerce")
+            dropped_values = before_non_null - df[column].notna().sum()
+            if dropped_values > 0:
+                logging.info(
+                    f"  {context}: coerced {column} to numeric and nulled {dropped_values} invalid values"
+                )
+
+        return df
 
     # ============================================================
     #  STEP 0b – drop unwanted columns
@@ -142,10 +236,36 @@ class DataTransformation:
         return df
 
     # ============================================================
+    #  STEP 1b – remove user-excluded city names
+    # ============================================================
+    def _remove_excluded_cities(self, df: pd.DataFrame) -> pd.DataFrame:
+        logging.info("Step 1b: Remove excluded city names")
+
+        if "city" not in df.columns:
+            logging.warning("  city column not found, skipping excluded-city filter")
+            return df
+
+        city_norm = df["city"].fillna("").astype(str).map(_normalize_city_name)
+        remove_mask = city_norm.isin(_EXCLUDED_CITY_NAMES)
+
+        removed = int(remove_mask.sum())
+        before = len(df)
+        if removed > 0:
+            df = df.loc[~remove_mask].copy()
+
+        logging.info(f"  Excluded-city filter: {before} -> {len(df)} (removed {removed})")
+        return df
+
+    # ============================================================
     #  STEP 2 – extract values from description & replace originals
     # ============================================================
     def _fill_from_description(self, df: pd.DataFrame) -> pd.DataFrame:
         logging.info("Step 2: Extract values from description/amenities & replace originals")
+        df = self._coerce_numeric_columns(
+            df,
+            ["bhk", "bathrooms", "balconies", "price_numeric"],
+            "pre-description fill",
+        )
         text = df.apply(combine_text, axis=1)
 
         # --- Create desc_* columns with extracted values ---
@@ -188,9 +308,6 @@ class DataTransformation:
         # --- Replace original columns with desc_* (use original if desc_* is missing) ---
         logging.info("  Replacing original columns with desc_* values...")
         
-        # Convert balconies to numeric first
-        df["balconies"] = pd.to_numeric(df["balconies"], errors="coerce")
-        
         # Replace logic: use desc_* if available, otherwise keep original
         original_bhk_na = df["bhk"].isna().sum()
         df["bhk"] = df["desc_bhk"].fillna(df["bhk"])
@@ -204,6 +321,12 @@ class DataTransformation:
         df["balconies"] = df["desc_balconies"].fillna(df["balconies"])
         logging.info(f"    balconies: replaced with desc_balconies (filled {df['balconies'].notna().sum() - (len(df) - original_balconies_na)} additional)")
 
+        df = self._coerce_numeric_columns(
+            df,
+            ["bhk", "bathrooms", "balconies"],
+            "post-description fill",
+        )
+
         # ── Bounds sanity: null out unreasonable values ──────────
         for col, cap in [("bhk", 12), ("bathrooms", 12), ("balconies", 12)]:
             bad = df[col].notna() & (df[col] > cap)
@@ -213,17 +336,13 @@ class DataTransformation:
         
         original_price_na = df["price_numeric"].isna().sum()
         df["price_numeric"] = df["desc_price"].fillna(df["price_numeric"])
+        df = self._coerce_numeric_columns(df, ["price_numeric"], "post-price fill")
         logging.info(f"    price_numeric: replaced with desc_price (filled {df['price_numeric'].notna().sum() - (len(df) - original_price_na)} additional)")
         
-        # For area: use desc_area_sqft (converted), fallback to original covered_area_value
-        # Also update unit to "Sq-ft" only where we used desc_area_sqft
-        original_area_na = df["covered_area_value"].isna().sum()
-        used_desc_mask = df["desc_area_sqft"].notna()
-        df.loc[used_desc_mask, "covered_area_value"] = df.loc[used_desc_mask, "desc_area_sqft"]
-        df.loc[used_desc_mask, "covered_area_unit"] = "Sq-ft"
-        # For rows without desc_area, keep original covered_area_value and unit
-        logging.info(f"    covered_area_value: replaced {used_desc_mask.sum()} values with desc_area_sqft (in Sq-ft)")
-        logging.info(f"    covered_area_unit: set to Sq-ft for {used_desc_mask.sum()} rows from desc")
+        # For area: keep desc_area_sqft as a separate column for manual comparison.
+        # Do NOT overwrite covered_area_value with desc_area_sqft.
+        logging.info(f"    covered_area_value: kept original ({df['covered_area_value'].notna().sum()} non-null)")
+        logging.info(f"    desc_area_sqft: available for comparison ({df['desc_area_sqft'].notna().sum()} non-null)")
         
         # --- Fill other fields from description (not creating desc_* for these) ---
         # facing_direction
@@ -508,6 +627,12 @@ class DataTransformation:
 
         # Snapshot original locality before filling
         locality_original = df['locality'].copy()
+        locality_clean = df['locality'].fillna('').astype(str).str.strip()
+        missing_mask = locality_clean.eq('') | locality_clean.str.lower().eq('nan')
+        sector_enrichment_mask = (~missing_mask) & ~locality_clean.str.contains('sector', case=False, na=False)
+
+        logging.info(f"  Rows requiring locality match: {int(missing_mask.sum())}")
+        logging.info(f"  Rows eligible for sector enrichment: {int(sector_enrichment_mask.sum())}")
 
         # Apply city-aware locality extraction
         def extract_locality_row(row):
@@ -518,7 +643,28 @@ class DataTransformation:
                 current_locality=row.get('locality', ''),
             )
 
-        df['locality'] = df.apply(extract_locality_row, axis=1)
+        def enrich_locality_with_sector(row):
+            locality = row.get('locality', '')
+            locality = locality.strip() if isinstance(locality, str) else ''
+            if not locality:
+                return locality
+
+            sector = self.locality_matcher._extract_sector(row.get('address_full', ''))
+            if sector is None:
+                sector = self.locality_matcher._extract_sector(row.get('description', ''))
+
+            if sector and 'sector' not in locality.lower():
+                return f"{locality}, {sector}"
+            return locality
+
+        if missing_mask.any():
+            df.loc[missing_mask, 'locality'] = df.loc[missing_mask].apply(extract_locality_row, axis=1)
+
+        if sector_enrichment_mask.any():
+            df.loc[sector_enrichment_mask, 'locality'] = df.loc[sector_enrichment_mask].apply(
+                enrich_locality_with_sector,
+                axis=1,
+            )
 
         after_missing = df['locality'].isna().sum()
         filled = before_missing - after_missing
@@ -563,6 +709,213 @@ class DataTransformation:
         return df
 
     # ============================================================
+    #  STEP 10 – circle rate from (city, locality)
+    # ============================================================
+    def _save_missing_circle_rate_json(self, df: pd.DataFrame) -> None:
+        """
+        Save unresolved (city, locality) pairs to JSON on every run.
+
+        File format is city -> {locality: rate_or_null}. Any numeric values already
+        present in the JSON are preserved as manual overrides for future runs.
+        """
+        try:
+            path = os.path.join(CIRCLE_RATES_DIR, "missing_circle_rates.json")
+            os.makedirs(CIRCLE_RATES_DIR, exist_ok=True)
+
+            # Keep previously filled numeric overrides so user updates are not lost.
+            preserved_overrides: dict[str, dict[str, float]] = {}
+            if os.path.exists(path):
+                with open(path, encoding="utf-8") as fh:
+                    existing = json.load(fh)
+                if isinstance(existing, dict):
+                    for city, loc_map in existing.items():
+                        if str(city).startswith("_") or not isinstance(loc_map, dict):
+                            continue
+                        if _normalize_city_name(city) in _EXCLUDED_CITY_NAMES:
+                            continue
+                        for locality, rate in loc_map.items():
+                            if locality is None:
+                                continue
+                            parsed_rate = None
+                            if isinstance(rate, (int, float)) and not pd.isna(rate):
+                                parsed_rate = float(rate)
+                            elif isinstance(rate, str):
+                                try:
+                                    parsed_rate = float(rate.strip())
+                                except Exception:
+                                    parsed_rate = None
+                            if parsed_rate is not None:
+                                city_s = str(city).strip()
+                                loc_s = str(locality).strip()
+                                if city_s and loc_s:
+                                    preserved_overrides.setdefault(city_s, {})[loc_s] = parsed_rate
+
+            # Build current unresolved list from this run.
+            missing_rows = df[df["circle_rate"].isna()].copy()
+            missing_pairs = missing_rows[
+                missing_rows["city"].notna() & missing_rows["locality"].notna()
+            ][["city", "locality"]].copy()
+
+            if not missing_pairs.empty:
+                missing_pairs["city"] = missing_pairs["city"].astype(str).str.strip()
+                missing_pairs["locality"] = missing_pairs["locality"].astype(str).str.strip()
+                missing_pairs["city_norm"] = missing_pairs["city"].map(_normalize_city_name)
+                missing_pairs = missing_pairs[
+                    (missing_pairs["city"] != "")
+                    & (missing_pairs["locality"] != "")
+                    & (missing_pairs["city"].str.lower() != "nan")
+                    & (missing_pairs["locality"].str.lower() != "nan")
+                    & (~missing_pairs["city_norm"].isin(_EXCLUDED_CITY_NAMES))
+                ]
+                missing_pairs = missing_pairs.drop(columns=["city_norm"], errors="ignore")
+
+            missing_counts = {}
+            if not missing_pairs.empty:
+                grouped = (
+                    missing_pairs.groupby(["city", "locality"], as_index=False)
+                    .size()
+                    .rename(columns={"size": "missing_count"})
+                )
+                for _, row in grouped.sort_values(["city", "locality"]).iterrows():
+                    city_s = row["city"]
+                    loc_s = row["locality"]
+                    missing_counts.setdefault(city_s, {})[loc_s] = int(row["missing_count"])
+
+            # Final payload: preserve numeric overrides + add current missing as null.
+            payload_city_map = {
+                city: dict(sorted(loc_map.items(), key=lambda x: x[0].lower()))
+                for city, loc_map in preserved_overrides.items()
+            }
+            for city, loc_map in missing_counts.items():
+                city_bucket = payload_city_map.setdefault(city, {})
+                for locality in loc_map.keys():
+                    city_bucket.setdefault(locality, None)
+
+            payload_city_map = dict(
+                sorted(payload_city_map.items(), key=lambda x: x[0].lower())
+            )
+
+            total_rows = len(df)
+            missing_rows_count = int(df["circle_rate"].isna().sum())
+            matched_rows_count = total_rows - missing_rows_count
+            unique_missing = sum(len(v) for v in missing_counts.values())
+            override_count = sum(len(v) for v in preserved_overrides.values())
+
+            payload = {
+                "_generated_at_utc": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                "_total_rows": int(total_rows),
+                "_matched_rows": int(matched_rows_count),
+                "_missing_rows": int(missing_rows_count),
+                "_unique_missing_city_locality": int(unique_missing),
+                "_preserved_numeric_overrides": int(override_count),
+                "_note": "Fill numeric INR/sqft values for null localities. Numeric values are reused in future runs.",
+            }
+            payload.update(payload_city_map)
+
+            with open(path, "w", encoding="utf-8") as fh:
+                json.dump(payload, fh, indent=2, ensure_ascii=False)
+
+            logging.info(
+                "  missing_circle_rates.json saved -> %s "
+                "(missing_rows=%s, unique_missing=%s, preserved_overrides=%s)",
+                path,
+                missing_rows_count,
+                unique_missing,
+                override_count,
+            )
+        except Exception as e:
+            logging.warning(f"  Could not save missing_circle_rates.json: {e}")
+
+    def _add_circle_rate(self, df: pd.DataFrame) -> pd.DataFrame:
+        logging.info("Step 10: Add circle_rate column")
+
+        if self.circle_rate_matcher is None:
+            logging.warning("  Circle rate matcher not available, filling NaN")
+            df["circle_rate"] = np.nan
+        else:
+            df["circle_rate"] = df.apply(
+                lambda row: self.circle_rate_matcher.get_rate(
+                    row.get("city", ""), row.get("locality", "")
+                ),
+                axis=1,
+            )
+
+            matched = df["circle_rate"].notna().sum()
+            total = len(df)
+            logging.info(f"  Circle rate matched: {matched}/{total} ({matched/total:.1%})")
+
+            # Per-city breakdown
+            if "city" in df.columns:
+                for city, grp in df.groupby("city"):
+                    m = grp["circle_rate"].notna().sum()
+                    t = len(grp)
+                    logging.info(f"    {city}: {m}/{t} ({m/t:.1%})")
+
+        self._save_missing_circle_rate_json(df)
+
+        return df
+
+    # ============================================================
+    #  STEP 11 – final locality null cleanup
+    # ============================================================
+    def _drop_missing_locality_final(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Final cleanup after all feature engineering:
+        drop rows where locality is null/blank.
+        """
+        logging.info("Step 11: Final locality cleanup")
+
+        if "locality" not in df.columns:
+            logging.warning("  locality column not found, skipping final locality cleanup")
+            return df
+
+        before = len(df)
+        locality_norm = df["locality"].fillna("").astype(str).str.strip()
+        invalid_locality = locality_norm.eq("") | locality_norm.str.lower().eq("nan")
+
+        dropped = int(invalid_locality.sum())
+        if dropped > 0:
+            df = df.loc[~invalid_locality].copy()
+
+        logging.info(f"  Dropped rows with missing locality: {dropped} ({before} -> {len(df)})")
+        return df
+
+    # ============================================================
+    #  STEP 12 – final property-type specific column cleanup
+    # ============================================================
+    def _final_property_type_column_cleanup(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Final cleanup requested for land/plot vs non-plot rows:
+          - Null out is_gated for plot/land rows
+          - Null out road_width/road_width_sqft/road_width_ft/gated_plot for non-plot rows
+        """
+        logging.info("Step 12: Final property-type specific column cleanup")
+
+        if "property_type_grouped" not in df.columns:
+            logging.warning("  property_type_grouped not found, skipping property-type cleanup")
+            return df
+
+        prop_key = df["property_type_grouped"].fillna("").astype(str).str.strip().str.lower()
+        plot_land_mask = prop_key.isin({"plot", "land"})
+        non_plot_mask = ~plot_land_mask
+
+        if "is_gated" in df.columns:
+            affected = int(df.loc[plot_land_mask, "is_gated"].notna().sum())
+            if affected > 0:
+                df.loc[plot_land_mask, "is_gated"] = np.nan
+            logging.info(f"  is_gated nulled for plot/land rows: {affected}")
+
+        for col in ["road_width", "road_width_sqft", "road_width_ft", "gated_plot"]:
+            if col not in df.columns:
+                continue
+            affected = int(df.loc[non_plot_mask, col].notna().sum())
+            if affected > 0:
+                df.loc[non_plot_mask, col] = np.nan
+            logging.info(f"  {col} nulled for non-plot rows: {affected}")
+
+        return df
+
+    # ============================================================
     #  MAIN ENTRYPOINT
     # ============================================================
     def initiate_data_transformation(self) -> DataTransformationArtifact:
@@ -571,10 +924,29 @@ class DataTransformation:
             logging.info("DATA TRANSFORMATION STARTED")
             logging.info("=" * 60)
 
-            df = pd.read_csv(self.data_ingestion_artifact.merged_file_path)
+            df = pd.read_csv(self.data_ingestion_artifact.merged_file_path, low_memory=False)
             logging.info(f"Loaded merged data: shape={df.shape}")
 
+            df = self._coerce_numeric_columns(
+                df,
+                [
+                    "covered_area_value",
+                    "price_numeric",
+                    "latitude",
+                    "longitude",
+                    "bhk",
+                    "bathrooms",
+                    "balconies",
+                    "corner_property",
+                    "rectangular_plot",
+                    "gated_plot",
+                    "backlane",
+                ],
+                "initial load",
+            )
+
             df = self._clean(df)
+            df = self._remove_excluded_cities(df)
             df = self._drop_columns(df)
             df = self._fill_from_description(df)
             df = self._transform_age(df)
@@ -586,6 +958,9 @@ class DataTransformation:
             df = self._standardise_facing(df)
             df = self._standardise_possession(df)
             df = self._fill_locality(df)
+            df = self._add_circle_rate(df)
+            df = self._drop_missing_locality_final(df)
+            df = self._final_property_type_column_cleanup(df)
 
             # Save
             os.makedirs(self.config.transformed_data_dir, exist_ok=True)
@@ -613,19 +988,89 @@ class DataTransformation:
             ohe_cols = [c for c in df.columns if c.startswith("prop_type_")]
             drop_for_split = ["property_type_grouped"] + ohe_cols
 
+            # User-requested export cleanup for cleaned_data folder only.
+            # This does not affect cleaned.csv or merged.csv.
+            _CLEANED_FOLDER_DROP_COLS = [
+                "id",
+                "event_type",
+                "covered_area_value",
+                "covered_area_unit",
+                "price_raw",
+                "sqft_price",
+                "property_type",
+                "description",
+                "address_full",
+                "amenities",
+                "agent_id",
+                "agent_name",
+                "agent_type",
+                "developer_name",
+                "developer_id",
+                "posting_date",
+                "scrape_date",
+                "company_name",
+                "project_society_name",
+                "desc_bhk",
+                "desc_balconies",
+                "desc_price",
+                "desc",
+                "desc_area",
+                "desc_unit",
+                "desc_area_sqft",
+            ]
+
             # Columns irrelevant for plots (no rooms / furnishing / floors)
             _PLOT_EXTRA_DROP = [
                 "bhk", "balconies", "bathrooms", "floors",
                 "furnishing_type", "possession_status",
                 "desc_bhk", "desc_bathrooms", "desc_balconies",
+                "is_gated",
+            ]
+
+            # Columns to remove for all non-plot/non-land property files.
+            _NON_PLOT_EXTRA_DROP = [
+                "road_width", "road_width_sqft", "road_width_ft", "gated_plot",
             ]
 
             for prop_type, group_df in df.groupby("property_type_grouped"):
-                extra = _PLOT_EXTRA_DROP if prop_type == "plot" else []
-                split_df = group_df.drop(columns=drop_for_split + extra, errors="ignore")
+                prop_type_key = str(prop_type).strip().lower()
+                is_plot_land = prop_type_key in {"plot", "land"}
+                extra = _PLOT_EXTRA_DROP if is_plot_land else _NON_PLOT_EXTRA_DROP
+
+                split_df = group_df.copy()
+
+                # Apply price filter only for cleaned_data exports.
+                if "price_per_sqft" in split_df.columns:
+                    split_df["price_per_sqft"] = pd.to_numeric(split_df["price_per_sqft"], errors="coerce")
+                    before_filter = len(split_df)
+                    ppsf_min = self.config.price_per_sqft_min
+                    split_df = split_df[split_df["price_per_sqft"] >= ppsf_min].copy()
+                    removed = before_filter - len(split_df)
+                    logging.info(f"  {prop_type}: removed {removed} rows with price_per_sqft < {ppsf_min}")
+                else:
+                    logging.warning(f"  {prop_type}: price_per_sqft not found, skipping >=800 filter")
+
+                dynamic_drop_cols = [
+                    col
+                    for col in split_df.columns
+                    if col.startswith("desc_") or col.startswith("project_society")
+                ]
+
+                split_df = split_df.drop(
+                    columns=drop_for_split + extra + _CLEANED_FOLDER_DROP_COLS + dynamic_drop_cols,
+                    errors="ignore",
+                )
                 split_path = os.path.join(cleaned_data_dir, f"{prop_type}.csv")
-                split_df.to_csv(split_path, index=False)
-                logging.info(f"  Saved {prop_type}: {len(split_df)} rows -> {split_path}")
+                try:
+                    split_df.to_csv(split_path, index=False)
+                    logging.info(f"  Saved {prop_type}: {len(split_df)} rows -> {split_path}")
+                except PermissionError:
+                    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                    split_path_locked = os.path.join(cleaned_data_dir, f"{prop_type}_{timestamp}.csv")
+                    split_df.to_csv(split_path_locked, index=False)
+                    logging.warning(
+                        f"  {prop_type} file was locked, saved {len(split_df)} rows -> {split_path_locked}"
+                    )
 
             logging.info("=" * 60)
             logging.info("DATA TRANSFORMATION COMPLETED")

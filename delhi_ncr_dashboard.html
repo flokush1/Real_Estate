@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Delhi NCR — Real Estate Demand &amp; Supply Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --surface2:  #22263a;
+    --border:    #2e3248;
+    --accent:    #4f8ef7;
+    --accent2:   #7c56f5;
+    --green:     #22c55e;
+    --red:       #ef4444;
+    --amber:     #f59e0b;
+    --teal:      #14b8a6;
+    --text:      #e4e6f0;
+    --muted:     #7b8198;
+    --radius:    12px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI',system-ui,sans-serif; min-height:100vh; }
+
+  /* ── Layout ── */
+  .shell { max-width: 1540px; margin: 0 auto; padding: 28px 24px; }
+  .header { display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:32px; }
+  .header-left h1 { font-size:26px; font-weight:700; letter-spacing:-.5px; }
+  .header-left p  { color:var(--muted); font-size:13.5px; margin-top:6px; }
+  .badge { display:inline-flex; align-items:center; gap:6px; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:600; }
+  .badge-info  { background:#1e3a5f; color:#7ab8ff; }
+  .badge-warn  { background:#3b2200; color:#fbbf24; }
+
+  /* ── KPI Cards ── */
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px; margin-bottom:32px; }
+  .kpi { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px 22px; }
+  .kpi-label { font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-weight:600; }
+  .kpi-value { font-size:30px; font-weight:700; margin-top:8px; line-height:1; }
+  .kpi-sub   { font-size:12px; color:var(--muted); margin-top:6px; }
+  .kpi-green { color:var(--green); }
+  .kpi-red   { color:var(--red); }
+  .kpi-amber { color:var(--amber); }
+  .kpi-blue  { color:var(--accent); }
+  .kpi-violet{ color:var(--accent2); }
+
+  /* ── Section titles ── */
+  .section { margin-bottom:40px; }
+  .section-title { font-size:15px; font-weight:700; letter-spacing:-.2px; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+  .section-title .dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+  .dot-blue   { background:var(--accent); }
+  .dot-green  { background:var(--green); }
+  .dot-amber  { background:var(--amber); }
+  .dot-violet { background:var(--accent2); }
+  .dot-teal   { background:var(--teal); }
+
+  /* ── Charts ── */
+  .chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .chart-grid-3 { display:grid; grid-template-columns:2fr 1fr; gap:20px; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px; }
+  .card-title { font-size:13px; font-weight:600; color:var(--muted); margin-bottom:16px; text-transform:uppercase; letter-spacing:.06em; }
+  .chart-wrap { position:relative; }
+  .chart-wrap canvas { max-height:300px; }
+  .chart-wrap-tall canvas { max-height:420px; }
+  .chart-wrap-full canvas { max-height:340px; }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  thead th { background:var(--surface2); color:var(--muted); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.07em; padding:10px 14px; text-align:left; border-bottom:1px solid var(--border); white-space:nowrap; cursor:pointer; user-select:none; }
+  thead th:hover { color:var(--text); }
+  tbody tr { border-bottom:1px solid var(--border); transition:background .12s; }
+  tbody tr:hover { background:var(--surface2); }
+  tbody td { padding:9px 14px; white-space:nowrap; }
+  .pill { display:inline-block; padding:2px 9px; border-radius:20px; font-size:11.5px; font-weight:600; }
+  .pill-green  { background:#14473a; color:#34d399; }
+  .pill-red    { background:#3b1a1a; color:#f87171; }
+  .pill-amber  { background:#3b2a00; color:#fbbf24; }
+  .pill-blue   { background:#1a2e5c; color:#93c5fd; }
+
+  /* ── Search / filter bar ── */
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .toolbar input, .toolbar select {
+    background:var(--surface2); border:1px solid var(--border); border-radius:8px;
+    color:var(--text); font-size:13px; padding:8px 14px; outline:none;
+  }
+  .toolbar input:focus, .toolbar select:focus { border-color:var(--accent); }
+  .toolbar input { flex:1; min-width:200px; }
+
+  /* ── Methodology box ── */
+  .method-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+  .method-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; }
+  .method-card h3 { font-size:13px; font-weight:700; margin-bottom:12px; color:var(--accent); }
+  .method-card p,
+  .method-card li { font-size:12.5px; color:var(--muted); line-height:1.7; }
+  .method-card ul { padding-left:18px; margin-top:6px; }
+  .formula { background:var(--surface2); border-left:3px solid var(--accent2); padding:10px 14px; border-radius:0 8px 8px 0; margin-top:10px; font-family:monospace; font-size:12px; color:#c4b5fd; line-height:1.8; }
+
+  /* ── Source row ── */
+  .footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--border); font-size:12px; color:var(--muted); display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .footer a { color:var(--accent); }
+
+  @media (max-width:900px) {
+    .chart-grid, .chart-grid-3 { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- ══════════ HEADER ══════════ -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Delhi NCR — Real Estate Demand &amp; Supply Dashboard</h1>
+      <p>Forecasting Engine Feature Analysis &nbsp;·&nbsp; Scrape runs: Mar 9–25, 2026 &nbsp;·&nbsp; Sources: housing.com + MagicBricks</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px;">
+      <span class="badge badge-info">22 Cities</span>
+      <span class="badge badge-info">2,081 Localities</span>
+      <span class="badge badge-warn">Log-derived · DB mode adds price metrics</span>
+    </div>
+  </div>
+
+  <!-- ══════════ KPI CARDS ══════════ -->
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">Total Listings Tracked</div>
+      <div class="kpi-value kpi-blue">90,273</div>
+      <div class="kpi-sub">Across all NCR cities (Mar 23 run)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">New Listings (Mar 10)</div>
+      <div class="kpi-value kpi-green">70,692</div>
+      <div class="kpi-sub">Fresh supply entering the market</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Price Updates Detected</div>
+      <div class="kpi-value kpi-amber">993</div>
+      <div class="kpi-sub">Mar 23 rescrape — 2-week delta</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Highest Active Supply</div>
+      <div class="kpi-value kpi-blue">25,204</div>
+      <div class="kpi-sub">New Delhi (housing.com baseline)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Tightest Market</div>
+      <div class="kpi-value kpi-green">Greater Noida</div>
+      <div class="kpi-sub">Tightness score: 58.3 (seller's market)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Highest Stale Inventory</div>
+      <div class="kpi-value kpi-red">99.9%</div>
+      <div class="kpi-sub">New Delhi / Saket — near-zero new supply</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Data Quality — Locality</div>
+      <div class="kpi-value kpi-violet">95–100%</div>
+      <div class="kpi-sub">Locality fill rate across runs</div>
+    </div>
+  </div>
+
+  <!-- ══════════ SUPPLY STOCK & TIGHTNESS ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-blue"></span>City-Level Supply Stock vs Market Tightness</div>
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Active Supply Count by City (latest run)</div>
+        <div class="chart-wrap chart-wrap-full"><canvas id="chartSupply"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Market Tightness Score (higher = seller's market)</div>
+        <div class="chart-wrap chart-wrap-full"><canvas id="chartTightness"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ DEMAND METRICS ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-green"></span>Demand Signals — Absorption &amp; Months of Inventory</div>
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Weekly Absorption Rate % by City</div>
+        <div class="chart-wrap chart-wrap-full"><canvas id="chartAbsorption"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Months of Inventory (MOI) — &lt;3 = seller's market</div>
+        <div class="chart-wrap chart-wrap-full"><canvas id="chartMOI"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STALE INVENTORY & NEW SUPPLY VELOCITY ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-amber"></span>Supply Health — Stale Inventory &amp; New Supply Velocity</div>
+    <div class="chart-grid">
+      <div class="card">
+        <div class="card-title">Stale Inventory % (unchanged listings) by City</div>
+        <div class="chart-wrap chart-wrap-full"><canvas id="chartStale"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">New Supply Velocity (weekly new listings) by City</div>
+        <div class="chart-wrap chart-wrap-full"><canvas id="chartNewSupply"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ W11→W13 TREND ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-teal"></span>Week-over-Week Trend — Supply Change (W11 → W13, Mar 9 → Mar 23)</div>
+    <div class="card">
+      <div class="card-title">Supply Change % by City (positive = inventory grew, negative = absorbed/delisted)</div>
+      <div class="chart-wrap"><canvas id="chartTrend"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ══════════ TOP LOCALITIES ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-violet"></span>Top 15 Micro-Markets by Active Listing Volume</div>
+    <div class="chart-grid-3">
+      <div class="card">
+        <div class="card-title">Active Listings by Locality</div>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartLocSupply"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Market Tightness by Locality</div>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartLocTightness"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ SUPPLY vs ABSORPTION SCATTER ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-blue"></span>Supply vs Demand Scatter — Active Stock vs Absorption Rate</div>
+    <div class="card">
+      <div class="card-title">Each bubble = one city &nbsp;·&nbsp; X = active supply &nbsp;·&nbsp; Y = absorption rate % &nbsp;·&nbsp; Size = market tightness</div>
+      <div class="chart-wrap"><canvas id="chartScatter"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ══════════ FEATURE TABLE ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-green"></span>Full Feature Table — (City, Week) Grain</div>
+    <div class="toolbar">
+      <input type="text" id="tableSearch" placeholder="Filter by city name…" oninput="filterTable()"/>
+      <select id="weekFilter" onchange="filterTable()">
+        <option value="">All Weeks</option>
+        <option value="2026-W11">2026-W11 (Mar 9–10)</option>
+        <option value="2026-W13">2026-W13 (Mar 23–25)</option>
+      </select>
+    </div>
+    <div class="card table-wrap">
+      <table id="featureTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">City ↕</th>
+            <th onclick="sortTable(1)">Week ↕</th>
+            <th onclick="sortTable(2)">Active Supply ↕</th>
+            <th onclick="sortTable(3)">New/Week ↕</th>
+            <th onclick="sortTable(4)">Stale % ↕</th>
+            <th onclick="sortTable(5)">Absorbed/Week ↕</th>
+            <th onclick="sortTable(6)">Absorption Rate % ↕</th>
+            <th onclick="sortTable(7)">MOI ↕</th>
+            <th onclick="sortTable(8)">Tightness ↕</th>
+            <th>Market Signal</th>
+          </tr>
+        </thead>
+        <tbody id="featureTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══════════ METHODOLOGY ══════════ -->
+  <div class="section">
+    <div class="section-title"><span class="dot dot-amber"></span>Methodology &amp; Feature Definitions</div>
+    <div class="method-grid">
+      <div class="method-card">
+        <h3>Supply Stock</h3>
+        <p>Count of distinct <code>property_id</code>s with <code>event_type ≠ 'deleted'</code> at a given scrape date. Captures the full visible inventory on the platform at that moment.</p>
+        <ul>
+          <li><b>New supply velocity</b> — listings where <code>event_type = 'new'</code></li>
+          <li><b>Stale inventory</b> — listings unchanged across ≥2 consecutive runs</li>
+          <li><b>Developer supply</b> — listings with a non-null <code>developer_name</code></li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <h3>Absorption (Demand Proxy)</h3>
+        <p>Property IDs present in run N but absent in run N+1 are treated as absorbed (likely sold or de-listed). Only same-source consecutive runs within 21 days are compared.</p>
+        <div class="formula">
+          absorbed ≈ max(0, prev_seen + curr_new − curr_seen)<br>
+          absorption_rate = absorbed_weekly / active_supply × 100<br>
+          MOI = active_supply / (absorbed_weekly × 4.33)
+        </div>
+      </div>
+      <div class="method-card">
+        <h3>Market Tightness Score</h3>
+        <p>Composite indicator for pricing direction. Values above 1 signal upward price pressure; below 0.5 indicate oversupply.</p>
+        <div class="formula">
+          Tightness = (Absorption Rate / New Supply Velocity) × (1 / MOI)<br><br>
+          &gt; 1.0 → Seller's market (demand &gt; supply)<br>
+          0.5–1.0 → Balanced<br>
+          &lt; 0.5 → Buyer's market
+        </div>
+      </div>
+      <div class="method-card">
+        <h3>Price Momentum (DB mode)</h3>
+        <p>Detected when <code>event_type = 'updated'</code> and <code>price_numeric</code> changed between runs. Requires PostgreSQL access.</p>
+        <div class="formula">
+          price_momentum = [(hikes − cuts) / total_updated]<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;× avg_sqft_price_Δ<br><br>
+          Positive → net hikes (demand confidence)<br>
+          Negative → net cuts (supply pressure)
+        </div>
+      </div>
+      <div class="method-card">
+        <h3>Data Sources</h3>
+        <ul>
+          <li><b>housing.com</b> — Mar 9, 24, 25 runs (sequential, ~26K New Delhi listings/run)</li>
+          <li><b>MagicBricks</b> — Mar 10, 23 runs (12 parallel workers, 7 sort strategies)</li>
+          <li><b>Table grain:</b> (locality, city, property_type, week)</li>
+          <li><b>Cities:</b> 22 Delhi NCR micro-markets</li>
+          <li><b>Localities:</b> 2,081 parsed from log files</li>
+        </ul>
+      </div>
+      <div class="method-card">
+        <h3>Data Quality Notes</h3>
+        <ul>
+          <li><code>locality</code>: 95–100% fill rate ✓</li>
+          <li><code>sqft_price</code>: 92–99% fill rate ✓</li>
+          <li><code>age_of_property</code>: 48–97% — impute from developer/possession</li>
+          <li><code>road_width</code>: 8–92% — enrich via OSM + lat/lon</li>
+          <li><code>developer_name</code>: 15–60% by city — fuzzy-match via society name</li>
+          <li>Price/momentum cols require <b>--db flag</b> to populate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Generated: April 4, 2026</span>
+    <span>·</span>
+    <span>Data: housing.com + MagicBricks scraper runs (Mar 9–25, 2026)</span>
+    <span>·</span>
+    <span>Script: <code>feature_extraction.py</code> → <code>demand_supply_features.csv</code></span>
+  </div>
+
+</div><!-- /shell -->
+
+<script>
+// ══════════════════════════════════════════════════════════════
+//  EMBEDDED DATA  (generated from demand_supply_features.csv)
+// ══════════════════════════════════════════════════════════════
+const CITY_DATA = [{"city":"New Delhi","active_supply_count":25204.0,"new_supply_weekly":2.0,"absorption_count_weekly":14.0,"absorption_rate_weekly":0.06,"months_of_inventory":415.77,"market_tightness":0.02,"stale_inventory_pct":99.92},{"city":"Gurugram","active_supply_count":19547.0,"new_supply_weekly":2397.0,"absorption_count_weekly":16779.0,"absorption_rate_weekly":85.84,"months_of_inventory":0.27,"market_tightness":25.93,"stale_inventory_pct":86.75},{"city":"Greater Noida","active_supply_count":10008.0,"new_supply_weekly":2747.0,"absorption_count_weekly":19229.0,"absorption_rate_weekly":192.14,"months_of_inventory":0.12,"market_tightness":58.33,"stale_inventory_pct":71.18},{"city":"Ghaziabad","active_supply_count":8325.0,"new_supply_weekly":1804.0,"absorption_count_weekly":12628.0,"absorption_rate_weekly":151.69,"months_of_inventory":0.15,"market_tightness":46.67,"stale_inventory_pct":76.02},{"city":"Noida","active_supply_count":8228.0,"new_supply_weekly":2001.0,"absorption_count_weekly":14007.0,"absorption_rate_weekly":170.24,"months_of_inventory":0.14,"market_tightness":50.0,"stale_inventory_pct":74.39},{"city":"South Delhi","active_supply_count":6508.0,"new_supply_weekly":0.0,"absorption_count_weekly":0.0,"absorption_rate_weekly":0.0,"months_of_inventory":null,"market_tightness":null,"stale_inventory_pct":99.91},{"city":"Faridabad","active_supply_count":5355.0,"new_supply_weekly":1461.0,"absorption_count_weekly":10227.0,"absorption_rate_weekly":190.98,"months_of_inventory":0.12,"market_tightness":58.33,"stale_inventory_pct":69.23},{"city":"Dwarka","active_supply_count":3741.0,"new_supply_weekly":1.0,"absorption_count_weekly":7.0,"absorption_rate_weekly":0.19,"months_of_inventory":123.42,"market_tightness":0.06,"stale_inventory_pct":99.87},{"city":"West Delhi","active_supply_count":3047.0,"new_supply_weekly":1.0,"absorption_count_weekly":7.0,"absorption_rate_weekly":0.23,"months_of_inventory":100.53,"market_tightness":0.07,"stale_inventory_pct":99.9},{"city":"Rohini","active_supply_count":2693.0,"new_supply_weekly":1.0,"absorption_count_weekly":7.0,"absorption_rate_weekly":0.26,"months_of_inventory":88.85,"market_tightness":0.08,"stale_inventory_pct":99.48},{"city":"East Delhi","active_supply_count":1095.0,"new_supply_weekly":0.0,"absorption_count_weekly":0.0,"absorption_rate_weekly":0.0,"months_of_inventory":null,"market_tightness":null,"stale_inventory_pct":99.63},{"city":"Yamuna Expressway Region","active_supply_count":1042.0,"new_supply_weekly":22.0,"absorption_count_weekly":41.6,"absorption_rate_weekly":3.99,"months_of_inventory":5.78,"market_tightness":0.33,"stale_inventory_pct":97.7},{"city":"Sohna","active_supply_count":748.0,"new_supply_weekly":6.0,"absorption_count_weekly":42.0,"absorption_rate_weekly":5.61,"months_of_inventory":4.11,"market_tightness":1.7,"stale_inventory_pct":98.93},{"city":"North Delhi","active_supply_count":710.0,"new_supply_weekly":0.0,"absorption_count_weekly":0.0,"absorption_rate_weekly":0.0,"months_of_inventory":null,"market_tightness":null,"stale_inventory_pct":99.72},{"city":"Meerut","active_supply_count":655.0,"new_supply_weekly":170.0,"absorption_count_weekly":1190.0,"absorption_rate_weekly":181.68,"months_of_inventory":0.13,"market_tightness":53.85,"stale_inventory_pct":73.59},{"city":"Sonipat","active_supply_count":292.0,"new_supply_weekly":47.0,"absorption_count_weekly":329.0,"absorption_rate_weekly":112.67,"months_of_inventory":0.2,"market_tightness":35.0,"stale_inventory_pct":83.56},{"city":"Shahdara","active_supply_count":283.0,"new_supply_weekly":4.0,"absorption_count_weekly":28.0,"absorption_rate_weekly":9.89,"months_of_inventory":2.33,"market_tightness":3.0,"stale_inventory_pct":98.59},{"city":"Saket","active_supply_count":271.0,"new_supply_weekly":0.0,"absorption_count_weekly":0.0,"absorption_rate_weekly":0.0,"months_of_inventory":null,"market_tightness":null,"stale_inventory_pct":100.0},{"city":"Central Delhi","active_supply_count":218.0,"new_supply_weekly":0.0,"absorption_count_weekly":0.0,"absorption_rate_weekly":0.0,"months_of_inventory":null,"market_tightness":null,"stale_inventory_pct":99.54},{"city":"Manesar","active_supply_count":141.0,"new_supply_weekly":3.0,"absorption_count_weekly":21.0,"absorption_rate_weekly":14.89,"months_of_inventory":1.55,"market_tightness":4.51,"stale_inventory_pct":95.74},{"city":"Kundli","active_supply_count":112.0,"new_supply_weekly":9.0,"absorption_count_weekly":62.0,"absorption_rate_weekly":55.36,"months_of_inventory":0.04,"market_tightness":108.84,"stale_inventory_pct":87.5},{"city":"Greater Faridabad","active_supply_count":106.0,"new_supply_weekly":0.0,"absorption_count_weekly":0.0,"absorption_rate_weekly":0.0,"months_of_inventory":null,"market_tightness":null,"stale_inventory_pct":98.11}];
+
+const LOC_DATA = [{"locality":"Noida Extension","city":"Greater Noida","active_supply_count":1927,"absorption_rate_weekly":11.21,"months_of_inventory":2.06,"market_tightness":0.05},{"locality":"Indirapuram","city":"Ghaziabad","active_supply_count":630,"absorption_rate_weekly":151.69,"months_of_inventory":0.15,"market_tightness":11.22},{"locality":"Noida Extension","city":"Noida","active_supply_count":314,"absorption_rate_weekly":12.69,"months_of_inventory":1.82,"market_tightness":0.07},{"locality":"Sector 140A","city":"Noida","active_supply_count":310,"absorption_rate_weekly":12.69,"months_of_inventory":1.82,"market_tightness":0.07},{"locality":"Sector 73","city":"Noida","active_supply_count":295,"absorption_rate_weekly":12.62,"months_of_inventory":1.83,"market_tightness":0.07},{"locality":"Raj Nagar Extension","city":"Ghaziabad","active_supply_count":238,"absorption_rate_weekly":14.03,"months_of_inventory":1.65,"market_tightness":0.09},{"locality":"Sector 85","city":"Faridabad","active_supply_count":204,"absorption_rate_weekly":12.38,"months_of_inventory":1.87,"market_tightness":0.07},{"locality":"Green Field Colony","city":"Faridabad","active_supply_count":195,"absorption_rate_weekly":12.38,"months_of_inventory":1.87,"market_tightness":0.07},{"locality":"Yamuna Expressway","city":"Greater Noida","active_supply_count":185,"absorption_rate_weekly":38.89,"months_of_inventory":0.59,"market_tightness":0.85},{"locality":"Sector 65","city":"Gurugram","active_supply_count":178,"absorption_rate_weekly":19.8,"months_of_inventory":1.17,"market_tightness":0.18},{"locality":"Sector 66","city":"Gurugram","active_supply_count":157,"absorption_rate_weekly":19.8,"months_of_inventory":1.17,"market_tightness":0.18},{"locality":"Sector 75","city":"Noida","active_supply_count":153,"absorption_rate_weekly":12.69,"months_of_inventory":1.82,"market_tightness":0.07},{"locality":"Sector 104","city":"Gurugram","active_supply_count":146,"absorption_rate_weekly":85.84,"months_of_inventory":0.27,"market_tightness":3.43},{"locality":"Sector 150","city":"Noida","active_supply_count":134,"absorption_rate_weekly":170.24,"months_of_inventory":0.14,"market_tightness":12.06},{"locality":"Sector 104","city":"Noida","active_supply_count":119,"absorption_rate_weekly":12.69,"months_of_inventory":1.82,"market_tightness":0.07}];
+
+const TREND_DATA = [{"city":"Central Delhi","active_supply_count_w11":221.0,"active_supply_count_w13":1207.0,"supply_delta_pct":446.2,"market_tightness_w13":null},{"city":"Dwarka","active_supply_count_w11":3807.0,"active_supply_count_w13":1969.0,"supply_delta_pct":-48.3,"market_tightness_w13":null},{"city":"East Delhi","active_supply_count_w11":1237.0,"active_supply_count_w13":1676.0,"supply_delta_pct":35.5,"market_tightness_w13":2.22},{"city":"Faridabad","active_supply_count_w11":5314.0,"active_supply_count_w13":3246.0,"supply_delta_pct":-38.9,"market_tightness_w13":0.56},{"city":"Ghaziabad","active_supply_count_w11":8949.0,"active_supply_count_w13":7330.0,"supply_delta_pct":-18.1,"market_tightness_w13":0.37},{"city":"Greater Faridabad","active_supply_count_w11":106.0,"active_supply_count_w13":369.0,"supply_delta_pct":248.1,"market_tightness_w13":0.38},{"city":"Greater Noida","active_supply_count_w11":9665.0,"active_supply_count_w13":7166.0,"supply_delta_pct":-25.9,"market_tightness_w13":2.75},{"city":"Gurugram","active_supply_count_w11":19530.0,"active_supply_count_w13":14988.0,"supply_delta_pct":-23.3,"market_tightness_w13":0.57},{"city":"Kundli","active_supply_count_w11":55.0,"active_supply_count_w13":292.0,"supply_delta_pct":430.9,"market_tightness_w13":4.89},{"city":"Manesar","active_supply_count_w11":142.0,"active_supply_count_w13":232.0,"supply_delta_pct":63.4,"market_tightness_w13":0.2},{"city":"Meerut","active_supply_count_w11":624.0,"active_supply_count_w13":921.0,"supply_delta_pct":47.6,"market_tightness_w13":1.48},{"city":"New Delhi","active_supply_count_w11":26160.0,"active_supply_count_w13":20993.0,"supply_delta_pct":-19.8,"market_tightness_w13":0.0},{"city":"Noida","active_supply_count_w11":8452.0,"active_supply_count_w13":10364.0,"supply_delta_pct":22.6,"market_tightness_w13":0.24},{"city":"North Delhi","active_supply_count_w11":678.0,"active_supply_count_w13":2781.0,"supply_delta_pct":310.2,"market_tightness_w13":null},{"city":"Rohini","active_supply_count_w11":2953.0,"active_supply_count_w13":1267.0,"supply_delta_pct":-57.1,"market_tightness_w13":null},{"city":"Saket","active_supply_count_w11":280.0,"active_supply_count_w13":291.0,"supply_delta_pct":3.9,"market_tightness_w13":1.9},{"city":"Shahdara","active_supply_count_w11":290.0,"active_supply_count_w13":386.0,"supply_delta_pct":33.1,"market_tightness_w13":null},{"city":"Sohna","active_supply_count_w11":841.0,"active_supply_count_w13":949.0,"supply_delta_pct":12.8,"market_tightness_w13":4.66},{"city":"Sonipat","active_supply_count_w11":295.0,"active_supply_count_w13":707.0,"supply_delta_pct":139.7,"market_tightness_w13":5.86},{"city":"South Delhi","active_supply_count_w11":6404.0,"active_supply_count_w13":5069.0,"supply_delta_pct":-20.8,"market_tightness_w13":null},{"city":"West Delhi","active_supply_count_w11":2872.0,"active_supply_count_w13":3688.0,"supply_delta_pct":28.4,"market_tightness_w13":4.05},{"city":"Yamuna Expressway Region","active_supply_count_w11":1115.0,"active_supply_count_w13":1492.0,"supply_delta_pct":33.8,"market_tightness_w13":1.62}];
+
+// ══════════════════════════════════════════════════════════════
+//  CHART HELPERS
+// ══════════════════════════════════════════════════════════════
+Chart.defaults.color = '#7b8198';
+Chart.defaults.borderColor = '#2e3248';
+Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
+Chart.defaults.plugins.legend.display = false;
+
+const BLUE   = '#4f8ef7';
+const GREEN  = '#22c55e';
+const AMBER  = '#f59e0b';
+const RED    = '#ef4444';
+const VIOLET = '#7c56f5';
+const TEAL   = '#14b8a6';
+
+function alpha(hex, a) {
+  const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function gradient(ctx, c1, c2) {
+  const g = ctx.createLinearGradient(0,0,0,300);
+  g.addColorStop(0, alpha(c1, .85));
+  g.addColorStop(1, alpha(c2, .4));
+  return g;
+}
+
+const TOOLTIP_OPTS = {
+  backgroundColor: '#1a1d27',
+  borderColor: '#2e3248',
+  borderWidth: 1,
+  titleColor: '#e4e6f0',
+  bodyColor: '#9da3b8',
+  padding: 10,
+  cornerRadius: 8,
+};
+
+// ── Chart 1: Active Supply ──────────────────────────────────
+(function() {
+  const sorted = [...CITY_DATA].sort((a,b) => b.active_supply_count - a.active_supply_count);
+  const labels = sorted.map(d => d.city);
+  const vals   = sorted.map(d => d.active_supply_count);
+  const ctx    = document.getElementById('chartSupply').getContext('2d');
+  const colors = vals.map(v => v > 10000 ? BLUE : v > 3000 ? VIOLET : TEAL);
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderRadius: 5, borderSkipped: false }] },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` ${c.parsed.x.toLocaleString()} listings` } } },
+      scales: {
+        x: { grid: { color: '#2e3248' }, ticks: { callback: v => v >= 1000 ? (v/1000).toFixed(0)+'K' : v } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+})();
+
+// ── Chart 2: Market Tightness ───────────────────────────────
+(function() {
+  const f = CITY_DATA.filter(d => d.market_tightness !== null && d.market_tightness > 0)
+                     .sort((a,b) => b.market_tightness - a.market_tightness);
+  const labels = f.map(d => d.city);
+  const vals   = f.map(d => d.market_tightness);
+  const ctx    = document.getElementById('chartTightness').getContext('2d');
+  const colors = vals.map(v => v > 30 ? GREEN : v > 5 ? TEAL : v > 1 ? AMBER : RED);
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ data: vals, backgroundColor: colors, borderRadius: 5, borderSkipped: false }] },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        tooltip: {
+          ...TOOLTIP_OPTS,
+          callbacks: {
+            label: c => ` Score: ${c.parsed.x.toFixed(2)}`,
+            afterLabel: c => {
+              const v = c.parsed.x;
+              if (v > 1) return ' → Seller\'s market';
+              if (v > 0.5) return ' → Balanced';
+              return ' → Buyer\'s market';
+            }
+          }
+        },
+        annotation: {}
+      },
+      scales: {
+        x: { grid: { color: '#2e3248' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+})();
+
+// ── Chart 3: Absorption Rate ─────────────────────────────────
+(function() {
+  const f = CITY_DATA.filter(d => d.absorption_rate_weekly > 0).sort((a,b) => b.absorption_rate_weekly - a.absorption_rate_weekly);
+  const ctx = document.getElementById('chartAbsorption').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: f.map(d => d.city),
+      datasets: [{ data: f.map(d => d.absorption_rate_weekly), backgroundColor: f.map(d => d.absorption_rate_weekly > 100 ? GREEN : TEAL), borderRadius: 5, borderSkipped: false }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` ${c.parsed.y.toFixed(1)}% absorption rate/week` } } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 40 } }, y: { grid: { color: '#2e3248' }, ticks: { callback: v => v + '%' } } }
+    }
+  });
+})();
+
+// ── Chart 4: MOI ─────────────────────────────────────────────
+(function() {
+  const f = CITY_DATA.filter(d => d.months_of_inventory !== null && d.months_of_inventory < 500)
+                     .sort((a,b) => a.months_of_inventory - b.months_of_inventory);
+  const ctx = document.getElementById('chartMOI').getContext('2d');
+  const colors = f.map(d => d.months_of_inventory < 3 ? GREEN : d.months_of_inventory < 6 ? AMBER : RED);
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: f.map(d => d.city), datasets: [{ data: f.map(d => d.months_of_inventory), backgroundColor: colors, borderRadius: 5, borderSkipped: false }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` MOI: ${c.parsed.y.toFixed(2)} months` } } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 40 } }, y: { grid: { color: '#2e3248' } } }
+    }
+  });
+})();
+
+// ── Chart 5: Stale Inventory ─────────────────────────────────
+(function() {
+  const sorted = [...CITY_DATA].sort((a,b) => b.stale_inventory_pct - a.stale_inventory_pct);
+  const ctx = document.getElementById('chartStale').getContext('2d');
+  const colors = sorted.map(d => d.stale_inventory_pct > 95 ? RED : d.stale_inventory_pct > 80 ? AMBER : GREEN);
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: sorted.map(d => d.city), datasets: [{ data: sorted.map(d => d.stale_inventory_pct), backgroundColor: colors, borderRadius: 5, borderSkipped: false }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` ${c.parsed.y.toFixed(1)}% listings unchanged` } } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 40 } }, y: { grid: { color: '#2e3248' }, ticks: { callback: v => v + '%' }, min: 50, max: 100 } }
+    }
+  });
+})();
+
+// ── Chart 6: New Supply Velocity ─────────────────────────────
+(function() {
+  const f = CITY_DATA.filter(d => d.new_supply_weekly > 0).sort((a,b) => b.new_supply_weekly - a.new_supply_weekly);
+  const ctx = document.getElementById('chartNewSupply').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: f.map(d => d.city), datasets: [{ data: f.map(d => d.new_supply_weekly), backgroundColor: VIOLET, borderRadius: 5, borderSkipped: false }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` ${c.parsed.y.toLocaleString()} new listings/week` } } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 40 } }, y: { grid: { color: '#2e3248' }, ticks: { callback: v => v >= 1000 ? (v/1000).toFixed(1)+'K' : v } } }
+    }
+  });
+})();
+
+// ── Chart 7: W11→W13 Trend ───────────────────────────────────
+(function() {
+  const sorted = [...TREND_DATA].sort((a,b) => b.supply_delta_pct - a.supply_delta_pct);
+  const ctx = document.getElementById('chartTrend').getContext('2d');
+  const colors = sorted.map(d => d.supply_delta_pct > 0 ? alpha(GREEN, .8) : alpha(RED, .8));
+  const borderColors = sorted.map(d => d.supply_delta_pct > 0 ? GREEN : RED);
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: sorted.map(d => d.city),
+      datasets: [{
+        label: 'Supply Change %',
+        data: sorted.map(d => d.supply_delta_pct),
+        backgroundColor: colors, borderColor: borderColors, borderWidth: 1, borderRadius: 5, borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          ...TOOLTIP_OPTS,
+          callbacks: {
+            label: c => ` ${c.parsed.y > 0 ? '+' : ''}${c.parsed.y}% supply change`,
+            afterLabel: c => c.parsed.y < 0
+              ? ' ↓ Inventory contracted (demand absorbed or de-listed)'
+              : ' ↑ New supply entered the market'
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 40 } },
+        y: { grid: { color: '#2e3248' }, ticks: { callback: v => v + '%' } }
+      }
+    }
+  });
+})();
+
+// ── Chart 8: Locality Supply ──────────────────────────────────
+(function() {
+  const ctx = document.getElementById('chartLocSupply').getContext('2d');
+  const colors = LOC_DATA.map(d => {
+    if (d.city === 'Gurugram') return BLUE;
+    if (d.city === 'Noida')    return GREEN;
+    if (d.city === 'Ghaziabad') return AMBER;
+    if (d.city === 'Greater Noida') return VIOLET;
+    if (d.city === 'Faridabad') return TEAL;
+    return RED;
+  });
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: LOC_DATA.map(d => d.locality + '\n(' + d.city + ')'),
+      datasets: [{ data: LOC_DATA.map(d => d.active_supply_count), backgroundColor: colors, borderRadius: 5, borderSkipped: false }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` ${c.parsed.x.toLocaleString()} active listings` } } },
+      scales: {
+        x: { grid: { color: '#2e3248' } },
+        y: { grid: { display: false }, ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+})();
+
+// ── Chart 9: Locality Tightness ───────────────────────────────
+(function() {
+  const f = LOC_DATA.filter(d => d.market_tightness !== null).sort((a,b) => b.market_tightness - a.market_tightness);
+  const ctx = document.getElementById('chartLocTightness').getContext('2d');
+  const colors = f.map(d => d.market_tightness > 5 ? GREEN : d.market_tightness > 1 ? TEAL : d.market_tightness > 0.5 ? AMBER : RED);
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: f.map(d => d.locality),
+      datasets: [{ data: f.map(d => d.market_tightness), backgroundColor: colors, borderRadius: 5, borderSkipped: false }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: true,
+      plugins: { tooltip: { ...TOOLTIP_OPTS, callbacks: { label: c => ` Tightness: ${c.parsed.x.toFixed(2)}` } } },
+      scales: {
+        x: { grid: { color: '#2e3248' } },
+        y: { grid: { display: false }, ticks: { font: { size: 10 } } }
+      }
+    }
+  });
+})();
+
+// ── Chart 10: Scatter ─────────────────────────────────────────
+(function() {
+  const f = CITY_DATA.filter(d => d.market_tightness !== null && d.absorption_rate_weekly > 0);
+  const ctx = document.getElementById('chartScatter').getContext('2d');
+  const scatterData = f.map(d => ({
+    x: d.active_supply_count,
+    y: d.absorption_rate_weekly,
+    r: Math.min(Math.sqrt(d.market_tightness) * 6 + 4, 40),
+    city: d.city,
+    tightness: d.market_tightness
+  }));
+  const bColors = f.map(d => {
+    const t = d.market_tightness;
+    return t > 30 ? alpha(GREEN, .75) : t > 5 ? alpha(TEAL, .75) : t > 1 ? alpha(AMBER, .75) : alpha(RED, .75);
+  });
+  const bBorders = f.map(d => {
+    const t = d.market_tightness;
+    return t > 30 ? GREEN : t > 5 ? TEAL : t > 1 ? AMBER : RED;
+  });
+  new Chart(ctx, {
+    type: 'bubble',
+    data: { datasets: [{ data: scatterData, backgroundColor: bColors, borderColor: bBorders, borderWidth: 1.5 }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: {
+        tooltip: {
+          ...TOOLTIP_OPTS,
+          callbacks: {
+            label: c => {
+              const d = c.raw;
+              return [`  ${d.city}`, `  Supply: ${d.x.toLocaleString()}`, `  Absorption Rate: ${d.y.toFixed(1)}%`, `  Tightness: ${d.tightness.toFixed(2)}`];
+            }
+          }
+        }
+      },
+      scales: {
+        x: { type: 'logarithmic', grid: { color: '#2e3248' }, title: { display: true, text: 'Active Supply (log scale)', color: '#7b8198' },
+             ticks: { callback: v => v >= 10000 ? (v/1000).toFixed(0)+'K' : v } },
+        y: { grid: { color: '#2e3248' }, title: { display: true, text: 'Absorption Rate %', color: '#7b8198' } }
+      }
+    }
+  });
+})();
+
+// ══════════════════════════════════════════════════════════════
+//  FEATURE TABLE
+// ══════════════════════════════════════════════════════════════
+const TABLE_DATA_RAW = [
+  ...CITY_DATA.map(d => ({ ...d, week: '2026-W13' })),
+  // W11 snapshot for cities that appeared in MagicBricks Mar 10 run
+  ...TREND_DATA.map(d => ({
+    city: d.city, week: '2026-W11',
+    active_supply_count: d.active_supply_count_w11,
+    new_supply_weekly: null, absorption_count_weekly: null,
+    absorption_rate_weekly: null, months_of_inventory: null,
+    market_tightness: d.market_tightness_w11, stale_inventory_pct: null
+  }))
+].sort((a, b) => a.city.localeCompare(b.city));
+
+let tableData = TABLE_DATA_RAW;
+let sortCol = -1, sortAsc = true;
+
+function marketSignal(row) {
+  const t = row.market_tightness;
+  if (t === null || t === undefined) return '<span class="pill pill-blue">N/A</span>';
+  if (t > 10)  return '<span class="pill pill-green">🔥 Strong Seller</span>';
+  if (t > 1)   return '<span class="pill pill-green">Seller\'s Market</span>';
+  if (t > 0.5) return '<span class="pill pill-amber">Balanced</span>';
+  return '<span class="pill pill-red">Buyer\'s Market</span>';
+}
+
+function fmt(v, dec = 1) { return v === null || v === undefined ? '<span style="color:#444">—</span>' : (+v).toFixed(dec); }
+function fmtInt(v) { return v === null || v === undefined ? '<span style="color:#444">—</span>' : (+v).toLocaleString(); }
+
+function renderTable(data) {
+  const tbody = document.getElementById('featureTableBody');
+  tbody.innerHTML = data.map(row => `
+    <tr>
+      <td><b>${row.city}</b></td>
+      <td>${row.week}</td>
+      <td>${fmtInt(row.active_supply_count)}</td>
+      <td>${fmtInt(row.new_supply_weekly)}</td>
+      <td>${row.stale_inventory_pct !== null ? fmt(row.stale_inventory_pct, 1)+'%' : '<span style="color:#444">—</span>'}</td>
+      <td>${fmtInt(row.absorption_count_weekly)}</td>
+      <td>${row.absorption_rate_weekly !== null ? fmt(row.absorption_rate_weekly, 2)+'%' : '<span style="color:#444">—</span>'}</td>
+      <td>${fmt(row.months_of_inventory, 2)}</td>
+      <td>${row.market_tightness !== null ? fmt(row.market_tightness, 2) : '<span style="color:#444">—</span>'}</td>
+      <td>${marketSignal(row)}</td>
+    </tr>`).join('');
+}
+
+function filterTable() {
+  const q    = document.getElementById('tableSearch').value.toLowerCase();
+  const week = document.getElementById('weekFilter').value;
+  tableData  = TABLE_DATA_RAW.filter(r =>
+    (!q    || r.city.toLowerCase().includes(q)) &&
+    (!week || r.week === week)
+  );
+  applySort();
+}
+
+function sortTable(col) {
+  if (sortCol === col) sortAsc = !sortAsc;
+  else { sortCol = col; sortAsc = true; }
+  applySort();
+}
+
+const colKeys = ['city', 'week', 'active_supply_count', 'new_supply_weekly',
+                 'stale_inventory_pct', 'absorption_count_weekly',
+                 'absorption_rate_weekly', 'months_of_inventory', 'market_tightness'];
+
+function applySort() {
+  if (sortCol >= 0) {
+    const key = colKeys[sortCol];
+    tableData = [...tableData].sort((a, b) => {
+      const av = a[key] ?? (sortAsc ? Infinity : -Infinity);
+      const bv = b[key] ?? (sortAsc ? Infinity : -Infinity);
+      return sortAsc ? (av > bv ? 1 : -1) : (av < bv ? 1 : -1);
+    });
+  }
+  renderTable(tableData);
+}
+
+renderTable(tableData);
+</script>
+</body>
+</html>

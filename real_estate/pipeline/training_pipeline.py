@@ -1,7 +1,13 @@
 import sys
 from real_estate.components.data_ingestion import DataIngestion
 from real_estate.components.data_transformation import DataTransformation
-from real_estate.entity import DataIngestionConfig, DataTransformationConfig
+from real_estate.constant import RENT_DATA_FILES
+from real_estate.entity import (
+    DataIngestionConfig,
+    DataTransformationConfig,
+    RentDataIngestionConfig,
+    RentDataTransformationConfig,
+)
 from real_estate.exception.exception import RealEstateException
 from real_estate.logging.logger import logging
 
@@ -42,6 +48,35 @@ class TrainingPipeline:
             # model_trainer_artifact = self.start_model_training(data_transformation_artifact)
 
             logging.info("============ Training Pipeline Finished ============")
+
+        except Exception as e:
+            raise RealEstateException(e, sys)
+
+    def run_rent_pipeline(self):
+        """Ingest + clean mb_rent.csv / ho_rent.csv and save to artifact/rent_*."""
+        try:
+            logging.info("============ Rent Pipeline Started ============")
+
+            # Stage 1 – Rent Data Ingestion
+            rent_ingestion_config = RentDataIngestionConfig()
+            rent_ingestion = DataIngestion(
+                config=rent_ingestion_config,
+                raw_data_files=RENT_DATA_FILES,
+            )
+            rent_ingestion_artifact = rent_ingestion.initiate_data_ingestion()
+            logging.info(f"Rent data ingestion complete: {rent_ingestion_artifact}")
+
+            # Stage 2 – Rent Data Transformation
+            rent_transformation_config = RentDataTransformationConfig()
+            rent_transformation = DataTransformation(
+                data_ingestion_artifact=rent_ingestion_artifact,
+                config=rent_transformation_config,
+            )
+            rent_transformation_artifact = rent_transformation.initiate_data_transformation()
+            logging.info(f"Rent data transformation complete: {rent_transformation_artifact}")
+
+            logging.info("============ Rent Pipeline Finished ============")
+            return rent_transformation_artifact
 
         except Exception as e:
             raise RealEstateException(e, sys)
