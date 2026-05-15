@@ -8,10 +8,17 @@ scikit-learn
 xgboost
 lightgbm
 joblib
+mlflow
 matplotlib
 seaborn
 streamlit
 geopy
 psycopg2
+geopandas
+fastapi
+uvicorn
+tensorboardX
+Pillow
+scipy
 
 ##-e.

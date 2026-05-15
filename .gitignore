@@ -1,7 +1,63 @@
-venv
+# ── Virtual environments ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Python cache ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environment / secrets ────────────────────────────────────────────────────
 .env
-.env/
-notebooks
+.env.*
+*.env
+
+# ── Data & large files ───────────────────────────────────────────────────────
 real_estate_data/
+inputs/
+opt/
+
+# ── ML artifacts & experiment tracking ──────────────────────────────────────
 artifact/
+mlruns/
+mlartifacts/
+
+# ── Logs ────────────────────────────────────────────────────────────────────
 logs/
+*.log
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+notebooks/
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Node / Frontend build ────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# ── IDE & OS ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.csv
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+*.onnx

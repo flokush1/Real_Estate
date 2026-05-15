@@ -34,9 +34,14 @@ from real_estate.utils.description_parser import (
     is_corner,
     is_gated,
 )
+from sklearn.neighbors import BallTree
 from real_estate.utils.locality_matcher import LocalityMatcher
-from real_estate.utils.circle_rate_matcher import CircleRateMatcher
+from real_estate.utils.circle_rate_matcher import CircleRateMatcher, _resolve_city
 
+
+# Maximum distance allowed when borrowing a neighbour's circle rate.
+# Rows whose nearest donor is farther than this will remain NaN and be dropped.
+MAX_CIRCLE_RATE_FALLBACK_KM: float = 5.0
 
 # ────────────────────────────────────────────────────────────────
 #  AREA CONVERSION FACTORS  →  everything to Sq-ft
@@ -70,6 +75,11 @@ _SQFT_CONVERSION = {
     "ground": 2400.0,
     "rood": 10890.0,
     "biswa": 1350.0, "biswa1": 1350.0, "biswa2": 1350.0,
+    "kanal": 5445.0,                    # 1 Kanal = 20 Marla = 5445 sq ft (Punjab/Haryana)
+    "aankadam": 72.0,                   # 1 Aankadam = 72 sq ft (Tamil Nadu)
+    "gaj": 9.0,                         # 1 Gaj = 1 sq yard = 9 sq ft
+    "are": 1076.39,                     # 1 Are = 100 sq metres = 1076.39 sq ft
+    "chatak": 45.0,                     # 1 Chatak = 45 sq ft (Bengal/Eastern India)
 }
 
 
@@ -711,6 +721,134 @@ class DataTransformation:
     # ============================================================
     #  STEP 10 – circle rate from (city, locality)
     # ============================================================
+
+    @staticmethod
+    def _map_prop_type_for_circle(property_type: str) -> str:
+        val = str(property_type or "").strip().lower()
+        if "commercial" in val:
+            return "Commercial"
+        if "agricultural" in val:
+            return "Agricultural"
+        if "institution" in val:
+            return "Institutional"
+        return "Residential"
+
+    @staticmethod
+    def _normalize_city_key(value) -> str:
+        if pd.isna(value):
+            return ""
+        resolved = _resolve_city(str(value))
+        if resolved is not None:
+            return resolved
+        return re.sub(r"\s+", " ", str(value).strip().lower())
+
+    def _fill_circle_rate_by_nearest_haversine(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Fill missing circle_rate values using the nearest known row by lat/lon
+        (haversine distance via sklearn BallTree).
+
+        Donor pool priority:
+          1) Same city + same mapped property type
+          2) Same city (any property type)
+          3) Same mapped property type (any city)
+          4) Any row with a known circle_rate
+
+        This is purely spatial — no default rates are hardcoded, so new cities
+        automatically benefit as soon as any rows from that city have a known rate.
+        """
+        if "circle_rate" not in df.columns:
+            return df
+
+        required_cols = ["latitude", "longitude"]
+        if any(col not in df.columns for col in required_cols):
+            return df
+
+        df = df.copy()
+        df["latitude"] = pd.to_numeric(df["latitude"], errors="coerce")
+        df["longitude"] = pd.to_numeric(df["longitude"], errors="coerce")
+        df["circle_rate"] = pd.to_numeric(df["circle_rate"], errors="coerce")
+
+        if "property_type" in df.columns:
+            df["_circle_prop_type"] = df["property_type"].apply(self._map_prop_type_for_circle)
+        else:
+            df["_circle_prop_type"] = "Residential"
+
+        if "city" in df.columns:
+            df["_circle_city_key"] = df["city"].apply(self._normalize_city_key)
+        else:
+            df["_circle_city_key"] = "all"
+
+        valid_coord_mask = df["latitude"].notna() & df["longitude"].notna()
+        known_mask = valid_coord_mask & df["circle_rate"].notna()
+        missing_mask = valid_coord_mask & df["circle_rate"].isna()
+
+        if known_mask.sum() == 0 or missing_mask.sum() == 0:
+            return df.drop(columns=["_circle_prop_type", "_circle_city_key"], errors="ignore")
+
+        earth_radius_km = 6371.0088
+        filled_rows = 0
+
+        group_cols = ["_circle_city_key", "_circle_prop_type"]
+        missing_groups = df.loc[missing_mask].groupby(group_cols, dropna=False).groups
+
+        for (city_key, prop_type), missing_index in missing_groups.items():
+            donor_mask = (
+                known_mask
+                & (df["_circle_city_key"] == city_key)
+                & (df["_circle_prop_type"] == prop_type)
+            )
+            if donor_mask.sum() == 0:
+                donor_mask = known_mask & (df["_circle_city_key"] == city_key)
+            if donor_mask.sum() == 0:
+                donor_mask = known_mask & (df["_circle_prop_type"] == prop_type)
+            if donor_mask.sum() == 0:
+                donor_mask = known_mask
+
+            donor_index = df.index[donor_mask]
+            if donor_index.empty:
+                continue
+
+            target_index = pd.Index(missing_index)
+            donor_coords = np.radians(
+                df.loc[donor_index, ["latitude", "longitude"]].to_numpy(dtype=float)
+            )
+            target_coords = np.radians(
+                df.loc[target_index, ["latitude", "longitude"]].to_numpy(dtype=float)
+            )
+
+            tree = BallTree(donor_coords, metric="haversine")
+            dist_rad, nearest_pos = tree.query(target_coords, k=1)
+
+            nearest_index = donor_index.to_numpy()[nearest_pos[:, 0]]
+            dist_km = dist_rad[:, 0] * earth_radius_km
+            within_cap = dist_km <= MAX_CIRCLE_RATE_FALLBACK_KM
+            filled_this = int(within_cap.sum())
+            if filled_this > 0:
+                t_arr = target_index.to_numpy()
+                df.loc[t_arr[within_cap], "circle_rate"] = (
+                    df.loc[nearest_index[within_cap], "circle_rate"].to_numpy()
+                )
+                df.loc[t_arr[within_cap], "_circle_rate_fill_dist_km"] = dist_km[within_cap]
+            filled_rows += filled_this
+
+        remaining_missing = int((df["circle_rate"].isna() & valid_coord_mask).sum())
+        if filled_rows > 0 and "_circle_rate_fill_dist_km" in df.columns:
+            median_fill_distance_km = float(df["_circle_rate_fill_dist_km"].median())
+            logging.info(
+                "Haversine circle-rate fallback filled rows=%s, "
+                "remaining_missing_with_coords=%s, median_distance_km=%.2f",
+                filled_rows,
+                remaining_missing,
+                median_fill_distance_km,
+            )
+        else:
+            logging.info("Haversine circle-rate fallback filled rows=0")
+
+        return df.drop(
+            columns=["_circle_prop_type", "_circle_city_key", "_circle_rate_fill_dist_km"],
+            errors="ignore",
+        )
+
     def _save_missing_circle_rate_json(self, df: pd.DataFrame) -> None:
         """
         Save unresolved (city, locality) pairs to JSON on every run.
@@ -851,7 +989,29 @@ class DataTransformation:
                     t = len(grp)
                     logging.info(f"    {city}: {m}/{t} ({m/t:.1%})")
 
+        # Save unmatched localities BEFORE haversine so the JSON reflects genuine
+        # text-match failures (not haversine-imputed ones).
         self._save_missing_circle_rate_json(df)
+
+        # Fill remaining missing values via nearest lat/lon (haversine BallTree)
+        before_haversine = int(df["circle_rate"].isna().sum())
+        if before_haversine > 0:
+            logging.info(f"  Attempting haversine fill for {before_haversine} unmatched rows "
+                         f"(max distance {MAX_CIRCLE_RATE_FALLBACK_KM} km)...")
+            df = self._fill_circle_rate_by_nearest_haversine(df)
+            after_haversine = int(df["circle_rate"].isna().sum())
+            logging.info(
+                f"  After haversine fill: {after_haversine} rows still missing "
+                f"(filled {before_haversine - after_haversine}, "
+                f"beyond {MAX_CIRCLE_RATE_FALLBACK_KM} km cap or no donor)"
+            )
+            if after_haversine > 0:
+                before_drop = len(df)
+                df = df[df["circle_rate"].notna()].reset_index(drop=True)
+                logging.info(
+                    f"  Dropped {before_drop - len(df)} rows with no circle_rate "
+                    f"within {MAX_CIRCLE_RATE_FALLBACK_KM} km. Remaining: {len(df)}"
+                )
 
         return df
 

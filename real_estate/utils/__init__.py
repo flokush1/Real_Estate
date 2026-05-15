@@ -1,10 +1,51 @@
+import json
 import os
-import sys
 import pickle
+import shutil
+import sys
+from datetime import datetime
+
 import pandas as pd
 
 from real_estate.exception.exception import RealEstateException
 from real_estate.logging.logger import logging
+
+MODEL_REGISTRY_PATH = os.path.join("artifact", "model_registry.json")
+
+
+def get_next_model_version(model_type: str = "plot") -> int:
+    """Return the next version number for a model type (auto-increments from registry)."""
+    if not os.path.exists(MODEL_REGISTRY_PATH):
+        return 1
+    with open(MODEL_REGISTRY_PATH, "r") as f:
+        registry = json.load(f)
+    latest = registry.get(model_type, {}).get("latest", 0)
+    return latest + 1
+
+
+def register_model_version(
+    model_type: str,
+    version: int,
+    model_path: str,
+    metrics: dict,
+) -> None:
+    """Record a trained model version with timestamp and metrics in the registry."""
+    os.makedirs(os.path.dirname(MODEL_REGISTRY_PATH), exist_ok=True)
+    registry = {}
+    if os.path.exists(MODEL_REGISTRY_PATH):
+        with open(MODEL_REGISTRY_PATH, "r") as f:
+            registry = json.load(f)
+    if model_type not in registry:
+        registry[model_type] = {"latest": 0, "versions": {}}
+    registry[model_type]["latest"] = version
+    registry[model_type]["versions"][str(version)] = {
+        "timestamp": datetime.utcnow().isoformat(),
+        "model_path": model_path,
+        "metrics": metrics,
+    }
+    with open(MODEL_REGISTRY_PATH, "w") as f:
+        json.dump(registry, f, indent=2)
+    logging.info(f"Model registry updated: {model_type} v{version} → {model_path}")
 
 
 def save_object(file_path: str, obj: object) -> None:

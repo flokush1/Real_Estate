@@ -17,7 +17,7 @@ DB_NAME     = os.getenv("PG_DB")
 DB_USER     = os.getenv("PG_USER")
 DB_PASSWORD = os.getenv("PG_PASSWORD")
 
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "real_estate_data")
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "real_estate_data", "real_estate_data")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 TABLES = ["ho_raw_data", "mb_raw_data","mb_rent","ho_rent"]
