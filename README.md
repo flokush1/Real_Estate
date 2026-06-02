@@ -262,4 +262,5 @@ mlflow ui --backend-store-uri sqlite:///artifact/mlflow.db --port 5000
 uvicorn api.main:app --reload --port 8000
 
 cd C:\Users\kushp\OneDrive\Desktop\geoai_ml\real_estate
-python -m uvicorn api.main:app --reload
+python -m uvicorn api.main:app --reload#   R e a l _ E s t a t e  
+ 
