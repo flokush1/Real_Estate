@@ -33,6 +33,14 @@ from real_estate.constant import (
     BF_MODEL_FILE_NAME,
     BF_FEATURE_COLUMNS_FILE_NAME,
     BF_VORONOI_FILE_NAME,
+    APT_RENT_MODEL_TRAINER_DIR,
+    APT_RENT_MODEL_FILE_NAME,
+    APT_RENT_FEATURE_COLUMNS_FILE_NAME,
+    APT_RENT_VORONOI_FILE_NAME,
+    BF_RENT_MODEL_TRAINER_DIR,
+    BF_RENT_MODEL_FILE_NAME,
+    BF_RENT_FEATURE_COLUMNS_FILE_NAME,
+    BF_RENT_VORONOI_FILE_NAME,
 )
 
 
@@ -137,6 +145,47 @@ class PlotModelTrainerConfig:
 
 
 @dataclass
+class AptRentModelTrainerConfig:
+    version: int = 0
+    random_state: int = 42
+    n_voronoi_clusters: int = 60
+    contamination: float = 0.02
+    test_size: float = 0.2
+    n_locality_tiers: int = 4
+    model_dir: str = field(default="", init=False)
+    model_file_path: str = field(default="", init=False)
+    feature_columns_file_path: str = field(default="", init=False)
+    voronoi_file_path: str = field(default="", init=False)
+
+    def __post_init__(self):
+        vdir = os.path.join(ARTIFACT_DIR, APT_RENT_MODEL_TRAINER_DIR, f"v{self.version}") if self.version > 0 else os.path.join(ARTIFACT_DIR, APT_RENT_MODEL_TRAINER_DIR)
+        self.model_dir = vdir
+        self.model_file_path = os.path.join(vdir, APT_RENT_MODEL_FILE_NAME)
+        self.feature_columns_file_path = os.path.join(vdir, APT_RENT_FEATURE_COLUMNS_FILE_NAME)
+        self.voronoi_file_path = os.path.join(vdir, APT_RENT_VORONOI_FILE_NAME)
+
+
+@dataclass
+class BfRentModelTrainerConfig:
+    version: int = 0
+    random_state: int = 42
+    n_voronoi_clusters: int = 60
+    contamination: float = 0.02
+    test_size: float = 0.2
+    model_dir: str = field(default="", init=False)
+    model_file_path: str = field(default="", init=False)
+    feature_columns_file_path: str = field(default="", init=False)
+    voronoi_file_path: str = field(default="", init=False)
+
+    def __post_init__(self):
+        vdir = os.path.join(ARTIFACT_DIR, BF_RENT_MODEL_TRAINER_DIR, f"v{self.version}") if self.version > 0 else os.path.join(ARTIFACT_DIR, BF_RENT_MODEL_TRAINER_DIR)
+        self.model_dir = vdir
+        self.model_file_path = os.path.join(vdir, BF_RENT_MODEL_FILE_NAME)
+        self.feature_columns_file_path = os.path.join(vdir, BF_RENT_FEATURE_COLUMNS_FILE_NAME)
+        self.voronoi_file_path = os.path.join(vdir, BF_RENT_VORONOI_FILE_NAME)
+
+
+@dataclass
 class ModelTrainerConfig:
     model_dir: str = os.path.join(ARTIFACT_DIR, MODEL_TRAINER_DIR)
     model_file_path: str = os.path.join(ARTIFACT_DIR, MODEL_TRAINER_DIR, MODEL_FILE_NAME)
@@ -183,6 +232,46 @@ class BfModelTrainerConfig:
         self.model_file_path = os.path.join(vdir, BF_MODEL_FILE_NAME)
         self.feature_columns_file_path = os.path.join(vdir, BF_FEATURE_COLUMNS_FILE_NAME)
         self.voronoi_file_path = os.path.join(vdir, BF_VORONOI_FILE_NAME)
+
+
+@dataclass
+class AptRentModelTrainerConfig:
+    # version=0 → canonical path; version>0 → artifact/apt_rent_model_trainer/v{N}/
+    version: int = 0
+    random_state: int = 42
+    n_voronoi_clusters: int = 60
+    test_size: float = 0.2
+    model_dir: str = field(default="", init=False)
+    model_file_path: str = field(default="", init=False)
+    feature_columns_file_path: str = field(default="", init=False)
+    voronoi_file_path: str = field(default="", init=False)
+
+    def __post_init__(self):
+        vdir = os.path.join(ARTIFACT_DIR, APT_RENT_MODEL_TRAINER_DIR, f"v{self.version}") if self.version > 0 else os.path.join(ARTIFACT_DIR, APT_RENT_MODEL_TRAINER_DIR)
+        self.model_dir = vdir
+        self.model_file_path = os.path.join(vdir, APT_RENT_MODEL_FILE_NAME)
+        self.feature_columns_file_path = os.path.join(vdir, APT_RENT_FEATURE_COLUMNS_FILE_NAME)
+        self.voronoi_file_path = os.path.join(vdir, APT_RENT_VORONOI_FILE_NAME)
+
+
+@dataclass
+class BfRentModelTrainerConfig:
+    # version=0 → canonical path; version>0 → artifact/bf_rent_model_trainer/v{N}/
+    version: int = 0
+    random_state: int = 42
+    n_voronoi_clusters: int = 60
+    test_size: float = 0.2
+    model_dir: str = field(default="", init=False)
+    model_file_path: str = field(default="", init=False)
+    feature_columns_file_path: str = field(default="", init=False)
+    voronoi_file_path: str = field(default="", init=False)
+
+    def __post_init__(self):
+        vdir = os.path.join(ARTIFACT_DIR, BF_RENT_MODEL_TRAINER_DIR, f"v{self.version}") if self.version > 0 else os.path.join(ARTIFACT_DIR, BF_RENT_MODEL_TRAINER_DIR)
+        self.model_dir = vdir
+        self.model_file_path = os.path.join(vdir, BF_RENT_MODEL_FILE_NAME)
+        self.feature_columns_file_path = os.path.join(vdir, BF_RENT_FEATURE_COLUMNS_FILE_NAME)
+        self.voronoi_file_path = os.path.join(vdir, BF_RENT_VORONOI_FILE_NAME)
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -247,6 +336,28 @@ class AptModelTrainerArtifact:
 
 @dataclass
 class BfModelTrainerArtifact:
+    model_file_path: str
+    feature_columns_file_path: str
+    voronoi_file_path: str
+    best_model_name: str
+    mae: float
+    mape: float
+    r2: float
+
+
+@dataclass
+class AptRentModelTrainerArtifact:
+    model_file_path: str
+    feature_columns_file_path: str
+    voronoi_file_path: str
+    best_model_name: str
+    mae: float
+    mape: float
+    r2: float
+
+
+@dataclass
+class BfRentModelTrainerArtifact:
     model_file_path: str
     feature_columns_file_path: str
     voronoi_file_path: str

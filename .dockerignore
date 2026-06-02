@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ML experiment tracking (large, not needed at runtime)
+mlruns/
+
+# Logs
+logs/
+
+# Notebooks
+notebooks/
+
+# Hyperparameter optimisation artefacts
+opt/
+
+# Local dev / OS
+.env
+.git/
+.gitignore
+*.DS_Store
+
+# Node modules (frontend has its own stage)
+frontend/node_modules/
+frontend/dist/

@@ -1,0 +1,8302 @@
+[
+  {
+    "locality": "Sector-10, 10A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 18975.0
+  },
+  {
+    "locality": "Sector-10, 10A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8000.0
+  },
+  {
+    "locality": "Inst Land Plot Other Area",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Huda Sec and L Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3777.78
+  },
+  {
+    "locality": "Aanaj mandi to Limit Mc",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12503.33
+  },
+  {
+    "locality": "Aanaj Mandi to Limit MC GGN",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12503.33
+  },
+  {
+    "locality": "Any converted industrial use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Bhutesar Mandir to Pataudi chowk",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12503.33
+  },
+  {
+    "locality": "Gandhi Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5866.67
+  },
+  {
+    "locality": "Gandhi Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4600.0
+  },
+  {
+    "locality": "Hari Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6325.0
+  },
+  {
+    "locality": "Hari Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4600.0
+  },
+  {
+    "locality": "Kadipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Kadipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3066.67
+  },
+  {
+    "locality": "Kadipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "Kadipur Industrial Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Krishan Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5866.67
+  },
+  {
+    "locality": "Krishan Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4400.0
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Prem Nagar Basai Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4840.0
+  },
+  {
+    "locality": "Prem Nagar Basai Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7125.56
+  },
+  {
+    "locality": "Ravi Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Ravi Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3630.0
+  },
+  {
+    "locality": "Saraswati Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Saraswati Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3361.11
+  },
+  {
+    "locality": "Shakti Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5133.33
+  },
+  {
+    "locality": "Shakti Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3544.44
+  },
+  {
+    "locality": "Shakti park kadipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4800.0
+  },
+  {
+    "locality": "Shakti park kadipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3373.33
+  },
+  {
+    "locality": "Shiv Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6325.0
+  },
+  {
+    "locality": "Shiv Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5060.0
+  },
+  {
+    "locality": "Shivaji Park Kadipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4400.0
+  },
+  {
+    "locality": "Shivaji Park Kadipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3960.0
+  },
+  {
+    "locality": "Vikash Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3630.0
+  },
+  {
+    "locality": "Vikash Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Hari Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6233.33
+  },
+  {
+    "locality": "Hari Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5011.11
+  },
+  {
+    "locality": "Khandsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6172.22
+  },
+  {
+    "locality": "Khandsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2811.11
+  },
+  {
+    "locality": "Khandsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "Land Converted into Indst. Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1840.0
+  },
+  {
+    "locality": "Land Converted into Indst. Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1840.0
+  },
+  {
+    "locality": "Land Converted into Indst. Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "NH48 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Saraswati Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Saraswati Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3361.11
+  },
+  {
+    "locality": "SEZ Industrial",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 333.33
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Kherki Majra Dhankot",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 396.69
+  },
+  {
+    "locality": "Kherki Majra Dhankot",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1760.0
+  },
+  {
+    "locality": "Kherki Majra Dhankot",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Nazafgarh Drain Area",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 55.56
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Gadauli Kalan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1147.84
+  },
+  {
+    "locality": "Gadauli Kalan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2933.33
+  },
+  {
+    "locality": "Gadauli Kalan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3697.22
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1251.15
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Gadauli Khurd",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3697.22
+  },
+  {
+    "locality": "Gadauli Khurd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Gadauli Khurd",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1090.91
+  },
+  {
+    "locality": "Manjor Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1100.0
+  },
+  {
+    "locality": "Saraswati Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Saraswati Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3361.11
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1319.44
+  },
+  {
+    "locality": "Tikampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1203.86
+  },
+  {
+    "locality": "Tikampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Tikampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1747.78
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 520.83
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Daultabad",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Daultabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1533.33
+  },
+  {
+    "locality": "Daultabad",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 516.53
+  },
+  {
+    "locality": "Industrial Area Daultabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Nazafgarh Drain Area",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 55.56
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 361.11
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 492.42
+  },
+  {
+    "locality": "Dhankot",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Dhankot",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 413.22
+  },
+  {
+    "locality": "Dhankot",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2285.56
+  },
+  {
+    "locality": "NH48 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "NH48 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 127.05
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 127.05
+  },
+  {
+    "locality": "Basunda",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 115.93
+  },
+  {
+    "locality": "Basunda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 466.67
+  },
+  {
+    "locality": "Basunda",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 315.15
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 315.15
+  },
+  {
+    "locality": "Babra Bakipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 277.78
+  },
+  {
+    "locality": "Babra Bakipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 966.67
+  },
+  {
+    "locality": "Babra Bakipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1234.44
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 121.97
+  },
+  {
+    "locality": "Birhera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 103.31
+  },
+  {
+    "locality": "Birhera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 466.67
+  },
+  {
+    "locality": "Birhera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 110.19
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 110.19
+  },
+  {
+    "locality": "Mehchiana",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 105.6
+  },
+  {
+    "locality": "Mehchiana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 550.0
+  },
+  {
+    "locality": "Mehchiana",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 696.67
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 253.67
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2029.38
+  },
+  {
+    "locality": "Mubarakpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 221.99
+  },
+  {
+    "locality": "Mubarakpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 253.67
+  },
+  {
+    "locality": "Mubarakpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "Mubarakpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 855.56
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 103.31
+  },
+  {
+    "locality": "Mushedpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 95.73
+  },
+  {
+    "locality": "Mushedpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 485.56
+  },
+  {
+    "locality": "Mushedpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 103.82
+  },
+  {
+    "locality": "Rajupur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 96.42
+  },
+  {
+    "locality": "Rajupur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 391.11
+  },
+  {
+    "locality": "Rajupur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 100.19
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 100.19
+  },
+  {
+    "locality": "Shekhupur Majri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 95.83
+  },
+  {
+    "locality": "Shekhupur Majri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 466.67
+  },
+  {
+    "locality": "Shekhupur Majri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 159.72
+  },
+  {
+    "locality": "Sarbashirpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 150.28
+  },
+  {
+    "locality": "Sarbashirpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 464.44
+  },
+  {
+    "locality": "Sarbashirpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 137.74
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 137.74
+  },
+  {
+    "locality": "Siwadi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 126.26
+  },
+  {
+    "locality": "Siwadi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 466.67
+  },
+  {
+    "locality": "Siwadi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 623.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 266.12
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 266.12
+  },
+  {
+    "locality": "Sultanpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 229.57
+  },
+  {
+    "locality": "Sultanpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 254.55
+  },
+  {
+    "locality": "Sultanpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 977.78
+  },
+  {
+    "locality": "Sultanpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1210.0
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 236.36
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 236.36
+  },
+  {
+    "locality": "Saidpur Mohammadpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 229.57
+  },
+  {
+    "locality": "Saidpur Mohammadpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 806.67
+  },
+  {
+    "locality": "Saidpur Mohammadpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 977.78
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 139.39
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 139.39
+  },
+  {
+    "locality": "Harinagar Dooma",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 135.45
+  },
+  {
+    "locality": "Harinagar Dooma",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Harinagar Dooma",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 700.0
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 520.83
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Dhanwapur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1906.67
+  },
+  {
+    "locality": "Dhanwapur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 537.19
+  },
+  {
+    "locality": "Dhanwapur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Laxman Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3967.44
+  },
+  {
+    "locality": "Laxman Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Nazafgarh Drain Area",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 55.56
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Ram Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "Ram Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Surya Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4152.78
+  },
+  {
+    "locality": "Surya Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5622.22
+  },
+  {
+    "locality": "surat nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3795.0
+  },
+  {
+    "locality": "surat nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 388.89
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 486.11
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Dharampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2420.0
+  },
+  {
+    "locality": "Dharampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 482.09
+  },
+  {
+    "locality": "Dharampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1405.56
+  },
+  {
+    "locality": "Nazafgarh Drain Area",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 55.56
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Converted Land industrial use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "Converted Land industrial use",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Converted Land industrial use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "Land Converted into Ind. use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "Narsinghpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3795.0
+  },
+  {
+    "locality": "Narsinghpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1147.84
+  },
+  {
+    "locality": "Narsinghpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Narsinghpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Narsinghpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3630.0
+  },
+  {
+    "locality": "NH48 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 444.44
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Laxman Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4400.0
+  },
+  {
+    "locality": "Laxman Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6844.44
+  },
+  {
+    "locality": "New Palam Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3911.11
+  },
+  {
+    "locality": "New Palam Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6477.78
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1319.44
+  },
+  {
+    "locality": "Pawala khusrupur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2400.0
+  },
+  {
+    "locality": "Pawala khusrupur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 550.96
+  },
+  {
+    "locality": "Pawala khusrupur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5377.78
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1055.56
+  },
+  {
+    "locality": "Rajendra Park",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3795.0
+  },
+  {
+    "locality": "Rajendra Park",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Vishnu Garden",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5466.67
+  },
+  {
+    "locality": "Vishnu Garden",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6966.67
+  },
+  {
+    "locality": "Basai",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2248.89
+  },
+  {
+    "locality": "Basai",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1136.36
+  },
+  {
+    "locality": "Basai",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4216.67
+  },
+  {
+    "locality": "Basai Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3373.33
+  },
+  {
+    "locality": "Basai Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Basai Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Basai Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Bhawani Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Bhawani Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Devilal Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4357.22
+  },
+  {
+    "locality": "Devilal Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Krishna Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4357.22
+  },
+  {
+    "locality": "Krishna Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "Temple,masjid,Church etc",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Any Industrial Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2066.67
+  },
+  {
+    "locality": "Any Industrial Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1894.44
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1955.56
+  },
+  {
+    "locality": "Begampur Khatola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6355.56
+  },
+  {
+    "locality": "Begampur Khatola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1492.19
+  },
+  {
+    "locality": "Begampur Khatola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2600.0
+  },
+  {
+    "locality": "Begampur Khatola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1894.44
+  },
+  {
+    "locality": "Begampur Khatola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1894.44
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Land Converted into Inds. Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1763.33
+  },
+  {
+    "locality": "Mohammadpur Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Mohammadpur Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1190.08
+  },
+  {
+    "locality": "Mohammadpur Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 361.11
+  },
+  {
+    "locality": "Agri open space NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 451.39
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Mohammadpur Hedi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 361.11
+  },
+  {
+    "locality": "Mohammadpur Hedi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 447.66
+  },
+  {
+    "locality": "Mohammadpur Hedi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2151.11
+  },
+  {
+    "locality": "Mohammadpur Hedi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1444.44
+  },
+  {
+    "locality": "NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Any Religious Place",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Insti school plot L Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3777.78
+  },
+  {
+    "locality": "Insti school plot L Colony",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3777.78
+  },
+  {
+    "locality": "Insti school site without roof",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "License colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "License colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6400.0
+  },
+  {
+    "locality": "License colony",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3777.78
+  },
+  {
+    "locality": "New Huda Sector",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22500.0
+  },
+  {
+    "locality": "New Huda Sector",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6400.0
+  },
+  {
+    "locality": "New Huda Sector",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3777.78
+  },
+  {
+    "locality": "Pace City-II",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5500.0
+  },
+  {
+    "locality": "Pace City-II",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5060.0
+  },
+  {
+    "locality": "Sec-34",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5777.78
+  },
+  {
+    "locality": "Sec-34",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5060.0
+  },
+  {
+    "locality": "Sec-37",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5500.0
+  },
+  {
+    "locality": "Sec-37",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7333.33
+  },
+  {
+    "locality": "Sec-37",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7347.22
+  },
+  {
+    "locality": "Sector 10,10A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 18975.0
+  },
+  {
+    "locality": "Sector 10,10A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8000.0
+  },
+  {
+    "locality": "Sector 33,34,35,36,37,37A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22500.0
+  },
+  {
+    "locality": "Sector 33,34,35,36,37,37A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7333.33
+  },
+  {
+    "locality": "Sector 71,72A,73,74,75,75A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16666.67
+  },
+  {
+    "locality": "Sector 71,72A,73,74,75,75A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6133.33
+  },
+  {
+    "locality": "Sector 9,9A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 18975.0
+  },
+  {
+    "locality": "Sector 9,9A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7347.22
+  },
+  {
+    "locality": "Sector 9,9A",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4111.11
+  },
+  {
+    "locality": "Sector 99 to 110",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "Sector 99 to 110",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6400.0
+  },
+  {
+    "locality": "Udyog Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5060.0
+  },
+  {
+    "locality": "Udyog Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5555.56
+  },
+  {
+    "locality": "Sector-10,10A of HB",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8000.0
+  },
+  {
+    "locality": "Sector-10,10A of HB",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 18150.0
+  },
+  {
+    "locality": "Sector-9,9A of HB",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7347.22
+  },
+  {
+    "locality": "Sector-9,9A of HB",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 18150.0
+  },
+  {
+    "locality": "Abheypur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 214.38
+  },
+  {
+    "locality": "Abheypur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 122.19
+  },
+  {
+    "locality": "Abheypur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 470.56
+  },
+  {
+    "locality": "Abheypur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 712.56
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 395.83
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 395.83
+  },
+  {
+    "locality": "Alipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 345.45
+  },
+  {
+    "locality": "Alipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 188.68
+  },
+  {
+    "locality": "Alipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 207.84
+  },
+  {
+    "locality": "Alipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 752.89
+  },
+  {
+    "locality": "Alipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1349.33
+  },
+  {
+    "locality": "Alipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1236.89
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 94.61
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 94.61
+  },
+  {
+    "locality": "Badshahpur Thethar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 89.91
+  },
+  {
+    "locality": "Badshahpur Thethar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 46.58
+  },
+  {
+    "locality": "Badshahpur Thethar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 410.67
+  },
+  {
+    "locality": "Badshahpur Thethar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Bai Khera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 78.83
+  },
+  {
+    "locality": "Bai Khera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 376.44
+  },
+  {
+    "locality": "Bai Khera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Baluda",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 329.79
+  },
+  {
+    "locality": "Baluda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 726.0
+  },
+  {
+    "locality": "Baluda",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 981.44
+  },
+  {
+    "locality": "Behlapa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 170.22
+  },
+  {
+    "locality": "Behlapa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 88.21
+  },
+  {
+    "locality": "Behlapa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Behlapa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 914.22
+  },
+  {
+    "locality": "Berka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 436.36
+  },
+  {
+    "locality": "Berka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 793.22
+  },
+  {
+    "locality": "Berka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 793.22
+  },
+  {
+    "locality": "Berka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1021.78
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 696.97
+  },
+  {
+    "locality": "Bhogpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 93.82
+  },
+  {
+    "locality": "Bhogpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 86.0
+  },
+  {
+    "locality": "Bhogpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Bhogpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 452.68
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 452.68
+  },
+  {
+    "locality": "4 Acre from the Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 433.0
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 346.41
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 221.69
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 204.69
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 221.69
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 981.44
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2756.11
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 412.23
+  },
+  {
+    "locality": "Bhondsi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1070.67
+  },
+  {
+    "locality": "Bidhwaka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 89.91
+  },
+  {
+    "locality": "Bidhwaka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Bidhwaka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Bihlaka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 86.0
+  },
+  {
+    "locality": "Bihlaka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Bihlaka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Chuherpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 100.0
+  },
+  {
+    "locality": "Chuherpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 470.56
+  },
+  {
+    "locality": "Chuherpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 605.0
+  },
+  {
+    "locality": "Damdama",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 205.45
+  },
+  {
+    "locality": "Damdama",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 111.06
+  },
+  {
+    "locality": "Damdama",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 658.78
+  },
+  {
+    "locality": "Damdama",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 712.56
+  },
+  {
+    "locality": "Daulla",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 158.25
+  },
+  {
+    "locality": "Daulla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 454.67
+  },
+  {
+    "locality": "Daulla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1083.33
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1083.33
+  },
+  {
+    "locality": "AGRI OPEN PUB UTILITY",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 49.65
+  },
+  {
+    "locality": "Dhunela",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 47.27
+  },
+  {
+    "locality": "Dhunela",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 806.67
+  },
+  {
+    "locality": "Dhunela",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1035.22
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 794.44
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 794.44
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 806.67
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1035.22
+  },
+  {
+    "locality": "Gahri Bazidpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 309.52
+  },
+  {
+    "locality": "Gahri Bazidpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 160.38
+  },
+  {
+    "locality": "Gahri Bazidpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 712.56
+  },
+  {
+    "locality": "Gahri Bazidpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 847.0
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 362.85
+  },
+  {
+    "locality": "2 Acre From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 362.85
+  },
+  {
+    "locality": "Ghamroj",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 317.27
+  },
+  {
+    "locality": "Ghamroj",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 188.68
+  },
+  {
+    "locality": "Ghamroj",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 180.12
+  },
+  {
+    "locality": "Ghamroj",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 914.22
+  },
+  {
+    "locality": "Ghamroj",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1599.89
+  },
+  {
+    "locality": "Ghanghola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 93.82
+  },
+  {
+    "locality": "Ghanghola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Ghanghola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 164.55
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 164.55
+  },
+  {
+    "locality": "Hajipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 149.58
+  },
+  {
+    "locality": "Hajipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 430.22
+  },
+  {
+    "locality": "Hajipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 143.6
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 143.6
+  },
+  {
+    "locality": "Harchandpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 130.55
+  },
+  {
+    "locality": "Harchandpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 449.78
+  },
+  {
+    "locality": "Harchandpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Hariya Hera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 290.91
+  },
+  {
+    "locality": "Hariya Hera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 630.67
+  },
+  {
+    "locality": "Hariya Hera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 712.56
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 458.33
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 578.11
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 712.56
+  },
+  {
+    "locality": "Issaki",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 110.66
+  },
+  {
+    "locality": "Issaki",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Issaki",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "AGRI OPEN PUB UTILITY",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Jakopur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 366.67
+  },
+  {
+    "locality": "Jakopur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1048.67
+  },
+  {
+    "locality": "Jakopur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1048.67
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "Jalalpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 124.24
+  },
+  {
+    "locality": "Jalalpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 81.82
+  },
+  {
+    "locality": "Jalalpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 74.03
+  },
+  {
+    "locality": "Jalalpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 75.0
+  },
+  {
+    "locality": "Jalalpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 470.56
+  },
+  {
+    "locality": "Jalalpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 605.0
+  },
+  {
+    "locality": "Johlaka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 98.91
+  },
+  {
+    "locality": "Johlaka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Johlaka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Khaika",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 418.18
+  },
+  {
+    "locality": "Khaika",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 421.67
+  },
+  {
+    "locality": "Khaika",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1277.22
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 600.0
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 672.22
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1277.22
+  },
+  {
+    "locality": "Kharoda",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 156.4
+  },
+  {
+    "locality": "Kharoda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 576.33
+  },
+  {
+    "locality": "Kharoda",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 672.22
+  },
+  {
+    "locality": "Khatrika",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 94.61
+  },
+  {
+    "locality": "Khatrika",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Khatrika",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Kherla",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 182.49
+  },
+  {
+    "locality": "Kherla",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 103.15
+  },
+  {
+    "locality": "Kherla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Kherla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 766.33
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1.06
+  },
+  {
+    "locality": "Kherli Lal",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 110.09
+  },
+  {
+    "locality": "Kherli Lal",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 570.47
+  },
+  {
+    "locality": "Kherli Lal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 430.22
+  },
+  {
+    "locality": "Kherli Lal",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Khobri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 116.67
+  },
+  {
+    "locality": "Khobri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 64.15
+  },
+  {
+    "locality": "Khobri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 77.78
+  },
+  {
+    "locality": "Khobri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 470.56
+  },
+  {
+    "locality": "Khobri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 605.0
+  },
+  {
+    "locality": "Khuntpuri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 88.61
+  },
+  {
+    "locality": "Khuntpuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Khuntpuri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Kranki",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 200.0
+  },
+  {
+    "locality": "Kranki",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 712.56
+  },
+  {
+    "locality": "Kranki",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 820.11
+  },
+  {
+    "locality": "Kuliyaka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 98.91
+  },
+  {
+    "locality": "Kuliyaka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Kuliyaka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 640.0
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 640.0
+  },
+  {
+    "locality": "AGRI OPEN PUB UTILITY",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 302.5
+  },
+  {
+    "locality": "Lakhuwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 327.27
+  },
+  {
+    "locality": "Lakhuwas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 914.22
+  },
+  {
+    "locality": "Lakhuwas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1156.22
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 533.33
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 914.22
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1156.22
+  },
+  {
+    "locality": "Loh Singhani",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 103.21
+  },
+  {
+    "locality": "Loh Singhani",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 86.72
+  },
+  {
+    "locality": "Loh Singhani",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Loh Singhani",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Lohtaki",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 239.33
+  },
+  {
+    "locality": "Lohtaki",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Lohtaki",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 793.22
+  },
+  {
+    "locality": "Mahendwara",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 260.01
+  },
+  {
+    "locality": "Mahendwara",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 605.0
+  },
+  {
+    "locality": "Mahendwara",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "Mohd.Pur Gurjar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 319.44
+  },
+  {
+    "locality": "Mohd.Pur Gurjar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Mohd.Pur Gurjar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 658.78
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 458.33
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 658.78
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 122.35
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 122.35
+  },
+  {
+    "locality": "Mundawar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 111.23
+  },
+  {
+    "locality": "Mundawar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 57.64
+  },
+  {
+    "locality": "Mundawar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 449.78
+  },
+  {
+    "locality": "Mundawar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 130.27
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 130.27
+  },
+  {
+    "locality": "Nimoth",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 113.69
+  },
+  {
+    "locality": "Nimoth",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 56.46
+  },
+  {
+    "locality": "Nimoth",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Nimoth",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "2 Acre Depth from roads",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 146.11
+  },
+  {
+    "locality": "2 Acre Depth from roads",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 146.11
+  },
+  {
+    "locality": "Nunera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 151.5
+  },
+  {
+    "locality": "Nunera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Nunera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Pullawas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 255.56
+  },
+  {
+    "locality": "Pullawas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 618.44
+  },
+  {
+    "locality": "Pullawas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 820.11
+  },
+  {
+    "locality": "Rahaka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 104.35
+  },
+  {
+    "locality": "Rahaka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Rahaka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "AGRI OPEN PUB UTILITY",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 458.33
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1035.22
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "Raipur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 383.33
+  },
+  {
+    "locality": "Raipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1035.22
+  },
+  {
+    "locality": "Raipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 381.94
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 194.44
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 351.39
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 605.0
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "Raisina",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 213.89
+  },
+  {
+    "locality": "Raisina",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 194.44
+  },
+  {
+    "locality": "Raisina",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 168.06
+  },
+  {
+    "locality": "Raisina",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 168.06
+  },
+  {
+    "locality": "Raisina",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 605.0
+  },
+  {
+    "locality": "Raisina",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "Rani Ka Singhola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 104.35
+  },
+  {
+    "locality": "Rani Ka Singhola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Rani Ka Singhola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Ratika Novabad",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 90.68
+  },
+  {
+    "locality": "Ratika Novabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Ratika Novabad",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Ritoj",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 178.27
+  },
+  {
+    "locality": "Ritoj",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 105.34
+  },
+  {
+    "locality": "Ritoj",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Ritoj",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 793.22
+  },
+  {
+    "locality": "Roz Ka Gurjar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 52.57
+  },
+  {
+    "locality": "Roz Ka Gurjar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 47.79
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 253.92
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 253.92
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "2 Acre Depth From Road new",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "Sacholi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 221.22
+  },
+  {
+    "locality": "Sacholi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 873.89
+  },
+  {
+    "locality": "Sacholi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1100.0
+  },
+  {
+    "locality": "Sahjawas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 194.85
+  },
+  {
+    "locality": "Sahjawas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 91.46
+  },
+  {
+    "locality": "Sahjawas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 576.33
+  },
+  {
+    "locality": "Sahjawas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 793.22
+  },
+  {
+    "locality": "Sanp Ki Nagli",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 280.76
+  },
+  {
+    "locality": "Sanp Ki Nagli",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 158.69
+  },
+  {
+    "locality": "Sanp Ki Nagli",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 147.71
+  },
+  {
+    "locality": "Sanp Ki Nagli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Sanp Ki Nagli",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 779.78
+  },
+  {
+    "locality": "Saramthla",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 90.66
+  },
+  {
+    "locality": "Saramthla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 403.33
+  },
+  {
+    "locality": "Saramthla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 524.33
+  },
+  {
+    "locality": "Satlaka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 100.0
+  },
+  {
+    "locality": "Satlaka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Satlaka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 251.24
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 251.24
+  },
+  {
+    "locality": "Silani",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 200.7
+  },
+  {
+    "locality": "Silani",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 209.42
+  },
+  {
+    "locality": "Silani",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 793.22
+  },
+  {
+    "locality": "Silani",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 997.33
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 488.89
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 699.11
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1317.56
+  },
+  {
+    "locality": "Sirsika",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 436.36
+  },
+  {
+    "locality": "Sirsika",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 699.11
+  },
+  {
+    "locality": "Sirsika",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1317.56
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 798.61
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 798.61
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "AGRI OPEN PUB UTILITY",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 458.33
+  },
+  {
+    "locality": "All Devlop Sector in Sohna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2698.67
+  },
+  {
+    "locality": "All Devlop Sector in Sohna",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3898.89
+  },
+  {
+    "locality": "All New Sector in Sohna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4830.0
+  },
+  {
+    "locality": "All New Sector in Sohna",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4640.0
+  },
+  {
+    "locality": "All New Sector in Sohna",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 2998.11
+  },
+  {
+    "locality": "All New Sector in Sohna",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 2998.11
+  },
+  {
+    "locality": "All New Sector in Sohna",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 2998.11
+  },
+  {
+    "locality": "Chungi 1 To Police Choki",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4235.0
+  },
+  {
+    "locality": "Fouhara C to Shiv Kund",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "Fouhara C to Shiv Kund",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2527.56
+  },
+  {
+    "locality": "HUDA sector Floor",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "New Anaj Mandi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1183.11
+  },
+  {
+    "locality": "New Anaj Mandi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2757.33
+  },
+  {
+    "locality": "Old Alwar R A Chowk M Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1317.56
+  },
+  {
+    "locality": "Old Alwar R A Chowk M Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3146.0
+  },
+  {
+    "locality": "OnPalwal Road To Tambaku Gdm",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1196.56
+  },
+  {
+    "locality": "OnPalwal Road To Tambaku Gdm",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2823.33
+  },
+  {
+    "locality": "Petrol Pump R To N College",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1183.11
+  },
+  {
+    "locality": "Petrol Pump R To N College",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2527.56
+  },
+  {
+    "locality": "Precore City Sec7 Sohna Raheja",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2473.78
+  },
+  {
+    "locality": "PRECORE CITY SECTOR 7 RAHEJA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2698.67
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "R ZONE COM INDST INST",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2487.22
+  },
+  {
+    "locality": "School or Hospital",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2998.11
+  },
+  {
+    "locality": "Sohna",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 436.36
+  },
+  {
+    "locality": "Sohna",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 366.67
+  },
+  {
+    "locality": "Sohna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1226.67
+  },
+  {
+    "locality": "Sohna",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2836.67
+  },
+  {
+    "locality": "Ward No.6,10",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1124.44
+  },
+  {
+    "locality": "Ward No1,2,11,15",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1124.44
+  },
+  {
+    "locality": "Ward No1,2,11,15",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2762.56
+  },
+  {
+    "locality": "Ward No3,4,5,7,8,9,12,1314.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "Ward No3,4,5,7,8,9,12,1314.",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3008.0
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 126.38
+  },
+  {
+    "locality": "2 Acre Depth From Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 126.38
+  },
+  {
+    "locality": "Tether",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 105.3
+  },
+  {
+    "locality": "Tether",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 57.05
+  },
+  {
+    "locality": "Tether",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 430.22
+  },
+  {
+    "locality": "Tether",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Tolni",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 121.21
+  },
+  {
+    "locality": "Tolni",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 62.8
+  },
+  {
+    "locality": "Tolni",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 416.78
+  },
+  {
+    "locality": "Tolni",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 537.78
+  },
+  {
+    "locality": "Aklimpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 459.14
+  },
+  {
+    "locality": "Aklimpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1944.44
+  },
+  {
+    "locality": "Aklimpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 916.67
+  },
+  {
+    "locality": "Inside R zone etc",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 661.16
+  },
+  {
+    "locality": "Inside R zone etc",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Inside R zone etc",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Islampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Islampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3520.0
+  },
+  {
+    "locality": "Islampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1083.33
+  },
+  {
+    "locality": "Gairatpur Bass",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 570.25
+  },
+  {
+    "locality": "Gairatpur Bass",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1210.0
+  },
+  {
+    "locality": "Gairatpur Bass",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Ghasola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Ghasola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Ghasola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1181.82
+  },
+  {
+    "locality": "2 ACRE DEPTH RATE outside R zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 878.79
+  },
+  {
+    "locality": "25 percent GGN SOHNA ROAD inside R zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1401.52
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1121.21
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3027.78
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Tikri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 651.52
+  },
+  {
+    "locality": "Tikri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 651.52
+  },
+  {
+    "locality": "Tikri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3900.0
+  },
+  {
+    "locality": "Tikri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Tikli",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2285.56
+  },
+  {
+    "locality": "Tikli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Tikli",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 757.58
+  },
+  {
+    "locality": "Tikli",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Darbaripur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 688.71
+  },
+  {
+    "locality": "Darbaripur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Darbaripur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Dhmaspur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1882.22
+  },
+  {
+    "locality": "Dhmaspur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Dhmaspur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 631.31
+  },
+  {
+    "locality": "Dhmaspur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1747.78
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1833.33
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1147.84
+  },
+  {
+    "locality": "Nangli Umarpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1193.76
+  },
+  {
+    "locality": "Nangli Umarpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Nangli Umarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2285.56
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1405.56
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 918.27
+  },
+  {
+    "locality": "Noorpur Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1333.33
+  },
+  {
+    "locality": "Noorpur Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1882.22
+  },
+  {
+    "locality": "Noorpur Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 550.96
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 826.45
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3159.44
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1827.22
+  },
+  {
+    "locality": "Palda",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 493.57
+  },
+  {
+    "locality": "Palda",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3159.44
+  },
+  {
+    "locality": "Palda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "25 percent GGN SOHNA ROAD inside R Zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1401.52
+  },
+  {
+    "locality": "Fazilpur Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "Fazilpur Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4888.89
+  },
+  {
+    "locality": "Fazilpur Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 972.22
+  },
+  {
+    "locality": "Fazilpur Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1056.01
+  },
+  {
+    "locality": "Fazilpur Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2666.67
+  },
+  {
+    "locality": "Fazilpur Jharsa 2 Acre Depth outside R zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 757.58
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4888.89
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1060.61
+  },
+  {
+    "locality": "Behrampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 909.09
+  },
+  {
+    "locality": "Behrampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 909.09
+  },
+  {
+    "locality": "Behrampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4571.11
+  },
+  {
+    "locality": "Behrampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2151.11
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 959.6
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4571.11
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2200.0
+  },
+  {
+    "locality": "25 percent GGN SOHNA ROAD inside R Zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1401.52
+  },
+  {
+    "locality": "Badshahpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9000.0
+  },
+  {
+    "locality": "Badshahpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1136.36
+  },
+  {
+    "locality": "Badshahpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 918.27
+  },
+  {
+    "locality": "Badshahpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 918.27
+  },
+  {
+    "locality": "Badshahpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Badshahpur 2 Acre Depth outside R Zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 820.71
+  },
+  {
+    "locality": "Badshahpur 2 Acre Depth outside R Zone",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 820.71
+  },
+  {
+    "locality": "Badshahpur 2 Acre Depth outside R Zone",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2285.56
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8800.0
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 656.57
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 656.57
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 3055.56
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 3055.56
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1377.41
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1377.41
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Ramgarh Ki Dhani",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8066.67
+  },
+  {
+    "locality": "Ramgarh Ki Dhani",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3933.33
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3600.0
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1262.63
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1262.63
+  },
+  {
+    "locality": "INSIDE RZONE Co IN IND AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6722.22
+  },
+  {
+    "locality": "Maidawas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3822.22
+  },
+  {
+    "locality": "Maidawas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1044.54
+  },
+  {
+    "locality": "Maidawas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6111.11
+  },
+  {
+    "locality": "Converted land into indust.",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Essencia sec 67 Ansal",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17477.78
+  },
+  {
+    "locality": "Essencia sec 67 Ansal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7027.78
+  },
+  {
+    "locality": "Inst. plot school clubs etc",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3911.11
+  },
+  {
+    "locality": "Inst. plot school clubs etc",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3911.11
+  },
+  {
+    "locality": "insti. plot land other area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3055.56
+  },
+  {
+    "locality": "Licence Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 23191.67
+  },
+  {
+    "locality": "Licence Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10833.33
+  },
+  {
+    "locality": "Licence Colony",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3911.11
+  },
+  {
+    "locality": "Malibu Town Islampur",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3935.56
+  },
+  {
+    "locality": "Malibu Town Islampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22611.11
+  },
+  {
+    "locality": "Malibu Town Islampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9583.33
+  },
+  {
+    "locality": "Palm Drive, Emerald Hills",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 23638.89
+  },
+  {
+    "locality": "Palm Drive, Emerald Hills",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10555.56
+  },
+  {
+    "locality": "Rosewood City",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26400.0
+  },
+  {
+    "locality": "Rosewood City",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26400.0
+  },
+  {
+    "locality": "Rosewood City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11055.56
+  },
+  {
+    "locality": "Rosewood City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11055.56
+  },
+  {
+    "locality": "Shopping mall on Sohna road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17600.0
+  },
+  {
+    "locality": "Success Tower",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22183.33
+  },
+  {
+    "locality": "Success Tower",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8738.89
+  },
+  {
+    "locality": "Tatvam Villas plots",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22611.11
+  },
+  {
+    "locality": "Tatvam Villas plots",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9777.78
+  },
+  {
+    "locality": "Tulip Ivory, Tulip Purple",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22183.33
+  },
+  {
+    "locality": "Tulip Ivory, Tulip Purple",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10833.33
+  },
+  {
+    "locality": "Tulip violet",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 23222.22
+  },
+  {
+    "locality": "Tulip violet",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10833.33
+  },
+  {
+    "locality": "Tulip White, Tulip Orange",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24200.0
+  },
+  {
+    "locality": "Tulip White, Tulip Orange",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10000.0
+  },
+  {
+    "locality": "Uniworld Resort Sec 33, 48",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22611.11
+  },
+  {
+    "locality": "Uniworld Resort Sec 33, 48",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10000.0
+  },
+  {
+    "locality": "Uppal Southend",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22611.11
+  },
+  {
+    "locality": "Uppal Southend",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9455.56
+  },
+  {
+    "locality": "Urban Cosmo politan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26400.0
+  },
+  {
+    "locality": "Urban Cosmo politan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9166.67
+  },
+  {
+    "locality": "Vatika City Sohna Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22611.11
+  },
+  {
+    "locality": "Vatika City Sohna Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10000.0
+  },
+  {
+    "locality": "Victor Velley",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22222.22
+  },
+  {
+    "locality": "Victor Velley",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11111.11
+  },
+  {
+    "locality": "Villa Emaar Marbella",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11666.67
+  },
+  {
+    "locality": "Vipul World Sohna Road",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4088.89
+  },
+  {
+    "locality": "Vipul World Sohna Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22611.11
+  },
+  {
+    "locality": "Vipul World Sohna Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10000.0
+  },
+  {
+    "locality": "Sakatpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1100.0
+  },
+  {
+    "locality": "Sakatpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 596.88
+  },
+  {
+    "locality": "Sakatpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Hasanpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 528.01
+  },
+  {
+    "locality": "Hasanpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Hasanpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3361.11
+  },
+  {
+    "locality": "Other area in Badshahpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1980.0
+  },
+  {
+    "locality": "Sec- 38, 41",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26666.67
+  },
+  {
+    "locality": "Sec- 38, 41",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8888.89
+  },
+  {
+    "locality": "Sec- 38, 41",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Sec-48, 49",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24200.0
+  },
+  {
+    "locality": "Sec-48, 49",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9444.44
+  },
+  {
+    "locality": "Sector 33",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24200.0
+  },
+  {
+    "locality": "Sector 33",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8066.67
+  },
+  {
+    "locality": "Sector 47",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24200.0
+  },
+  {
+    "locality": "Sector 47",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9966.67
+  },
+  {
+    "locality": "Sector 50",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26620.0
+  },
+  {
+    "locality": "Sector 50",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8800.0
+  },
+  {
+    "locality": "Sector 62 65 66 69 70 71 72",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22222.22
+  },
+  {
+    "locality": "Sector 62 65 66 69 70 71 72",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7777.78
+  },
+  {
+    "locality": "Sector 63 63A 64 67",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17333.33
+  },
+  {
+    "locality": "Sector 63 63A 64 67",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6500.0
+  },
+  {
+    "locality": "Sector 67A 68 75 78",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14666.67
+  },
+  {
+    "locality": "Sector 67A 68 75 78",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6066.67
+  },
+  {
+    "locality": "INDUSTRIAL AND RESIDENTIAL PLOT",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2514.11
+  },
+  {
+    "locality": "INDUSTRIAL AND RESIDENTIAL PLOT",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2070.44
+  },
+  {
+    "locality": "2 Acre depth road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 257.58
+  },
+  {
+    "locality": "Baslambi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 254.55
+  },
+  {
+    "locality": "Baslambi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1008.33
+  },
+  {
+    "locality": "Baslambi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "2 Acre depth road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 271.53
+  },
+  {
+    "locality": "Fakharpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Fakharpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1008.33
+  },
+  {
+    "locality": "Fakharpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 233.33
+  },
+  {
+    "locality": "Institutional School hosp club",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Institutional School hosp club",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3520.0
+  },
+  {
+    "locality": "Institutional School hosp club",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Sec 36A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7421.33
+  },
+  {
+    "locality": "Sec 36A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 21645.56
+  },
+  {
+    "locality": "Sec 76",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7690.22
+  },
+  {
+    "locality": "Sec 77",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8039.78
+  },
+  {
+    "locality": "Sec 77",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 15840.0
+  },
+  {
+    "locality": "sec 78",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7690.22
+  },
+  {
+    "locality": "sec 78",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13915.0
+  },
+  {
+    "locality": "sec 79",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7273.89
+  },
+  {
+    "locality": "sec 79",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11831.11
+  },
+  {
+    "locality": "sec 80",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7690.22
+  },
+  {
+    "locality": "sec 80",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13310.0
+  },
+  {
+    "locality": "Sec 81",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8039.78
+  },
+  {
+    "locality": "Sec 81",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14520.0
+  },
+  {
+    "locality": "Sec 82",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7690.22
+  },
+  {
+    "locality": "Sec 82",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13915.0
+  },
+  {
+    "locality": "Sec 83",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7690.22
+  },
+  {
+    "locality": "Sec 83",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14520.0
+  },
+  {
+    "locality": "Sec 85",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6957.5
+  },
+  {
+    "locality": "Sec 85",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14080.0
+  },
+  {
+    "locality": "Sec 86",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6957.5
+  },
+  {
+    "locality": "Sec 86",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14080.0
+  },
+  {
+    "locality": "Sec 87",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6957.5
+  },
+  {
+    "locality": "Sec 87",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11831.11
+  },
+  {
+    "locality": "Sec 90",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Sec 90",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13713.33
+  },
+  {
+    "locality": "Sec M1 A,C",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6655.0
+  },
+  {
+    "locality": "Sec M1 A,C",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11831.11
+  },
+  {
+    "locality": "Sec84",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6957.5
+  },
+  {
+    "locality": "Sec84",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Sec84",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14080.0
+  },
+  {
+    "locality": "Sec-M1D,B",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7690.22
+  },
+  {
+    "locality": "Sec-M1D,B",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13310.0
+  },
+  {
+    "locality": "VILLA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6991.11
+  },
+  {
+    "locality": "IMT Sectors",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3373.33
+  },
+  {
+    "locality": "IMT Sectors",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3373.33
+  },
+  {
+    "locality": "Sector 1",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 10560.0
+  },
+  {
+    "locality": "Sector 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4329.11
+  },
+  {
+    "locality": "2 Acre depth road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 233.33
+  },
+  {
+    "locality": "kharkhari",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1008.33
+  },
+  {
+    "locality": "kharkhari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 233.33
+  },
+  {
+    "locality": "kharkhari",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 271.53
+  },
+  {
+    "locality": "Kherki",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "Kherki",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 236.81
+  },
+  {
+    "locality": "Kherki",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 860.44
+  },
+  {
+    "locality": "2 Acre depth road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 271.53
+  },
+  {
+    "locality": "Mokalwas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1004.97
+  },
+  {
+    "locality": "Mokalwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 233.78
+  },
+  {
+    "locality": "Mokalwas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1391.5
+  },
+  {
+    "locality": "Tatarpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1398.22
+  },
+  {
+    "locality": "Tatarpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 175.69
+  },
+  {
+    "locality": "Tatarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 699.11
+  },
+  {
+    "locality": "Udaipuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 773.06
+  },
+  {
+    "locality": "Udaipuri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 230.0
+  },
+  {
+    "locality": "Udaipuri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2473.78
+  },
+  {
+    "locality": "Kasan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 310.0
+  },
+  {
+    "locality": "Kasan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Kasan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3092.22
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Kukrola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3697.22
+  },
+  {
+    "locality": "Kukrola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 316.67
+  },
+  {
+    "locality": "Kukrola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1210.0
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 833.33
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Agri Pub utility open spc",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 833.33
+  },
+  {
+    "locality": "Kherki Daula",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6453.33
+  },
+  {
+    "locality": "Kherki Daula",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3168.0
+  },
+  {
+    "locality": "Kherki Daula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "Kherki Daula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 909.09
+  },
+  {
+    "locality": "R Zone 2AcreNH48",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2957.78
+  },
+  {
+    "locality": "R Zone 2AcreNH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1231.06
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1231.06
+  },
+  {
+    "locality": "Khoh",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Khoh",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2420.0
+  },
+  {
+    "locality": "Khoh",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4201.39
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 283.33
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 311.67
+  },
+  {
+    "locality": "1 Acre depth from NH8",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 283.33
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2487.22
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1169.67
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 283.33
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 283.33
+  },
+  {
+    "locality": "Chandla Dungarwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 260.0
+  },
+  {
+    "locality": "Chandla Dungarwas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1089.0
+  },
+  {
+    "locality": "Chandla Dungarwas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1546.11
+  },
+  {
+    "locality": "Dinokri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1478.89
+  },
+  {
+    "locality": "Dinokri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Dinokri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 206.67
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1277.78
+  },
+  {
+    "locality": "1 Acre depth from NH8",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1277.78
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1393.94
+  },
+  {
+    "locality": "Nakhrola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2319.17
+  },
+  {
+    "locality": "Nakhrola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 722.31
+  },
+  {
+    "locality": "Nakhrola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "R Zone 2AcreNH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1277.78
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 958.33
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 606.94
+  },
+  {
+    "locality": "Nawada Fatehpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "Nawada Fatehpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 722.31
+  },
+  {
+    "locality": "Nawada Fatehpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2325.89
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 798.61
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2352.78
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 798.61
+  },
+  {
+    "locality": "Naharpur Kasan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2319.17
+  },
+  {
+    "locality": "Naharpur Kasan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 543.06
+  },
+  {
+    "locality": "Naharpur Kasan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "Noorpur Bhora",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 699.11
+  },
+  {
+    "locality": "Noorpur Bhora",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 191.67
+  },
+  {
+    "locality": "Noorpur Bhora",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1707.44
+  },
+  {
+    "locality": "Nainwal",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2319.17
+  },
+  {
+    "locality": "Nainwal",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 235.7
+  },
+  {
+    "locality": "Nainwal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1113.2
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 990.28
+  },
+  {
+    "locality": "INDUSTRIAL LAND 2.5",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2156.25
+  },
+  {
+    "locality": "INDUSTRIAL LAND 2.5",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2156.25
+  },
+  {
+    "locality": "Nurangpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3401.44
+  },
+  {
+    "locality": "Nurangpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1686.67
+  },
+  {
+    "locality": "Nurangpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 696.97
+  },
+  {
+    "locality": "Nurangpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 760.33
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 862.5
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 255.56
+  },
+  {
+    "locality": "INDUSTRIAL",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2514.11
+  },
+  {
+    "locality": "Pathreri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1276.0
+  },
+  {
+    "locality": "Pathreri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 226.52
+  },
+  {
+    "locality": "Pathreri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2783.0
+  },
+  {
+    "locality": "residential plot",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2070.44
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 223.61
+  },
+  {
+    "locality": "Parasoli",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1546.11
+  },
+  {
+    "locality": "Parasoli",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 191.67
+  },
+  {
+    "locality": "Parasoli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 699.11
+  },
+  {
+    "locality": "2Acre Major Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1169.67
+  },
+  {
+    "locality": "2Acre Major Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 399.31
+  },
+  {
+    "locality": "2Acre Major Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 399.31
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 399.31
+  },
+  {
+    "locality": "Fazalwas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1169.67
+  },
+  {
+    "locality": "Fazalwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 347.22
+  },
+  {
+    "locality": "Fazalwas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3428.33
+  },
+  {
+    "locality": "Badha",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3697.22
+  },
+  {
+    "locality": "Badha",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 595.04
+  },
+  {
+    "locality": "Badha",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2424.58
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1041.67
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2520.83
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 260.42
+  },
+  {
+    "locality": "Baghanki",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 227.27
+  },
+  {
+    "locality": "Baghanki",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 847.0
+  },
+  {
+    "locality": "Baghanki",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1546.11
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 216.67
+  },
+  {
+    "locality": "Bar Gujar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "Bar Gujar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 699.11
+  },
+  {
+    "locality": "Bar Gujar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 216.67
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 361.11
+  },
+  {
+    "locality": "Binola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1089.0
+  },
+  {
+    "locality": "Binola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 327.27
+  },
+  {
+    "locality": "Binola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1546.11
+  },
+  {
+    "locality": "Binola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1546.11
+  },
+  {
+    "locality": "PRIME KHASRA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 361.11
+  },
+  {
+    "locality": "PRIME KHASRA",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 361.11
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 383.33
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 383.33
+  },
+  {
+    "locality": "Ansal Plot",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2514.11
+  },
+  {
+    "locality": "Bilaspur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5445.0
+  },
+  {
+    "locality": "Bilaspur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 345.45
+  },
+  {
+    "locality": "Bilaspur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1169.67
+  },
+  {
+    "locality": "prime no",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 383.33
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 223.61
+  },
+  {
+    "locality": "2Acre Major Road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 223.61
+  },
+  {
+    "locality": "Bhudka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Bhudka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 209.09
+  },
+  {
+    "locality": "Bhudka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1540.0
+  },
+  {
+    "locality": "Bhokarka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "Bhokarka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 193.33
+  },
+  {
+    "locality": "Bhokarka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 239.58
+  },
+  {
+    "locality": "Bhora khurd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 551.22
+  },
+  {
+    "locality": "Bhora khurd",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 218.6
+  },
+  {
+    "locality": "Bhora khurd",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1411.67
+  },
+  {
+    "locality": "1 Acre depth from NH8",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1041.67
+  },
+  {
+    "locality": "Manesar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6722.22
+  },
+  {
+    "locality": "Manesar",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Manesar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3025.0
+  },
+  {
+    "locality": "Manesar",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 946.97
+  },
+  {
+    "locality": "1 Acre depth from NH8",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 303.47
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 303.47
+  },
+  {
+    "locality": "Rathiwas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1008.33
+  },
+  {
+    "locality": "Rathiwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 261.36
+  },
+  {
+    "locality": "Rathiwas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2783.0
+  },
+  {
+    "locality": "Langra",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1680.56
+  },
+  {
+    "locality": "Langra",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 209.09
+  },
+  {
+    "locality": "Langra",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 887.33
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1277.78
+  },
+  {
+    "locality": "R Zone 2AcreNH48",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2097.33
+  },
+  {
+    "locality": "Shikohpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1277.78
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1038.19
+  },
+  {
+    "locality": "Shikohpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2537.33
+  },
+  {
+    "locality": "Shikohpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 589.26
+  },
+  {
+    "locality": "Shikohpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 327.43
+  },
+  {
+    "locality": "Sehrawan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2783.0
+  },
+  {
+    "locality": "Sehrawan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 261.94
+  },
+  {
+    "locality": "Sehrawan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1008.33
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 958.33
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 958.33
+  },
+  {
+    "locality": "Sikandarpur Bada",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2319.17
+  },
+  {
+    "locality": "Sikandarpur Bada",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 760.33
+  },
+  {
+    "locality": "Sikandarpur Bada",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "1 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 319.44
+  },
+  {
+    "locality": "2 Acre depth from link road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 319.44
+  },
+  {
+    "locality": "1 Acre depth from NH8",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 319.44
+  },
+  {
+    "locality": "2Acre NH48",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 319.44
+  },
+  {
+    "locality": "Sidhrawali",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2537.33
+  },
+  {
+    "locality": "Sidhrawali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "Sidhrawali",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 261.36
+  },
+  {
+    "locality": "Sidhrawali",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 261.36
+  },
+  {
+    "locality": "R Zone comm ind inst",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 958.33
+  },
+  {
+    "locality": "Sihi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 760.33
+  },
+  {
+    "locality": "Sihi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2530.0
+  },
+  {
+    "locality": "Sihi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4849.17
+  },
+  {
+    "locality": "Chakkarpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1309.09
+  },
+  {
+    "locality": "Chakkarpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Chakkarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3784.0
+  },
+  {
+    "locality": "Chakkarpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6511.11
+  },
+  {
+    "locality": "Nathupur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1345.45
+  },
+  {
+    "locality": "Nathupur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1233.33
+  },
+  {
+    "locality": "Nathupur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7920.0
+  },
+  {
+    "locality": "Nathupur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9277.78
+  },
+  {
+    "locality": "Chandan Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7122.22
+  },
+  {
+    "locality": "Chandan Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8433.33
+  },
+  {
+    "locality": "saini khera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5666.67
+  },
+  {
+    "locality": "saini khera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6833.33
+  },
+  {
+    "locality": "Silokhera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2166.67
+  },
+  {
+    "locality": "Silokhera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3963.89
+  },
+  {
+    "locality": "Silokhera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8066.67
+  },
+  {
+    "locality": "Vijay Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7122.22
+  },
+  {
+    "locality": "Vijay Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7733.33
+  },
+  {
+    "locality": "Sikandarpur Ghosi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Sikandarpur Ghosi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8082.22
+  },
+  {
+    "locality": "Sikandarpur Ghosi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12066.67
+  },
+  {
+    "locality": "Adampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1166.67
+  },
+  {
+    "locality": "Adampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3188.89
+  },
+  {
+    "locality": "Adampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7111.11
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 581.82
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2144.44
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4111.11
+  },
+  {
+    "locality": "Sector-58",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6600.0
+  },
+  {
+    "locality": "Sector-58",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 15466.67
+  },
+  {
+    "locality": "Sector-59",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector-59",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16163.89
+  },
+  {
+    "locality": "Sector-60",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector-60",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16866.67
+  },
+  {
+    "locality": "Sector-62",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector-62",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16166.67
+  },
+  {
+    "locality": "Sector-62",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3944.44
+  },
+  {
+    "locality": "Sector-63",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector-63",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17600.0
+  },
+  {
+    "locality": "Sector-63A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector-63A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16866.67
+  },
+  {
+    "locality": "Ullahwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1190.08
+  },
+  {
+    "locality": "Ullahwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2144.44
+  },
+  {
+    "locality": "Ullahwas",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 581.82
+  },
+  {
+    "locality": "Ullahwas",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2552.22
+  },
+  {
+    "locality": "Ullahwas",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5368.33
+  },
+  {
+    "locality": "Kanhai",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Kanhai",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 3188.89
+  },
+  {
+    "locality": "Kanhai",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Kanhai",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6511.11
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 522.73
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1555.56
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2744.44
+  },
+  {
+    "locality": "Kadarpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 950.41
+  },
+  {
+    "locality": "Kadarpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 909.09
+  },
+  {
+    "locality": "Kadarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1555.56
+  },
+  {
+    "locality": "Kadarpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2744.44
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 909.09
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 909.09
+  },
+  {
+    "locality": "Sector-63A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector-63A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14788.89
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 511.11
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 479.17
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 152.78
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1411.11
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1129.41
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 825.0
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1033.33
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 152.78
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 825.0
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2361.33
+  },
+  {
+    "locality": "Gwal Pahari",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Trade Centre Sector-2",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 666.67
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2144.44
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4511.11
+  },
+  {
+    "locality": "Ghata",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Ghata",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2144.44
+  },
+  {
+    "locality": "Ghata",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2339.33
+  },
+  {
+    "locality": "Ghata",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4922.22
+  },
+  {
+    "locality": "Pioneer Park Sec-61",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4511.11
+  },
+  {
+    "locality": "Civil Line Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9388.89
+  },
+  {
+    "locality": "Civil Line Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13844.44
+  },
+  {
+    "locality": "Civil Lines Backside",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7112.11
+  },
+  {
+    "locality": "Civil Lines Backside",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12833.33
+  },
+  {
+    "locality": "Friends Colony Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6188.89
+  },
+  {
+    "locality": "Friends Colony Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11911.11
+  },
+  {
+    "locality": "Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1309.09
+  },
+  {
+    "locality": "Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Jharsa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3633.33
+  },
+  {
+    "locality": "Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6188.89
+  },
+  {
+    "locality": "Kirti Nagar Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6766.67
+  },
+  {
+    "locality": "Kirti Nagar Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7277.78
+  },
+  {
+    "locality": "Patel Nagar Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5915.56
+  },
+  {
+    "locality": "Patel Nagar Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11024.44
+  },
+  {
+    "locality": "Prem Puri Jharsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3444.44
+  },
+  {
+    "locality": "Prem Puri Jharsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6184.44
+  },
+  {
+    "locality": "nan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13333.33
+  },
+  {
+    "locality": "nan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 15200.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 31680.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13744.44
+  },
+  {
+    "locality": "nan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "nan",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "nan",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "nan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 31680.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "nan",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27833.33
+  },
+  {
+    "locality": "Tigra",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Tigra",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3188.89
+  },
+  {
+    "locality": "Tigra",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6511.11
+  },
+  {
+    "locality": "Fatehpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1166.67
+  },
+  {
+    "locality": "Fatehpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3188.89
+  },
+  {
+    "locality": "Fatehpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6211.11
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 666.67
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 550.0
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 728.65
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 152.78
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 550.0
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1944.44
+  },
+  {
+    "locality": "Bandwari",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3700.0
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 488.89
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 458.33
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1411.11
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 152.78
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1411.11
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1333.33
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 152.78
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2530.0
+  },
+  {
+    "locality": "Bairampur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3700.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 763.89
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1045.45
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 798.61
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 2366.67
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 152.78
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 798.61
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2581.67
+  },
+  {
+    "locality": "Balula",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3700.0
+  },
+  {
+    "locality": "Bindapur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1166.67
+  },
+  {
+    "locality": "Bindapur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3477.78
+  },
+  {
+    "locality": "Bindapur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6366.67
+  },
+  {
+    "locality": "Ambience Island",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Ardee City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10288.89
+  },
+  {
+    "locality": "Ardee City",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 20704.44
+  },
+  {
+    "locality": "Centrum Plaza",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Dispensary Site-South City II",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Freedom Park Life Sec-57",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Garden Estate",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 12000.0
+  },
+  {
+    "locality": "Garden Estate",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24411.11
+  },
+  {
+    "locality": "Global Business Park",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12675.0
+  },
+  {
+    "locality": "Global Gateway",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11200.0
+  },
+  {
+    "locality": "Greenwood City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 14055.56
+  },
+  {
+    "locality": "Greenwood City",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 25511.11
+  },
+  {
+    "locality": "Mayfield Garden",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10733.33
+  },
+  {
+    "locality": "Mayfield Garden",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24640.0
+  },
+  {
+    "locality": "Mayfield Garden",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "National Media Centre",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13713.33
+  },
+  {
+    "locality": "National Media Centre",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24411.11
+  },
+  {
+    "locality": "Nirvana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 14700.0
+  },
+  {
+    "locality": "Nirvana",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26622.22
+  },
+  {
+    "locality": "Rahejas Atlantis",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Rosewood City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11022.22
+  },
+  {
+    "locality": "Rosewood City",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 25555.56
+  },
+  {
+    "locality": "School -Institute",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-58 and new sectors",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sec-58 and new sectors",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16866.67
+  },
+  {
+    "locality": "Sector 58",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7200.0
+  },
+  {
+    "locality": "Sector 58",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16166.67
+  },
+  {
+    "locality": "Sector-50",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8816.67
+  },
+  {
+    "locality": "South city 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 14694.44
+  },
+  {
+    "locality": "South city 1",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29100.0
+  },
+  {
+    "locality": "Southcity-II",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11021.11
+  },
+  {
+    "locality": "Southcity-II",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "Suncity",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11500.0
+  },
+  {
+    "locality": "Suncity",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sushant Lok",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13960.0
+  },
+  {
+    "locality": "The Palm Springs Centre Sec-54",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Uniworld Garden-I-Sec-47",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Vally View Estate",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Vally View Estate",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Villa Palm Springs",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13444.44
+  },
+  {
+    "locality": "Villa Rest of Tehsil Wazirabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 12777.78
+  },
+  {
+    "locality": "Indra Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3722.22
+  },
+  {
+    "locality": "Indra Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6811.11
+  },
+  {
+    "locality": "Saraswati Kunj",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4333.33
+  },
+  {
+    "locality": "Saraswati Kunj",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9000.0
+  },
+  {
+    "locality": "Wazirabad",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1418.18
+  },
+  {
+    "locality": "Wazirabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3477.78
+  },
+  {
+    "locality": "Wazirabad",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7422.22
+  },
+  {
+    "locality": "Samaspur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Samaspur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 3188.89
+  },
+  {
+    "locality": "Samaspur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3324.44
+  },
+  {
+    "locality": "Samaspur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6511.11
+  },
+  {
+    "locality": "School and Institutional Land",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sushant Lok-I",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13966.67
+  },
+  {
+    "locality": "Sushant Lok-I",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "Sushant Lok-II",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10286.11
+  },
+  {
+    "locality": "Sushant Lok-III",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10733.33
+  },
+  {
+    "locality": "Sushant Lok-III",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22588.89
+  },
+  {
+    "locality": "Sushant Lok-III",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "HBC-Jharsa Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9144.44
+  },
+  {
+    "locality": "HBC-Saraswati Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9600.0
+  },
+  {
+    "locality": "HBC-Sec 40",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "HBC-Sec 42",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "HBC-Sec-28",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9966.67
+  },
+  {
+    "locality": "HBC-Sec-39",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9600.0
+  },
+  {
+    "locality": "HBC-Sec-43",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "HBC-Sector 31-32A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "HBC-Sector 51",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6480.0
+  },
+  {
+    "locality": "HBC-Sector-28",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9144.44
+  },
+  {
+    "locality": "HBC-Sector-28",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24411.11
+  },
+  {
+    "locality": "HBC-Sector-47",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6210.0
+  },
+  {
+    "locality": "HBC-Sector-52",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9600.0
+  },
+  {
+    "locality": "HBC-Sector-57",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6480.0
+  },
+  {
+    "locality": "HBC-Sec-51",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6480.0
+  },
+  {
+    "locality": "National Media Center",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 14960.0
+  },
+  {
+    "locality": "National Media Center",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24444.44
+  },
+  {
+    "locality": "New Huda Sector",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6600.0
+  },
+  {
+    "locality": "School Land",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-15",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9555.56
+  },
+  {
+    "locality": "Sec-15",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sec-15",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-24",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4480.0
+  },
+  {
+    "locality": "Sec-25",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 15488.33
+  },
+  {
+    "locality": "Sec-26",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Sec-26",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Sec-27",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-27",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sec-28",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9966.67
+  },
+  {
+    "locality": "Sec-28",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27833.33
+  },
+  {
+    "locality": "Sec-29",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 38722.22
+  },
+  {
+    "locality": "Sec-29",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-30",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-30",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24200.0
+  },
+  {
+    "locality": "Sec-31-32A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9300.0
+  },
+  {
+    "locality": "Sec-31-32A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29044.44
+  },
+  {
+    "locality": "Sec-32",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4480.0
+  },
+  {
+    "locality": "Sec-32",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-39",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8816.67
+  },
+  {
+    "locality": "Sec-39",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26622.22
+  },
+  {
+    "locality": "Sec-40",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-40",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 25511.11
+  },
+  {
+    "locality": "Sec-41",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-41",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 20711.11
+  },
+  {
+    "locality": "Sec-42",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-42",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sec-43",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-43",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sec-43",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-44",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sec-44",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-44",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 9411.11
+  },
+  {
+    "locality": "Sec-45",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9200.0
+  },
+  {
+    "locality": "Sec-45",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26622.22
+  },
+  {
+    "locality": "Sec-46",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9200.0
+  },
+  {
+    "locality": "Sec-46",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29073.33
+  },
+  {
+    "locality": "Sec-46",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4480.0
+  },
+  {
+    "locality": "Sec-47",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8816.67
+  },
+  {
+    "locality": "Sec-47",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27833.33
+  },
+  {
+    "locality": "Sec-47",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4106.67
+  },
+  {
+    "locality": "Sec-47",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4322.22
+  },
+  {
+    "locality": "Sec-50",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9600.0
+  },
+  {
+    "locality": "Sec-50",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "Sec-51",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9200.0
+  },
+  {
+    "locality": "Sec-51",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "Sec-51",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 3766.67
+  },
+  {
+    "locality": "Sec-52",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9200.0
+  },
+  {
+    "locality": "Sec-52",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27833.33
+  },
+  {
+    "locality": "Sec-53",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-53",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "Sec-54",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10400.0
+  },
+  {
+    "locality": "Sec-54",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27833.33
+  },
+  {
+    "locality": "Sec-55",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9200.0
+  },
+  {
+    "locality": "Sec-55",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24411.11
+  },
+  {
+    "locality": "Sec-56",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8816.67
+  },
+  {
+    "locality": "Sec-56",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 27830.0
+  },
+  {
+    "locality": "Sec-56",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4106.67
+  },
+  {
+    "locality": "Sec-57",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8816.67
+  },
+  {
+    "locality": "Sec-57",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29040.0
+  },
+  {
+    "locality": "Haidarpur Viran",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1200.0
+  },
+  {
+    "locality": "Haidarpur Viran",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3468.89
+  },
+  {
+    "locality": "Haidarpur Viran",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5622.22
+  },
+  {
+    "locality": "Industrial",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Inst. in Other Area",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Inst./School in Huda/Lic",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 500.0
+  },
+  {
+    "locality": "Kankrola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Kankrola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 573.92
+  },
+  {
+    "locality": "Kankrola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1262.63
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1262.63
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Garhi Harsaru",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 435.61
+  },
+  {
+    "locality": "Garhi Harsaru",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1613.33
+  },
+  {
+    "locality": "Garhi Harsaru",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1097.34
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 424.7
+  },
+  {
+    "locality": "Gopalpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Gopalpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1444.44
+  },
+  {
+    "locality": "Gopalpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 482.09
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1147.84
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1147.84
+  },
+  {
+    "locality": "Chandu",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 305.56
+  },
+  {
+    "locality": "Chandu",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "Chandu",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1478.89
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 305.56
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 305.56
+  },
+  {
+    "locality": "Dhana",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Dhana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Dhana",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Dhorka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Dhorka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Dhorka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 608.36
+  },
+  {
+    "locality": "Dhorka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1747.78
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 916.67
+  },
+  {
+    "locality": "Open Space Major Rd",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1190.08
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1190.08
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Any Land Converted into Industrial Use",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Baskushla",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1140.5
+  },
+  {
+    "locality": "Baskushla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2200.0
+  },
+  {
+    "locality": "Baskushla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Baskushla",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Bashariya",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Bashariya",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Bashariya",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Bashariya",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1090.91
+  },
+  {
+    "locality": "Budhera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 941.11
+  },
+  {
+    "locality": "Budhera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "Budhera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 363.64
+  },
+  {
+    "locality": "Budhera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 363.64
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 400.0
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 333.33
+  },
+  {
+    "locality": "najafgarh drain area",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 55.56
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 568.18
+  },
+  {
+    "locality": "Bhangrola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1239.67
+  },
+  {
+    "locality": "Bhangrola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4167.78
+  },
+  {
+    "locality": "Bhangrola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2200.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1262.63
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Makdola",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 236.11
+  },
+  {
+    "locality": "Makdola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "Makdola",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 941.11
+  },
+  {
+    "locality": "Mecka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Mecka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Mecka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2352.78
+  },
+  {
+    "locality": "Mecka",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1193.76
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 545.45
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 669.19
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 669.19
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1136.36
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1136.36
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2200.0
+  },
+  {
+    "locality": "R Zone Com Ind.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1055.56
+  },
+  {
+    "locality": "R Zone Com Ind.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1055.56
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 596.88
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 596.88
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2200.0
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Sadhrana",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 416.67
+  },
+  {
+    "locality": "Sadhrana",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2016.67
+  },
+  {
+    "locality": "Sadhrana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Hamirpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 303.03
+  },
+  {
+    "locality": "Hamirpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1210.0
+  },
+  {
+    "locality": "Hamirpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 545.45
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 500.0
+  },
+  {
+    "locality": "Hayatpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2300.0
+  },
+  {
+    "locality": "Hayatpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2083.89
+  },
+  {
+    "locality": "Hayatpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 595.04
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2108.33
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 666.67
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 666.67
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2108.33
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1212.12
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1212.12
+  },
+  {
+    "locality": "Agri open pub utility",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 500.0
+  },
+  {
+    "locality": "Harsaru",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 619.83
+  },
+  {
+    "locality": "Harsaru",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1766.67
+  },
+  {
+    "locality": "Harsaru",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2352.78
+  },
+  {
+    "locality": "Major Road 10 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 4888.89
+  },
+  {
+    "locality": "NPR HARSARU",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 694.44
+  },
+  {
+    "locality": "Open Space Major Rd",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 500.0
+  },
+  {
+    "locality": "Open Space NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Open Space NPR 25 Percent",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1322.31
+  },
+  {
+    "locality": "R Zone Com Ind Inst.",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1322.31
+  },
+  {
+    "locality": "Institutional School Site",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Institutional School Site",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Institutional School Site",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "New Builder Sector",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 10890.0
+  },
+  {
+    "locality": "New Builder Sector",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "New Builder Sector",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5826.67
+  },
+  {
+    "locality": "New Huda Sector",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11888.89
+  },
+  {
+    "locality": "New Huda Sector",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5583.89
+  },
+  {
+    "locality": "Residential Area Sector M9, M10, M12, M12A, M13, M14",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Sector 88, 88A, 89, 89A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13000.0
+  },
+  {
+    "locality": "Sector 88, 88A, 89, 89A",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4400.0
+  },
+  {
+    "locality": "Sector 88, 88A, 89, 89A",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Sector 88, 88A, 89, 89A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5573.33
+  },
+  {
+    "locality": "Sector 88B, 95, 95A, 95B, 94, 89B, 99A, 90, 91, 92,93",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13000.0
+  },
+  {
+    "locality": "Sector 88B, 95, 95A, 95B, 94, 89B, 99A, 90, 91, 92,93",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4400.0
+  },
+  {
+    "locality": "Sector 88B, 95, 95A, 95B, 94, 89B, 99A, 90, 91, 92,93",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Sector 88B, 95, 95A, 95B, 94, 89B, 99A, 90, 91, 92,93",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5833.33
+  },
+  {
+    "locality": "Sector 89,89A,89B",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5108.89
+  },
+  {
+    "locality": "Gurgaon gaon",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1113.64
+  },
+  {
+    "locality": "Gurgaon gaon",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1113.64
+  },
+  {
+    "locality": "Gurgaon gaon",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4983.33
+  },
+  {
+    "locality": "Gurgaon gaon",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7700.0
+  },
+  {
+    "locality": "Hidayatpur Chhawni",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3055.56
+  },
+  {
+    "locality": "Hidayatpur Chhawni",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "Inayatpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1391.41
+  },
+  {
+    "locality": "Inayatpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3422.22
+  },
+  {
+    "locality": "Inayatpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "Carterpuri",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1316.12
+  },
+  {
+    "locality": "Carterpuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3422.22
+  },
+  {
+    "locality": "Carterpuri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "Rly.fatak to Daultabad with mc area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3948.33
+  },
+  {
+    "locality": "Rly.fatak to Daultabad with mc area",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6868.89
+  },
+  {
+    "locality": "4 Marla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6197.22
+  },
+  {
+    "locality": "4 Marla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9423.33
+  },
+  {
+    "locality": "8 Marla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6197.22
+  },
+  {
+    "locality": "8 Marla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11136.67
+  },
+  {
+    "locality": "Acharyapuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5292.22
+  },
+  {
+    "locality": "Acharyapuri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7675.56
+  },
+  {
+    "locality": "Adarsh Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6197.22
+  },
+  {
+    "locality": "Adarsh Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9263.89
+  },
+  {
+    "locality": "Aman Pura",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6453.33
+  },
+  {
+    "locality": "Aman Pura",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7663.33
+  },
+  {
+    "locality": "Amar Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Amar Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7125.56
+  },
+  {
+    "locality": "Anamika Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6991.11
+  },
+  {
+    "locality": "Anamika Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8470.0
+  },
+  {
+    "locality": "Anand Garden",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4766.67
+  },
+  {
+    "locality": "Anand Garden",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5524.44
+  },
+  {
+    "locality": "Arjun Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4852.22
+  },
+  {
+    "locality": "Arjun Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "Ashok Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5072.78
+  },
+  {
+    "locality": "Ashok Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8017.78
+  },
+  {
+    "locality": "Ashokpuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5927.78
+  },
+  {
+    "locality": "Ashokpuri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7675.56
+  },
+  {
+    "locality": "Barf Khana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9417.22
+  },
+  {
+    "locality": "Barf Khana",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12522.22
+  },
+  {
+    "locality": "Bhim Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8066.67
+  },
+  {
+    "locality": "Bhim Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9411.11
+  },
+  {
+    "locality": "Bhim Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4510.56
+  },
+  {
+    "locality": "Bhim Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7462.22
+  },
+  {
+    "locality": "Bhimgarh Kheri Phase-II",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4302.22
+  },
+  {
+    "locality": "Bhimgarh Kheri Phase-II",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5781.11
+  },
+  {
+    "locality": "BHINDE CIVIL LINE",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6493.67
+  },
+  {
+    "locality": "BHINDE CIVIL LINE",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11716.78
+  },
+  {
+    "locality": "BHUTESHWAR MANDIR TO PATAUDI CHOWK AND ANAJ MANDI",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17339.44
+  },
+  {
+    "locality": "Cancon Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7394.44
+  },
+  {
+    "locality": "Cancon Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9411.11
+  },
+  {
+    "locality": "Civil Line to Jail Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 11136.67
+  },
+  {
+    "locality": "Civil Line to Jail Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 19601.11
+  },
+  {
+    "locality": "Dayanand Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4920.0
+  },
+  {
+    "locality": "Dayanand Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7166.67
+  },
+  {
+    "locality": "Devi Lal Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5524.44
+  },
+  {
+    "locality": "Devi Lal Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7137.78
+  },
+  {
+    "locality": "Dhanak Basti Near DSD College",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Dhanak Basti Near DSD College",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4638.33
+  },
+  {
+    "locality": "DLF Colony Old",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10132.78
+  },
+  {
+    "locality": "DLF Colony Old",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 20447.78
+  },
+  {
+    "locality": "Feroz Gandhi Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3764.44
+  },
+  {
+    "locality": "Feroz Gandhi Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4840.0
+  },
+  {
+    "locality": "Friends Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6759.44
+  },
+  {
+    "locality": "Friends Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 13053.33
+  },
+  {
+    "locality": "Gandhi Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5927.78
+  },
+  {
+    "locality": "Gandhi Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7675.56
+  },
+  {
+    "locality": "Gopal Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5927.78
+  },
+  {
+    "locality": "Gopal Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8482.22
+  },
+  {
+    "locality": "Heera nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4510.56
+  },
+  {
+    "locality": "Heera nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7786.67
+  },
+  {
+    "locality": "idgaha area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4314.44
+  },
+  {
+    "locality": "idgaha area",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7137.78
+  },
+  {
+    "locality": "Inderpuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5927.78
+  },
+  {
+    "locality": "Inderpuri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7137.78
+  },
+  {
+    "locality": "Jacubpura",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8616.67
+  },
+  {
+    "locality": "Jacubpura",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14208.89
+  },
+  {
+    "locality": "JAWAHAR NAGAR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6465.56
+  },
+  {
+    "locality": "JAWAHAR NAGAR",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7675.56
+  },
+  {
+    "locality": "JYOTI PARK",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5635.0
+  },
+  {
+    "locality": "JYOTI PARK",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7137.78
+  },
+  {
+    "locality": "KRISHNA COLONY",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6465.56
+  },
+  {
+    "locality": "KRISHNA COLONY",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7675.56
+  },
+  {
+    "locality": "Krishna Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6453.33
+  },
+  {
+    "locality": "Krishna Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6856.67
+  },
+  {
+    "locality": "LAXMAN VIHAR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5072.78
+  },
+  {
+    "locality": "LAXMAN VIHAR",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8912.22
+  },
+  {
+    "locality": "LAXMI GARDEN",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5390.0
+  },
+  {
+    "locality": "LAXMI GARDEN",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7137.78
+  },
+  {
+    "locality": "MADANPURI",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5390.0
+  },
+  {
+    "locality": "MADANPURI",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7786.67
+  },
+  {
+    "locality": "MAHAVIR CHOWK TO OLD NJF GARH ROAD",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14116.67
+  },
+  {
+    "locality": "MAHAVIR PURA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5635.0
+  },
+  {
+    "locality": "MAHAVIR PURA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7541.11
+  },
+  {
+    "locality": "Mahroli Road to Delhi Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 19680.56
+  },
+  {
+    "locality": "MAJOR ATUL KATRIA CHOWK TO SEC 5 CHOWK ON Rly ROAD , SHEETLA MATA ROAD",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14116.67
+  },
+  {
+    "locality": "MANOHAR NAGAR-BALDEV NAGAR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4852.22
+  },
+  {
+    "locality": "New Palam Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4766.67
+  },
+  {
+    "locality": "New Palam Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "2acres depth from Major road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1075.56
+  },
+  {
+    "locality": "2acres depth from NH,NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "agri open space public utility as per master plan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 550.0
+  },
+  {
+    "locality": "Dundahera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 978.03
+  },
+  {
+    "locality": "Dundahera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3040.0
+  },
+  {
+    "locality": "Dundahera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6465.56
+  },
+  {
+    "locality": "2acres depth from NH,NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1145.86
+  },
+  {
+    "locality": "Hans Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4180.0
+  },
+  {
+    "locality": "Hans Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6722.22
+  },
+  {
+    "locality": "Hari Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4560.0
+  },
+  {
+    "locality": "Hari Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7333.33
+  },
+  {
+    "locality": "Rajiv Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4180.0
+  },
+  {
+    "locality": "Rajiv Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6722.22
+  },
+  {
+    "locality": "Naharpur Rupa",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 916.92
+  },
+  {
+    "locality": "Naharpur Rupa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4180.0
+  },
+  {
+    "locality": "Naharpur Rupa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7027.78
+  },
+  {
+    "locality": "DLF PHASE II",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 16625.56
+  },
+  {
+    "locality": "DLF PHASE II",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29107.78
+  },
+  {
+    "locality": "agri open space public utility as per master plan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 606.7
+  },
+  {
+    "locality": "Bajghera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 987.83
+  },
+  {
+    "locality": "Bajghera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 916.92
+  },
+  {
+    "locality": "Bajghera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "Bajghera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5744.44
+  },
+  {
+    "locality": "Babupur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 911.62
+  },
+  {
+    "locality": "Babupur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "Babupur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4766.67
+  },
+  {
+    "locality": "Molahera",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 977.78
+  },
+  {
+    "locality": "Molahera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2701.11
+  },
+  {
+    "locality": "Molahera",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5646.67
+  },
+  {
+    "locality": "Molahera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "2acres depth from NH,NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.47
+  },
+  {
+    "locality": "Shahpur",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 978.03
+  },
+  {
+    "locality": "Shahpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "Shahpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5988.89
+  },
+  {
+    "locality": "2acres depth from Major road",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1075.58
+  },
+  {
+    "locality": "2acres depth from NH,NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.47
+  },
+  {
+    "locality": "agri open space public utility as per master plan",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 605.03
+  },
+  {
+    "locality": "Inside R zone etc",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1669.19
+  },
+  {
+    "locality": "Inside R zone etc",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.47
+  },
+  {
+    "locality": "Sarhol",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1075.58
+  },
+  {
+    "locality": "Sarhol",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3055.56
+  },
+  {
+    "locality": "Sarhol",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8188.89
+  },
+  {
+    "locality": "New Palam Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4777.78
+  },
+  {
+    "locality": "New Palam Vihar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "Sarai Allawardi",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1250.25
+  },
+  {
+    "locality": "Sarai Allawardi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4766.67
+  },
+  {
+    "locality": "Sarai Allawardi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7455.56
+  },
+  {
+    "locality": "2acres depth from NH,NPR",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Sukhrali",
+    "property_type": "Agricultural",
+    "rate_2025_per_sqft": 1066.69
+  },
+  {
+    "locality": "Sukhrali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2772.78
+  },
+  {
+    "locality": "Sukhrali",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5927.78
+  },
+  {
+    "locality": "I D C OPPOSITE SECTOR 14",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6125.0
+  },
+  {
+    "locality": "I D C OPPOSITE SECTOR 15",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6125.0
+  },
+  {
+    "locality": "Indl. Area Except HSIIDC & Huda",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8829.44
+  },
+  {
+    "locality": "Instt School Clubs Hospital",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6062.22
+  },
+  {
+    "locality": "Maruti Ind Area and Udyog Vihar phase 1 to 5 and sec 18, 35",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9547.78
+  },
+  {
+    "locality": "Maruti Ind Area and Udyog Vihar phase 1 to 5 and sec 18, 36",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9547.78
+  },
+  {
+    "locality": "Maruti Ind Area and Udyog Vihar phase 1 to 5 and sec 18, 37",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8177.78
+  },
+  {
+    "locality": "PALAM VIHAR",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 26707.78
+  },
+  {
+    "locality": "Chakkarpur (Saraswati Vihar)",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5658.89
+  },
+  {
+    "locality": "Sector 17 Mukherli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7679.44
+  },
+  {
+    "locality": "Sector 7 Extension",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6413.33
+  },
+  {
+    "locality": "Ind. Sector-18",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 10572.22
+  },
+  {
+    "locality": "Institution Sec-18,32,44",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12112.22
+  },
+  {
+    "locality": "INSTITUTIONAL PLOT, SCHOOL PLOT, CLUB HOSPITALS etc. IN HUDA SECTOR AND LICENCE COLONIES",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6111.11
+  },
+  {
+    "locality": "INSTITUTIONAL PLOT, SCHOOL PLOT, CLUB HOSPITALS etc. IN OTHER AREA",
+    "property_type": "Other",
+    "rate_2025_per_sqft": 6111.11
+  },
+  {
+    "locality": "INSTITUTIONAL PLOT, SCHOOL PLOT, CLUB HOSPITALS etc. IN OTHER AREA",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6111.11
+  },
+  {
+    "locality": "Sec-18",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17758.89
+  },
+  {
+    "locality": "Sec-19",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 10572.22
+  },
+  {
+    "locality": "Sec-19",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16166.67
+  },
+  {
+    "locality": "Sec-2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6758.89
+  },
+  {
+    "locality": "Sec-3",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 21853.33
+  },
+  {
+    "locality": "Sec-20",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16166.67
+  },
+  {
+    "locality": "Sec-22A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7373.33
+  },
+  {
+    "locality": "Sec-22A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22708.89
+  },
+  {
+    "locality": "Sec-25",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 13444.44
+  },
+  {
+    "locality": "Sec-26",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17666.67
+  },
+  {
+    "locality": "Sec-3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6759.44
+  },
+  {
+    "locality": "Sec-4",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 21853.33
+  },
+  {
+    "locality": "Sector-1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6465.56
+  },
+  {
+    "locality": "Sector-2",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24833.33
+  },
+  {
+    "locality": "Sector-12",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6465.56
+  },
+  {
+    "locality": "Sector-13",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 21853.33
+  },
+  {
+    "locality": "Sector-12A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7066.11
+  },
+  {
+    "locality": "Sector-12A",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 21853.33
+  },
+  {
+    "locality": "Sector-14",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9557.78
+  },
+  {
+    "locality": "Sector-15",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 29000.0
+  },
+  {
+    "locality": "Sector-15",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10388.89
+  },
+  {
+    "locality": "Sector-16",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24407.78
+  },
+  {
+    "locality": "Sector-16-17",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9546.67
+  },
+  {
+    "locality": "Sector-16-18",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24407.78
+  },
+  {
+    "locality": "Sector-17 (P)",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8013.89
+  },
+  {
+    "locality": "Sector-17 (P)",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 20178.89
+  },
+  {
+    "locality": "Sector-21",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7373.33
+  },
+  {
+    "locality": "Sector-22",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 22708.89
+  },
+  {
+    "locality": "Sector-22",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8013.89
+  },
+  {
+    "locality": "Sector-23",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 24725.56
+  },
+  {
+    "locality": "Inst. in Other Area",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3226.67
+  },
+  {
+    "locality": "Inst./School in Huda/Lic",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Rly. fatak to Daultabad with mc area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3433.33
+  },
+  {
+    "locality": "BABUPUR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "CARTERPURI",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3111.11
+  },
+  {
+    "locality": "Gurgaon Gaon",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3455.56
+  },
+  {
+    "locality": "Heera Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3922.22
+  },
+  {
+    "locality": "Idgah Area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3922.22
+  },
+  {
+    "locality": "MANOHAR NAGAR\u2013BALDEV NAGAR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4411.11
+  },
+  {
+    "locality": "MIYANWALI COLONY",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6366.67
+  },
+  {
+    "locality": "NAHARPUR RUPA",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3800.0
+  },
+  {
+    "locality": "NAI BASTI",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4900.0
+  },
+  {
+    "locality": "NAI BASTI SAMSHAN GHAT",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3744.44
+  },
+  {
+    "locality": "NEW COLONY",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7833.33
+  },
+  {
+    "locality": "Nihal Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4333.33
+  },
+  {
+    "locality": "OM NAGAR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4411.11
+  },
+  {
+    "locality": "Sai Kunj",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4333.33
+  },
+  {
+    "locality": "SARAI ALLAWARDI",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3311.11
+  },
+  {
+    "locality": "SARHOL",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2211.11
+  },
+  {
+    "locality": "SUKHRALI",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2411.11
+  },
+  {
+    "locality": "Delhi Road & Mahrauli Road (\u0926\u093f\u0932\u094d\u0932\u0940 \u0930\u094b\u0921 \u0914\u0930 \u092e\u0939\u0930\u094c\u0932\u0940 \u0930\u094b\u0921)",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 15744.44
+  },
+  {
+    "locality": "Bhimgarh Khedi (\u092d\u0940\u092e\u0917\u0922\u093c \u0916\u0947\u0921\u093c\u0940)",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3233.33
+  },
+  {
+    "locality": "choma",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "PHASE-2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9788.89
+  },
+  {
+    "locality": "ANY LAND CONVERTED TO INDUSTRIAL USE",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "PALAM VIHAR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7111.11
+  },
+  {
+    "locality": "\u0938\u0947\u0915\u094d\u091f\u0930 7 (Saraswati Vihar)",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5144.44
+  },
+  {
+    "locality": "\u0938\u0947\u0915\u094d\u091f\u0930 17 \u0938\u0941\u0916\u0930\u093e\u0932\u0940",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6677.78
+  },
+  {
+    "locality": "\u0938\u0947\u0915\u094d\u091f\u0930 14 \u0938\u0930\u0938\u094d\u0935\u0924\u0940 \u090f\u0928\u0915\u094d\u0932\u0947\u0935",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5344.44
+  },
+  {
+    "locality": "SECTOR 104 TO 106 109 TO 115 LIC COLONY",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4444.44
+  },
+  {
+    "locality": "Sector-23-23A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6144.44
+  },
+  {
+    "locality": "Sector-27",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5877.78
+  },
+  {
+    "locality": "Sector-28",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7955.56
+  },
+  {
+    "locality": "Sector-38",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7211.11
+  },
+  {
+    "locality": "Sector-3A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5877.78
+  },
+  {
+    "locality": "Sector-4",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5888.89
+  },
+  {
+    "locality": "Sector-40",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7955.56
+  },
+  {
+    "locality": "Sector-42",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8077.78
+  },
+  {
+    "locality": "Sector-43",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8811.11
+  },
+  {
+    "locality": "Sector-5",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6144.44
+  },
+  {
+    "locality": "SECTOR-6",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5877.78
+  },
+  {
+    "locality": "Sector-7",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6144.44
+  },
+  {
+    "locality": "Sectors Sec 104 to 106, 109 to 115",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5877.78
+  }
+]

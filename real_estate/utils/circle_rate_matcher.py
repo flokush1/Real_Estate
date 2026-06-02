@@ -43,6 +43,18 @@ _CITY_KEY: Dict[str, str] = {
     "jaipur": "jaipur",
     "aligarh": "aligarh",
     "alwar": "alwar",
+    "dehradun": "dehradun",
+    "dehra dun": "dehradun",
+    "pune": "pune",
+    "pimpri chinchwad": "pune",
+    "pcmc": "pune",
+
+    # Gautam Buddha Nagar district → use Greater Noida rates (same admin area)
+    "gautam buddha nagar": "greater_noida",
+    "gb nagar": "greater_noida",
+
+    # Nimka is a village in Faridabad district → use Faridabad rates
+    "nimka": "faridabad",
 }
 
 _CITY_FALLBACKS: Dict[str, List[str]] = {
@@ -281,7 +293,10 @@ class CircleRateMatcher:
         self._load_jaipur(cr_dir)
         self._load_aligarh(cr_dir)
         self._load_alwar(cr_dir)
+        self._load_dehradun(cr_dir)
+        self._load_pune(cr_dir)
         self._load_missing_overrides(cr_dir)
+        self._load_canonical_json_files(cr_dir)
 
         # Pre-compute choice lists for fuzzy matching.
         for city, lkp in self._lookup.items():
@@ -291,6 +306,106 @@ class CircleRateMatcher:
         for city, lkp in self._lookup.items():
             logging.info(f"  CircleRate [{city}]: {len(lkp)} normalised entries")
         logging.info(f"  CircleRate total across cities: {total}")
+
+    # Canonical JSON format for new cities:
+    # [
+    #   {
+    #     "city": "CityName",          <- required when city can't be inferred from filename
+    #     "locality": "Locality Name", <- required
+    #     "property_type": "Residential", <- optional, defaults to "Residential"
+    #     "circle_rate_sqft": 5000.0   <- required (₹/sqft)
+    #   },
+    #   ...
+    # ]
+    # Files already handled by the specific loaders above are skipped so there
+    # is no double-loading. Any new city just needs a JSON file with this schema.
+    _KNOWN_CANONICAL_FILES = {
+        "merged_delhi_localities_cr.json",
+        "noida_circle_rate (1).json",
+        "greater-noida_circlerate (1).json",
+        "gurgaon circle rate.json",
+        "ghaziabad_circle_rate.json",
+        "faridabad_circle.json",
+        "jaipur_circle_rates_urban (1).json",
+        "aligarh_circle.json",
+        "alwar_circle.json",
+        "missing_circle_rates.json",
+        "dehradun_circle.json",   # handled by _load_dehradun
+        "pune_circle.json",       # handled by _load_pune
+        # Note: "delhi circle rat3e (1).json" intentionally NOT listed here
+        # so the generic loader picks it up and merges it into delhi.
+    }
+
+    def _load_canonical_json_files(self, cr_dir: str) -> None:
+        """
+        Generic loader for any JSON file not already handled by a specific loader.
+
+        Supports two list formats:
+          1. Each record has a ``"city"`` field → city resolved from the record.
+          2. No ``"city"`` field → city resolved from the filename (same logic
+             as :func:`load_all_circle_rates` in the API layer).
+
+        Flat-dict ``{locality: rate}`` files without a known city mapping are
+        skipped with a warning.
+        """
+        import glob as _glob
+
+        for fpath in sorted(_glob.glob(os.path.join(cr_dir, "*.json"))):
+            fname = os.path.basename(fpath).lower()
+            if fname in self._KNOWN_CANONICAL_FILES:
+                continue  # already handled by a specific loader
+
+            try:
+                with open(fpath, encoding="utf-8") as fh:
+                    data = json.load(fh)
+            except Exception as exc:
+                logging.warning(f"  Could not read circle-rate file {fpath}: {exc}")
+                continue
+
+            if not isinstance(data, list):
+                # Flat-dict format: try to infer city from filename.
+                file_city = _resolve_city(fname.replace("_circle", "").replace("_rate", "").replace(".json", ""))
+                if file_city is None:
+                    logging.warning(
+                        f"  Skipping {fname}: flat-dict format requires city inferrable from filename."
+                    )
+                    continue
+                loaded = 0
+                for loc_key, raw_rate in data.items():
+                    rate = _safe_float(raw_rate)
+                    if loc_key and rate is not None:
+                        self._put(file_city, str(loc_key), rate)
+                        loaded += 1
+                logging.info(f"  Canonical loader [{file_city}] from {fname}: {loaded} entries")
+                continue
+
+            # List format — read city from each record or from filename.
+            file_city = _resolve_city(fname.replace("_circle", "").replace("_rate", "").replace(".json", ""))
+            loaded = 0
+            for item in data:
+                if not isinstance(item, dict):
+                    continue
+                # Try _resolve_city first (handles known aliases like "Gurugram" → "gurgaon").
+                # Fall back to a plain normalised string so any new city name works
+                # without needing to be added to _CITY_KEY.
+                raw_city = str(item.get("city", "")).strip()
+                city_key = file_city or _resolve_city(raw_city) or _normalize(raw_city).lower() or None
+                if not city_key:
+                    continue
+                loc = str(item.get("locality", "")).strip()
+                prop_type = str(item.get("property_type") or "Residential").strip().title() or "Residential"
+                rate = _safe_float(
+                    item.get("circle_rate_sqft")
+                    or item.get("circle_land_cost_inr_per_sqft")
+                    or item.get("rate_2025_per_sqft")
+                    or item.get("rate")
+                )
+                if loc and rate is not None:
+                    self._put_typed(city_key, loc, prop_type, rate)
+                    loaded += 1
+
+            if loaded:
+                logging.info(f"  Canonical loader from {fname}: {loaded} entries")
 
     def _load_delhi(self, cr_dir: str):
         path = os.path.join(cr_dir, "Merged_Delhi_Localities_cr.json")
@@ -612,7 +727,7 @@ class CircleRateMatcher:
           - Also store useful Colony names from Rows.
           - Skip agricultural-only/generic slab labels.
         """
-        path = os.path.join(cr_dir, "jaipur_circle_rate.json")
+        path = os.path.join(cr_dir, "jaipur_circle_rates_urban (1).json")
         if not os.path.exists(path):
             logging.warning(f"  Jaipur circle-rate file not found: {path}")
             return
@@ -624,7 +739,7 @@ class CircleRateMatcher:
             logging.warning(f"  Could not parse Jaipur circle-rate JSON: {e}")
             return
 
-        records = doc.get("data", [])
+        records = doc if isinstance(doc, list) else doc.get("data", [])
         if not isinstance(records, list):
             logging.warning("  Jaipur circle-rate JSON has unexpected top-level format")
             return
@@ -730,6 +845,146 @@ class CircleRateMatcher:
             f"  Loaded Jaipur records → "
             f"{loaded_zones} zone entries, {loaded_colonies} useful colony aliases"
         )
+
+    def _load_dehradun(self, cr_dir: str) -> None:
+        """
+        Load Dehradun circle rates from dehradun_circle.json.
+
+        The file uses a nested road/zone format:
+            {
+                "circle_rates_uttarakhand_2025_per_sqft": {
+                    "Dehradun": {
+                        "non_agricultural_land": [
+                            {
+                                "zone": "A",
+                                "locality": "Rajpur Road (Clocktower to RTO)",
+                                "rate_per_sqft_area_upto_50_sqm_plot": 5760.03,
+                                "rate_per_sqft_area_50_350_sqm_plot": 4645.15
+                            },
+                            ...
+                        ]
+                    }
+                }
+            }
+
+        Entries are stored keyed by the full locality description AND by the
+        abbreviated road name (text before the first parenthesis) so that
+        locality names containing e.g. "Rajpur Road" can match via fuzzy.
+        """
+        path = os.path.join(cr_dir, "dehradun_circle.json")
+        if not os.path.exists(path):
+            return
+
+        try:
+            with open(path, encoding="utf-8") as fh:
+                doc = json.load(fh)
+        except Exception as exc:
+            logging.warning(f"  Could not parse Dehradun circle-rate JSON: {exc}")
+            return
+
+        outer = doc.get("circle_rates_uttarakhand_2025_per_sqft", {})
+        deh_data = outer.get("Dehradun", {})
+        entries = deh_data.get("non_agricultural_land", [])
+
+        loaded = 0
+        for entry in entries:
+            if not isinstance(entry, dict):
+                continue
+            locality = str(entry.get("locality", "")).strip()
+            if not locality:
+                continue
+            # Use the smaller 50-350 sqm rate as the conservative residential rate
+            rate = _safe_float(
+                entry.get("rate_per_sqft_area_50_350_sqm_plot")
+                or entry.get("rate_per_sqft_area_upto_50_sqm_plot")
+            )
+            if rate is None:
+                continue
+
+            self._put("dehradun", locality, rate)
+            loaded += 1
+
+            # Also index by the root road name before the parenthesis.
+            # "Rajpur Road (Clocktower to RTO)" → "Rajpur Road"
+            paren_idx = locality.find("(")
+            if paren_idx > 0:
+                root_name = locality[:paren_idx].strip()
+                if root_name and root_name.lower() != locality.lower():
+                    self._put("dehradun", root_name, rate)
+
+        logging.info(f"  Loaded {loaded} Dehradun circle-rate entries from dehradun_circle.json")
+
+    def _load_pune(self, cr_dir: str) -> None:
+        """
+        Load Pune circle rates from pune_circle.json.
+
+        File format (flat dict, 844 localities):
+            {
+                "Kharadi": {
+                    "Residential_Flats_Apts":  [5000, 8000],
+                    "Commercial_Offices":      [6000, 9500],
+                    "Commercial_Shops":        [7500, 12000],
+                    "Residential_Land_Plots":  [2000, 4000]
+                },
+                ...
+            }
+
+        Loading strategy:
+          - Residential → midpoint of Residential_Flats_Apts range
+          - Commercial   → max midpoint of Commercial_Offices and Commercial_Shops
+          - _default     → Residential rate (set by _put_typed)
+        """
+        path = os.path.join(cr_dir, "pune_circle.json")
+        if not os.path.exists(path):
+            logging.warning(f"  Pune circle-rate file not found: {path}")
+            return
+
+        try:
+            with open(path, encoding="utf-8") as fh:
+                data = json.load(fh)
+        except Exception as exc:
+            logging.warning(f"  Could not parse Pune circle-rate JSON: {exc}")
+            return
+
+        if not isinstance(data, dict):
+            logging.warning(f"  Pune circle-rate file has unexpected format: {path}")
+            return
+
+        def _midpoint(val: object) -> Optional[float]:
+            """Return midpoint of [min, max] list, or safe-float of scalar."""
+            if isinstance(val, list) and len(val) == 2:
+                lo = _safe_float(val[0])
+                hi = _safe_float(val[1])
+                if lo is not None and hi is not None:
+                    return (lo + hi) / 2.0
+                return lo or hi
+            return _safe_float(val)
+
+        loaded = 0
+        for locality, sub in data.items():
+            if not locality or not isinstance(sub, dict):
+                continue
+
+            res_rate = _midpoint(sub.get("Residential_Flats_Apts"))
+            land_rate = _midpoint(sub.get("Residential_Land_Plots"))
+            com_office = _midpoint(sub.get("Commercial_Offices"))
+            com_shop = _midpoint(sub.get("Commercial_Shops"))
+
+            # Residential: prefer flat/apt rate, fall back to land plot rate
+            res = res_rate if res_rate is not None else land_rate
+            # Commercial: take the higher of the two commercial categories
+            com_vals = [v for v in (com_office, com_shop) if v is not None]
+            com = max(com_vals) if com_vals else None
+
+            if res is not None:
+                self._put_typed("pune", locality, "Residential", res)
+                loaded += 1
+            if land_rate is not None:
+                self._put_typed("pune", locality, "Residential_Land", land_rate)
+            if com is not None:
+                self._put_typed("pune", locality, "Commercial", com)
+
+        logging.info(f"  Loaded {loaded} Pune circle-rate entries from pune_circle.json")
 
     def _load_aligarh(self, cr_dir: str):
         """
@@ -1016,9 +1271,11 @@ class CircleRateMatcher:
 
         city_key = _resolve_city(city)
         if city_key is None:
-            return None
+            # For cities not in _CITY_KEY (e.g. newly added cities like Pune),
+            # fall back to the plain normalised city string used during loading.
+            city_key = _normalize(city_c) or None
 
-        if city_key not in self._lookup:
+        if not city_key or city_key not in self._lookup:
             return None
 
         norm = _normalize(loc_c)

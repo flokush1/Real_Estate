@@ -50,7 +50,7 @@ PROPERTY_TYPE_TO_SEGMENT: dict[str, str] = {
     "villa": "house_villa",
 }
 
-SUPPORTED_SEGMENTS: set[str] = {"apt", "builder_floor", "plot"}
+SUPPORTED_SEGMENTS: set[str] = {"apt", "builder_floor", "plot", "house_villa"}
 
 ACTIVE_EVENT_TYPES: set[str] = {"new", "unchanged", "updated"}
 
@@ -152,19 +152,37 @@ class MarketIntelligenceService:
 
     def __init__(self, project_root: str) -> None:
         self.project_root = Path(project_root)
-        self.raw_paths = [
-            self.project_root / "real_estate_data" / "real_estate_data" / "ho_raw_data.csv",
-            self.project_root / "real_estate_data" / "real_estate_data" / "mb_raw_data.csv",
-        ]
         self._artifacts: dict[str, pd.DataFrame] = {}
-        cr_dir = str(
-            self.project_root / "real_estate_data" / "real_estate_data" / "circle_rates"
-        )
+        # circle_rates/ lives at the project root, not nested inside real_estate_data/
+        cr_dir = str(self.project_root / "circle_rates")
         try:
             self._cr_matcher: CircleRateMatcher | None = CircleRateMatcher(cr_dir)
         except Exception as exc:
             logger.warning("MarketIntelligenceService: circle rate matcher init failed: %s", exc)
             self._cr_matcher = None
+
+        # Prefer the already-cleaned transformation output (accurate locality names,
+        # validated prices/areas, correct property_type_grouped segments) over raw
+        # HO/MB files.  Fall back to raw files if no cleaned artifact exists yet.
+        cleaned = self._find_latest_cleaned_csv()
+        if cleaned:
+            logger.info("MarketIntelligenceService: using cleaned CSV %s", cleaned)
+            self.raw_paths = [cleaned]
+        else:
+            logger.warning(
+                "MarketIntelligenceService: no cleaned.csv found; falling back to raw HO/MB files"
+            )
+            self.raw_paths = [
+                self.project_root / "real_estate_data" / "ho_raw_data.csv",
+                self.project_root / "real_estate_data" / "mb_raw_data.csv",
+            ]
+
+    def _find_latest_cleaned_csv(self) -> Path | None:
+        """Return the cleaned.csv from the highest-versioned data_transformation artifact."""
+        import glob as _glob
+        pattern = str(self.project_root / "artifact" / "data_transformation" / "*" / "cleaned.csv")
+        candidates = sorted(_glob.glob(pattern))  # v4 < v5 < v6 … sorts correctly
+        return Path(candidates[-1]) if candidates else None
 
     # ─────────────────────────────────────────────────────────────
     # 1. Load + normalize raw data
@@ -172,7 +190,7 @@ class MarketIntelligenceService:
 
     # Only the columns actually consumed by _normalize_market_data
     _NEEDED_COLS = {
-        "property_id", "property_type", "city", "locality",
+        "property_id", "property_type", "property_type_grouped", "city", "locality",
         "event_type", "price_numeric", "covered_area_value", "covered_area_unit",
         "sqft_price", "possession_status", "posting_date", "scrape_date",
         "agent_type", "user_type", "developer_id", "developer_uuid",
@@ -209,7 +227,11 @@ class MarketIntelligenceService:
             except Exception as exc:
                 logger.warning("MarketIntelligenceService: failed to read %s: %s", path, exc)
                 continue
-            df["_source_file"] = "housing" if "ho_" in path.name else "magicbricks"
+            df["_source_file"] = (
+                "cleaned" if "cleaned" in path.name
+                else "housing" if "ho_" in path.name
+                else "magicbricks"
+            )
             frames.append(df)
 
         if not frames:
@@ -233,10 +255,24 @@ class MarketIntelligenceService:
         out["property_id"] = col("property_id").astype(str)
         out["source"] = col("_source_file").fillna("unknown").astype(str)
 
-        # Segment
+        # Segment: use property_type_grouped when available (cleaned CSV — already
+        # normalised and validated). Fall back to raw property_type string mapping.
+        pt_grouped = col("property_type_grouped").astype(str)
+        has_grouped = pt_grouped.ne("nan") & pt_grouped.ne("None") & pt_grouped.ne("")
+        _GROUPED_TO_SEG = {
+            "apartment": "apt",
+            "builder_floor": "builder_floor",
+            "plot": "plot",
+            "res_house": "house_villa",
+            "villa": "house_villa",
+        }
         pt_raw = col("property_type").astype(str)
         out["property_type_raw"] = pt_raw
-        out["segment"] = pt_raw.apply(lambda v: _map_segment(v) if v != "nan" else None)
+        out["segment"] = np.where(
+            has_grouped,
+            pt_grouped.map(_GROUPED_TO_SEG),
+            pt_raw.apply(lambda v: _map_segment(v) if v != "nan" else None),
+        )
 
         # City (initial normalization)
         out["city"] = col("city").apply(lambda v: _norm_city(v) if pd.notna(v) else None)
@@ -428,18 +464,25 @@ class MarketIntelligenceService:
             price_hike_pcts: list[float] = []
 
             if dt_idx > 0 and updated_count > 0:
-                prev_dt = all_dates[dt_idx - 1]
-                prev_grp = active_df[
+                # Use MOST RECENT prior price from ANY earlier scrape date.
+                # An UPDATED event's original NEW listing can be several scrape dates back,
+                # so looking only at prev_dt (immediately previous date) always misses it.
+                prior_loc_df = active_df[
                     (active_df["segment"] == seg)
                     & (active_df["city"] == city)
                     & (active_df["canonical_locality"] == locality)
-                    & (active_df["scrape_date"] == prev_dt)
+                    & (active_df["scrape_date"].isin(all_dates[:dt_idx]))
                 ]
-                prev_prices = prev_grp.set_index("property_id")["price"].to_dict()
+                prior_prices = (
+                    prior_loc_df.sort_values("scrape_date")
+                    .drop_duplicates("property_id", keep="last")
+                    .set_index("property_id")["price"]
+                    .to_dict()
+                )
                 for _, row_u in updated_grp.iterrows():
                     pid = row_u["property_id"]
                     curr_p = row_u["price"]
-                    prev_p = prev_prices.get(pid)
+                    prev_p = prior_prices.get(pid)
                     if prev_p and pd.notna(prev_p) and pd.notna(curr_p) and prev_p > 0:
                         pct = (curr_p - prev_p) / prev_p * 100.0
                         if curr_p < prev_p:

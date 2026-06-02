@@ -1,0 +1,40 @@
+services:
+
+  # ── FastAPI / Uvicorn backend ──────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    # Mount artifact + data folders as volumes so you can retrain and update
+    # models without rebuilding the image. Remove the volumes block if you
+    # prefer everything baked into the image.
+    volumes:
+      - ./artifact:/app/artifact
+      - ./real_estate_data:/app/real_estate_data
+      - ./inputs:/app/inputs
+    env_file:
+      - .env            # PG_HOST, PG_PORT, PG_DB, PG_USER, PG_PASSWORD
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── React / Nginx frontend ─────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Replace with your server's public IP or domain name.
+        # If the server_ip is set in .env it will be substituted automatically.
+        VITE_API_BASE: "http://${SERVER_IP:-localhost}:8080"
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped

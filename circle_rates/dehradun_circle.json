@@ -1,0 +1,1599 @@
+{
+  "circle_rates_uttarakhand_2025_per_sqft": {
+    "Dehradun": {
+      "non_agricultural_land": [
+        {
+          "zone": "A",
+          "locality": "Rajpur Road (Clocktower to RTO)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 5760.03,
+          "rate_per_sqft_area_50_350_sqm_plot": 4645.15
+        },
+        {
+          "zone": "B",
+          "locality": "Rajpur Road (RTO to Mussoorie byPass)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 5109.67,
+          "rate_per_sqft_area_50_350_sqm_plot": 3901.93
+        },
+        {
+          "zone": "C",
+          "locality": "Chakrata Road (Bindal Pul – Kishan Nagar Chowk – Ballupur Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "Clock Tower (Gandhi Road – Darshanlal Chowk – Prince Chowk – Rly Station – Lakkhibagh Chowki – Aarath Bazaar – Saharanpur Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "Haridwar By Pass Road (Prince Chowk to Rispanna Pull)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "EC Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "Subhash Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "New Cantt Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "Rajpur Road (Mussoorie By-Pass  - Sai Temple – Rajpur)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "Mussoorie diversion – Malsi Deer Park",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "C",
+          "locality": "Malsi Deer Park to Kuthal Gate",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4645.15,
+          "rate_per_sqft_area_50_350_sqm_plot": 3716.12
+        },
+        {
+          "zone": "D",
+          "locality": "GMS Road (Balliwala Chowk – Sevla Kala – Transport Nagar – Mohabbewala)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "D",
+          "locality": "GMS Road ( Ballupur Chowk – Balliwala Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "D",
+          "locality": "Kaulagarh Road (Kishan Nagar Chowk to Kendriya Vidhyalaya)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "D",
+          "locality": "Rajpur Road (Canal Road Kathbagla)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "D",
+          "locality": "Haridwar Road (Rispanna Pull – Jogiwala)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "D",
+          "locality": "Saharanpur Road (Saharanpur Chowk – Bindal Pul)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "D",
+          "locality": "Haridwar Road (Rispanna Pull – Vidhan Sabha – Rly Crossing)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 4180.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 3530.31
+        },
+        {
+          "zone": "E",
+          "locality": "Survey Chowk – Raipur Road (Rispanna Pull – Sahastradhara Chowk IT Park)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Garhi Chowk – Ballupur Chowk",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Saharanpur Road (Bindal Pul – Turner Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Chakrata Road (Ballupur Chowk – Premnagar Bus Stand)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Maurvian Institute Old Mussoorie Road (Rajpur Crossing – Kuthal Gate)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Anurang Nursery – Indira Nagar – Seemadwar – GMS Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Balliwala Chowk - Anurag Nursery – Vasant Vihar – Lovely Market – Panditwari – Chakrata Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Haridwar Road – Jogiwala to Kuwawala",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Saharanpur Road (Turner Road – Subhash Nagar Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "FRI to Vasant Vihar Chowk",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Kanwali Road (Saharanpur Chowk – Balliwala Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "E",
+          "locality": "Sahastradhara Road (IT Park – Uppal Tower – Canal Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 3251.61,
+          "rate_per_sqft_area_50_350_sqm_plot": 2972.90
+        },
+        {
+          "zone": "F",
+          "locality": "Sahastradhara Road (IT Park – Chatri)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "By Pass Road (Saharnpur Road – Haridwar Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Saharanpur Road (Lal Pul – Indresh Hospital – Derakhas – Kargi Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Shimla byPass Road ( Saharapur Road – Mehuwala)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Raipur Road (Kali Temple – Raipur)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Mussoorie byPass Road- Ring Road (Jogiwala – Forest Rest House)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Mata Mandir Road ( Dharampur Chowk – byPass Road Police Check Post)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Kaulagarh Road (Kendriya Vidyalaya – Kaulagarh)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Laxmi Road Chowk – Badrish Colony – Puliya No. 6",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Motharowala Road (Dharampur Chowk – byPass road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Haridwar Road ( Kuwawala – Lacchiwala Flyover)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Raipur Road (Sahastradhara Chowk – Kali Temple)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Chakrata Road (Prem Nagar Bus Stand to Nadi)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Saharanpur Road (Subhash Nagar Chowk to Forest Area)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Guniyal Gaon – Bhagwantpur Road Purukul",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Sahastradhara Road (Kirsali Chowk – Mussoorie byPass – Sai Temple)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Sahastradhara Road (Panchayati Bahwan – Nanurkheda)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "F",
+          "locality": "Mussoorie Road (Daniyon ka Danda – Hayatt Hotel)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 2508.38,
+          "rate_per_sqft_area_50_350_sqm_plot": 2322.58
+        },
+        {
+          "zone": "G",
+          "locality": "Shimala byPass (Mehuwala – Badowala)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Saharanpur Road (Chandrabani Chowk – WII)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Haridwar Road ( Lacchiwala Flyover – Doiwala)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Saharanpur Road (Brahamanwala – Majra)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Saharanpur Road (Indira Gandhi Marg – Majra)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Sahastradhara Road (Chatri – Sahastradhara)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Doon University – Motharowala Link Road (Kedarpur Secretariat Road – Doon University – Motharowala Link Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Saharanpur Haridwar byPass Road – Motharowala – Doon University – Kedarpur – Firing Range",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Saharanpur Haridwar byPass Road (Police Check Post – Mahindra Showroom – Bangali Kothi – Kedarpur – Dudhli – Doiwala Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Saharanpur Haridwar byPass Road (Kargi Chowk – Banjarawala)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Puliya No. 6 – Kidduwala Chowk – Maharana Pratap Chowk",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Motharowala Dudhli Doiwala Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Raipur Road (Kali Mandir – Nalapani Chowk – Sahastradhara Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Miyawala Nagar Road – Raipur Ranjhawala",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Vidhan Sabha Rly Crossing – MDDA Colony Kedarpuram",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Jogiwala Chowk – Badripur – Indrapur – Badripur Chowk – Majri Mafi",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Raipur Chowk – Thano Chowk",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Mussoorie byPass Road – Ring Road (After Forest Rest House to Raipur Road)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Haridwar Road – Majri Mafi (Rly Crossing) Haripur/ Nevada – Inderpur",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Raipur Road (Ghakki Number 4 – Donali Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Gularghali Raipur Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Haridwar Road (Miyawala Chowk – Chaktunwala – Haathikhana chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Old Post Office (Jogiwala) – Kidduwala Chowk",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Malsi Puliya – Donali Chowk",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Raipur Chowk (Shiv Temple) – Maldevta Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Kirsali Chowk – Kala Gaon – Jagatkhana - Asthal",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Sahastradhara Road (Kulhan Karanpur – Maldevta)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Maldevta – Silla – Kyara Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Haridwar Road (Kuwawala – Gularghati Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Firing Range – Dodwala – Dudhli Doiwala Road. Kedarpur Secretariat colony – Dudhli Doiwala Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Chakrata Road (IMA – Premnagar – Gorakhpur Road - Arcadia Grant - Telpur Chowk)",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Mussoorie Diversion Road – Sinola – Johadi – Anarwala road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Jakhan – Johadi Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Kuthal Gate – Mussoorie Municipal Road Boundary",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "G",
+          "locality": "Nakraunda – Ghisar Padi Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1672.26,
+          "rate_per_sqft_area_50_350_sqm_plot": 1579.35
+        },
+        {
+          "zone": "H",
+          "locality": "Doiwala – Bullawala Road – Jhabarawala",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1300.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 1207.74
+        },
+        {
+          "zone": "H",
+          "locality": "Doiwala – Khatta Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1300.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 1207.74
+        },
+        {
+          "zone": "H",
+          "locality": "Doiwala – Dharmchak Road - Dharmchak",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1300.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 1207.74
+        },
+        {
+          "zone": "H",
+          "locality": "Rikholi – Mussoorie byPass Road",
+          "rate_per_sqft_area_upto_50_sqm_plot": 1300.64,
+          "rate_per_sqft_area_50_350_sqm_plot": 1207.74
+        }
+      ],
+      "residential_apartments_and_commercial_spaces": [
+        {
+          "zone": "A",
+          "area": "Rajpur Road (Clocktower to RTO)",
+          "apartments_rate_per_sqft": 7060.63,
+          "shop_restaurants_offices_rate_per_sqft": 15050.29,
+          "other_commercial_rate_per_sqft": 13749.65
+        },
+        {
+          "zone": "B",
+          "area": "Rajpur Road (RTO to Mussoorie byPass)",
+          "apartments_rate_per_sqft": 6410.31,
+          "shop_restaurants_offices_rate_per_sqft": 13470.94,
+          "other_commercial_rate_per_sqft": 12263.20
+        },
+        {
+          "zone": "C",
+          "area": "Chakrata Road (Bindal Pul – Kishan Nagar Chowk – Ballupur Chowk)",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "Clock Tower (Gandhi Road – Darshanlal Chowk – Prince Chowk – Rly Station – Lakkhibagh Chowki – Aarath Bazaar – Saharanpur Chowk)",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "Haridwar By Pass Road (Prince Chowk to Rispanna Pull)",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "EC Road",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "Subhash Road",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "New Cantt Road",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "Rajpur Road (Mussoorie By-Pass  - Sai Temple – Rajpur)",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "Mussoorie diversion – Malsi Deer Park",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "C",
+          "area": "Malsi Deer Park to Kuthal Gate",
+          "apartments_rate_per_sqft": 5945.79,
+          "shop_restaurants_offices_rate_per_sqft": 12263.20,
+          "other_commercial_rate_per_sqft": 11241.27
+        },
+        {
+          "zone": "D",
+          "area": "GMS Road (Balliwala Chowk – Sevla Kala – Transport Nagar – Mohabbewala)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "D",
+          "area": "GMS Road ( Ballupur Chowk – Balliwala Chowk)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "D",
+          "area": "Kaulagarh Road (Kishan Nagar Chowk to Kendriya Vidhyalaya)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "D",
+          "area": "Rajpur Road (Canal Road Kathbagla)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "D",
+          "area": "Haridwar Road (Rispanna Pull – Jogiwala)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "D",
+          "area": "Saharanpur Road (Saharanpur Chowk – Bindal Pul)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "D",
+          "area": "Haridwar Road (Rispanna Pull – Vidhan Sabha – Rly Crossing)",
+          "apartments_rate_per_sqft": 5481.28,
+          "shop_restaurants_offices_rate_per_sqft": 11055.46,
+          "other_commercial_rate_per_sqft": 10219.33
+        },
+        {
+          "zone": "E",
+          "area": "Survey Chowk – Raipur Road (Rispanna Pull – Sahastradhara Chowk IT Park)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Garhi Chowk – Ballupur Chowk",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Saharanpur Road (Bindal Pul – Turner Road)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Chakrata Road (Ballupur Chowk – Premnagar Bus Stand)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Maurvian Institute Old Mussoorie Road (Rajpur Crossing – Kuthal Gate)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Anurang Nursery – Indira Nagar – Seemadwar – GMS Road",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Balliwala Chowk - Anurag Nursery – Vasant Vihar – Lovely Market – Panditwari – Chakrata Road",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Haridwar Road – Jogiwala to Kuwawala",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Saharanpur Road (Turner Road – Subhash Nagar Chowk)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "FRI to Vasant Vihar Chowk",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Kanwali Road (Saharanpur Chowk – Balliwala Chowk)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "E",
+          "area": "Sahastradhara Road (IT Park – Uppal Tower – Canal Road)",
+          "apartments_rate_per_sqft": 4552.25,
+          "shop_restaurants_offices_rate_per_sqft": 10033.53,
+          "other_commercial_rate_per_sqft": 9104.50
+        },
+        {
+          "zone": "F",
+          "area": "Sahastradhara Road (IT Park – Chatri)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "By Pass Road (Saharnpur Road – Haridwar Road)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Saharanpur Road (Lal Pul – Indresh Hospital – Derakhas – Kargi Chowk)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Shimla byPass Road ( Saharapur Road – Mehuwala)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Raipur Road (Kali Temple – Raipur)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Mussoorie byPass Road- Ring Road (Jogiwala – Forest Rest House)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Mata Mandir Road ( Dharampur Chowk – byPass Road Police Check Post)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Kaulagarh Road (Kendriya Vidyalaya – Kaulagarh)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Laxmi Road Chowk – Badrish Colony – Puliya No. 6",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Motharowala Road (Dharampur Chowk – byPass road)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Haridwar Road ( Kuwawala – Lacchiwala Flyover)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Raipur Road (Sahastradhara Chowk – Kali Temple)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Chakrata Road (Prem Nagar Bus Stand to Nadi)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Saharanpur Road (Subhash Nagar Chowk to Forest Area)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Guniyal Gaon – Bhagwantpur Road Purukul",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Sahastradhara Road (Kirsali Chowk – Mussoorie byPass – Sai Temple)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Sahastradhara Road (Panchayati Bahwan – Nanurkheda)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "F",
+          "area": "Mussoorie Road (Daniyon ka Danda – Hayatt Hotel)",
+          "apartments_rate_per_sqft": 3809.02,
+          "shop_restaurants_offices_rate_per_sqft": 9104.50,
+          "other_commercial_rate_per_sqft": 8175.47
+        },
+        {
+          "zone": "G",
+          "area": "Shimala byPass (Mehuwala – Badowala)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Saharanpur Road (Chandrabani Chowk – WII)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Haridwar Road ( Lacchiwala Flyover – Doiwala)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Saharanpur Road (Brahamanwala – Majra)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Saharanpur Road (Indira Gandhi Marg – Majra)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Sahastradhara Road (Chatri – Sahastradhara)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Doon University – Motharowala Link Road (Kedarpur Secretariat Road – Doon University – Motharowala Link Road)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Saharanpur Haridwar byPass Road – Motharowala – Doon University – Kedarpur – Firing Range",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Saharanpur Haridwar byPass Road (Police Check Post – Mahindra Showroom – Bangali Kothi – Kedarpur – Dudhli – Doiwala Road)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Saharanpur Haridwar byPass Road (Kargi Chowk – Banjarawala)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Puliya No. 6 – Kidduwala Chowk – Maharana Pratap Chowk",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Motharowala Dudhli Doiwala Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Raipur Road (Kali Mandir – Nalapani Chowk – Sahastradhara Road)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Miyawala Nagar Road – Raipur Ranjhawala",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Vidhan Sabha Rly Crossing – MDDA Colony Kedarpuram",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Jogiwala Chowk – Badripur – Indrapur – Badripur Chowk – Majri Mafi",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Raipur Chowk – Thano Chowk",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Mussoorie byPass Road – Ring Road (After Forest Rest House to Raipur Road)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Haridwar Road – Majri Mafi (Rly Crossing) Haripur/ Nevada – Inderpur",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Raipur Road (Ghakki Number 4 – Donali Chowk)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Gularghali Raipur Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Haridwar Road (Miyawala Chowk – Chaktunwala – Haathikhana chowk)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Old Post Office (Jogiwala) – Kidduwala Chowk",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Malsi Puliya – Donali Chowk",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Raipur Chowk (Shiv Temple) – Maldevta Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Kirsali Chowk – Kala Gaon – Jagatkhana - Asthal",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Sahastradhara Road (Kulhan Karanpur – Maldevta)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Maldevta – Silla – Kyara Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Haridwar Road (Kuwawala – Gularghati Chowk)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Firing Range – Dodwala – Dudhli Doiwala Road. Kedarpur Secretariat colony – Dudhli Doiwala Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Chakrata Road (IMA – Premnagar – Gorakhpur Road - Arcadia Grant - Telpur Chowk)",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Mussoorie Diversion  Road – Sinola – Johadi – Anarwala road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Jakhan – Johadi Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Kuthal Gate – Mussoorie Municipal Road Boundary",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "G",
+          "area": "Nakraunda – Ghisar Padi Road",
+          "apartments_rate_per_sqft": 2972.90,
+          "shop_restaurants_offices_rate_per_sqft": 6689.02,
+          "other_commercial_rate_per_sqft": 5945.79
+        },
+        {
+          "zone": "H",
+          "area": "Doiwala – Bullawala Road – Jhabarawala",
+          "apartments_rate_per_sqft": 2601.28,
+          "shop_restaurants_offices_rate_per_sqft": 5852.89,
+          "other_commercial_rate_per_sqft": 5295.47
+        },
+        {
+          "zone": "H",
+          "area": "Doiwala – Khatta Road",
+          "apartments_rate_per_sqft": 2601.28,
+          "shop_restaurants_offices_rate_per_sqft": 5852.89,
+          "other_commercial_rate_per_sqft": 5295.47
+        },
+        {
+          "zone": "H",
+          "area": "Doiwala – Dharmchak Road - Dharmchak",
+          "apartments_rate_per_sqft": 2601.28,
+          "shop_restaurants_offices_rate_per_sqft": 5852.89,
+          "other_commercial_rate_per_sqft": 5295.47
+        },
+        {
+          "zone": "H",
+          "area": "Rikholi – Mussoorie byPass Road",
+          "apartments_rate_per_sqft": 2601.28,
+          "shop_restaurants_offices_rate_per_sqft": 5852.89,
+          "other_commercial_rate_per_sqft": 5295.47
+        }
+      ],
+      "combined_rates": [
+        {
+          "zone": "A",
+          "locality": "Chakkuwala/clock Tower-Kalika Mandi",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 5760.03,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 4645.15,
+          "residential_flat_rate_per_sqft": 7060.63,
+          "commercial_shop_restaurant_office_rate_per_sqft": 15328.99,
+          "commercial_other_rate_per_sqft": 13749.65,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "B",
+          "locality": "Jakhan",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 5109.67,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 3901.93,
+          "residential_flat_rate_per_sqft": 6410.31,
+          "commercial_shop_restaurant_office_rate_per_sqft": 13470.94,
+          "commercial_other_rate_per_sqft": 12263.20,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "C",
+          "locality": "Rajpur Road/Kishan Nagar Chowk/Race Course/ Karanpur/MKP/Malsi",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 4645.15,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 3716.12,
+          "residential_flat_rate_per_sqft": 5945.79,
+          "commercial_shop_restaurant_office_rate_per_sqft": 12263.20,
+          "commercial_other_rate_per_sqft": 11241.27,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "D",
+          "locality": "Ballupur/Kaulagarh/Rajivnagar/Shahnagar/Shewala kala",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 4180.64,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 3530.31,
+          "residential_flat_rate_per_sqft": 5481.28,
+          "commercial_shop_restaurant_office_rate_per_sqft": 11055.46,
+          "commercial_other_rate_per_sqft": 10219.33,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "E",
+          "locality": "MDDA Colony/Vasant vihar/Indra Nagar/Miyawala/Mohkampur/Harrawala",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 3251.61,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 2972.90,
+          "residential_flat_rate_per_sqft": 4552.25,
+          "commercial_shop_restaurant_office_rate_per_sqft": 10033.53,
+          "commercial_other_rate_per_sqft": 9104.50,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "F",
+          "locality": "Amwala Tarla/Dehrakhas/Nathanpur/Saraswati Vihar Ajabpur/Adhoiwala/Chander Road",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 2508.38,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 2322.58,
+          "residential_flat_rate_per_sqft": 3809.02,
+          "commercial_shop_restaurant_office_rate_per_sqft": 9104.50,
+          "commercial_other_rate_per_sqft": 8175.47,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "G",
+          "locality": "Mohabbewala/Chandrabani/Banjarawala/Mothrowala/Dobhal Chowk/Nehru/Gram/Raipur/Chaktunwala/Nawada/Balawala/ Nakraunda/Vijaypur/Arcadia",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 1672.26,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 1579.35,
+          "residential_flat_rate_per_sqft": 2972.90,
+          "commercial_shop_restaurant_office_rate_per_sqft": 6689.02,
+          "commercial_other_rate_per_sqft": 5945.79,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        },
+        {
+          "zone": "H",
+          "locality": "Doiwala/Mussorie Bypass Road",
+          "non_agri_0_50_sqm_plot_rate_per_sqft": 1300.64,
+          "non_agri_50_350_sqm_plot_rate_per_sqft": 1207.74,
+          "residential_flat_rate_per_sqft": 2601.28,
+          "commercial_shop_restaurant_office_rate_per_sqft": 5852.89,
+          "commercial_other_rate_per_sqft": 5295.47,
+          "linter_posh_construction_rate_per_sqft": 1114.84
+        }
+      ]
+    },
+    "Almora": [
+      {
+        "zone": "A",
+        "locality": "Jakhandevi/Chausar/Tilakpur/ Talla Joshikhola/Mall Road /Talla Kasuna/ Jijhar/Chowk Bazar/Paltan Bazaar/ Tamta Mohalla/ Baman Khola/ Johri Bazaar/Thana Bazaar",
+        "agri_rate_per_lakh": "Nil",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 1114.84,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 1021.93,
+        "residential_flat_rate_per_sqft": 3065.80,
+        "commercial_shop_hotel_office_rate_per_sqft": 7153.53,
+        "commercial_other_rate_per_sqft": 6317.40,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "B",
+        "locality": "Senti Contol Area/ Nagarpalika / Chaudhri khola/Hiradungri/East Pokharkhali/ Sunari Naula/ Dharanaula/ Aawas Vikas Colony/ Joshikhola/ Laxmeshwar/Kapina",
+        "agri_rate_per_lakh": "Nil",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 929.03,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 836.13,
+        "residential_flat_rate_per_sqft": 2880.00,
+        "commercial_shop_hotel_office_rate_per_sqft": 6689.02,
+        "commercial_other_rate_per_sqft": 6131.60,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "C",
+        "locality": "West Pokharkhali/ Ranidhara /Rajpur/ Galla Danya/ Pataldevi/Shail/ Shailgooth / Pandey Khola /Karnatakhola/ Kanoli /Jal Nigam Colony/Tiwari Khola/ Dhungadhara / Raila Pali",
+        "agri_rate_per_lakh": "Nil",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 836.13,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 743.22,
+        "residential_flat_rate_per_sqft": 2787.09,
+        "commercial_shop_hotel_office_rate_per_sqft": 6689.02,
+        "commercial_other_rate_per_sqft": 6038.70,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "D",
+        "locality": "Khadya Gramin/Mall Gaon/Sunar Khola /Maat /Matena /Kalimati/Golna Karadiya/Rikholi/Sunola Malla/ Gadholi",
+        "agri_rate_per_lakh": "500",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 743.22,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 650.32,
+        "residential_flat_rate_per_sqft": 2694.19,
+        "commercial_shop_hotel_office_rate_per_sqft": 6689.02,
+        "commercial_other_rate_per_sqft": 6038.70,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "E",
+        "locality": "Falseema/Chana/Gadholi/Machhor/Gar Guth/ Talad / Deoli/ Matela/ Railakot/ Adholi Tiwari/Bhanar/ Sainkura",
+        "agri_rate_per_lakh": "300",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 464.52,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 371.61,
+        "residential_flat_rate_per_sqft": 2415.48,
+        "commercial_shop_hotel_office_rate_per_sqft": 3716.12,
+        "commercial_other_rate_per_sqft": 3251.61,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "F",
+        "locality": "Katarmal (Kosi Bazar), Hawalbag Line State /Bakh/ Bajwar/ Turiya/ Silkhora/ Dhura/Toli/Jogyuda/ Sheel/ Maniagar/ Digoli/ Chitaipant",
+        "agri_rate_per_lakh": "210",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 232.26,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 213.68,
+        "residential_flat_rate_per_sqft": 2322.58,
+        "commercial_shop_hotel_office_rate_per_sqft": 3251.61,
+        "commercial_other_rate_per_sqft": 2787.09,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "G",
+        "locality": "Tatik/Jyoli/Gadhwali/Dewali Khan/ Badgal Rautela/ Champa/ Dhari/ Khunt/ Katarmal/ Dhamas/Salla Rautela",
+        "agri_rate_per_lakh": "100",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 185.81,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 167.23,
+        "residential_flat_rate_per_sqft": 2322.58,
+        "commercial_shop_hotel_office_rate_per_sqft": 2787.09,
+        "commercial_other_rate_per_sqft": 2601.28,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "H",
+        "locality": "Fatehpur Bari/Mahat Gaon/ Naugaon/ Sarna/ Kuman/Raun/Raingal/Dal",
+        "agri_rate_per_lakh": "50",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 139.35,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 111.48,
+        "residential_flat_rate_per_sqft": 2136.77,
+        "commercial_shop_hotel_office_rate_per_sqft": 2787.09,
+        "commercial_other_rate_per_sqft": 2415.48,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      },
+      {
+        "zone": "I",
+        "locality": "Bhetuli/Basoli/Dotiyal Gaon/ Amkholi/ Beena/Malli Dhauni/ Chauna/ Nakuta/ Danda Kanda/Bunga/Mangalta/ Minar",
+        "agri_rate_per_lakh": "15",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 92.90,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 83.61,
+        "residential_flat_rate_per_sqft": 2043.87,
+        "commercial_shop_hotel_office_rate_per_sqft": 2601.28,
+        "commercial_other_rate_per_sqft": 2322.58,
+        "linter_posh_construction_rate_per_sqft": 1858.06,
+        "tin_shed_construction_rate_per_sqft": 929.03
+      }
+    ],
+    "Haridwar": [
+      {
+        "zone": "A",
+        "locality": "Rishikul Road (From rishikul tirahe to shankar ashram)/ Bheemgoda marg(from bheemgoda police check post to har ki pauri)/Birla Road/Joghamal Road/Bholagiri Marg/Bhalla Road",
+        "agri_rate_per_lakh": "-",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 6038.70,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 5574.18,
+        "residential_flat_rate_per_sqft": 7385.79,
+        "commercial_shop_hotel_office_rate_per_sqft": 20438.67,
+        "commercial_other_rate_per_sqft": 16258.03,
+        "linter_posh_construction_rate_per_sqft": 1300.64,
+        "tin_posh_construction_rate_per_sqft": 1114.84
+      },
+      {
+        "zone": "B",
+        "locality": "Railway Road(from shivmurti tirahe to rishikul tirahe)/Delhi Road(from Ranipur moad to new haridwar pull)/Jwalapur Kotwali Road(From Shankar Ashram to Railway Bridge in front of Lal Mandir)/BHEL Road(From Ranipur Mod to Railway Bridge in front of Vinayak Hotel)",
+        "agri_rate_per_lakh": "-",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 5109.67,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 4645.15,
+        "residential_flat_rate_per_sqft": 7385.79,
+        "commercial_shop_hotel_office_rate_per_sqft": 17651.58,
+        "commercial_other_rate_per_sqft": 13935.46,
+        "linter_posh_construction_rate_per_sqft": 1300.64,
+        "tin_posh_construction_rate_per_sqft": 1114.84
+      },
+      {
+        "zone": "C",
+        "locality": "Kankhal Road(from aryanagar chowk to singh dwar chowk)/Railway Road Jwalapur(from aryanagar chowk to railway phatak jwalapur)/Jwalapur Kotwali Road(From Railway bridge next to Lali Mandir to Pul Jatwara)/Railway Road Jwalapur(from police chowki jwalapur to Sector 2 barrier)",
+        "agri_rate_per_lakh": "-",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 4180.64,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 3716.12,
+        "residential_flat_rate_per_sqft": 5992.24,
+        "commercial_shop_hotel_office_rate_per_sqft": 13935.46,
+        "commercial_other_rate_per_sqft": 11612.88,
+        "linter_posh_construction_rate_per_sqft": 1300.64,
+        "tin_posh_construction_rate_per_sqft": 1114.84
+      },
+      {
+        "zone": "D",
+        "locality": "Laksar Road(from Jagjeetpur ITI college to DAV College till the boundary of village Jagjitpur)/BHEL Road(from shivalik nagar to hotel vinayak grand next to Immortal Martyr Gajendra Singh Bisht filling station)",
+        "agri_rate_per_lakh": "-",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 3623.22,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 2787.09,
+        "residential_flat_rate_per_sqft": 4970.31,
+        "commercial_shop_hotel_office_rate_per_sqft": 13935.46,
+        "commercial_other_rate_per_sqft": 11612.88,
+        "linter_posh_construction_rate_per_sqft": 1300.64,
+        "tin_posh_construction_rate_per_sqft": 1114.84
+      },
+      {
+        "zone": "E",
+        "locality": "BHEL Road(from Immortal Martyr Gajendra singh bisht filling station to barrier no 6 next to salempur police check post)/Raja Garden-Jamalpur Link road ( From Laksar Road to the culvert of irrigation canal before Hanuman Mandir)/Kankhal Jagjeetpur Marg(from yantar setu to Shivedale School)/Karkhadi Samsan Road, Beyond Mor",
+        "agri_rate_per_lakh": "-",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 3251.61,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 2322.58,
+        "residential_flat_rate_per_sqft": 4598.70,
+        "commercial_shop_hotel_office_rate_per_sqft": 12077.39,
+        "commercial_other_rate_per_sqft": 9290.30,
+        "linter_posh_construction_rate_per_sqft": 1300.64,
+        "tin_posh_construction_rate_per_sqft": 1114.84
+      }
+    ],
+    "Tehri": [
+      {
+        "zone": "A",
+        "locality": "Dikholgaon/Mathiyan Goa/Guldi/Jakhot/Hadam Malla/Arakot/Hadam Talla/Dandasalli",
+        "agri_0_50_meter_road_distance_lakh_value": 36000000,
+        "agri_50_200_meter_road_distance_lakh_value": 22000000,
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 399.48,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 232.26,
+        "residential_flat_rate_per_sqft": 3530.31,
+        "commercial_shop_hotel_office_rate_per_sqft": 4087.73,
+        "commercial_other_rate_per_sqft": 3623.22,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 1021.93
+      },
+      {
+        "zone": "B",
+        "locality": "Gajana Madhe/Batkhem Madhe/Bhetudi/Pursol Gaon/ Kutha /Painula/ Godmu/Dibnu/Dabri/Kandikhal",
+        "agri_0_50_meter_road_distance_lakh_value": 20000000,
+        "agri_50_200_meter_road_distance_lakh_value": 15000000,
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 250.84,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 148.64,
+        "residential_flat_rate_per_sqft": 3437.41,
+        "commercial_shop_hotel_office_rate_per_sqft": 3901.93,
+        "commercial_other_rate_per_sqft": 3716.12,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 1021.93
+      },
+      {
+        "zone": "C",
+        "locality": "Ramgaon/Tiwadgaon/Maroda/Dobra/Jagdhar/Dharkot/ Than/Kaleth/Baur/Selur /Aleru/Sabli Malli/Kot/Silla uppu/Malla uppu/Talla uppu",
+        "agri_0_50_meter_road_distance_lakh_value": 10000000,
+        "agri_50_200_meter_road_distance_lakh_value": 7600000,
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 111.48,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 102.29,
+        "residential_flat_rate_per_sqft": 3344.51,
+        "commercial_shop_hotel_office_rate_per_sqft": 3901.93,
+        "commercial_other_rate_per_sqft": 3530.31,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 1021.93
+      },
+      {
+        "zone": "D",
+        "locality": "Nakot/Churer Dhar/Manda/Chopariyalgaon",
+        "agri_0_50_meter_road_distance_lakh_value": 6600000,
+        "agri_50_200_meter_road_distance_lakh_value": 5000000,
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 78.97,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 55.74,
+        "residential_flat_rate_per_sqft": 3344.51,
+        "commercial_shop_hotel_office_rate_per_sqft": 3716.12,
+        "commercial_other_rate_per_sqft": 3437.41,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 1021.93
+      },
+      {
+        "zone": "E",
+        "locality": "Dobhalgaon/Gajna/Pali/Chopdi/Jakh/Jaspur/Kuttha /Nail Malla/Nail Talla/Chopari/Jaspur/Purshol Gaon",
+        "agri_0_50_meter_road_distance_lakh_value": 5800000,
+        "agri_50_200_meter_road_distance_lakh_value": 4700000,
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 74.32,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 55.74,
+        "residential_flat_rate_per_sqft": 3251.61,
+        "commercial_shop_hotel_office_rate_per_sqft": 3530.31,
+        "commercial_other_rate_per_sqft": 3344.51,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 1021.93
+      },
+      {
+        "zone": "F",
+        "locality": "Thilari/Basal/Bergani/Basal/Bhandar Gaon/ Pangar/ Kyari/ Dharmghat/ Koldhar/Chamni/Pata/Bhatkoti",
+        "agri_0_50_meter_road_distance_lakh_value": 5000000,
+        "agri_50_200_meter_road_distance_lakh_value": 4100000,
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 55.74,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 41.81,
+        "residential_flat_rate_per_sqft": 3158.70,
+        "commercial_shop_hotel_office_rate_per_sqft": 3437.41,
+        "commercial_other_rate_per_sqft": 3251.61,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 1021.93
+      }
+    ],
+    "Pithoragarh": [
+      {
+        "zone": "A",
+        "locality": "Motorways road in Nagar Palika Parishad Nazul land - From Roadways Station to Siltham: Via Ghatkaran Pant Park, Kotwali, Pithoragarh, Uptake Tiraha, Raja Hotel, KMOU Bus Station, and Roadways Station",
+        "agri_rate_per_lakh": "-",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 817.55,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 775.74,
+        "residential_flat_rate_per_sqft": 1811.61,
+        "commercial_shop_hotel_office_rate_per_sqft": 2657.03,
+        "commercial_other_rate_per_sqft": 2536.25,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 836.13
+      },
+      {
+        "zone": "B",
+        "locality": "Aicholi - Hanuman Mandir Road-Takana - Roadways Station/ Uptake Tiraha GIC Road/Pitthoragarh - Chandak Road/Pitthoragarh Dharchula Motor road/Siltham Bhatkot Motor road",
+        "agri_rate_per_lakh": "467",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 706.06,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 667.04,
+        "residential_flat_rate_per_sqft": 1737.29,
+        "commercial_shop_hotel_office_rate_per_sqft": 2638.45,
+        "commercial_other_rate_per_sqft": 2508.38,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 836.13
+      },
+      {
+        "zone": "C",
+        "locality": "Chandrabhaga - Roadways Workshop Motor Road/Takana Aakash Vaani Stadium Road/Pitthoragarh Jhulaghat Motor Road/ Degree College Road Pitthoragarh - Chandak Motor Road/Punedi Tarigaon Motor Road",
+        "agri_rate_per_lakh": "280",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 510.97,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 487.74,
+        "residential_flat_rate_per_sqft": 1662.96,
+        "commercial_shop_hotel_office_rate_per_sqft": 2415.48,
+        "commercial_other_rate_per_sqft": 2294.70,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 836.13
+      },
+      {
+        "zone": "D",
+        "locality": "Neda/Baste/Bin Panda Bypass Road-Daula",
+        "agri_rate_per_lakh": "240",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 348.39,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 320.52,
+        "residential_flat_rate_per_sqft": 1412.13,
+        "commercial_shop_hotel_office_rate_per_sqft": 2201.80,
+        "commercial_other_rate_per_sqft": 2034.58,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 580.64
+      },
+      {
+        "zone": "E",
+        "locality": "Panda/Salmora/Jaurasi/Kasani/Devlalgaon/Chaisar/Lelu/Makholya Gaon",
+        "agri_rate_per_lakh": "220",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 334.45,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 306.58,
+        "residential_flat_rate_per_sqft": 1347.09,
+        "commercial_shop_hotel_office_rate_per_sqft": 2118.19,
+        "commercial_other_rate_per_sqft": 1950.96,
+        "linter_posh_construction_rate_per_sqft": 1114.84,
+        "tin_posh_construction_rate_per_sqft": 580.64
+      }
+    ],
+    "Chamoli": [
+      {
+        "zone": "A",
+        "locality": "Gopeshwar (ward no 1) upper market Gopeshwar (ward no 4)/Vasant Vihar (ward no 6)/ Kothiyal Sain/Gopeshwar Gaon (ward no 2)/ Gwala (ward no 10)/Rampur Chak Paduli",
+        "agri_rate_per_lakh": "304",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 315.87,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 288.00,
+        "residential_flat_rate_per_sqft": 2731.35,
+        "commercial_shop_hotel_office_rate_per_sqft": 3121.54,
+        "commercial_other_rate_per_sqft": 2954.32,
+        "linter_posh_construction_rate_per_sqft": 2415.48,
+        "tin_posh_construction_rate_per_sqft": 1950.96
+      },
+      {
+        "zone": "B",
+        "locality": "Kshetrapal(Chamoli) (ward no 11) / Chhinka/ Birahi/ Mayapur /Gadora/Badol(ward no 4)/ Naurakh (pipalkoti)/ Agthala/ Daswan",
+        "agri_rate_per_lakh": "171",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 185.81,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 157.94,
+        "residential_flat_rate_per_sqft": 2601.28,
+        "commercial_shop_hotel_office_rate_per_sqft": 2833.54,
+        "commercial_other_rate_per_sqft": 2787.09,
+        "linter_posh_construction_rate_per_sqft": 2415.48,
+        "tin_posh_construction_rate_per_sqft": 1950.96
+      },
+      {
+        "zone": "C",
+        "locality": "Gwar/Dewaldhar/Bairgana/Siroli/Kunkuli/Mandal/Khalla/Devar Khadora/Dusat Gaon/Golim(Bajpur)",
+        "agri_rate_per_lakh": "120",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 130.06,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 111.48,
+        "residential_flat_rate_per_sqft": 2545.54,
+        "commercial_shop_hotel_office_rate_per_sqft": 2731.35,
+        "commercial_other_rate_per_sqft": 2564.12,
+        "linter_posh_construction_rate_per_sqft": 2415.48,
+        "tin_posh_construction_rate_per_sqft": 1950.96
+      },
+      {
+        "zone": "D",
+        "locality": "Pilang Batoli/Kwirali/Kujoun Maikot/ Hat/Baula/ Sonla/ Bachher/Ghudsal/Kanderi/ Ramtoli/Tartoli/Khainuri/Majothi",
+        "agri_rate_per_lakh": "80",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 83.61,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 74.32,
+        "residential_flat_rate_per_sqft": 2499.09,
+        "commercial_shop_hotel_office_rate_per_sqft": 2554.83,
+        "commercial_other_rate_per_sqft": 2508.38,
+        "linter_posh_construction_rate_per_sqft": 2415.48,
+        "tin_posh_construction_rate_per_sqft": 1950.96
+      },
+      {
+        "zone": "E",
+        "locality": "Dogri Kandai/Bamiyala/Kunjpothani/Koteshwar/Mehargaon/ Banswara /Kafal Khet/Digoli",
+        "agri_rate_per_lakh": "45",
+        "uncultivated_0_50_meter_road_distance_rate_per_sqft": 55.74,
+        "uncultivated_50_200_meter_road_distance_rate_per_sqft": 41.81,
+        "residential_flat_rate_per_sqft": 2471.22,
+        "commercial_shop_hotel_office_rate_per_sqft": 2554.83,
+        "commercial_other_rate_per_sqft": 2508.38,
+        "linter_posh_construction_rate_per_sqft": 2415.48,
+        "tin_posh_construction_rate_per_sqft": 1950.96
+      }
+    ]
+  }
+}

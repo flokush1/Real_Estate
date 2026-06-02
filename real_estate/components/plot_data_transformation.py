@@ -11,7 +11,7 @@ from sklearn.neighbors import BallTree, KNeighborsClassifier, KNeighborsRegresso
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-from real_estate.constant import CIRCLE_RATES_DIR, NCR_ROADS_GEOJSON_PATH
+from real_estate.constant import CIRCLE_RATES_DIR, NCR_ROADS_GEOJSON_PATH, ROADS_GEOJSON_PATHS
 from real_estate.entity import (
     PlotDataIngestionArtifact,
     PlotDataTransformationArtifact,
@@ -31,6 +31,8 @@ SQFT_CONVERSION = {
     "sq-m": 10.7639,
     "sq.mt": 10.7639,
     "acre": 43560.0,
+    "guntha": 1089.0,   # 1 Guntha = 1/40 acre = 1089 sq ft (Maharashtra/Goa)
+    "gunta": 1089.0,    # alternate spelling
 }
 
 AMENITY_RULES = [
@@ -546,17 +548,25 @@ class PlotDataTransformation:
         return num
 
     @staticmethod
-    def _classify_road_class(ref_value):
-        if pd.isna(ref_value):
-            return None
-        ref = str(ref_value).upper()
-        compact = re.sub(r"\s+", "", ref)
-        if compact.startswith("NH") or re.search(r"\bNH\b", ref):
-            return "NH"
-        if compact.startswith("SH") or re.search(r"\bSH\b", ref):
-            return "SH"
-        if compact.startswith("MDR") or re.search(r"\bMDR\b", ref):
-            return "MDR"
+    def _classify_road_class(ref_value, fclass_value=None):
+        if not pd.isna(ref_value) and str(ref_value).strip():
+            ref = str(ref_value).upper()
+            compact = re.sub(r"\s+", "", ref)
+            if compact.startswith("NH") or re.search(r"\bNH\b", ref):
+                return "NH"
+            if compact.startswith("SH") or re.search(r"\bSH\b", ref):
+                return "SH"
+            if compact.startswith("MDR") or re.search(r"\bMDR\b", ref):
+                return "MDR"
+        # fclass-based fallback for roads without a ref (Pune/Jaipur etc.)
+        if fclass_value and not pd.isna(fclass_value):
+            fc = str(fclass_value).lower().strip()
+            if fc in ("motorway", "trunk"):
+                return "NH"
+            if fc in ("primary", "primary_link"):
+                return "SH"
+            if fc in ("secondary", "secondary_link"):
+                return "MDR"
         return None
 
     @staticmethod
@@ -919,8 +929,9 @@ class PlotDataTransformation:
             if col not in df.columns:
                 df[col] = np.nan
 
-        if not os.path.exists(NCR_ROADS_GEOJSON_PATH):
-            logging.warning(f"Road geojson not found: {NCR_ROADS_GEOJSON_PATH}. Skipping road distance features.")
+        available_geojsons = [p for p in ROADS_GEOJSON_PATHS if os.path.exists(p)]
+        if not available_geojsons:
+            logging.warning(f"No road geojson files found. Skipping road distance features.")
             return df
 
         try:
@@ -929,14 +940,36 @@ class PlotDataTransformation:
             logging.warning("geopandas unavailable. Skipping road distance features.")
             return df
 
-        roads = gpd.read_file(NCR_ROADS_GEOJSON_PATH)
-        if roads.crs is None:
-            roads = roads.set_crs(epsg=4326)
+        road_frames = []
+        for geojson_path in available_geojsons:
+            gdf = gpd.read_file(geojson_path)
+            if gdf.crs is None:
+                gdf = gdf.set_crs(epsg=4326)
+            road_frames.append(gdf)
+        import pandas as _pd
+        roads = _pd.concat(road_frames, ignore_index=True) if len(road_frames) > 1 else road_frames[0]
+        if not isinstance(roads, gpd.GeoDataFrame):
+            roads = gpd.GeoDataFrame(roads, crs=road_frames[0].crs)
 
         roads = roads[roads.geometry.notna() & ~roads.geometry.is_empty].copy()
         if "ref" not in roads.columns:
             roads["ref"] = np.nan
-        roads["road_class"] = roads["ref"].apply(self._classify_road_class)
+        # Normalise dehradun_highways.geojson which uses the OSM-native "highway"
+        # key instead of the "fclass" key used by all other files.
+        if "fclass" not in roads.columns:
+            if "highway" in roads.columns:
+                roads["fclass"] = roads["highway"]
+            else:
+                roads["fclass"] = np.nan
+        elif "highway" in roads.columns:
+            # Fill fclass gaps from highway for any rows that have highway but not fclass
+            roads["fclass"] = roads["fclass"].where(
+                roads["fclass"].notna() & (roads["fclass"].astype(str).str.strip() != ""),
+                other=roads["highway"],
+            )
+        roads["road_class"] = roads.apply(
+            lambda row: self._classify_road_class(row["ref"], row.get("fclass")), axis=1
+        )
 
         df["latitude"] = pd.to_numeric(df["latitude"], errors="coerce")
         df["longitude"] = pd.to_numeric(df["longitude"], errors="coerce")

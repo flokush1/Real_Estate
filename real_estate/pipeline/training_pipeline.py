@@ -15,6 +15,7 @@ from real_estate.components.plot_data_transformation import PlotDataTransformati
 from real_estate.components.plot_model_trainer import PlotModelTrainer
 from real_estate.components.apt_model_trainer import AptModelTrainer
 from real_estate.components.bf_model_trainer import BfModelTrainer
+from real_estate.components.rent_model_trainer import AptRentModelTrainer, BfRentModelTrainer
 from real_estate.constant import RENT_DATA_FILES
 from real_estate.entity import (
     DataIngestionConfig,
@@ -26,6 +27,8 @@ from real_estate.entity import (
     RentDataTransformationConfig,
     AptModelTrainerConfig,
     BfModelTrainerConfig,
+    AptRentModelTrainerConfig,
+    BfRentModelTrainerConfig,
 )
 from real_estate.exception.exception import RealEstateException
 from real_estate.logging.logger import logging
@@ -353,6 +356,72 @@ class TrainingPipeline:
             logging.info(f"Promoted bf v{next_version} → canonical: {canonical.model_file_path}")
 
             logging.info("============ BF Training Pipeline Finished ============")
+            return artifact
+
+        except Exception as e:
+            raise RealEstateException(e, sys)
+
+    # ════════════════════════════════════════════════════════
+    #  APARTMENT RENT TRAINING PIPELINE
+    # ════════════════════════════════════════════════════════
+    def run_apt_rent_training_pipeline(self):
+        """
+        Apartment Rent training pipeline:
+        1) Ingest + transform rent data (ho_rent + mb_rent)
+        2) Train apartment rent model (log1p monthly rent target)
+        3) Save to artifact/apt_rent_model_trainer/
+        """
+        try:
+            logging.info("============ Apt Rent Training Pipeline Started ============")
+
+            # Stage 1 – Rent data ingestion + transformation
+            rent_artifact = self.run_rent_pipeline()
+            logging.info(f"Rent data ready: {rent_artifact.transformed_file_path}")
+
+            # Stage 2 – Train
+            apt_rent_config = AptRentModelTrainerConfig(version=0)
+            os.makedirs(apt_rent_config.model_dir, exist_ok=True)
+            trainer = AptRentModelTrainer(
+                data_transformation_artifact=rent_artifact,
+                config=apt_rent_config,
+            )
+            artifact = trainer.initiate_model_training()
+            logging.info(f"Apt rent training complete: {artifact}")
+
+            logging.info("============ Apt Rent Training Pipeline Finished ============")
+            return artifact
+
+        except Exception as e:
+            raise RealEstateException(e, sys)
+
+    # ════════════════════════════════════════════════════════
+    #  BUILDER FLOOR RENT TRAINING PIPELINE
+    # ════════════════════════════════════════════════════════
+    def run_bf_rent_training_pipeline(self):
+        """
+        Builder Floor Rent training pipeline:
+        1) Ingest + transform rent data (ho_rent + mb_rent)
+        2) Train builder floor rent model (log1p monthly rent target)
+        3) Save to artifact/bf_rent_model_trainer/
+        """
+        try:
+            logging.info("============ BF Rent Training Pipeline Started ============")
+
+            # Stage 1 – Rent data ingestion + transformation
+            rent_artifact = self.run_rent_pipeline()
+            logging.info(f"Rent data ready: {rent_artifact.transformed_file_path}")
+
+            # Stage 2 – Train
+            bf_rent_config = BfRentModelTrainerConfig(version=0)
+            os.makedirs(bf_rent_config.model_dir, exist_ok=True)
+            trainer = BfRentModelTrainer(
+                data_transformation_artifact=rent_artifact,
+                config=bf_rent_config,
+            )
+            artifact = trainer.initiate_model_training()
+            logging.info(f"BF rent training complete: {artifact}")
+
+            logging.info("============ BF Rent Training Pipeline Finished ============")
             return artifact
 
         except Exception as e:

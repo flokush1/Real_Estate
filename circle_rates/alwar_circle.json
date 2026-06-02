@@ -1,0 +1,3518 @@
+[
+  {
+    "locality": "AGRO FOOD PARK [MIA] RESERVED PRICE",
+    "property_type": "Industrial",
+    "circle_rate_sqft": 418.06,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "ARAWALI VIHAR FT. ROAD TAK",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5016.72,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "ARAWALI VIHAR FT. ROAD TAK",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2508.36,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Aate Wali Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11612.78,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Aate Wali Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1709.4,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Adarsh nagar colony daudpur",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Adarsh nagar colony daudpur",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1820.88,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Akhepura (Harijan Basti )",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 826.83,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Akhepura (Harijan Basti )",
+    "property_type": "Residential",
+    "circle_rate_sqft": 241.55,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Akhepura (Thakar Wala Kuwa)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 826.83,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Akhepura (Thakar Wala Kuwa)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 288.0,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Alkapuri",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Alkapuri",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Alwar No. 1-Alwar No.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2378.3,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Alwar No. 1-Alwar No.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1189.15,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Alwar No. 2-Alwar No.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2378.3,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Alwar No. 2-Alwar No.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1189.15,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ambedakar nagar Foot road tak",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4459.31,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Ambedakar nagar Foot road tak",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2740.62,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Anand vihar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Anand vihar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2155.33,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Apna Ghar Shalimar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Apna Ghar Shalimar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Approved Group Gousing/ Township Yojna",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Approved Group Gousing/ Township Yojna",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1858.05,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Aravali vihaar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Aravali vihaar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1672.24,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Arts College pulia se Feet bypass main road tak",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Arts College pulia se Feet bypass main road tak",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2322.56,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Ashok Circle",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13935.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ashok Circle",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3827.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ashok Vihar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ashok Vihar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ashok Vihar Mahawar Public School Se Tijara Phatak Tak",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ashok Vihar Mahawar Public School Se Tijara Phatak Tak",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "BELAKA",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2062.43,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "BELAKA",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1300.63,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "BERKA",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2062.43,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "BERKA",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1300.63,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Baderiya Padi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2508.36,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Baderiya Padi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 371.61,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bagar Ka Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bagar Ka Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 687.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Balji Rathore Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Balji Rathore Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 836.12,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ballaboda",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2369.01,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Ballaboda",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1073.02,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Balli Ka Darwaja",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3344.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Balli Ka Darwaja",
+    "property_type": "Residential",
+    "circle_rate_sqft": 388.33,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Baniya Ka Bagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4979.56,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Baniya Ka Bagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 929.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bank",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7302.12,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bank",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3121.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bans Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bans Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 929.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bapu Bazar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bapu Bazar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 929.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Beech Ka Mohalla",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Beech Ka Mohalla",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Behrod Mukhya Sarak Par Scheme No.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 15793.39,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Behrod Mukhya Sarak Par Scheme No.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 5880.71,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Behror road v behror road se telko chauraha v delhi road se tuleda ki antim",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3641.77,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Behror road v behror road se telko chauraha v delhi road se tuleda ki antim",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1960.24,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Bhagatsingh Ka Chouraha",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 15793.39,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhagatsingh Ka Chouraha",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3623.19,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhairu Ka Chabutara",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3994.8,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhairu Ka Chabutara",
+    "property_type": "Residential",
+    "circle_rate_sqft": 459.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhairu Ka Thana",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2972.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhairu Ka Thana",
+    "property_type": "Residential",
+    "circle_rate_sqft": 464.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhakheda",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 1988.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhakheda",
+    "property_type": "Residential",
+    "circle_rate_sqft": 882.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhatiyaron Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11612.78,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhatiyaron Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1653.66,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhekam Saiyad",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bhekam Saiyad",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Biccho Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3437.38,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Biccho Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 650.32,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bijli Ghar Ka Chouraha",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13935.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bijli Ghar Ka Chouraha",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Biluchi Ka Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3065.77,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Biluchi Ka Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 464.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Birbal Ka Mohalla",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2972.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Birbal Ka Mohalla",
+    "property_type": "Residential",
+    "circle_rate_sqft": 441.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bjaja Bazar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13192.12,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bjaja Bazar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1486.44,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Brahmchari Mohalla",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2303.98,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Brahmchari Mohalla",
+    "property_type": "Residential",
+    "circle_rate_sqft": 325.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5295.43,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2754.55,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Foot Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5824.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Foot Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3030.47,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Foot Road Behroad Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6089.74,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Foot Road Behroad Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Vistar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5295.43,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Vistar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1783.72,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Vistar Feet Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6089.74,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Budh Vihar Vistar Feet Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2369.01,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Burja House",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3344.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Burja House",
+    "property_type": "Residential",
+    "circle_rate_sqft": 388.33,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bus Stand Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Bus Stand Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1309.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chaha Mistriwala",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chaha Mistriwala",
+    "property_type": "Residential",
+    "circle_rate_sqft": 418.06,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chaha Pappu",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3065.77,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chaha Pappu",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chakla Gundi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chakla Gundi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 278.71,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chamarpadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2461.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chamarpadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 241.55,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chameli Bagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3056.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chameli Bagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 371.61,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Charch Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 12699.74,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Charch Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1858.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chawand Padi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3808.99,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chawand Padi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 520.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Cheetawan Ke Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Cheetawan Ke Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chelapadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3344.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chelapadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 318.65,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chetan Enclave",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chetan Enclave",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1746.56,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chhju Singh Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2972.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chhju Singh Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 459.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chudi Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 32515.79,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Chudi Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2703.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Civil Line",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7896.69,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Civil Line",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1514.31,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Company Bagh Road Hospital Ke Taraf",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Company Bagh Road Hospital Ke Taraf",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1514.31,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "DEEWAKARI",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "DEEWAKARI",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1486.44,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Darjipada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Darjipada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 278.71,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Darokuta",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Darokuta",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1096.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Daudpur",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Daudpur",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1774.43,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Dehli Darwaje Bahar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3623.19,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dehli Darwaje Bahar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 459.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dehli Darwaje Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3530.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dehli Darwaje Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 389.26,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Devkhera",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 1923.08,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Devkhera",
+    "property_type": "Residential",
+    "circle_rate_sqft": 789.67,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Dhabai Ji Ka Bag",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7896.69,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhabai Ji Ka Bag",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhakpuri",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5109.62,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhakpuri",
+    "property_type": "Residential",
+    "circle_rate_sqft": 919.73,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhobi Gatta",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3437.38,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhobi Gatta",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1114.83,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhobi Pada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2879.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Dhobi Pada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 371.61,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Diwan Ji Ka Bagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2601.26,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Diwan Ji Ka Bagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 929.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Family Line",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4087.7,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Family Line",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Fateh singh Gummad",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5109.62,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Fateh singh Gummad",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1495.73,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Footikhel",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2879.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Footikhel",
+    "property_type": "Residential",
+    "circle_rate_sqft": 388.33,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Friends",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Friends",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gai Wala Mohalla",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3158.68,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gai Wala Mohalla",
+    "property_type": "Residential",
+    "circle_rate_sqft": 478.45,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Galib Saiyad",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Galib Saiyad",
+    "property_type": "Residential",
+    "circle_rate_sqft": 441.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ganesh Guwadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ganesh Guwadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1858.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ganesh Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 32515.79,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ganesh Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2703.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gangapura",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gangapura",
+    "property_type": "Residential",
+    "circle_rate_sqft": 353.03,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ganj Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ganj Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 743.22,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gaytri Mandir Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gaytri Mandir Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1714.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ghanta Ghar Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 20438.5,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ghanta Ghar Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1811.59,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ghee Wali Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5759.94,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ghee Wali Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 882.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gujarpadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gujarpadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 278.71,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gulabbagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7989.59,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gulabbagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1486.44,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gundbas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5202.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Gundbas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 650.32,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hajari Ka Mohallah",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hajari Ka Mohallah",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hajuri Gate Andar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3344.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hajuri Gate Andar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 412.49,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hajuri Gate Bahar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3344.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hajuri Gate Bahar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 412.49,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hakim Ji Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hakim Ji Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 583.43,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Halwai Pada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3065.77,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Halwai Pada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 464.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hanuman Burj (Commercial Complex)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 18580.45,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hanuman Circle Alwar se desula ki seema tak (Delhi Road)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Hanuman Circle Alwar se desula ki seema tak (Delhi Road)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2322.56,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Hanuman JI Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 12950.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hanuman JI Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1096.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Harbax Ka Mohallah",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3344.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Harbax Ka Mohallah",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hasan Khan Mewati Nagar B Block",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hasan Khan Mewati Nagar B Block",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hasan Khan Mewati Nagar D Block",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hasan Khan Mewati Nagar D Block",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Heera Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Heera Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 654.96,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hindu Pada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hindu Pada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 584.36,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Holiupar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Holiupar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 459.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hope Circus",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 20438.5,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Hope Circus",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2146.04,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Indira",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Indira",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1291.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Indira Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 32515.79,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Indira Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2703.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jai Complex",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 16722.41,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jai Marg ( Bhagat Singh Circle Se Puliya Tak)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13935.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jai Marg ( Bhagat Singh Circle Se Puliya Tak)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3887.96,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jain Mandir Mukhya Sarak Scheme No.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jain Mandir Mukhya Sarak Scheme No.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jaipur Golden Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jaipur Golden Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1007.99,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jal Wala Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jal Wala Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1309.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jati Ki Bagichi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jati Ki Bagichi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 831.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jawali Bhawan",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jawali Bhawan",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1732.63,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Johada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4152.73,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Johada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 425.49,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jubli Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 10219.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jubli Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1560.76,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jyoti Nagar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2591.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Jyoti Nagar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 529.54,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kabir",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2972.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kabir",
+    "property_type": "Residential",
+    "circle_rate_sqft": 602.01,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kailash",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kailash",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kalakuwa Purani Abadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kalakuwa Purani Abadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1574.69,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kali Mori",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4124.86,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Kali Mori",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1272.76,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Kallupada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kallupada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 478.45,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Karoli Kund Se Lagta Area",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Karoli Kund Se Lagta Area",
+    "property_type": "Residential",
+    "circle_rate_sqft": 831.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kedalganj",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9383.13,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kedalganj",
+    "property_type": "Residential",
+    "circle_rate_sqft": 887.22,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khadana",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9754.74,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khadana",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1096.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khandelwal Dharamshala (Dipali Showroom Se Gurudware Tak)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13935.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khandelwal Dharamshala (Dipali Showroom Se Gurudware Tak)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1588.63,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khapta Padi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khapta Padi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khatikpari",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khatikpari",
+    "property_type": "Residential",
+    "circle_rate_sqft": 371.61,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khohara",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 12077.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khohara",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1588.63,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Khudanpuri",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3548.87,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Khudanpuri",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1486.44,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Kitooda",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3548.87,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Kitooda",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1486.44,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Kolipada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2972.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kolipada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 301.0,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kotiyapari",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2136.75,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kotiyapari",
+    "property_type": "Residential",
+    "circle_rate_sqft": 301.0,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Krashi Upaj mandi ke pas (Road Par)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Krashi Upaj mandi ke pas (Road Par)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1356.37,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Krashi upaj mandi ke under",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5899.29,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Krishna",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9940.54,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Krishna",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1978.82,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kush Marg",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Kush Marg",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2824.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ladiya",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ladiya",
+    "property_type": "Residential",
+    "circle_rate_sqft": 455.22,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ladiya Bagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ladiya Bagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 557.41,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lakhanda Wala Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lakhanda Wala Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1570.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Laldiggi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Laldiggi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1309.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lalgate Scheme",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 32515.79,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lalgate Scheme",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1179.86,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lalkhan",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2378.3,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lalkhan",
+    "property_type": "Residential",
+    "circle_rate_sqft": 278.71,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lisoda Wala Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lisoda Wala Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 929.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Liwari",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 1988.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Liwari",
+    "property_type": "Residential",
+    "circle_rate_sqft": 882.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lodi Ka Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lodi Ka Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1114.83,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lohiya Padi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3530.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Lohiya Padi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 831.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "MATSYA INDUSTRIAL AREA [MIA] EXT.RESERVED PRICE RIICO",
+    "property_type": "Industrial",
+    "circle_rate_sqft": 418.06,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "MATSYA INDUSTRIAL AREA [MIA] RESERVED PRICE RIICO",
+    "property_type": "Industrial",
+    "circle_rate_sqft": 418.06,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Mahaveer Marg",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mahaveer Marg",
+    "property_type": "Residential",
+    "circle_rate_sqft": 929.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Makan U.I.T. Dwara Nirmit (Scheme A)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Makan U.I.T. Dwara Nirmit (Scheme A)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1960.24,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malakheda Bazar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malakheda Bazar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 743.22,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malakheda Darwaja",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malakheda Darwaja",
+    "property_type": "Residential",
+    "circle_rate_sqft": 743.22,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malan Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malan Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 882.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malviya Nagar ( Niti Nagar )",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6967.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malviya Nagar ( Niti Nagar )",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2591.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malviya Nagar Foot Road Par ( Niti Nagar )",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8012.82,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Malviya Nagar Foot Road Par ( Niti Nagar )",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2981.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Manni Ka Badh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11612.78,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Manni Ka Badh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1858.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mansrovar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 1746.56,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mansrovar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1114.83,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Manu Marg",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Manu Marg",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Masjid Teliyan",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Masjid Teliyan",
+    "property_type": "Residential",
+    "circle_rate_sqft": 464.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mathur Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 45893.72,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Meena Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Meena Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 459.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Meena Padi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2879.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Meena Padi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 402.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mehndi Bagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mehndi Bagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1256.04,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mehtab Singh Ka Nohara",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mehtab Singh Ka Nohara",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1021.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Modiyon Ki Bawadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Modiyon Ki Bawadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 836.12,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Moongaska",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Moongaska",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1486.44,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Moot Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Moot Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 424.56,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Moti Doongri",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Moti Doongri",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4719.44,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Moti Kunj",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Moti Kunj",
+    "property_type": "Residential",
+    "circle_rate_sqft": 636.38,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mrethiya Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Mrethiya Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Munshi Bagh",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2926.42,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Munshi Bagh",
+    "property_type": "Residential",
+    "circle_rate_sqft": 510.96,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Munshi Bazar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Munshi Bazar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 896.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "N.E.B Ext.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5109.62,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B Ext.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1802.3,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B Housing Board",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B Housing Board",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2684.88,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B colony (subhash nagar)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6224.45,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B colony (subhash nagar)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2619.84,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B subhash nagar Puliya se foot baipas tak",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "N.E.B subhash nagar Puliya se foot baipas tak",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4254.92,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Nala Shishgaran",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nala Shishgaran",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1361.02,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nangali Kota",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Nangali Kota",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1774.43,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Naru Marg",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 10219.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Naru Marg",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3465.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nawabpura",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6967.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nawabpura",
+    "property_type": "Residential",
+    "circle_rate_sqft": 529.54,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Naya Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6967.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Naya Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1727.98,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nemi chand Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Nemi chand Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1579.34,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "New Friends Kala Kuwa Housing Board Ke Samne",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "New Friends Kala Kuwa Housing Board Ke Samne",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2076.37,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nuktipada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Nuktipada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "OLD INDUSTRIAL AREA [MIA]",
+    "property_type": "Industrial",
+    "circle_rate_sqft": 585.28,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Padaw Ki Chakki",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3065.77,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Padaw Ki Chakki",
+    "property_type": "Residential",
+    "circle_rate_sqft": 464.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pansari Bazar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 20438.5,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pansari Bazar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1811.59,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Panwar Complex",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 45893.72,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Parivahan Nagar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5109.62,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Parivahan Nagar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Pawan Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 32515.79,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pawan Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2703.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Plot U.I.T. Foot Tak Ki Sarak Scheme No.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Plot U.I.T. Foot Tak Ki Sarak Scheme No.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2043.85,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Police Line Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Police Line Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 636.38,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pratap Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pratap Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pratap Nagar Housing Board",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8825.72,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Pratap Nagar Housing Board",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Barfkhana",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Barfkhana",
+    "property_type": "Residential",
+    "circle_rate_sqft": 859.35,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Jaipur Golden (Shiv Market )(Ghantaghar Ke Pas)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Jaipur Golden (Shiv Market )(Ghantaghar Ke Pas)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1356.37,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Ktla",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4923.82,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Ktla",
+    "property_type": "Residential",
+    "circle_rate_sqft": 505.39,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Station Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Purana Station Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1309.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Raghu Complex",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Raghu Complex",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2081.01,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Railway Station Alwar se Hanuman Circle Tak Main Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Railway Station Alwar se Hanuman Circle Tak Main Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Rajaji Ka Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Rajaji Ka Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 706.06,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Rajput Chhatrawas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4152.73,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Rajput Chhatrawas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 441.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ram Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ram Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 759.94,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramanand Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 16954.66,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramanand Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 955.96,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramganj",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7896.69,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramganj",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1309.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramkrishna Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7896.69,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramkrishna Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 882.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramkutir",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramkutir",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4524.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramleela Ground",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 10683.76,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ramleela Ground",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Rangbhariyon Ki Gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Rangbhariyon Ki Gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 464.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Ranjeet Nagar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4152.73,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Ranjeet Nagar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1802.3,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Rathkhana",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Rathkhana",
+    "property_type": "Residential",
+    "circle_rate_sqft": 761.8,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Roopbas Purani Abadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Roopbas Purani Abadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 955.96,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "S.W.B. Kala Kuwa Housing Board",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9067.26,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "S.W.B. Kala Kuwa Housing Board",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2787.07,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sahab Johada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sahab Johada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Samola",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 1774.43,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Samola",
+    "property_type": "Residential",
+    "circle_rate_sqft": 994.05,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Sanjay",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4830.92,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sanjay",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1579.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sanjay Colony(Railway Station Ke Pas Wali)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sanjay Colony(Railway Station Ke Pas Wali)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1625.79,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sarak No. ( Kashiram Ke Chourahe Se U.I.T. Ke Main Gate Tak)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 18580.45,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sarak No. ( Kashiram Ke Chourahe Se U.I.T. Ke Main Gate Tak)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3140.1,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme B Housing Board",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme B Housing Board",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1727.98,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme B U.I.T.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme B U.I.T.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1858.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No.",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 10219.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No.",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2949.65,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. (60 Foot)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8175.4,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. (60 Foot)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3239.5,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. (80 Foot Par)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8547.01,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. (80 Foot Par)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3387.22,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. (Behrod Road Mukhya Sarak Par)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 15793.39,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. (Behrod Road Mukhya Sarak Par)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 5490.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. B (Sonawa)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6484.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. B (Sonawa)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. Nagli Circle Se G.D. College Main Road Par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9708.29,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. Nagli Circle Se G.D. College Main Road Par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 4329.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. Vistar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Scheme No. Vistar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2703.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Seth Ka Bawadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2415.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Seth Ka Bawadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 650.32,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Seth Ka Tila",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Seth Ka Tila",
+    "property_type": "Residential",
+    "circle_rate_sqft": 650.32,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shahji Ka Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2424.75,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shahji Ka Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shahji Ka Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2424.75,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shahji Ka Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1393.53,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shakti Nagar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3186.55,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shakti Nagar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 882.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shanti Kunj",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6967.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shanti Kunj",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3623.19,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shanti Kunj Housing Board",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6967.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shanti Kunj Housing Board",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3112.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shikari Ka Bas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shikari Ka Bas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1858.05,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shikari Pada",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shikari Pada",
+    "property_type": "Residential",
+    "circle_rate_sqft": 421.78,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shiv Complex",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Foot Road Tempo Stand Road Behrod Par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Foot Road Tempo Stand Road Behrod Par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Makan U.I.T. Constructed",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Makan U.I.T. Constructed",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2294.69,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Plots U.I.T. Foot Tak Ki Sarak Par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Plots U.I.T. Foot Tak Ki Sarak Par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3121.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Vistar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivaji Park Vistar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3121.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivmohan Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivmohan Market",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivpura",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shivpura",
+    "property_type": "Residential",
+    "circle_rate_sqft": 831.48,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shukla Ki Bagichi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13935.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shukla Ki Bagichi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1820.88,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shyam Market",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 45893.72,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shyolalpura",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shyolalpura",
+    "property_type": "Residential",
+    "circle_rate_sqft": 789.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shyopura",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Shyopura",
+    "property_type": "Residential",
+    "circle_rate_sqft": 789.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sidhipura",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 21367.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sidhipura",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2173.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sonawa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2382.94,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sonawa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1189.15,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sonawa Ki Doongri Bhawni Top Circle Se Roopbas Road Tak Circuit House Ki",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5332.59,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sonawa Ki Doongri Bhawni Top Circle Se Roopbas Road Tak Circuit House Ki",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1876.63,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Station Road Naya",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 10219.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Station Road Naya",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1523.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sursagar Ki Pol",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2415.46,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Sursagar Ki Pol",
+    "property_type": "Residential",
+    "circle_rate_sqft": 325.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Surya Nagar Foot Road Par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5063.17,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Surya Nagar Foot Road Par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2508.36,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Swarg Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5109.62,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Swarg Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1096.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tanga Stand",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 18580.45,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tanga Stand",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2146.04,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Teej Ki Bawadi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Teej Ki Bawadi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 371.61,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Teej Ki Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5109.62,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Teej Ki Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1040.51,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tehsil Ke Pas (Kotwali Se Kashiram Ke Chourahe Tak)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 18766.26,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tehsil Ke Pas (Kotwali Se Kashiram Ke Chourahe Tak)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1820.88,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tej Mandi",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tej Mandi",
+    "property_type": "Residential",
+    "circle_rate_sqft": 812.89,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tej Mandi Station Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8361.2,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tej Mandi Station Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 812.89,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Thakar Wala Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Thakar Wala Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 706.06,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tijara road (Fatak se telco choraha) main road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 8918.62,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tijara road (Fatak se telco choraha) main road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2062.43,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tilak Market Hanuman Burj Tak",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 21367.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Titoda",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3251.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Titoda",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1374.95,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tiwari Ka Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3065.77,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Tiwari Ka Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 406.91,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Toli Ka Kuwa",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2972.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Toli Ka Kuwa",
+    "property_type": "Residential",
+    "circle_rate_sqft": 388.33,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Town Hall Ke Pas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 23225.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Town Hall Ke Pas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1096.25,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Trance poart nagar-A",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2475.85,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Trance poart nagar-B",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2136.75,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Vaishali Nagar Foot Road Par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4273.5,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Vaishali Nagar Foot Road Par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2508.36,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "Veer Chowk",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 20438.5,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Veer Chowk",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2146.04,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Veer Sawarkar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 7432.18,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Veer Sawarkar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3121.52,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Mandir Road ( Jel Chourahe Se Budh Vihar Vistar Tak )",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Mandir Road ( Jel Chourahe Se Budh Vihar Vistar Tak )",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3335.19,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5156.08,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2591.97,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar Foot Road Behrod Road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar Foot Road Behrod Road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar Foot Road Ke Andar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6503.16,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar Foot Road Ke Andar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3037.9,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar Vistar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4347.83,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vijay Nagar Vistar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1820.88,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vikas Path",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vikas Path",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1727.98,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vivekanand Nagar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4180.6,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "Vivekanand Nagar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1518.95,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "anand vihar (choraha se foot road daudpur tak)",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "anand vihar (choraha se foot road daudpur tak)",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3000.74,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "ashok circle se atta mandir taq",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 13935.34,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "ashok circle se atta mandir taq",
+    "property_type": "Residential",
+    "circle_rate_sqft": 3827.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "bhoogor ki seema se v bhoogor tiraye se jagannath mandir ke paas bhoogor",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2954.29,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "bhoogor ki seema se v bhoogor tiraye se jagannath mandir ke paas bhoogor",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1319.21,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "bhugor tiraha se rajgarh road bypass alwar seema taq",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2963.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "bhugor tiraha se rajgarh road bypass alwar seema taq",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1314.57,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "kala kua purani chungi se ahinsa circle taq (purana jaipur road) alwar number",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3548.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "kala kua purani chungi se ahinsa circle taq (purana jaipur road) alwar number",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1779.08,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "kala kua purani chungi se ahinsa circle taq (purana jaipur road) bhakheda ki",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 2963.58,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "kala kua purani chungi se ahinsa circle taq (purana jaipur road) bhakheda ki",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1317.35,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "khudanpuri ki seema se samola ki antim seema taq foot baai pas road ke",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 4645.11,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "khudanpuri ki seema se samola ki antim seema taq foot baai pas road ke",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2322.56,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "manu marg petrol pump se purusharthi dharamshala taq mukhya road",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 11148.27,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "manu marg petrol pump se purusharthi dharamshala taq mukhya road",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2015.98,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "motiyon ki gali",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3716.09,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "motiyon ki gali",
+    "property_type": "Residential",
+    "circle_rate_sqft": 424.56,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "purana RTO office se BL public school taq",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6967.67,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "purana RTO office se BL public school taq",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1727.98,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "sabji mandi ke paas",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 20903.01,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "sabji mandi ke paas",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1811.59,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "sarrafa bazar tirpoliya gate se jagannath ji mandir gate taq",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 9290.23,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "sarrafa bazar tirpoliya gate se jagannath ji mandir gate taq",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1184.5,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "shalimar nagar foot road par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3084.36,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "shalimar nagar foot road par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1746.56,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "shalimar nagar foot road se adhik road par",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3651.06,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "surya nagar foot road par and baai paas mannaka road surya nagar vistar",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 5574.14,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "surya nagar foot road par and baai paas mannaka road surya nagar vistar",
+    "property_type": "Residential",
+    "circle_rate_sqft": 2926.42,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "telco choraha se feet bypass road seema alwar number",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 3548.87,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "telco choraha se feet bypass road seema alwar number",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1421.4,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "vigyan nagar foot road par",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1635.08,
+    "zone": "ALWAR-II"
+  },
+  {
+    "locality": "vikas path se tehsil ke peeche taq",
+    "property_type": "Commercial",
+    "circle_rate_sqft": 6038.65,
+    "zone": "ALWAR-I"
+  },
+  {
+    "locality": "vikas path se tehsil ke peeche taq",
+    "property_type": "Residential",
+    "circle_rate_sqft": 1727.98,
+    "zone": "ALWAR-I"
+  }
+]

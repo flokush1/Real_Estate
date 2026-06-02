@@ -1,3 +1,4 @@
+import glob
 import os
 
 
@@ -29,8 +30,11 @@ RENT_DATA_FILES = [
     "ho_rent.csv",
     "mb_rent.csv",
 ]
-CITY_LOCALITIES_JSON = os.path.join(DATA_DIR, "ncr_colonies.json")
-CIRCLE_RATES_DIR = os.path.join(DATA_DIR, "circle_rates")
+# Project root = two levels above real_estate/constant/__init__.py
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+# ncr_colonies.json and circle_rates/ live at the project root, not in real_estate_data/
+CITY_LOCALITIES_JSON = os.path.join(_PROJECT_ROOT, "ncr_colonies.json")
+CIRCLE_RATES_DIR = os.path.join(_PROJECT_ROOT, "circle_rates")
 
 # ─── Artifact paths ─────────────────────────────────────────
 ARTIFACT_DIR = "artifact"
@@ -54,7 +58,34 @@ PLOT_MERGED_FILE_NAME = "combined_plot.csv"
 
 PLOT_TRANSFORMATION_DIR = "plot_transformation"
 PLOT_TRANSFORMED_FILE_NAME = "cleaning_plot_datav1.csv"
-NCR_ROADS_GEOJSON_PATH = os.path.join(DATA_DIR, "NCR Roads.geojson")
+
+# Dedicated folder for all road/city GeoJSON files.
+GEOJSON_DIR = os.path.join(_PROJECT_ROOT, "geojson")
+
+NCR_ROADS_GEOJSON_PATH = os.path.join(GEOJSON_DIR, "NCR Roads.geojson")
+
+
+def _discover_roads_geojson_paths() -> list[str]:
+    """Auto-discover all road/highway GeoJSON files from geojson/.
+
+    Any *.geojson whose name contains 'road' or 'highway' is picked up
+    automatically, so adding a new city requires only dropping the file in
+    the geojson/ directory.
+    """
+    seen: set[str] = set()
+    result: list[str] = []
+    for fpath in sorted(glob.glob(os.path.join(GEOJSON_DIR, "*.geojson"))):
+        fname_lower = os.path.basename(fpath).lower()
+        if "road" not in fname_lower and "highway" not in fname_lower:
+            continue
+        abs_path = os.path.abspath(fpath)
+        if abs_path not in seen:
+            seen.add(abs_path)
+            result.append(abs_path)
+    return result
+
+
+ROADS_GEOJSON_PATHS: list[str] = _discover_roads_geojson_paths()
 
 PLOT_MODEL_TRAINER_DIR = "plot_model_trainer"
 PLOT_MODEL_FILE_NAME = "plot_v3_production_model.pkl"
@@ -73,6 +104,18 @@ BF_MODEL_TRAINER_DIR = "bf_model_trainer"
 BF_MODEL_FILE_NAME = "best_bf_random_forest.pkl"
 BF_FEATURE_COLUMNS_FILE_NAME = "bf_feature_columns.pkl"
 BF_VORONOI_FILE_NAME = "bf_vor_kmeans.pkl"
+
+# ─── Apartment Rent model ────────────────────────────────────
+APT_RENT_MODEL_TRAINER_DIR = "apt_rent_model_trainer"
+APT_RENT_MODEL_FILE_NAME = "best_apt_random_forest.pkl"
+APT_RENT_FEATURE_COLUMNS_FILE_NAME = "apt_rent_feature_columns.pkl"
+APT_RENT_VORONOI_FILE_NAME = "apt_rent_vor_kmeans.pkl"
+
+# ─── Builder Floor Rent model ────────────────────────────────
+BF_RENT_MODEL_TRAINER_DIR = "bf_rent_model_trainer"
+BF_RENT_MODEL_FILE_NAME = "best_bf_random_forest.pkl"
+BF_RENT_FEATURE_COLUMNS_FILE_NAME = "bf_rent_feature_columns.pkl"
+BF_RENT_VORONOI_FILE_NAME = "bf_rent_vor_kmeans.pkl"
 
 MODEL_TRAINER_DIR = "model_trainer"
 MODEL_FILE_NAME = "model.pkl"

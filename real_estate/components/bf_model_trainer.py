@@ -463,7 +463,8 @@ class BfModelTrainer:
                     run_name = (
                         f"bf_v{self.config.version}" if self.config.version > 0 else "bf"
                     )
-                    mlflow.set_experiment("bf_model_trainer")
+                    # Experiment is set by the training pipeline ("builder-floor-price-model").
+                    # Do NOT call set_experiment here — it would override to wrong name.
                     with mlflow.start_run(run_name=run_name):
                         # ── Tags ──────────────────────────────────────────
                         mlflow.set_tags({

@@ -1,0 +1,3472 @@
+[
+  {
+    "locality": "Ajronda",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Ajronda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3055.56
+  },
+  {
+    "locality": "Ajronda",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3666.67
+  },
+  {
+    "locality": "Ajronda Along with R.2 Acres",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 555.56
+  },
+  {
+    "locality": "Anangpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 321.4
+  },
+  {
+    "locality": "Anangpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 75.76
+  },
+  {
+    "locality": "Anangpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2555.56
+  },
+  {
+    "locality": "Anangpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3222.22
+  },
+  {
+    "locality": "Ankhir",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 252.53
+  },
+  {
+    "locality": "Ankhir",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 91.85
+  },
+  {
+    "locality": "Ankhir",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 114.78
+  },
+  {
+    "locality": "Ankhir",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Ankhir",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6388.89
+  },
+  {
+    "locality": "SGM Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2833.33
+  },
+  {
+    "locality": "SGM Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5444.44
+  },
+  {
+    "locality": "Kheri Gujran",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 222.22
+  },
+  {
+    "locality": "Kheri Gujran",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 277.87
+  },
+  {
+    "locality": "Kheri Gujran",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "Kheri Gujran",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1888.89
+  },
+  {
+    "locality": "Gajipur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 333.49
+  },
+  {
+    "locality": "Gajipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1611.11
+  },
+  {
+    "locality": "Gajipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Dabua",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 493.9
+  },
+  {
+    "locality": "Dabua",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Dabua",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5166.67
+  },
+  {
+    "locality": "Dabua Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Dabua Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7000.0
+  },
+  {
+    "locality": "Dabua R.Zone",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 472.45
+  },
+  {
+    "locality": "Daultabad",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 0.0
+  },
+  {
+    "locality": "Daultabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4000.0
+  },
+  {
+    "locality": "Daultabad",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4111.11
+  },
+  {
+    "locality": "Nangla Gujran",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 390.27
+  },
+  {
+    "locality": "Nangla Gujran",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 475.67
+  },
+  {
+    "locality": "Nangla Gujran",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Nangla Gujran",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2611.11
+  },
+  {
+    "locality": "Navada Koh",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 393.94
+  },
+  {
+    "locality": "Navada Koh",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2111.11
+  },
+  {
+    "locality": "Navada Koh",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3000.0
+  },
+  {
+    "locality": "Pakhal",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 229.57
+  },
+  {
+    "locality": "Pakhal",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 286.96
+  },
+  {
+    "locality": "Pakhal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "Pakhal",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1888.89
+  },
+  {
+    "locality": "Pali",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 277.87
+  },
+  {
+    "locality": "Pali",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 347.33
+  },
+  {
+    "locality": "Pali",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 94.13
+  },
+  {
+    "locality": "Pali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Pali",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "1-2 Chowk-NIT Phagwara Singh Chowk-Gurudwara Chowk",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17555.56
+  },
+  {
+    "locality": "All GHS co-op City Flats",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6400
+  },
+  {
+    "locality": "All HSVP LIC cly Floors",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6600
+  },
+  {
+    "locality": "All Licensed Colony Faridabad city",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6900
+  },
+  {
+    "locality": "All NIT Flat Floors",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5800
+  },
+  {
+    "locality": "Any other Ind.-1 Acre and Above",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1711.11
+  },
+  {
+    "locality": "Any other Ind.-1 Acre and Above",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Any other Ind. 1000 Sqy to 2000 Sqy",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2455.56
+  },
+  {
+    "locality": "Any other Ind. 1000 Sqy to 2000 Sqy",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2333.33
+  },
+  {
+    "locality": "Any other Ind. 2000 Sqy to 1 Acre",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2055.56
+  },
+  {
+    "locality": "Any other Ind. 1 Sqy to 1000 Sqy",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "B.K.-K.C. Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14888.89
+  },
+  {
+    "locality": "Badkhal",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 277.87
+  },
+  {
+    "locality": "Badkhal",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 75.02
+  },
+  {
+    "locality": "Badkhal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Badkhal",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5666.67
+  },
+  {
+    "locality": "Charmwood Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5888.89
+  },
+  {
+    "locality": "Charmwood Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9444.44
+  },
+  {
+    "locality": "Com. Complex First Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7700
+  },
+  {
+    "locality": "Com. Complex Basement",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6600
+  },
+  {
+    "locality": "Com. Complex Ground Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8800
+  },
+  {
+    "locality": "Com. Complex Fourth Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7000
+  },
+  {
+    "locality": "Com. Complex Second Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7700
+  },
+  {
+    "locality": "Com. Complex Third Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7000
+  },
+  {
+    "locality": "Commercial Fifth Floor and Above",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7000
+  },
+  {
+    "locality": "Dayalbag",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Dayalbag",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8111.11
+  },
+  {
+    "locality": "Eros Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6666.67
+  },
+  {
+    "locality": "Eros Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8888.89
+  },
+  {
+    "locality": "Ex. Sainik Society",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4777.78
+  },
+  {
+    "locality": "Ex. Sainik Society",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8111.11
+  },
+  {
+    "locality": "Faridabad Old",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Faridabad Old",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6777.78
+  },
+  {
+    "locality": "Frontier Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4777.78
+  },
+  {
+    "locality": "Frontier Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 6777.78
+  },
+  {
+    "locality": "Gandhi Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2111.11
+  },
+  {
+    "locality": "Gandhi Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4111.11
+  },
+  {
+    "locality": "Green Valley",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6222.22
+  },
+  {
+    "locality": "Green Valley",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9444.44
+  },
+  {
+    "locality": "Greenfield Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5777.78
+  },
+  {
+    "locality": "Greenfield Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9888.89
+  },
+  {
+    "locality": "Hardware Chowk to B.K. Chowk",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 17555.56
+  },
+  {
+    "locality": "Housing Board Floor or Flat",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000
+  },
+  {
+    "locality": "Indra Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2666.67
+  },
+  {
+    "locality": "Indra Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4555.56
+  },
+  {
+    "locality": "Kant Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4111.11
+  },
+  {
+    "locality": "Kant Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8888.89
+  },
+  {
+    "locality": "Lakewood City upto 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5444.44
+  },
+  {
+    "locality": "Lakewood City upto 500",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9444.44
+  },
+  {
+    "locality": "Lakewood City above 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Lakewood City above 500",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9444.44
+  },
+  {
+    "locality": "Neelam Bata Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 10777.78
+  },
+  {
+    "locality": "Neelam Bata Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11777.78
+  },
+  {
+    "locality": "Neelam Chowk to Railway Station Road",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14888.89
+  },
+  {
+    "locality": "Nehru Ground upto 150 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7222.22
+  },
+  {
+    "locality": "Nehru Ground upto 150 sq.yds.",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11111.11
+  },
+  {
+    "locality": "Nehru Ground Above 151",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6777.78
+  },
+  {
+    "locality": "Nehru Ground Above 151",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 10777.78
+  },
+  {
+    "locality": "Sanjay Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3222.22
+  },
+  {
+    "locality": "Sanjay Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5444.44
+  },
+  {
+    "locality": "Sector-49",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Sector-49",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8111.11
+  },
+  {
+    "locality": "Sec-15A 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6666.67
+  },
+  {
+    "locality": "Sec-15A 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11333.33
+  },
+  {
+    "locality": "Sec-15A 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5888.89
+  },
+  {
+    "locality": "Sec-16A 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5666.67
+  },
+  {
+    "locality": "Sec-16A 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11555.56
+  },
+  {
+    "locality": "Sec-16A 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5333.33
+  },
+  {
+    "locality": "Sector-15 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7333.33
+  },
+  {
+    "locality": "Sector-15 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14444.44
+  },
+  {
+    "locality": "Sector-15 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7555.56
+  },
+  {
+    "locality": "Sector-15 above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7388.89
+  },
+  {
+    "locality": "Sector-15-A above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5166.67
+  },
+  {
+    "locality": "Sector-16-A above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5833.33
+  },
+  {
+    "locality": "Sector-21C 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5622.22
+  },
+  {
+    "locality": "Sector-21C 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "Sector-21C 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5166.67
+  },
+  {
+    "locality": "Sector-21C above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5066.67
+  },
+  {
+    "locality": "Sector-21D 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5444.44
+  },
+  {
+    "locality": "Sector-21D 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 16000.0
+  },
+  {
+    "locality": "Sector-21D 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4666.67
+  },
+  {
+    "locality": "Sector-21D above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Sector-37 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6722.22
+  },
+  {
+    "locality": "Sector-37 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12722.22
+  },
+  {
+    "locality": "Sector-37 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5500.0
+  },
+  {
+    "locality": "Sector-37 above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5388.89
+  },
+  {
+    "locality": "Sector-45 and 48 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Sector-45 and 48 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8111.11
+  },
+  {
+    "locality": "Sector-45 and 48 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4222.22
+  },
+  {
+    "locality": "Sector-45 and 48 Above 500 SQ",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3888.89
+  },
+  {
+    "locality": "Sector-46 1 to 250",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Sector-46 1 to 250",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12000.0
+  },
+  {
+    "locality": "Sector-46 250 to 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4611.11
+  },
+  {
+    "locality": "Sec.46 above 500 sq.yd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4000.0
+  },
+  {
+    "locality": "SGM Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "SGM Nagar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5666.67
+  },
+  {
+    "locality": "Sector-12 SCF/SCO Booth",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14944.44
+  },
+  {
+    "locality": "Sector-20A 20B upto 1000 SqYd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5777.78
+  },
+  {
+    "locality": "Sector-20A 20B 1000-2000 SqYd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5055.56
+  },
+  {
+    "locality": "Sector-20A 20B 2000 SqYd-1acre",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4444.44
+  },
+  {
+    "locality": "Sector-20A 20B 1 Acre to 2 Acre",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3666.67
+  },
+  {
+    "locality": "Sector-20A 20B 2Acre to Above",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3666.67
+  },
+  {
+    "locality": "Bajri",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 363.77
+  },
+  {
+    "locality": "Bajri",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 454.72
+  },
+  {
+    "locality": "Bajri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "Bajri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1944.44
+  },
+  {
+    "locality": "Bhankri",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 380.26
+  },
+  {
+    "locality": "Bhankri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Bhankri",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Manyaru",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 416.68
+  },
+  {
+    "locality": "Manyaru",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Manyaru",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3000.0
+  },
+  {
+    "locality": "Mewla Mahrajpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 389.15
+  },
+  {
+    "locality": "Mewla Mahrajpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 91.85
+  },
+  {
+    "locality": "Mewla Mahrajpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Mewla Mahrajpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3222.22
+  },
+  {
+    "locality": "Lakkarpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 454.72
+  },
+  {
+    "locality": "Lakkarpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 145.51
+  },
+  {
+    "locality": "Lakkarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2666.67
+  },
+  {
+    "locality": "Lakkarpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4666.67
+  },
+  {
+    "locality": "Sarai Khawaja",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 643.98
+  },
+  {
+    "locality": "Sarai Khawaja",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 69.47
+  },
+  {
+    "locality": "Sarai Khawaja",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3888.89
+  },
+  {
+    "locality": "Sarai Khawaja",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4000.0
+  },
+  {
+    "locality": "Dabua Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2833.33
+  },
+  {
+    "locality": "Jawahar Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3000.0
+  },
+  {
+    "locality": "Sanjay Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Saran",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 430.76
+  },
+  {
+    "locality": "Saran",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Saran",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Aterna",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 165.38
+  },
+  {
+    "locality": "Aterna",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 206.72
+  },
+  {
+    "locality": "Aterna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 500.0
+  },
+  {
+    "locality": "Chhainsa",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 183.65
+  },
+  {
+    "locality": "Chhainsa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 777.78
+  },
+  {
+    "locality": "Chhainsa",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "Jawan",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 172.18
+  },
+  {
+    "locality": "Jawan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "Mohna",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 241.05
+  },
+  {
+    "locality": "Mohna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 944.44
+  },
+  {
+    "locality": "Mohna",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Narhawali",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 206.62
+  },
+  {
+    "locality": "Narhawali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "Panhera Khurd",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 264.0
+  },
+  {
+    "locality": "Panhera Khurd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 777.78
+  },
+  {
+    "locality": "Shahjahanpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 149.22
+  },
+  {
+    "locality": "Shahjahanpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 500.0
+  },
+  {
+    "locality": "Auli",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 152.82
+  },
+  {
+    "locality": "Auli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 777.78
+  },
+  {
+    "locality": "Auli",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "All GH Co-op Society",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5500
+  },
+  {
+    "locality": "Commercial Complex Basement",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7500
+  },
+  {
+    "locality": "Commercial Complex First Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8000
+  },
+  {
+    "locality": "Commercial Complex Ground Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8500
+  },
+  {
+    "locality": "Gaunchi",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 374.96
+  },
+  {
+    "locality": "Gaunchi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Gaunchi",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4777.78
+  },
+  {
+    "locality": "Sector-22",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4333.33
+  },
+  {
+    "locality": "Sector-22",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8444.44
+  },
+  {
+    "locality": "Sector-23",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4222.22
+  },
+  {
+    "locality": "Sector-23",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7222.22
+  },
+  {
+    "locality": "Sector-55",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3555.56
+  },
+  {
+    "locality": "Sector-56",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3111.11
+  },
+  {
+    "locality": "Sector-56A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3111.11
+  },
+  {
+    "locality": "Mujesar",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 444.62
+  },
+  {
+    "locality": "Mujesar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2333.33
+  },
+  {
+    "locality": "Mujesar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7111.11
+  },
+  {
+    "locality": "Sarurpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 363.77
+  },
+  {
+    "locality": "Sarurpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Sarurpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3111.11
+  },
+  {
+    "locality": "Sikrona",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 208.36
+  },
+  {
+    "locality": "Sikrona",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Sikrona",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Bhanakpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 166.67
+  },
+  {
+    "locality": "Bhanakpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 777.78
+  },
+  {
+    "locality": "Jakopur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 152.82
+  },
+  {
+    "locality": "Jakopur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 611.11
+  },
+  {
+    "locality": "Firojpur Kalan",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 152.82
+  },
+  {
+    "locality": "Firojpur Kalan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 777.78
+  },
+  {
+    "locality": "Amipur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 126.27
+  },
+  {
+    "locality": "Amipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 855.56
+  },
+  {
+    "locality": "Amipur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1833.33
+  },
+  {
+    "locality": "Jasana",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 229.57
+  },
+  {
+    "locality": "Jasana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1055.56
+  },
+  {
+    "locality": "Tigaon",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 321.4
+  },
+  {
+    "locality": "Tigaon",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Tigaon",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Neemka",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 573.93
+  },
+  {
+    "locality": "Neemka",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "Neemka",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4444.44
+  },
+  {
+    "locality": "Faridpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 573.93
+  },
+  {
+    "locality": "Faridpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "Mirjapur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 573.93
+  },
+  {
+    "locality": "Mirjapur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "All Floors in Huda Sector",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5500
+  },
+  {
+    "locality": "All Floors in Licence Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5500
+  },
+  {
+    "locality": "ALL Comm. Complex Ist Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7000
+  },
+  {
+    "locality": "ALL Comm. Complex Ground Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8000
+  },
+  {
+    "locality": "ALL Huda Res. Plots",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4000.0
+  },
+  {
+    "locality": "All Industrial Plots in Sectors",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1333.33
+  },
+  {
+    "locality": "Adarsh Nagar UG",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3522.22
+  },
+  {
+    "locality": "Adarsh Nagar UG",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4033.33
+  },
+  {
+    "locality": "Uncha Gaon",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 472.45
+  },
+  {
+    "locality": "Uncha Gaon",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3522.22
+  },
+  {
+    "locality": "kailgaon",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 444.62
+  },
+  {
+    "locality": "kailgaon",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1622.22
+  },
+  {
+    "locality": "kailgaon",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "khandawali",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 347.33
+  },
+  {
+    "locality": "khandawali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1622.22
+  },
+  {
+    "locality": "Ballabgarh City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4277.78
+  },
+  {
+    "locality": "Ballabgarh City",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 5377.78
+  },
+  {
+    "locality": "Ballabhgarh",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 472.45
+  },
+  {
+    "locality": "All Group Housing Society",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7500
+  },
+  {
+    "locality": "All Licensed Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7500
+  },
+  {
+    "locality": "ALL HSVP FLOOR",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7500
+  },
+  {
+    "locality": "All Licensed Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9900
+  },
+  {
+    "locality": "Com Complex Ground Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9000
+  },
+  {
+    "locality": "Com Complex First Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9000
+  },
+  {
+    "locality": "Com Complex Second Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9000
+  },
+  {
+    "locality": "Sector-2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000.0
+  },
+  {
+    "locality": "Sector-2",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7000.0
+  },
+  {
+    "locality": "Sector-3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Sector-4",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Sector-8",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6400.0
+  },
+  {
+    "locality": "Sector-9",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8000.0
+  },
+  {
+    "locality": "Sector-9",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 11200.0
+  },
+  {
+    "locality": "Sector-10",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5777.78
+  },
+  {
+    "locality": "Sector-11",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8000.0
+  },
+  {
+    "locality": "Sector-11",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9333.33
+  },
+  {
+    "locality": "Sector-62",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4611.11
+  },
+  {
+    "locality": "Sector-63",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5500.0
+  },
+  {
+    "locality": "Sector-64",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Sector-65",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4222.22
+  },
+  {
+    "locality": "IMT Sec-70",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4583.33
+  },
+  {
+    "locality": "DLF",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7500
+  },
+  {
+    "locality": "Housing Board Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000
+  },
+  {
+    "locality": "Pathwari Mandir Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5055.56
+  },
+  {
+    "locality": "Mathura Road to Ambedkar Chowk",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7333.33
+  },
+  {
+    "locality": "Deeg",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 277.87
+  },
+  {
+    "locality": "Deeg",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 944.44
+  },
+  {
+    "locality": "Nagla Jogiyan",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 353.64
+  },
+  {
+    "locality": "Nagla Jogiyan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 711.11
+  },
+  {
+    "locality": "Nawada Tigaon",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 410.52
+  },
+  {
+    "locality": "Nawada Tigaon",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1466.67
+  },
+  {
+    "locality": "Piala",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 377.59
+  },
+  {
+    "locality": "Piala",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Fatehpur Billoch",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 347.33
+  },
+  {
+    "locality": "Fatehpur Billoch",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Malerna",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 379.56
+  },
+  {
+    "locality": "Malerna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Mujeri",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 416.68
+  },
+  {
+    "locality": "Mujeri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Sameypur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 568.43
+  },
+  {
+    "locality": "Sameypur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2022.22
+  },
+  {
+    "locality": "Sagarpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 353.64
+  },
+  {
+    "locality": "Sagarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1344.44
+  },
+  {
+    "locality": "Sihi",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 673.19
+  },
+  {
+    "locality": "Sihi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3366.67
+  },
+  {
+    "locality": "Shahpur Kalan",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 378.79
+  },
+  {
+    "locality": "Shahpur Kalan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 944.44
+  },
+  {
+    "locality": "Sikri National Highway",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 516.28
+  },
+  {
+    "locality": "Sikri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2022.22
+  },
+  {
+    "locality": "Sunper",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 41.32
+  },
+  {
+    "locality": "Sunper",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1622.22
+  },
+  {
+    "locality": "Chandawali Nehar to Gaon Side",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 492.65
+  },
+  {
+    "locality": "Chandawali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2688.89
+  },
+  {
+    "locality": "Sahupura",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 455.43
+  },
+  {
+    "locality": "Sahupura",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Agwanpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 229.57
+  },
+  {
+    "locality": "Agwanpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Agwanpur",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 3333.33
+  },
+  {
+    "locality": "Kheri Kalan",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 707.07
+  },
+  {
+    "locality": "Kheri Kalan",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Palwali",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 776.4
+  },
+  {
+    "locality": "Palwali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Palla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "Palla",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 4555.56
+  },
+  {
+    "locality": "Budena",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 753.12
+  },
+  {
+    "locality": "Budena",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Agarsain Main Bazar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12222.22
+  },
+  {
+    "locality": "All Comm Complex GF and FF",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8800
+  },
+  {
+    "locality": "All Comm Complex SF and Above",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8400
+  },
+  {
+    "locality": "All GHS co-op City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000
+  },
+  {
+    "locality": "All Licensed Colony Faridabad city",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000
+  },
+  {
+    "locality": "Ashoka Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5555.56
+  },
+  {
+    "locality": "Ashoka Enclave",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8555.56
+  },
+  {
+    "locality": "Faridabad Old",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3666.67
+  },
+  {
+    "locality": "Faridabad Old",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9666.67
+  },
+  {
+    "locality": "Housing Board Flat",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6300
+  },
+  {
+    "locality": "Inderprasath Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4444.44
+  },
+  {
+    "locality": "Nehar Par Sec Plots 79-83",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6222.22
+  },
+  {
+    "locality": "Nehar Par Sec Plots 84-90",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Other Residential Sector Plot",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4777.78
+  },
+  {
+    "locality": "Sec-14 Above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6444.44
+  },
+  {
+    "locality": "Sec-14 upto 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8000.0
+  },
+  {
+    "locality": "Sec-16 above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5388.89
+  },
+  {
+    "locality": "Sec-16 upto 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6222.22
+  },
+  {
+    "locality": "Sec-17 above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4722.22
+  },
+  {
+    "locality": "Sec-17 upto 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6111.11
+  },
+  {
+    "locality": "Sec-21A above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Sec-21A upto 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5888.89
+  },
+  {
+    "locality": "Sec-28 upto 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5666.67
+  },
+  {
+    "locality": "Sec-29 upto 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000.0
+  },
+  {
+    "locality": "Sec-29 upto 500 sq.yds.",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 18333.33
+  },
+  {
+    "locality": "Sec.30 and 31 upto 500 sq.yd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5444.44
+  },
+  {
+    "locality": "Sec.30 and 31 upto 500 sq.yd",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 14777.78
+  },
+  {
+    "locality": "Sector Floors All Huda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6200
+  },
+  {
+    "locality": "Sector-18 upto 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4722.22
+  },
+  {
+    "locality": "Sector-19 upto 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5444.44
+  },
+  {
+    "locality": "Sector-19 upto 500",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 12555.56
+  },
+  {
+    "locality": "Shastri Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3222.22
+  },
+  {
+    "locality": "Spring Field Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4444.44
+  },
+  {
+    "locality": "Spring Field Colony",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8333.33
+  },
+  {
+    "locality": "Surya Nagar Sec-91",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3444.44
+  },
+  {
+    "locality": "Basewla",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 681.91
+  },
+  {
+    "locality": "Basewla",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 417.81
+  },
+  {
+    "locality": "Wazirpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Riwajpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 335.17
+  },
+  {
+    "locality": "Riwajpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2333.33
+  },
+  {
+    "locality": "Tilpat",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 321.4
+  },
+  {
+    "locality": "Tilpat",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Nacholi",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 353.64
+  },
+  {
+    "locality": "Nacholi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Badoli",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 576.45
+  },
+  {
+    "locality": "Badoli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2111.11
+  },
+  {
+    "locality": "Bhatola",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 642.79
+  },
+  {
+    "locality": "Bhatola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "DLF IND All Sizes",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 7666.67
+  },
+  {
+    "locality": "Nehar Par Commercial Ground Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 9600
+  },
+  {
+    "locality": "Nehar Par Commercial First Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8800
+  },
+  {
+    "locality": "Nehar Par Commercial Second Floor",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 8100
+  },
+  {
+    "locality": "Dhauj",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 207.08
+  },
+  {
+    "locality": "Dhauj",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Dhauj",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 1833.33
+  },
+  {
+    "locality": "Mangar",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 268.59
+  },
+  {
+    "locality": "Mangar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1611.11
+  },
+  {
+    "locality": "Mangar",
+    "property_type": "Commercial",
+    "rate_2025_per_sqft": 2333.33
+  },
+  {
+    "locality": "Kureshipur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 214.89
+  },
+  {
+    "locality": "Kureshipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Sirohi",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 187.49
+  },
+  {
+    "locality": "Sirohi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Silakhadi",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 165.38
+  },
+  {
+    "locality": "Silakhadi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Hospital/Educational/Institutional 1 to 1000 sq.yds.",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 1444.44
+  },
+  {
+    "locality": "Hospital/Educational/Institutional 1000 to 2000 sq.yds.",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 1222.22
+  },
+  {
+    "locality": "Hospital/Educational/Institutional 2000 sq.yds to 1 Acre",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 1111.11
+  },
+  {
+    "locality": "Hospital/Educational/Institutional 1 Acre to 2 Acre",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 1000.0
+  },
+  {
+    "locality": "Hospital/Educational/Institutional Above 2 Acre",
+    "property_type": "Institutional",
+    "rate_2025_per_sqft": 777.78
+  },
+  {
+    "locality": "Khori Jamalpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 181.82
+  },
+  {
+    "locality": "Khori Jamalpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Pawta",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 194.47
+  },
+  {
+    "locality": "Pawta",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Nekpur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 179.3
+  },
+  {
+    "locality": "Nekpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Noorpur Dhumaspur",
+    "property_type": "Krishi",
+    "rate_2025_per_sqft": 174.24
+  },
+  {
+    "locality": "Noorpur Dhumaspur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1388.89
+  },
+  {
+    "locality": "Aitmadpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "All Licensed Cly. Fbd city",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000.0
+  },
+  {
+    "locality": "All Licensed cly. Nehar Par",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000.0
+  },
+  {
+    "locality": "Asalatpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Baba Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Badarpur said",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Badshahpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1955.56
+  },
+  {
+    "locality": "Basantpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Basewla Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2888.89
+  },
+  {
+    "locality": "Bhaskola",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1555.56
+  },
+  {
+    "locality": "Bhood colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Bhupani",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Bindapur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Chakmawai",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Dasdiya",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Dhadar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Durga Builder Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3444.44
+  },
+  {
+    "locality": "Fatehpur chandila",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2444.44
+  },
+  {
+    "locality": "Floor in Lic. cly. Nahar par",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6000.0
+  },
+  {
+    "locality": "Gopi Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2777.78
+  },
+  {
+    "locality": "Ishmailpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "Kheri khurd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Kidawali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Krishna cly",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2333.33
+  },
+  {
+    "locality": "Lalpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Mahawatpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1555.56
+  },
+  {
+    "locality": "Mawai",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Mojmabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1555.56
+  },
+  {
+    "locality": "Nasarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1777.78
+  },
+  {
+    "locality": "Nehar Par New Sec. and Cly",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4777.78
+  },
+  {
+    "locality": "Nehar par sec Plot 79,80,81,82,83",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 6222.22
+  },
+  {
+    "locality": "Nehar par sec Plot 84,85,86,87,88,89,90",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5000.0
+  },
+  {
+    "locality": "Neherpar Sec-97, 98",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4222.22
+  },
+  {
+    "locality": "Other Colony within in MCF",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3111.11
+  },
+  {
+    "locality": "Pehladpur Badoli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Raja Garden",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3111.11
+  },
+  {
+    "locality": "Rijajpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2333.33
+  },
+  {
+    "locality": "Salarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Sec -18A Above 500sq",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3888.89
+  },
+  {
+    "locality": "Sec 31 Ind Area 2 Acre Above",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Sec-18 above 500 sq",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3666.67
+  },
+  {
+    "locality": "Sec-21B above 500 sq.yds.",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5222.22
+  },
+  {
+    "locality": "Sec-28 above 500 Sq.yds",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4055.56
+  },
+  {
+    "locality": "Sec-29 above 500 Sq.yds",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4000.0
+  },
+  {
+    "locality": "Sec 30 and 31 Above 500 Sq Yards",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4222.22
+  },
+  {
+    "locality": "Sector-18-A upto 500",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4166.67
+  },
+  {
+    "locality": "Sehatpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2000.0
+  },
+  {
+    "locality": "Shekhpur khadar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Shiv Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2666.67
+  },
+  {
+    "locality": "Surya Nagar - Sec.91",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3444.44
+  },
+  {
+    "locality": "Tajupur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1666.67
+  },
+  {
+    "locality": "Tikawali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2222.22
+  },
+  {
+    "locality": "Vikash Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3166.67
+  },
+  {
+    "locality": "sec 19 Above 500sq",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3666.67
+  },
+  {
+    "locality": "Ahinsa Khand 2, Sector 62",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Akash Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Amaatra Crystal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Amrapali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Amrit Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Anand Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Ankur Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Ansal East End",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3963.86
+  },
+  {
+    "locality": "Anwarpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Asalat Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Asalatpur Farakh Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Ashok Vatika",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2322.57
+  },
+  {
+    "locality": "Atour",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 572.9
+  },
+  {
+    "locality": "Avantika",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3963.86
+  },
+  {
+    "locality": "Ayroor South",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Bahrampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2260.64
+  },
+  {
+    "locality": "Bahrampur, Sector 63",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Bamheta Village",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Basantpur Saitli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Bazaria",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Bhim Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Biharipura",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2322.58
+  },
+  {
+    "locality": "Bishnuli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Bisrakh Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Block A Rampuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Block B Nandgram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3189.67
+  },
+  {
+    "locality": "Block B Sector 2 Vaishali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Block B Shalimar Garden Extension 2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4211.61
+  },
+  {
+    "locality": "Block C Shaheed Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2818.06
+  },
+  {
+    "locality": "Block C Swaran Jayanti Puram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Block D Lohia Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3561.29
+  },
+  {
+    "locality": "Block E Govindpuram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Brij Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Brij Vihar Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Brindavan Garden Extension",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3623.22
+  },
+  {
+    "locality": "Bulandshahr Road Industrial Area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1920
+  },
+  {
+    "locality": "Chauhan Patti",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Chikamberpur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Chipiyana Buzurg",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Chipiyana Buzurg Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Chipiyana Buzurg, Sector 10",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Chipiyana Buzurg, Sector 16",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Chipiyana Buzurg, Sector 16B",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Chipyana Khurd Urf Tigri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Chirauri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Christian Nagar, Sector 62",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "D Block Nandgram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3189.67
+  },
+  {
+    "locality": "D Block Pratap Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3344.51
+  },
+  {
+    "locality": "DLF Ankur Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3963.86
+  },
+  {
+    "locality": "DLF Ankur Vihar, Sector 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3963.86
+  },
+  {
+    "locality": "DLF Ankur Vihar, Sector 16B",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3344.51
+  },
+  {
+    "locality": "DLF Dilshad Extention 2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4211.61
+  },
+  {
+    "locality": "Dasna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Dasna Dehat",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Dasna Gate",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Defence Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2508.38
+  },
+  {
+    "locality": "Delhi Meerut Expressway",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2787.09
+  },
+  {
+    "locality": "Dujana",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2043.87
+  },
+  {
+    "locality": "Elaichipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Friends Colony Asalat Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "GDA Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3344.51
+  },
+  {
+    "locality": "Galand",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Gandhi Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Gangapuram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Garhi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Ghantaghar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Ghaziabad Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Ghukna",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Girdharpur Sunarasi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Gokul Dham Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Grand Trunk Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2787.09
+  },
+  {
+    "locality": "Green Park",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4180.64
+  },
+  {
+    "locality": "Gulab Vatika",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Gulmohur Greens",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4861.93
+  },
+  {
+    "locality": "Gyan Khand 3, Sector 62",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Hapur Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Hindan Residential Area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 5759.99
+  },
+  {
+    "locality": "Indrapuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Indrapuri Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2353.55
+  },
+  {
+    "locality": "Jaiprakash Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Jalalabad",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2570.32
+  },
+  {
+    "locality": "Janakpuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2725.16
+  },
+  {
+    "locality": "Jassipura",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2322.58
+  },
+  {
+    "locality": "Kamma 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1950.96
+  },
+  {
+    "locality": "Kanauja",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Karera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1950.96
+  },
+  {
+    "locality": "Karpuri Puram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Kaushambi, Sector 14",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9073.53
+  },
+  {
+    "locality": "Kaushambi, Sector 8",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9073.53
+  },
+  {
+    "locality": "Krishna Garden Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Kushaliya",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9073.53
+  },
+  {
+    "locality": "Lajpat Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3561.29
+  },
+  {
+    "locality": "Lajpat Nagar, Sector 4",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3561.29
+  },
+  {
+    "locality": "Lal Bagh Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3406.45
+  },
+  {
+    "locality": "Lalbag Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3406.45
+  },
+  {
+    "locality": "Lohia Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Loni Dehat",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Loni Industrial Area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1920
+  },
+  {
+    "locality": "Loni Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1920
+  },
+  {
+    "locality": "Madhuban Bapudham",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Mahagunpuram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Mahindra Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2972.9
+  },
+  {
+    "locality": "Mainpur Village",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Makanpur, Sector 62A",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4861.93
+  },
+  {
+    "locality": "Mandola Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Mansarovar Park Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Marium Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2756.12
+  },
+  {
+    "locality": "Master Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Masuri",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Matiyala",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1950.96
+  },
+  {
+    "locality": "Meerut Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2787.09
+  },
+  {
+    "locality": "Meerut Road Industrial Area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2539.35
+  },
+  {
+    "locality": "Mehrauli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Mirpur Hindu",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Model Town",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Model Town West",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Modern Railway City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Modern Railway City, Sector 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Modi Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3901.93
+  },
+  {
+    "locality": "Modinagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3901.93
+  },
+  {
+    "locality": "Modinagar Sonda Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2198.7
+  },
+  {
+    "locality": "Mohammadpur Dwedha",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3158.7
+  },
+  {
+    "locality": "Mohan Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Morta",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Morta Village",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Morti",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Muhiddinpur Dabarsi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1145.8
+  },
+  {
+    "locality": "Mukund Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3901.93
+  },
+  {
+    "locality": "Muradnagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "NH 58",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2787.09
+  },
+  {
+    "locality": "NH 91",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2972.9
+  },
+  {
+    "locality": "Nai Basti Dundahera",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2260.64
+  },
+  {
+    "locality": "Nai Basti Dundahera, Sector 16C",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7060.63
+  },
+  {
+    "locality": "Nai Basti Dundahera, Sector 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7060.63
+  },
+  {
+    "locality": "Nandgram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3189.67
+  },
+  {
+    "locality": "Narainpur Urf Rampur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Navyug Market",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4180.64
+  },
+  {
+    "locality": "Nayphal",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Nayphal, Sector 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Nayphal, Sector 8",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Neelmani Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4273.54
+  },
+  {
+    "locality": "Neelpadam Kunj Complex",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4273.54
+  },
+  {
+    "locality": "Neelpadam Kunj Complex, Sector 4",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3344.51
+  },
+  {
+    "locality": "Neeti Khand 2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "New Panchwati Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Nistoli",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Noor Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2322.57
+  },
+  {
+    "locality": "Panchsheel Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Panchsheel Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Panchvati Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Parson",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Parson, Sector 59",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Pasonda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2198.7
+  },
+  {
+    "locality": "Phase 1 Akash Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Pilkhuwa",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Pink City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2972.9
+  },
+  {
+    "locality": "Piplehda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Pocket F Nehru Nagar 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4707.09
+  },
+  {
+    "locality": "Police Line",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "RK Puram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Radha Kunj",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Rahul Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2198.7
+  },
+  {
+    "locality": "Rahul Vihar 2nd",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2198.7
+  },
+  {
+    "locality": "Rahul Vihar, Sector 10",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2198.7
+  },
+  {
+    "locality": "Rail Vihar Manoj Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Railway Colony Advocate Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2043.87
+  },
+  {
+    "locality": "Raispur Village",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Raj Nagar Extension Nandgram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3282.58
+  },
+  {
+    "locality": "Rajnagar Sector 7",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3282.58
+  },
+  {
+    "locality": "Ram Park",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4180.64
+  },
+  {
+    "locality": "Rampark Extension",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Ramprastha Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2570.32
+  },
+  {
+    "locality": "Ramprastha Greens",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Ramprastha Greens, Sector 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Ramprastha Greens, Sector 9",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Rasulpur Sikroda",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Razapur Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Sadiq Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2105.8
+  },
+  {
+    "locality": "Sadullahabad Village",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2941.93
+  },
+  {
+    "locality": "Sahibabad Industrial Area",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1920
+  },
+  {
+    "locality": "Sahibabad Industrial Area, Sector 4",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1920
+  },
+  {
+    "locality": "Sahibabad Industrial Area, Sector 5",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1920
+  },
+  {
+    "locality": "Sanjay Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Sanjay Nagar, Sector 23",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Sarai Nazar Ali",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Sarvodaya Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Sector 23",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Sector 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3189.67
+  },
+  {
+    "locality": "Sector C1 Trans Delhi Signature City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Sewa Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2539.35
+  },
+  {
+    "locality": "Shahberi",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 9073.53
+  },
+  {
+    "locality": "Shaheed Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2818.06
+  },
+  {
+    "locality": "Shahpur Bamheta",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Shahpur Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Shakti Khand 4, Sector 11",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Shakti khand 1, Sector 10",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Shalimar Garden Extension 1",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4211.61
+  },
+  {
+    "locality": "Shalimar Garden Extension 1, Sector 2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4211.61
+  },
+  {
+    "locality": "Shalimar Garden Extension 2",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4211.61
+  },
+  {
+    "locality": "Shalimar Garden Extension 2, Sector 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4211.61
+  },
+  {
+    "locality": "Shatabdipuram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2601.29
+  },
+  {
+    "locality": "Shipra Suncity",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  },
+  {
+    "locality": "Shyam Park Extension",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Siddharth Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddharth Vihar, Sector 12",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddharth Vihar, Sector 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddharth Vihar, Sector 7",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddharth Vihar, Sector 8",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddharth Vihar, Sector 9",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar, Sector 03",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar, Sector 10",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar, Sector 11",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar, Sector 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar, Sector 7",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Siddhartha Vihar, Sector 8",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4645.15
+  },
+  {
+    "locality": "Sikrod",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1145.8
+  },
+  {
+    "locality": "Sikrod, Sector 16",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1145.8
+  },
+  {
+    "locality": "Sikrod, Sector 62",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1145.8
+  },
+  {
+    "locality": "Sona Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2260.64
+  },
+  {
+    "locality": "State Highway 57",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Swaran Jayanti Puram",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 4118.7
+  },
+  {
+    "locality": "Talabpur Urf Hathipur",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Tila More",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 1858.06
+  },
+  {
+    "locality": "Tronica City",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3344.51
+  },
+  {
+    "locality": "Tronica City, Sector 3",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3344.51
+  },
+  {
+    "locality": "Turab Nagar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Uttaranchal Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Vaibhav Khand",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8361.27
+  },
+  {
+    "locality": "Vaishali Extension",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Vaishali Extension, Sector 9",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 8547.08
+  },
+  {
+    "locality": "Vasundhara Indirapuram Road",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 7060.63
+  },
+  {
+    "locality": "Vijay Nagar Colony",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3251.61
+  },
+  {
+    "locality": "Vijay Vihar",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2229.67
+  },
+  {
+    "locality": "Vikram Enclave",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 3158.7
+  },
+  {
+    "locality": "khora",
+    "property_type": "Residential",
+    "rate_2025_per_sqft": 2136.77
+  }
+]

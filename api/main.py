@@ -140,21 +140,165 @@ BF_VORONOI_PATH = _resolve_model_path(
     "bf_vor_kmeans.pkl",
     "notebooks/notebooks/sell/bf/bf_vor_kmeans.pkl",
 )
-ROAD_GEOJSON_PATHS = [
-    "real_estate_data/real_estate_data/NCR Roads.geojson",
-    "NCR Roads.geojson",
-]
+def _discover_road_geojsons() -> list[str]:
+    """Auto-discover all road GeoJSON files from known data directories.
+    Any *.geojson file whose name contains 'road' (case-insensitive) is included.
+    Adding a new city's roads only requires dropping the geojson file in the
+    real_estate_data/real_estate_data/ folder — no code changes needed.
+    The root directory is only searched as a last-resort fallback so that
+    duplicate files at multiple levels are not loaded twice.
+    """
+    canonical_dirs = [
+        "real_estate_data/real_estate_data",
+        "real_estate_data",
+    ]
+    seen: set[str] = set()
+    result: list[str] = []
+
+    def _collect(directory: str) -> None:
+        if not os.path.isdir(directory):
+            return
+        for fname in sorted(os.listdir(directory)):
+            if not fname.lower().endswith(".geojson"):
+                continue
+            if "road" not in fname.lower():
+                continue
+            abs_path = os.path.abspath(os.path.join(directory, fname))
+            if abs_path not in seen:
+                seen.add(abs_path)
+                result.append(abs_path)
+
+    for d in canonical_dirs:
+        _collect(d)
+
+    # Only check root directory if nothing found in canonical locations
+    if not result:
+        _collect(".")
+
+    return result
 
 
-CITY_OPTIONS = [
-    "Delhi",
-    "Noida",
-    "Gurgaon",
-    "Faridabad",
-    "Ghaziabad",
-    "Greater Noida",
-    "Jaipur",
-]
+def _city_display_name(key: str) -> str:
+    """Convert an internal city key (snake_case or space-separated) to a UI display name."""
+    _OVERRIDES = {
+        "new_delhi": "Delhi",
+        "new delhi": "Delhi",
+        "delhi": "Delhi",
+    }
+    k = key.strip().lower()
+    return _OVERRIDES.get(k, k.replace("_", " ").title())
+
+
+def _norm_text(value: str) -> str:
+    return re.sub(r"\s+", " ", str(value).strip().lower())
+
+
+def _normalize_city_key(city: str) -> str:
+    """Normalise a city name to a canonical lowercase key.
+    Known aliases are collapsed; any unknown city falls through to its
+    normalised form so new cities work without code changes.
+    """
+    c = _norm_text(city)
+    city_map = {
+        "new delhi": "delhi",
+        "delhi": "delhi",
+        "gurugram": "gurgaon",
+        "gurgaon": "gurgaon",
+        "greater noida": "greater noida",
+        "greater noida west": "greater noida",
+        "gr noida": "greater noida",
+        "noida": "noida",
+        "ghaziabad": "ghaziabad",
+        "faridabad": "faridabad",
+        "jaipur": "jaipur",
+        "pune": "pune",
+        "dehradun": "dehradun",
+        "aligarh": "aligarh",
+        "alwar": "alwar",
+        "uttarakhand": "uttarakhand",
+    }
+    # Explicit map first; unknown cities fall through to the normalised string
+    return city_map.get(c, c)
+
+
+# Token patterns to strip from a circle-rate filename to isolate the city name.
+_CR_SUFFIX_RE = re.compile(
+    r"(circle[_\s-]*rate[s]?|circle[s]?|_cr\b|\bcr\b|localities|merged|normalized"
+    r"|colony[_\s]*list|mcd|_rate[s]?|\(\d+\)|\s+\d+)",
+    re.IGNORECASE,
+)
+
+
+def _city_from_filename(filename: str) -> str | None:
+    """Infer a city key from a circle-rate JSON filename.
+    Hard-coded aliases handle legacy filenames; a generic suffix-stripping
+    fallback handles future files automatically.
+    """
+    f = _norm_text(os.path.splitext(filename)[0])  # drop .json extension first
+
+    # Hard-coded special cases for non-obvious filenames
+    if "merged_delhi" in f or f.startswith("delhi"):
+        return "delhi"
+    if "greater-noida" in f or "greater_noida" in f or "greater noida" in f:
+        return "greater noida"
+    if "mcd_colony" in f or "missing_circle" in f:
+        return None  # not a city-specific file
+
+    # Generic: strip common non-city tokens, normalise separators, look up
+    cleaned = _CR_SUFFIX_RE.sub(" ", f)
+    cleaned = re.sub(r"[-_]+", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    if not cleaned:
+        return None
+    return _normalize_city_key(cleaned)
+
+
+def _build_city_options() -> list[str]:
+    """Build the city list dynamically from:
+    1. Keys in ncr_colonies.json (locality registry)
+    2. Cities inferred from circle-rate JSON filenames
+    New cities appear automatically once their data files are added.
+    """
+    cities_seen: dict[str, str] = {}  # internal_key -> display_name
+
+    # --- Source 1: ncr_colonies.json ---
+    colonies_paths = [
+        "real_estate_data/real_estate_data/ncr_colonies.json",
+        "real_estate_data/ncr_colonies.json",
+        "ncr_colonies.json",
+    ]
+    for cp in colonies_paths:
+        if os.path.exists(cp):
+            try:
+                with open(cp, encoding="utf-8") as f:
+                    data = json.load(f)
+                for raw_key in data.keys():
+                    # Replace underscores before normalising so new_delhi → delhi, etc.
+                    key = _normalize_city_key(raw_key.replace("_", " "))
+                    if key and key not in cities_seen:
+                        cities_seen[key] = _city_display_name(raw_key)
+            except Exception:
+                pass
+            break
+
+    # --- Source 2: circle-rate filenames ---
+    cr_dir = CR_FOLDER
+    if os.path.isdir(cr_dir):
+        for fname in os.listdir(cr_dir):
+            if not fname.lower().endswith(".json"):
+                continue
+            city_key = _city_from_filename(fname.lower())
+            if city_key and city_key not in cities_seen:
+                cities_seen[city_key] = _city_display_name(city_key)
+
+    if not cities_seen:
+        return ["Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad", "Greater Noida", "Jaipur"]
+
+    return sorted(cities_seen.values())
+
+
+ROAD_GEOJSON_PATHS: list[str] = _discover_road_geojsons()
+CITY_OPTIONS: list[str] = _build_city_options()
 AGE_CATEGORIES = ["10 to 20 years", "5 to 10 years", "Above 20 years", "Less than 5 years", "New Construction"]
 FURNISHING_CATEGORIES = ["Furnished", "Semi-Furnished", "Unfurnished"]
 FACING_CATEGORIES = ["East", "North", "North-East", "North-West", "South", "South-East", "South-West", "West"]
@@ -179,10 +323,6 @@ _SECTOR_TOKEN_RE = re.compile(r"\bsec(?:tor)?[.\-\s]*(\d{1,3}[a-z]?)\b", re.IGNO
 _LOCALITY_STOPWORDS = {"sector", "sec", "block", "phase", "extension", "extn", "ext"}
 
 
-def _norm_text(value: str) -> str:
-    return re.sub(r"\s+", " ", str(value).strip().lower())
-
-
 def _normalize_property_type(value: str | None) -> str | None:
     if value is None:
         return None
@@ -201,43 +341,6 @@ def _normalize_property_type(value: str | None) -> str | None:
     if "other" in key:
         return "Other"
     return raw.title()
-
-
-def _normalize_city_key(city: str) -> str:
-    c = _norm_text(city)
-    city_map = {
-        "new delhi": "delhi",
-        "delhi": "delhi",
-        "gurugram": "gurgaon",
-        "gurgaon": "gurgaon",
-        "greater noida": "greater noida",
-        "greater noida west": "greater noida",
-        "gr noida": "greater noida",
-        "noida": "noida",
-        "ghaziabad": "ghaziabad",
-        "faridabad": "faridabad",
-        "jaipur": "jaipur",
-    }
-    return city_map.get(c, c)
-
-
-def _city_from_filename(filename: str) -> str | None:
-    f = _norm_text(filename)
-    if "merged_delhi_localities" in f or f.startswith("delhi"):
-        return "delhi"
-    if "greater-noida" in f or "greater_noida" in f:
-        return "greater noida"
-    if "noida_circle_rate" in f:
-        return "noida"
-    if "gurgaon" in f or "gurugram" in f:
-        return "gurgaon"
-    if "ghaziabad" in f:
-        return "ghaziabad"
-    if "faridabad" in f:
-        return "faridabad"
-    if "jaipur" in f:
-        return "jaipur"
-    return None
 
 
 def _city_rate_candidates(city: str) -> list[str]:
@@ -354,10 +457,13 @@ def load_all_circle_rates() -> dict[str, dict[str, float | dict[str, float]]]:
             continue
 
         if isinstance(data, list):
-            if file_city is None:
-                continue
             for item in data:
                 if isinstance(item, dict):
+                    # Canonical format: each record may carry a "city" field.
+                    # Fall back to the city inferred from the filename.
+                    item_city = file_city or _normalize_city_key(str(item.get("city", "")).strip())
+                    if not item_city:
+                        continue
                     loc = str(item.get("locality", "")).strip()
                     prop_type = item.get("property_type") or item.get("property_sub_type")
                     rate = item.get("circle_land_cost_inr_per_sqft")
@@ -370,7 +476,7 @@ def load_all_circle_rates() -> dict[str, dict[str, float | dict[str, float]]]:
 
                     if loc and rate is not None:
                         try:
-                            _put(file_city, loc, float(rate), str(prop_type) if prop_type is not None else None)
+                            _put(item_city, loc, float(rate), str(prop_type) if prop_type is not None else None)
                         except (TypeError, ValueError):
                             continue
 
@@ -671,9 +777,13 @@ def compute_voronoi_features(lat: float, lon: float, vor_kmeans) -> dict:
     point = np.array([[lat, lon]])
     cell_id = int(vor_kmeans.predict(point)[0])
     centers = vor_kmeans.cluster_centers_
-    dist = float(np.sqrt(((point - centers[cell_id]) ** 2).sum()))
+    # KMeans was trained on raw (lat, lon) degrees → Euclidean distance is in
+    # degrees.  Convert to km so that downstream consumers (uniqueness, road
+    # detail) receive a meaningful distance.  1° ≈ 111.32 km at India's lat.
+    dist_deg = float(np.sqrt(((point - centers[cell_id]) ** 2).sum()))
+    dist_km = dist_deg * 111.32
 
-    feats = {"voronoi_dist_to_seed": dist}
+    feats = {"voronoi_dist_to_seed": dist_km}
     for i in range(n_cells):
         feats[f"vor_cell_{i}"] = 1 if i == cell_id else 0
     return feats
@@ -682,6 +792,7 @@ def compute_voronoi_features(lat: float, lon: float, vor_kmeans) -> dict:
 def _road_bucket(properties: dict) -> str | None:
     ref = str(properties.get("ref") or "").upper().replace(" ", "")
     name = str(properties.get("name") or "").upper()
+    fclass = str(properties.get("fclass") or "").lower().strip()
 
     if ref.startswith("MDR") or "MAJOR DISTRICT ROAD" in name:
         return "MDR"
@@ -689,48 +800,59 @@ def _road_bucket(properties: dict) -> str | None:
         return "SH"
     if ref.startswith("NH") or re.search(r"\bNH\s*\d", name):
         return "NH"
+    # fclass-based fallback for roads without a ref code (Pune / Jaipur etc.)
+    if fclass in ("motorway", "trunk"):
+        return "NH"
+    if fclass in ("primary", "primary_link"):
+        return "SH"
+    if fclass in ("secondary", "secondary_link"):
+        return "MDR"
     return None
 
 
 def load_road_segments() -> dict[str, np.ndarray]:
-    geojson_path = None
+    # Deduplicate paths so the same file isn't loaded twice
+    seen: set[str] = set()
+    available_paths: list[str] = []
     for path in ROAD_GEOJSON_PATHS:
-        if os.path.exists(path):
-            geojson_path = path
-            break
+        abs_path = os.path.abspath(path)
+        if os.path.exists(abs_path) and abs_path not in seen:
+            seen.add(abs_path)
+            available_paths.append(abs_path)
 
-    if geojson_path is None:
+    if not available_paths:
         return {
             "MDR": np.empty((0, 4), dtype=np.float64),
             "SH": np.empty((0, 4), dtype=np.float64),
             "NH": np.empty((0, 4), dtype=np.float64),
         }
 
-    with open(geojson_path, "r", encoding="utf-8") as f:
-        gj = json.load(f)
-
     segments = {"MDR": [], "SH": [], "NH": []}
-    for feature in gj.get("features", []):
-        props = feature.get("properties", {})
-        geometry = feature.get("geometry", {})
-        bucket = _road_bucket(props)
-        if bucket is None:
-            continue
+    for geojson_path in available_paths:
+        with open(geojson_path, "r", encoding="utf-8") as f:
+            gj = json.load(f)
 
-        gtype = geometry.get("type")
-        coords = geometry.get("coordinates", [])
-        if gtype == "LineString":
-            lines = [coords]
-        elif gtype == "MultiLineString":
-            lines = coords
-        else:
-            continue
-
-        for line in lines:
-            if not line or len(line) < 2:
+        for feature in gj.get("features", []):
+            props = feature.get("properties", {})
+            geometry = feature.get("geometry", {})
+            bucket = _road_bucket(props)
+            if bucket is None:
                 continue
-            for (lon1, lat1), (lon2, lat2) in zip(line[:-1], line[1:]):
-                segments[bucket].append((lat1, lon1, lat2, lon2))
+
+            gtype = geometry.get("type")
+            coords = geometry.get("coordinates", [])
+            if gtype == "LineString":
+                lines = [coords]
+            elif gtype == "MultiLineString":
+                lines = coords
+            else:
+                continue
+
+            for line in lines:
+                if not line or len(line) < 2:
+                    continue
+                for (lon1, lat1), (lon2, lat2) in zip(line[:-1], line[1:]):
+                    segments[bucket].append((lat1, lon1, lat2, lon2))
 
     out = {}
     for key, vals in segments.items():
@@ -1143,7 +1265,7 @@ def _build_buy_decision_payload(context_payload: dict[str, Any], hold_years: int
     if overall_score >= 68.0:
         recommendation = "Buy"
     elif overall_score >= 50.0:
-        recommendation = "Watch"
+        recommendation = "Hold / Neutral"
     else:
         recommendation = "Avoid"
 
@@ -1710,7 +1832,13 @@ def localities(city: str = Query(...), query: str = Query(""), limit: int = Quer
 
 @app.get("/circle-rate")
 def circle_rate(city: str = Query(...), locality: str = Query(...), property_type: str | None = Query(None)) -> dict[str, Any]:
-    value = lookup_circle_rate(locality, city, circle_rates_by_city, property_type=property_type)
+    # Prefer CircleRateMatcher (loads from circle_rates/ at project root — correct path).
+    # Fall back to the legacy lookup only if the matcher is unavailable.
+    cr_matcher = getattr(market_service, "_cr_matcher", None)
+    if cr_matcher is not None:
+        value = cr_matcher.get_rate(city, locality)
+    else:
+        value = lookup_circle_rate(locality, city, circle_rates_by_city, property_type=property_type)
     return {"value": value}
 
 
@@ -1888,6 +2016,154 @@ def predict_plot(req: PlotRequest) -> dict[str, Any]:
         ncr_stats=NCR_STATS,
     )
     return {"ppsf": pred_ppsf, "total": total, "explanation": explanation}
+
+
+@app.post("/predict/builder-floor/all")
+def predict_builder_floor_all(req: BuilderFloorRequest) -> dict[str, Any]:
+    """Sell price + rent estimate + rental yield in one call for Builder Floor."""
+    if bf_model is None:
+        raise HTTPException(status_code=503, detail="Builder Floor model not available")
+
+    vor_feats = compute_voronoi_features(req.lat, req.lon, bf_vor) if bf_vor is not None else {"voronoi_dist_to_seed": 0.0}
+
+    X_sell = build_features(
+        bhk=req.bhk, area_sqft=req.area_sqft, bathrooms=req.bathrooms, balconies=req.balconies,
+        circle_rate=req.circle_rate, is_parking=req.is_parking, is_pool=req.is_pool,
+        is_main_road=req.is_main_road, is_garden_park=req.is_garden_park,
+        is_gated=req.is_gated, is_corner=req.is_corner,
+        age=req.age, furnishing=req.furnishing, facing=req.facing,
+        voronoi_feats=vor_feats, model=bf_model,
+    )
+    pred_log = float(bf_model.predict(X_sell)[0])
+    pred_ratio = float(np.expm1(pred_log))
+    ppsf = float(pred_ratio * req.circle_rate)
+    total = float(ppsf * req.area_sqft)
+
+    monthly_rent: float | None = None
+    annual_rent: float | None = None
+    rent_yield_pct: float | None = None
+    rent_available = bf_rent_model is not None
+
+    if rent_available:
+        try:
+            floor_feats_rent = {
+                "current_floor": 1,
+                "total_floors": max(2, req.bhk + 1),
+                "is_ground_floor": 0,
+                "is_top_floor": 0,
+                "is_basement": 0,
+            }
+            X_rent = build_features(
+                bhk=req.bhk, area_sqft=req.area_sqft, bathrooms=req.bathrooms, balconies=req.balconies,
+                circle_rate=req.circle_rate, is_parking=req.is_parking, is_pool=req.is_pool,
+                is_main_road=req.is_main_road, is_garden_park=req.is_garden_park,
+                is_gated=req.is_gated, is_corner=req.is_corner,
+                age=req.age, furnishing=req.furnishing, facing=req.facing,
+                voronoi_feats=vor_feats, model=bf_rent_model, floor_feats=floor_feats_rent,
+            )
+            rent_log = float(bf_rent_model.predict(X_rent)[0])
+            monthly_rent = max(0.0, float(np.expm1(rent_log)))
+            annual_rent = monthly_rent * 12.0
+            rent_yield_pct = round((annual_rent / total) * 100.0, 3) if total > 0 else None
+        except Exception:
+            rent_available = False
+
+    explanation = _build_xai_explanation(
+        segment="builder-floor", ppsf=ppsf, circle_rate=req.circle_rate, area_sqft=req.area_sqft,
+        pred_ratio=pred_ratio, voronoi_dist=float(vor_feats.get("voronoi_dist_to_seed", 5.0)),
+        is_main_road=req.is_main_road, furnishing=req.furnishing, age=req.age,
+        is_parking=req.is_parking, is_pool=req.is_pool, is_garden_park=req.is_garden_park,
+        is_gated=req.is_gated, is_corner=req.is_corner, ncr_stats=NCR_STATS,
+    )
+    return {
+        "segment": "builder-floor",
+        "sell": {"predRatio": pred_ratio, "ppsf": round(ppsf, 2), "total": round(total, 2)},
+        "rent": {
+            "available": rent_available,
+            "monthlyRent": round(monthly_rent, 2) if monthly_rent is not None else None,
+            "annualRent": round(annual_rent, 2) if annual_rent is not None else None,
+            "rentalYieldPct": rent_yield_pct,
+        },
+        "explanation": explanation,
+    }
+
+
+@app.post("/predict/apartment/all")
+def predict_apartment_all(req: ApartmentRequest) -> dict[str, Any]:
+    """Sell price + rent estimate + rental yield in one call for Apartment."""
+    if apt_model is None:
+        raise HTTPException(status_code=503, detail="Apartment model not available")
+
+    vor_feats = compute_voronoi_features(req.lat, req.lon, apt_vor) if apt_vor is not None else {"voronoi_dist_to_seed": 0.0}
+
+    floor_feats_sell = {
+        "floor_low": 1 if "Low" in req.floor_level else 0,
+        "floor_medium": 1 if "Medium" in req.floor_level else 0,
+        "floor_high": 1 if "High" in req.floor_level else 0,
+        "is_ground_floor": int(req.is_ground),
+        "is_top_floor": int(req.is_top),
+    }
+    floor_feats_sell.update(build_apartment_property_features(req.property_segment, apt_model))
+
+    X_sell = build_features(
+        bhk=req.bhk, area_sqft=req.area_sqft, bathrooms=req.bathrooms, balconies=req.balconies,
+        circle_rate=req.circle_rate, is_parking=req.is_parking, is_pool=req.is_pool,
+        is_main_road=req.is_main_road, is_garden_park=req.is_garden_park,
+        is_gated=req.is_gated, is_corner=req.is_corner,
+        age=req.age, furnishing=req.furnishing, facing=req.facing,
+        voronoi_feats=vor_feats, model=apt_model, floor_feats=floor_feats_sell,
+    )
+    pred_log = float(apt_model.predict(X_sell)[0])
+    pred_ratio = float(np.expm1(pred_log))
+    ppsf = float(pred_ratio * req.circle_rate)
+    total = float(ppsf * req.area_sqft)
+
+    monthly_rent: float | None = None
+    annual_rent: float | None = None
+    rent_yield_pct: float | None = None
+    rent_available = apt_rent_model is not None
+
+    if rent_available:
+        try:
+            floor_feats_rent = {
+                "floor_low": 0, "floor_medium": 1, "floor_high": 0,
+                "is_ground_floor": 0, "is_top_floor": 0,
+            }
+            floor_feats_rent.update(build_apartment_property_features("Mid", apt_rent_model))
+            X_rent = build_features(
+                bhk=req.bhk, area_sqft=req.area_sqft, bathrooms=req.bathrooms, balconies=req.balconies,
+                circle_rate=req.circle_rate, is_parking=req.is_parking, is_pool=req.is_pool,
+                is_main_road=req.is_main_road, is_garden_park=req.is_garden_park,
+                is_gated=req.is_gated, is_corner=req.is_corner,
+                age=req.age, furnishing=req.furnishing, facing=req.facing,
+                voronoi_feats=vor_feats, model=apt_rent_model, floor_feats=floor_feats_rent,
+            )
+            rent_log = float(apt_rent_model.predict(X_rent)[0])
+            monthly_rent = max(0.0, float(np.expm1(rent_log)))
+            annual_rent = monthly_rent * 12.0
+            rent_yield_pct = round((annual_rent / total) * 100.0, 3) if total > 0 else None
+        except Exception:
+            rent_available = False
+
+    explanation = _build_xai_explanation(
+        segment="apartment", ppsf=ppsf, circle_rate=req.circle_rate, area_sqft=req.area_sqft,
+        pred_ratio=pred_ratio, voronoi_dist=float(vor_feats.get("voronoi_dist_to_seed", 5.0)),
+        is_main_road=req.is_main_road, furnishing=req.furnishing, age=req.age,
+        floor_level=req.floor_level, property_segment=req.property_segment,
+        is_parking=req.is_parking, is_pool=req.is_pool, is_garden_park=req.is_garden_park,
+        is_gated=req.is_gated, is_corner=req.is_corner, ncr_stats=NCR_STATS,
+    )
+    return {
+        "segment": "apartment",
+        "sell": {"predRatio": pred_ratio, "ppsf": round(ppsf, 2), "total": round(total, 2)},
+        "rent": {
+            "available": rent_available,
+            "monthlyRent": round(monthly_rent, 2) if monthly_rent is not None else None,
+            "annualRent": round(annual_rent, 2) if annual_rent is not None else None,
+            "rentalYieldPct": rent_yield_pct,
+        },
+        "explanation": explanation,
+    }
 
 
 @app.get("/road-distances")
@@ -2109,6 +2385,891 @@ def mi_context(
         return result
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Market intelligence context failed: {exc}")
+
+
+# ─────────────────────────────────────────────────────────────
+# Metro data (loaded once at startup)
+# ─────────────────────────────────────────────────────────────
+
+def _load_metro_stations() -> np.ndarray:
+    """Load Delhi metro station lat/lon as (N, 2) numpy array."""
+    candidates = [
+        PROJECT_ROOT / "DELHI_METRO_DATA (1).csv",
+        PROJECT_ROOT / "DELHI_METRO_DATA.csv",
+    ]
+    for path in candidates:
+        if path.exists():
+            try:
+                df = pd.read_csv(path)
+                lats = pd.to_numeric(df.get("Latitude"), errors="coerce")
+                lons = pd.to_numeric(df.get("Longitude"), errors="coerce")
+                mask = lats.notna() & lons.notna()
+                arr = np.column_stack([lats[mask].values, lons[mask].values])
+                _startup_logger.info("Loaded %d metro stations from %s", len(arr), path.name)
+                return arr
+            except Exception as exc:
+                _startup_logger.warning("Failed to load metro data from %s: %s", path, exc)
+    _startup_logger.warning("Metro data file not found; metro distances will be unavailable.")
+    return np.empty((0, 2), dtype=float)
+
+
+METRO_STATIONS: np.ndarray = _load_metro_stations()
+
+
+def _nearest_metro_km(lat: float, lon: float) -> float:
+    """Haversine distance (km) to the nearest metro station."""
+    if METRO_STATIONS.shape[0] == 0:
+        return float("nan")
+    k_lat = 110.574
+    k_lon = 111.320 * np.cos(np.radians(lat))
+    dy = (METRO_STATIONS[:, 0] - lat) * k_lat
+    dx = (METRO_STATIONS[:, 1] - lon) * k_lon
+    dists = np.sqrt(dx ** 2 + dy ** 2)
+    return float(np.nanmin(dists))
+
+
+# ─────────────────────────────────────────────────────────────
+# Property Intelligence – per-listing analysis
+# ─────────────────────────────────────────────────────────────
+
+class PIBfRequest(SharedPredictRequest):
+    listing_price: float = Field(..., gt=0, description="Seller's asking total price in INR")
+    locality: str = Field("", description="Locality name for market context lookup")
+    city: str = Field("Delhi", description="City")
+
+
+class PIAptRequest(PIBfRequest):
+    floor_level: str = Field("Medium (2nd - 7th)")
+    is_ground: int = Field(0, ge=0, le=1)
+    is_top: int = Field(0, ge=0, le=1)
+    property_segment: str = Field("Mid")
+
+
+class PIPlotRequest(BaseModel):
+    listing_price: float = Field(..., gt=0)
+    locality: str = Field("")
+    city: str = Field("Delhi")
+    area_sqft: float = Field(1800.0, gt=0)
+    usage_type: str = Field("Residential")
+    facing_direction: str = Field("North")
+    circle_rate: float = Field(11891.59, gt=0)
+    is_park_facing: int = Field(0, ge=0, le=1)
+    is_corner: int = Field(0, ge=0, le=1)
+    is_rectangular: int = Field(1, ge=0, le=1)
+    is_gated: int = Field(1, ge=0, le=1)
+    has_boundary_wall: int = Field(1, ge=0, le=1)
+    road_width_upto_9m: int = Field(0, ge=0, le=1)
+    road_width_9_to_18m: int = Field(1, ge=0, le=1)
+    road_width_18_plus: int = Field(0, ge=0, le=1)
+    lat: float = Field(28.6139)
+    lon: float = Field(77.2090)
+
+
+def _pi_score(value: float, good_threshold: float, bad_threshold: float, good_is_low: bool = True) -> int:
+    """
+    Return a score in {-2, -1, 0, 1, 2}.
+    If good_is_low: lower value is better (e.g. distance to metro).
+    Otherwise: higher value is better.
+    """
+    if good_is_low:
+        if value <= good_threshold:
+            return 2
+        if value <= (good_threshold + bad_threshold) / 2:
+            return 1
+        if value <= bad_threshold:
+            return 0
+        if value <= bad_threshold * 1.5:
+            return -1
+        return -2
+    else:
+        if value >= good_threshold:
+            return 2
+        if value >= (good_threshold + bad_threshold) / 2:
+            return 1
+        if value >= bad_threshold:
+            return 0
+        if value >= bad_threshold * 0.5:
+            return -1
+        return -2
+
+
+_SCORE_LABELS = {2: "Strong +", 1: "Positive", 0: "Neutral", -1: "Negative", -2: "Strong −"}
+
+
+def _build_property_intelligence(
+    *,
+    segment: str,
+    listing_price: float,
+    fair_value_ppsf: float,
+    fair_value_total: float,
+    area_sqft: float,
+    circle_rate: float,
+    lat: float,
+    lon: float,
+    locality: str,
+    city: str,
+    # shared BF / APT fields (also used for rent model)
+    bhk: int = 2,
+    bathrooms: int = 2,
+    balconies: int = 1,
+    age: str = "5 to 10 years",
+    is_gated: int = 0,
+    is_parking: int = 0,
+    is_pool: int = 0,
+    is_garden_park: int = 0,
+    is_main_road: int = 0,
+    is_corner: int = 0,
+    furnishing: str = "Semi-Furnished",
+    facing: str = "North",
+    floor_level: str = "Medium (2nd - 7th)",
+    property_segment: str = "Mid",
+    # plot signals
+    is_rectangular: int = 1,
+    has_boundary_wall: int = 0,
+    is_park_facing: int = 0,
+    road_width_18_plus: int = 0,
+    road_width_9_to_18m: int = 0,
+    usage_type: str = "Residential",
+    # voronoi / uniqueness
+    voronoi_dist: float = 5.0,
+    model_confidence: float = 0.8,
+    ncr_stats: dict | None = None,
+) -> dict[str, Any]:
+    """Build all 12 property intelligence signals for a single listing."""
+
+    listing_ppsf = listing_price / max(area_sqft, 1.0)
+    premium_discount_pct = (listing_ppsf / max(fair_value_ppsf, 1.0) - 1.0) * 100.0
+
+    # 1. Listing premium / discount
+    pd_score = _pi_score(-premium_discount_pct, 10, -10, good_is_low=False)  # discount is good
+    pd_signal = {
+        "key": "listing_premium_discount",
+        "label": "Listing Premium / Discount",
+        "score": pd_score,
+        "scoreLabel": _SCORE_LABELS[pd_score],
+        "value": round(premium_discount_pct, 2),
+        "unit": "%",
+        "detail": (
+            f"Listing price (INR {listing_ppsf:,.0f}/sqft) is "
+            f"{'above' if premium_discount_pct > 0 else 'below'} fair value "
+            f"(INR {fair_value_ppsf:,.0f}/sqft) by {abs(premium_discount_pct):.1f}%. "
+            + ("Potential discount — attractive entry." if premium_discount_pct < -5 else
+               "Near fair value." if abs(premium_discount_pct) <= 5 else
+               "Premium pricing — check if quality justifies the gap.")
+        ),
+    }
+
+    # 2. Uniqueness (based on voronoi distance from nearest cluster seed)
+    uniqueness = min(1.0, voronoi_dist / 10.0)
+    uniq_score = _pi_score(uniqueness, 0.7, 0.3, good_is_low=False)
+    uniq_signal = {
+        "key": "uniqueness",
+        "label": "Uniqueness",
+        "score": uniq_score,
+        "scoreLabel": _SCORE_LABELS[uniq_score],
+        "value": round(uniqueness, 3),
+        "unit": "index (0–1)",
+        "detail": (
+            f"Property uniqueness index: {uniqueness:.2f} (voronoi dist {voronoi_dist:.1f} km). "
+            + ("Highly differentiated from nearby substitutes." if uniqueness >= 0.7 else
+               "Moderate differentiation." if uniqueness >= 0.3 else
+               "Many similar competing properties nearby.")
+        ),
+    }
+
+    # 3. Model confidence
+    conf_score = _pi_score(model_confidence, 0.85, 0.6, good_is_low=False)
+    conf_signal = {
+        "key": "model_confidence",
+        "label": "Valuation Confidence",
+        "score": conf_score,
+        "scoreLabel": _SCORE_LABELS[conf_score],
+        "value": round(model_confidence * 100, 1),
+        "unit": "%",
+        "detail": (
+            f"Model confidence: {model_confidence*100:.0f}%. "
+            + ("High certainty — valuation is reliable." if model_confidence >= 0.85 else
+               "Moderate confidence." if model_confidence >= 0.6 else
+               "Low confidence — treat valuation as indicative only.")
+        ),
+    }
+
+    # 4. Undervaluation relative to confidence (composite)
+    underval_ratio = max(0.0, -premium_discount_pct) * model_confidence / 100.0
+    uv_score = _pi_score(underval_ratio, 0.1, 0.02, good_is_low=False)
+    uv_signal = {
+        "key": "undervaluation_confidence",
+        "label": "Undervaluation × Confidence",
+        "score": uv_score,
+        "scoreLabel": _SCORE_LABELS[uv_score],
+        "value": round(underval_ratio, 3),
+        "unit": "composite",
+        "detail": (
+            f"Discount ({abs(premium_discount_pct):.1f}%) × confidence ({model_confidence*100:.0f}%) = {underval_ratio:.3f}. "
+            + ("Strong buy signal — confident undervaluation." if uv_score >= 1 else
+               "Mild undervaluation or low confidence." if uv_score == 0 else
+               "No clear undervaluation advantage.")
+        ),
+    }
+
+    # 5. Metro distance
+    metro_km = _nearest_metro_km(lat, lon)
+    metro_valid = not np.isnan(metro_km)
+    metro_score = _pi_score(metro_km, 1.0, 3.0, good_is_low=True) if metro_valid else 0
+    metro_signal = {
+        "key": "metro_distance",
+        "label": "Distance to Metro",
+        "score": metro_score,
+        "scoreLabel": _SCORE_LABELS[metro_score] if metro_valid else "N/A",
+        "value": round(metro_km, 2) if metro_valid else None,
+        "unit": "km",
+        "detail": (
+            f"Nearest metro station: {metro_km:.2f} km. "
+            + ("Excellent metro access (< 1 km)." if metro_valid and metro_km < 1.0 else
+               "Good metro access (1–3 km)." if metro_valid and metro_km < 3.0 else
+               "Moderate connectivity (3–5 km)." if metro_valid and metro_km < 5.0 else
+               "Poor metro access (> 5 km)." if metro_valid else
+               "Metro distance data unavailable.")
+        ) if metro_valid else "Metro distance data unavailable.",
+    }
+
+    # 6. Safety proxies (from property features)
+    safety_score_raw = int(is_gated) * 2 + int(is_main_road == 0) + int(has_boundary_wall) + int(is_park_facing)
+    safety_max = 5
+    safety_norm = safety_score_raw / safety_max
+    safety_score = _pi_score(safety_norm, 0.7, 0.4, good_is_low=False)
+    safety_factors = []
+    if is_gated:
+        safety_factors.append("gated community")
+    if not is_main_road:
+        safety_factors.append("away from main road noise")
+    if has_boundary_wall:
+        safety_factors.append("boundary wall")
+    if is_park_facing:
+        safety_factors.append("park-facing (open space)")
+    safety_signal = {
+        "key": "safety_proxies",
+        "label": "Safety & Security Proxies",
+        "score": safety_score,
+        "scoreLabel": _SCORE_LABELS[safety_score],
+        "value": round(safety_norm * 100, 1),
+        "unit": "/ 100",
+        "detail": (
+            ("Positive safety features: " + ", ".join(safety_factors) + "." if safety_factors else "No notable safety features detected.")
+        ),
+    }
+
+    # 7. Unit desirability (floor, facing, furnishing, parking, balcony, pool)
+    desirability_pts = 0
+    desirability_max = 8
+    desirability_notes = []
+
+    facing_premium = {"East": 2, "North": 2, "North-East": 2, "North-West": 1, "South-East": 1}
+    fp = facing_premium.get(facing, 0)
+    desirability_pts += fp
+    desirability_max += 2
+    if fp >= 2:
+        desirability_notes.append(f"{facing} facing (premium)")
+    elif fp == 1:
+        desirability_notes.append(f"{facing} facing (good)")
+
+    if furnishing == "Furnished":
+        desirability_pts += 2
+        desirability_notes.append("Fully furnished")
+    elif furnishing == "Semi-Furnished":
+        desirability_pts += 1
+        desirability_notes.append("Semi-furnished")
+
+    if is_parking:
+        desirability_pts += 2
+        desirability_notes.append("Parking")
+    if is_pool:
+        desirability_pts += 1
+        desirability_notes.append("Pool")
+    if is_garden_park:
+        desirability_pts += 1
+        desirability_notes.append("Garden/Park")
+    if is_corner:
+        desirability_pts += 1
+        desirability_notes.append("Corner property")
+
+    if "High" in floor_level:
+        desirability_pts += 2
+        desirability_notes.append("High floor")
+    elif "Medium" in floor_level:
+        desirability_pts += 1
+        desirability_notes.append("Mid floor")
+
+    # plot specific
+    if is_rectangular:
+        desirability_pts += 1
+        desirability_notes.append("Rectangular shape")
+    if road_width_18_plus:
+        desirability_pts += 2
+        desirability_notes.append("Wide road (18m+)")
+    elif road_width_9_to_18m:
+        desirability_pts += 1
+        desirability_notes.append("Medium road (9–18m)")
+
+    desirability_norm = min(1.0, desirability_pts / max(desirability_max, 1))
+    des_score = _pi_score(desirability_norm, 0.6, 0.35, good_is_low=False)
+    desirability_signal = {
+        "key": "unit_desirability",
+        "label": "Unit Desirability",
+        "score": des_score,
+        "scoreLabel": _SCORE_LABELS[des_score],
+        "value": round(desirability_norm * 100, 1),
+        "unit": "/ 100",
+        "detail": (", ".join(desirability_notes) + "." if desirability_notes else "Standard unit with no notable premium features."),
+    }
+
+    # 8–12: Locality-level market signals from MarketIntelligenceService
+    seg_map = {"builder-floor": "builder_floor", "apartment": "apt", "plot": "plot"}
+    mi_seg = seg_map.get(segment.lower().replace("_", "-"), "apt")
+    mi_data: dict[str, Any] = {}
+    if locality.strip():
+        try:
+            mi_data = market_service.get_market_context(mi_seg, city, locality) or {}
+        except Exception:
+            mi_data = {}
+
+    kpis = mi_data.get("kpis", {})
+    idx = mi_data.get("indices", {})
+
+    # 8. Inventory pressure — competing supply of the SAME segment in this locality.
+    # A builder-floor buyer competes with other builder floors, not apartments or plots.
+    # Cap at 50 for locality-level scoring (200 is citywide scale, not per-locality).
+    supply_stock = kpis.get("activeSupplyStock", None)
+    stale_share = kpis.get("staleInventoryShare", 0.0)
+    if supply_stock is not None and supply_stock > 0:
+        inv_norm = min(1.0, supply_stock / 50.0)
+        inv_combined = (inv_norm * 0.6 + stale_share * 0.4)
+        inv_score = _pi_score(1.0 - inv_combined, 0.7, 0.4, good_is_low=False)
+        inv_detail = f"Active supply: {supply_stock} {mi_seg} listings; stale inventory: {stale_share*100:.1f}%."
+    else:
+        inv_score = 0
+        inv_detail = "Inventory data unavailable for this locality."
+    inv_signal = {
+        "key": "inventory_pressure",
+        "label": "Inventory Pressure",
+        "score": inv_score,
+        "scoreLabel": _SCORE_LABELS[inv_score],
+        "value": supply_stock,
+        "unit": "active listings",
+        "detail": inv_detail,
+    }
+
+    # 9. Price cut frequency
+    cut_freq = kpis.get("priceCutFrequency", None)
+    if cut_freq is not None:
+        cut_score = _pi_score(1.0 - cut_freq, 0.85, 0.6, good_is_low=False)
+        cut_detail = f"Price-cut frequency: {cut_freq*100:.1f}% of updated listings reduced price."
+    else:
+        cut_score = 0
+        cut_detail = "Price cut data unavailable for this locality."
+    cut_signal = {
+        "key": "price_cut_frequency",
+        "label": "Price Cut Frequency",
+        "score": cut_score,
+        "scoreLabel": _SCORE_LABELS[cut_score],
+        "value": round(cut_freq * 100, 1) if cut_freq is not None else None,
+        "unit": "%",
+        "detail": cut_detail,
+    }
+
+    # 10. Neighbourhood liquidity
+    liq_idx = idx.get("liquidityIndex", None)
+    absorption = kpis.get("absorptionRate", None)
+    if liq_idx is not None:
+        liq_score = _pi_score(liq_idx, 65, 40, good_is_low=False)
+        liq_detail = f"Liquidity index: {liq_idx:.1f}/100."
+        if absorption is not None:
+            liq_detail += f" Absorption proxy: {absorption*100:.1f}%."
+    else:
+        liq_score = 0
+        liq_detail = "Liquidity data unavailable for this locality."
+    liq_signal = {
+        "key": "neighbourhood_liquidity",
+        "label": "Neighbourhood Liquidity",
+        "score": liq_score,
+        "scoreLabel": _SCORE_LABELS[liq_score],
+        "value": round(liq_idx, 1) if liq_idx is not None else None,
+        "unit": "/ 100",
+        "detail": liq_detail,
+    }
+
+    # 11. Rental yield — use actual rent model when available
+    seg_norm = segment.strip().lower().replace("_", "-")
+    monthly_rent_estimate: float | None = None
+    rent_yield_source = "benchmark"
+    est_yield_pct: float
+    yield_benchmark = {"apartment": 3.5, "builder-floor": 3.0, "plot": 1.5}
+
+    if seg_norm in {"builder-floor", "apartment"}:
+        rent_model = bf_rent_model if seg_norm == "builder-floor" else apt_rent_model
+        try:
+            if rent_model is not None:
+                common_kwargs = {
+                    "bhk": bhk,
+                    "area_sqft": area_sqft,
+                    "bathrooms": bathrooms,
+                    "balconies": balconies,
+                    "circle_rate": circle_rate,
+                    "is_parking": is_parking,
+                    "is_pool": is_pool,
+                    "is_main_road": is_main_road,
+                    "is_garden_park": is_garden_park,
+                    "is_gated": is_gated,
+                    "is_corner": is_corner,
+                    "age": age,
+                    "furnishing": furnishing,
+                    "facing": facing,
+                    "voronoi_feats": {"voronoi_dist_to_seed": voronoi_dist},
+                }
+                if seg_norm == "builder-floor":
+                    floor_feats = {
+                        "current_floor": 1,
+                        "total_floors": max(2, bhk + 1),
+                        "is_ground_floor": 0,
+                        "is_top_floor": 0,
+                        "is_basement": 0,
+                    }
+                else:
+                    floor_feats = {
+                        "floor_low": 1 if "Low" in floor_level else 0,
+                        "floor_medium": 1 if "Medium" in floor_level else 0,
+                        "floor_high": 1 if "High" in floor_level else 0,
+                        "is_ground_floor": 0,
+                        "is_top_floor": 0,
+                    }
+                    floor_feats.update(build_apartment_property_features(property_segment, rent_model))
+                rent_X = build_features(model=rent_model, floor_feats=floor_feats, **common_kwargs)
+                rent_pred_log = float(rent_model.predict(rent_X)[0])
+                monthly_rent_estimate = max(0.0, float(np.expm1(rent_pred_log)))
+                annual_rent = monthly_rent_estimate * 12.0
+                est_yield_pct = (annual_rent / max(listing_price, 1.0)) * 100.0
+                rent_yield_source = "rent_model"
+            else:
+                raise ValueError("no rent model")
+        except Exception:
+            # Fallback to benchmark adjusted by price premium vs median
+            stats = (ncr_stats or {}).get(seg_norm, {})
+            median_ppsf = stats.get("median_ppsf", fair_value_ppsf)
+            est_yield_pct = yield_benchmark.get(seg_norm, 3.0)
+            if median_ppsf > 0:
+                est_yield_pct = est_yield_pct / max(listing_ppsf / median_ppsf, 0.5)
+            rent_yield_source = "benchmark"
+    else:
+        # Plot: no rent model — use benchmark adjusted by listing vs median
+        stats = (ncr_stats or {}).get(seg_norm, {})
+        median_ppsf = stats.get("median_ppsf", fair_value_ppsf)
+        est_yield_pct = yield_benchmark.get("plot", 1.5)
+        if median_ppsf > 0:
+            est_yield_pct = est_yield_pct / max(listing_ppsf / median_ppsf, 0.5)
+        rent_yield_source = "benchmark"
+
+    yield_score = _pi_score(est_yield_pct, 3.5, 2.0, good_is_low=False)
+    yield_detail = f"Estimated gross rental yield: {est_yield_pct:.2f}% p.a."
+    if rent_yield_source == "rent_model" and monthly_rent_estimate is not None:
+        yield_detail += f" — rent model predicted INR {monthly_rent_estimate:,.0f}/month"
+    elif rent_yield_source == "benchmark":
+        yield_detail += f" (segment benchmark; rent model unavailable)"
+    yield_detail += ". " + (
+        "Investor-attractive yield." if est_yield_pct >= 3.5 else
+        "Moderate yield." if est_yield_pct >= 2.5 else
+        "Yield may not support investment-grade return."
+    )
+    yield_signal = {
+        "key": "rental_yield",
+        "label": "Estimated Rental Yield",
+        "score": yield_score,
+        "scoreLabel": _SCORE_LABELS[yield_score],
+        "value": round(est_yield_pct, 2),
+        "unit": "% p.a.",
+        "monthlyRentEstimate": round(monthly_rent_estimate, 0) if monthly_rent_estimate is not None else None,
+        "source": rent_yield_source,
+        "detail": yield_detail,
+    }
+
+    # 12. Expected growth (market heat + price momentum as forward proxy)
+    heat = idx.get("marketHeatIndex", None)
+    momentum = idx.get("priceMomentumScore", None)
+    if heat is not None and momentum is not None:
+        growth_score_raw = (heat * 0.5 + momentum * 0.5) / 100.0
+        growth_score = _pi_score(growth_score_raw, 0.65, 0.4, good_is_low=False)
+        growth_detail = f"Market heat: {heat:.1f}/100; price momentum: {momentum:.1f}/100."
+    elif heat is not None:
+        growth_score = _pi_score(heat, 65, 40, good_is_low=False)
+        growth_detail = f"Market heat index: {heat:.1f}/100."
+    else:
+        growth_score = 0
+        growth_detail = "Market growth signals unavailable for this locality — use locality-level Market Intelligence tab for more detail."
+    growth_signal = {
+        "key": "expected_growth",
+        "label": "Expected Growth Potential",
+        "score": growth_score,
+        "scoreLabel": _SCORE_LABELS[growth_score],
+        "value": round(heat, 1) if heat is not None else None,
+        "unit": "/ 100 (heat)",
+        "detail": growth_detail,
+    }
+
+    signals = [
+        pd_signal, uniq_signal, conf_signal, uv_signal, metro_signal,
+        safety_signal, desirability_signal, inv_signal, cut_signal, liq_signal,
+        yield_signal, growth_signal,
+    ]
+
+    # Overall recommendation score
+    total_score = sum(s["score"] for s in signals)
+    max_possible = len(signals) * 2
+    overall_pct = (total_score + max_possible) / (2 * max_possible) * 100
+
+    if overall_pct >= 70:
+        recommendation = "Strong Buy"
+        rec_color = "#2a7d4f"
+    elif overall_pct >= 58:
+        recommendation = "Buy"
+        rec_color = "#5aae78"
+    elif overall_pct >= 45:
+        recommendation = "Hold / Neutral"
+        rec_color = "#d9892b"
+    elif overall_pct >= 35:
+        recommendation = "Caution"
+        rec_color = "#e08c4a"
+    else:
+        recommendation = "Avoid"
+        rec_color = "#c0392b"
+
+    return {
+        "segment": segment,
+        "listingPrice": listing_price,
+        "listingPpsf": round(listing_ppsf, 2),
+        "fairValuePpsf": round(fair_value_ppsf, 2),
+        "fairValueTotal": round(fair_value_total, 2),
+        "premiumDiscountPct": round(premium_discount_pct, 2),
+        "overallScore": round(overall_pct, 1),
+        "recommendation": recommendation,
+        "recommendationColor": rec_color,
+        "signals": signals,
+        "locality": locality,
+        "city": city,
+        "metroDistanceKm": round(metro_km, 2) if metro_valid else None,
+    }
+
+
+@app.post("/property-intelligence/analyze")
+def property_intelligence_bf(req: PIBfRequest) -> dict[str, Any]:
+    """Property intelligence for a Builder Floor listing."""
+    if bf_model is None:
+        raise HTTPException(status_code=503, detail="Builder Floor model not available")
+    vor_feats = compute_voronoi_features(req.lat, req.lon, bf_vor) if bf_vor is not None else {"voronoi_dist_to_seed": 0.0}
+    X = build_features(
+        bhk=req.bhk, area_sqft=req.area_sqft, bathrooms=req.bathrooms, balconies=req.balconies,
+        circle_rate=req.circle_rate, is_parking=req.is_parking, is_pool=req.is_pool,
+        is_main_road=req.is_main_road, is_garden_park=req.is_garden_park, is_gated=req.is_gated,
+        is_corner=req.is_corner, age=req.age, furnishing=req.furnishing, facing=req.facing,
+        voronoi_feats=vor_feats, model=bf_model,
+    )
+    pred_log = float(bf_model.predict(X)[0])
+    pred_ratio = float(np.expm1(pred_log))
+    fair_ppsf = float(pred_ratio * req.circle_rate)
+    fair_total = float(fair_ppsf * req.area_sqft)
+    voronoi_dist = float(vor_feats.get("voronoi_dist_to_seed", 5.0))
+    conf = float(np.clip(1.0 - voronoi_dist / 20.0, 0.3, 0.95))
+    return _build_property_intelligence(
+        segment="builder-floor", listing_price=req.listing_price,
+        fair_value_ppsf=fair_ppsf, fair_value_total=fair_total,
+        area_sqft=req.area_sqft, circle_rate=req.circle_rate, lat=req.lat, lon=req.lon,
+        locality=req.locality, city=req.city,
+        bhk=req.bhk, bathrooms=req.bathrooms, balconies=req.balconies, age=req.age,
+        is_gated=req.is_gated, is_parking=req.is_parking, is_pool=req.is_pool,
+        is_garden_park=req.is_garden_park, is_main_road=req.is_main_road, is_corner=req.is_corner,
+        furnishing=req.furnishing, facing=req.facing,
+        voronoi_dist=voronoi_dist, model_confidence=conf, ncr_stats=NCR_STATS,
+    )
+
+
+@app.post("/property-intelligence/analyze-apartment")
+def property_intelligence_apt(req: PIAptRequest) -> dict[str, Any]:
+    """Property intelligence for an Apartment listing."""
+    if apt_model is None:
+        raise HTTPException(status_code=503, detail="Apartment model not available")
+    vor_feats = compute_voronoi_features(req.lat, req.lon, apt_vor) if apt_vor is not None else {"voronoi_dist_to_seed": 0.0}
+    floor_feats = {
+        "floor_low": 1 if "Low" in req.floor_level else 0,
+        "floor_medium": 1 if "Medium" in req.floor_level else 0,
+        "floor_high": 1 if "High" in req.floor_level else 0,
+        "is_ground_floor": int(req.is_ground),
+        "is_top_floor": int(req.is_top),
+    }
+    floor_feats.update(build_apartment_property_features(req.property_segment, apt_model))
+    X = build_features(
+        bhk=req.bhk, area_sqft=req.area_sqft, bathrooms=req.bathrooms, balconies=req.balconies,
+        circle_rate=req.circle_rate, is_parking=req.is_parking, is_pool=req.is_pool,
+        is_main_road=req.is_main_road, is_garden_park=req.is_garden_park, is_gated=req.is_gated,
+        is_corner=req.is_corner, age=req.age, furnishing=req.furnishing, facing=req.facing,
+        voronoi_feats=vor_feats, model=apt_model, floor_feats=floor_feats,
+    )
+    pred_log = float(apt_model.predict(X)[0])
+    pred_ratio = float(np.expm1(pred_log))
+    fair_ppsf = float(pred_ratio * req.circle_rate)
+    fair_total = float(fair_ppsf * req.area_sqft)
+    voronoi_dist = float(vor_feats.get("voronoi_dist_to_seed", 5.0))
+    conf = float(np.clip(1.0 - voronoi_dist / 20.0, 0.3, 0.95))
+    return _build_property_intelligence(
+        segment="apartment", listing_price=req.listing_price,
+        fair_value_ppsf=fair_ppsf, fair_value_total=fair_total,
+        area_sqft=req.area_sqft, circle_rate=req.circle_rate, lat=req.lat, lon=req.lon,
+        locality=req.locality, city=req.city,
+        bhk=req.bhk, bathrooms=req.bathrooms, balconies=req.balconies, age=req.age,
+        is_gated=req.is_gated, is_parking=req.is_parking, is_pool=req.is_pool,
+        is_garden_park=req.is_garden_park, is_main_road=req.is_main_road, is_corner=req.is_corner,
+        furnishing=req.furnishing, facing=req.facing, floor_level=req.floor_level,
+        property_segment=req.property_segment,
+        voronoi_dist=voronoi_dist, model_confidence=conf, ncr_stats=NCR_STATS,
+    )
+
+
+@app.post("/property-intelligence/analyze-plot")
+def property_intelligence_plot(req: PIPlotRequest) -> dict[str, Any]:
+    """Property intelligence for a Plot listing."""
+    if plot_model is None:
+        raise HTTPException(status_code=503, detail="Plot model not available")
+    X = build_plot_features(
+        area_sqft=req.area_sqft, circle_rate=req.circle_rate, latitude=req.lat, longitude=req.lon,
+        usage_type=req.usage_type, facing_direction=req.facing_direction,
+        is_park_facing=req.is_park_facing, is_corner=req.is_corner, is_rectangular=req.is_rectangular,
+        is_gated=req.is_gated, has_boundary_wall=req.has_boundary_wall,
+        road_width_upto_9m=req.road_width_upto_9m, road_width_9_to_18m=req.road_width_9_to_18m,
+        road_width_18_plus=req.road_width_18_plus, model_bundle=plot_bundle, road_segments=road_segments,
+    )
+    pred_log_ppsf = float(plot_model.predict(X)[0])
+    fair_ppsf = float(np.expm1(pred_log_ppsf))
+    fair_total = float(fair_ppsf * req.area_sqft)
+    return _build_property_intelligence(
+        segment="plot", listing_price=req.listing_price,
+        fair_value_ppsf=fair_ppsf, fair_value_total=fair_total,
+        area_sqft=req.area_sqft, circle_rate=req.circle_rate, lat=req.lat, lon=req.lon,
+        locality=req.locality, city=req.city,
+        is_gated=req.is_gated, is_corner=req.is_corner, is_rectangular=req.is_rectangular,
+        has_boundary_wall=req.has_boundary_wall, is_park_facing=req.is_park_facing,
+        road_width_18_plus=req.road_width_18_plus, road_width_9_to_18m=req.road_width_9_to_18m,
+        usage_type=req.usage_type, model_confidence=0.75, ncr_stats=NCR_STATS,
+    )
+
+
+# ── Layer 2: Property Listing & Analytics ─────────────────────────────────────
+
+_PROP_SEG_CFG: dict[str, dict] = {
+    "builder-floor": {
+        "dir": "builder_floor",
+        "csv": str(PROJECT_ROOT / "inputs" / "builder_floor_with_pi.csv"),
+        "has_ids": True,
+        "area_col": "covered_area_sqft",
+    },
+    "apartment": {
+        "dir": "apt",
+        "csv": str(PROJECT_ROOT / "inputs" / "apartment_with_pi.csv"),
+        "has_ids": True,
+        "area_col": "covered_area_sqft",
+    },
+    "plot": {
+        "dir": "plot",
+        "csv": str(PROJECT_ROOT / "inputs" / "plot_with_pi.csv"),
+        "has_ids": False,
+        "area_col": "plot_area",
+    },
+}
+
+# Lazy-loaded cache for the property CSVs (loaded once per segment).
+_prop_df_cache: dict[str, pd.DataFrame] = {}
+_prop_df_lock = threading.Lock()
+
+
+def _load_prop_df(segment: str) -> pd.DataFrame:
+    if segment not in _prop_df_cache:
+        with _prop_df_lock:
+            if segment not in _prop_df_cache:
+                cfg = _PROP_SEG_CFG[segment]
+                _prop_df_cache[segment] = pd.read_csv(cfg["csv"], low_memory=False)
+    return _prop_df_cache[segment]
+
+
+def _load_rho_df(segment: str) -> pd.DataFrame:
+    path = PROJECT_ROOT / "opt" / _PROP_SEG_CFG[segment]["dir"] / "rho_details.csv"
+    return pd.read_csv(path, low_memory=False)
+
+
+def _load_forecast_df(segment: str) -> pd.DataFrame:
+    path = PROJECT_ROOT / "opt" / _PROP_SEG_CFG[segment]["dir"] / "property_forecasts_flodata.csv"
+    return pd.read_csv(path, low_memory=False)
+
+
+def _validate_segment(segment: str) -> None:
+    if segment not in _PROP_SEG_CFG:
+        raise HTTPException(status_code=400, detail=f"segment must be one of: {list(_PROP_SEG_CFG)}")
+
+
+@app.get("/properties/list")
+def properties_list(
+    segment: str = Query(..., description="builder-floor | apartment | plot"),
+    city: str = Query(None, description="Filter by city (case-insensitive partial match)"),
+    locality: str = Query(None, description="Filter by locality (fuzzy match)"),
+    limit: int = Query(50, ge=1, le=500, description="Max rows to return"),
+) -> dict[str, Any]:
+    """List properties for a segment, optionally filtered by city/locality."""
+    _validate_segment(segment)
+    cfg = _PROP_SEG_CFG[segment]
+    df = _load_prop_df(segment).copy()
+
+    if city:
+        df = df[df["city"].str.lower().str.contains(city.lower(), na=False)]
+
+    if locality:
+        if "locality" in df.columns:
+            candidates = df["locality"].dropna().unique().tolist()
+            best_matches = [c for c in candidates if _locality_match_score(locality, c) >= 0.35]
+            if best_matches:
+                df = df[df["locality"].isin(best_matches)]
+
+    area_col = cfg["area_col"]
+    rows = []
+    for _, r in df.head(limit).iterrows():
+        row: dict[str, Any] = {
+            "locality": r.get("locality"),
+            "city":     r.get("city"),
+            "area_sqft": r.get(area_col),
+            "listed_ppsf": round(float(r["price_per_sqft"]), 0) if pd.notna(r.get("price_per_sqft")) else None,
+            "model_ppsf":  round(float(r["pi_price_per_sqft"]), 0) if pd.notna(r.get("pi_price_per_sqft")) else None,
+        }
+        if cfg["has_ids"]:
+            row["property_id"] = r.get("property_id")
+            listed = r.get("price_per_sqft")
+            model  = r.get("pi_price_per_sqft")
+            if pd.notna(listed) and pd.notna(model) and float(model) != 0:
+                row["delta_pct"] = round((float(listed) - float(model)) / float(model) * 100, 2)
+        if "bhk" in df.columns:
+            row["bhk"] = r.get("bhk")
+        rows.append(row)
+
+    return {"segment": segment, "count": len(rows), "items": rows}
+
+
+@app.get("/properties/summary")
+def properties_summary(
+    segment: str = Query(..., description="builder-floor | apartment"),
+    property_id: str = Query(..., description="Property ID from /properties/list"),
+) -> dict[str, Any]:
+    """Return full property row by property_id (builder-floor / apartment only)."""
+    _validate_segment(segment)
+    if not _PROP_SEG_CFG[segment]["has_ids"]:
+        raise HTTPException(status_code=400, detail="plot segment has no individual property IDs; use /properties/list?segment=plot")
+
+    df = _load_prop_df(segment)
+    matches = df[df["property_id"] == property_id]
+    if matches.empty:
+        raise HTTPException(status_code=404, detail=f"property_id '{property_id}' not found in segment '{segment}'")
+
+    r = matches.iloc[0]
+    result: dict[str, Any] = r.dropna().to_dict()
+    listed = r.get("price_per_sqft")
+    model  = r.get("pi_price_per_sqft")
+    if pd.notna(listed) and pd.notna(model) and float(model) != 0:
+        result["delta_pct_listed_vs_model"] = round((float(listed) - float(model)) / float(model) * 100, 2)
+
+    return {"segment": segment, "property_id": property_id, "data": result}
+
+
+@app.get("/properties/rho")
+def properties_rho(
+    segment: str = Query(..., description="builder-floor | apartment | plot"),
+    property_id: str = Query(None, description="Property ID (builder-floor / apartment)"),
+    locality: str = Query(None, description="Locality name (plot segment)"),
+) -> dict[str, Any]:
+    """Return rho blending components for a property or locality."""
+    _validate_segment(segment)
+    df = _load_rho_df(segment)
+
+    if _PROP_SEG_CFG[segment]["has_ids"]:
+        if not property_id:
+            raise HTTPException(status_code=400, detail="property_id is required for segment builder-floor / apartment")
+        matches = df[df["property_id"] == property_id]
+        if matches.empty:
+            raise HTTPException(status_code=404, detail=f"property_id '{property_id}' not found in rho data for segment '{segment}'")
+        r = matches.iloc[0]
+        return {
+            "segment": segment,
+            "property_id": property_id,
+            "locality": r.get("locality"),
+            "listed_ppsf": round(float(r["price_per_sqft"]), 0) if pd.notna(r.get("price_per_sqft")) else None,
+            "model_ppsf":  round(float(r["pi_price_per_sqft"]), 0) if pd.notna(r.get("pi_price_per_sqft")) else None,
+            "comp_support":       round(float(r["comp_support"]), 4) if pd.notna(r.get("comp_support")) else None,
+            "uniqueness":         round(float(r["uniqueness"]), 4) if pd.notna(r.get("uniqueness")) else None,
+            "model_confidence":   round(float(r["model_confidence"]), 4) if pd.notna(r.get("model_confidence")) else None,
+            "rho_0":              round(float(r["rho_0"]), 4) if pd.notna(r.get("rho_0")) else None,
+        }
+    else:
+        # Plot: locality-level rho
+        if not locality:
+            raise HTTPException(status_code=400, detail="locality is required for plot segment")
+        candidates = df["locality"].dropna().unique().tolist()
+        best, score = _best_locality_match(locality, candidates)
+        if score < 0.35:
+            raise HTTPException(status_code=404, detail=f"Locality '{locality}' not found in plot rho data")
+        r = df[df["locality"] == best].iloc[0]
+        return {
+            "segment": segment,
+            "locality": best,
+            "listed_ppsf": round(float(r["price_per_sqft"]), 0) if pd.notna(r.get("price_per_sqft")) else None,
+            "model_ppsf":  round(float(r["pi_price_per_sqft"]), 0) if pd.notna(r.get("pi_price_per_sqft")) else None,
+            "comp_support":     round(float(r["comp_support"]), 4) if pd.notna(r.get("comp_support")) else None,
+            "uniqueness":       round(float(r["uniqueness"]), 4) if pd.notna(r.get("uniqueness")) else None,
+            "model_confidence": round(float(r["model_confidence"]), 4) if pd.notna(r.get("model_confidence")) else None,
+            "rho_0":            round(float(r["rho_0"]), 4) if pd.notna(r.get("rho_0")) else None,
+        }
+
+
+@app.get("/properties/yoy")
+def properties_yoy(
+    segment: str = Query(..., description="builder-floor | apartment | plot"),
+    property_id: str = Query(..., description="Property ID from forecast data"),
+    years: int = Query(5, ge=1, le=10, description="Number of forecast years"),
+) -> dict[str, Any]:
+    """Return annual YoY forecast price changes for a specific property."""
+    _validate_segment(segment)
+    df = _load_forecast_df(segment)
+    prop_df = df[df["property_id"] == property_id]
+    if prop_df.empty:
+        raise HTTPException(status_code=404, detail=f"property_id '{property_id}' not found in forecast data for segment '{segment}'")
+
+    qmap: dict[int, float] = dict(zip(prop_df["quarter"].astype(int), prop_df["forecast_price_per_sqft"].astype(float)))
+    dmap: dict[int, str]   = dict(zip(prop_df["quarter"].astype(int), prop_df["date"].astype(str)))
+
+    yoy_results = []
+    for n in range(1, years + 1):
+        end_q   = 4 * n
+        start_q = max(1, 4 * (n - 1))  # year 1: Q1 as base (earliest forecast quarter)
+        if end_q in qmap and start_q in qmap:
+            sp = float(qmap[start_q])
+            ep = float(qmap[end_q])
+            yoy_pct = round((ep - sp) / sp * 100, 2) if sp != 0 else None
+            yoy_results.append({
+                "label":        f"Y+{n}",
+                "start_date":   dmap.get(start_q),
+                "end_date":     dmap.get(end_q),
+                "anchor_ppsf":  round(sp),
+                "target_ppsf":  round(ep),
+                "yoy_pct":      yoy_pct,
+            })
+
+    locality = prop_df["locality"].iloc[0] if "locality" in prop_df.columns else None
+    return {
+        "segment":     segment,
+        "property_id": property_id,
+        "locality":    locality,
+        "yoy":         yoy_results,
+    }
 
 
 if __name__ == "__main__":

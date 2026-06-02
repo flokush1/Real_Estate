@@ -80,6 +80,10 @@ _SQFT_CONVERSION = {
     "gaj": 9.0,                         # 1 Gaj = 1 sq yard = 9 sq ft
     "are": 1076.39,                     # 1 Are = 100 sq metres = 1076.39 sq ft
     "chatak": 45.0,                     # 1 Chatak = 45 sq ft (Bengal/Eastern India)
+    "guntha": 1089.0,                   # 1 Guntha = 1/40 acre = 1089 sq ft (Maharashtra/Goa)
+    "gunta": 1089.0,                    # alternate spelling
+    "guntha.": 1089.0,
+    "gunta.": 1089.0,
 }
 
 

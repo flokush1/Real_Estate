@@ -157,7 +157,7 @@ class PlotModelTrainer:
         ].copy()
 
         df["ratio"] = df["price_per_sqft"] / df["circle_rate"].replace(0, np.nan)
-        df = df[(df["ratio"] > 0.7) & (df["ratio"] < 25)].copy()
+        df = df[(df["ratio"] > 0.3) & (df["ratio"] < 25)].copy()
         df = df.drop(columns=["ratio"], errors="ignore")
         return df
 
@@ -513,6 +513,18 @@ class PlotModelTrainer:
                 X_test,
                 y_test,
             )
+
+            # Safeguard: if the tuned model underperforms the vanilla baseline RF,
+            # fall back to the baseline to avoid deploying a regressed model.
+            if final_r2 < baseline_r2:
+                self._emit_warning(
+                    f"Tuned {best_name} (R2={final_r2:.4f}) underperforms "
+                    f"baseline RF (R2={baseline_r2:.4f}). "
+                    f"Falling back to baseline RandomForest model."
+                )
+                final_model = baseline_model
+                best_name = "Random Forest"
+                final_mae, final_mape, final_r2 = baseline_mae, baseline_mape, baseline_r2
 
             self._emit_info("=" * 50)
             self._emit_info("FINAL TEST PERFORMANCE")

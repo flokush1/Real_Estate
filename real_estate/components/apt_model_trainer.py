@@ -535,7 +535,8 @@ class AptModelTrainer:
                     run_name = (
                         f"apt_v{self.config.version}" if self.config.version > 0 else "apt"
                     )
-                    mlflow.set_experiment("apt_model_trainer")
+                    # Experiment is set by the training pipeline ("apartment-price-model").
+                    # Do NOT call set_experiment here — it would override to wrong name.
                     with mlflow.start_run(run_name=run_name):
                         # ── Tags ──────────────────────────────────────────
                         mlflow.set_tags({

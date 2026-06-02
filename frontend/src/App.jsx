@@ -9,6 +9,7 @@ const TAB_KEYS = {
   PLOT: 'plot',
   FORECAST: 'forecast',
   MI: 'market-intelligence',
+  PI: 'property-intelligence',
 }
 
 const defaultOptions = {
@@ -340,6 +341,231 @@ async function apiPost(path, payload) {
   return response.json()
 }
 
+function PropertyIntelligenceTab({
+  piSegment, setPiSegment,
+  piCity, setPiCity,
+  piLocalityQuery, setPiLocalityQuery,
+  piLocalitySuggestions,
+  piSelectedLocality, setPiSelectedLocality,
+  bfForm, setBfForm, aptForm, setAptForm, plotForm, setPlotForm,
+  piListingPrice, setPiListingPrice,
+  piFloorLevel, setPiFloorLevel,
+  piIsGround, setPiIsGround,
+  piIsTop, setPiIsTop,
+  piPropertySegment, setPiPropertySegment,
+  piResult, piLoading, piError,
+  onAnalyze,
+  options,
+}) {
+  const segmentOptions = [
+    { id: 'builder-floor', label: 'Builder Floor' },
+    { id: 'apartment', label: 'Apartment' },
+    { id: 'plot', label: 'Plot' },
+  ]
+  const cityOptions = options?.cities ?? defaultOptions.cities
+
+  const SIGNAL_COLORS = {
+    2:  { bar: '#2a7d4f', bg: '#dff5eb', label: 'Strong +' },
+    1:  { bar: '#5aae78', bg: '#edf8f2', label: 'Positive' },
+    0:  { bar: '#9e9e9e', bg: '#f5f5f5', label: 'Neutral'  },
+    '-1': { bar: '#e08c4a', bg: '#fdf3e7', label: 'Negative' },
+    '-2': { bar: '#c0392b', bg: '#fde8e3', label: 'Strong −' },
+  }
+
+  const form = piSegment === 'builder-floor' ? bfForm : piSegment === 'apartment' ? aptForm : plotForm
+  const setForm = piSegment === 'builder-floor' ? setBfForm : piSegment === 'apartment' ? setAptForm : setPlotForm
+
+  return (
+    <>
+      <h3>Property Intelligence</h3>
+      <p className="li-desc">
+        Analyse a specific listing against your model's fair value. Enter the property details and the seller's asking price to get 12 intelligence signals covering valuation, desirability, metro access, inventory pressure, liquidity, yield, and growth potential.
+      </p>
+
+      {/* Segment + city + locality */}
+      <div className="forecast-controls">
+        <Field label="Segment">
+          <select value={piSegment} onChange={(e) => setPiSegment(e.target.value)}>
+            {segmentOptions.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}
+          </select>
+        </Field>
+        <Field label="City">
+          <select value={piCity} onChange={(e) => { setPiCity(e.target.value); setPiSelectedLocality(''); setPiLocalityQuery('') }}>
+            {cityOptions.map((c) => <option key={c}>{c}</option>)}
+          </select>
+        </Field>
+        <Field label="Locality" hint="Optional – enables inventory, liquidity, and growth signals">
+          <input
+            value={piLocalityQuery}
+            onChange={(e) => { setPiLocalityQuery(e.target.value); setPiSelectedLocality('') }}
+            placeholder="e.g. Sector 62, Dwarka"
+          />
+        </Field>
+      </div>
+
+      {piLocalitySuggestions.length ? (
+        <div className="suggestions forecast-suggestions">
+          {piLocalitySuggestions.map((item) => (
+            <button
+              key={item}
+              className={`suggestion ${piSelectedLocality === item ? 'active' : ''}`}
+              onClick={() => { setPiSelectedLocality(item); setPiLocalityQuery(item) }}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      ) : null}
+
+      {/* Listing price */}
+      <div className="form-grid" style={{ marginTop: 12 }}>
+        <Field label="Seller's Asking Price (INR)" hint="Total listing price from the seller">
+          <input
+            type="number"
+            min="100000"
+            step="100000"
+            value={piListingPrice}
+            onChange={(e) => setPiListingPrice(Number(e.target.value))}
+            placeholder="e.g. 8500000"
+          />
+        </Field>
+        <Field label="Circle Rate (INR/sqft)">
+          <input type="number" min="100" value={form.circle_rate} onChange={(e) => setForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} />
+        </Field>
+      </div>
+
+      {/* Property features */}
+      {piSegment !== 'plot' ? (
+        <>
+          <h4 style={{ marginTop: 16, marginBottom: 8 }}>Property Details</h4>
+          <div className="form-grid">
+            <Field label="BHK"><input type="number" min="1" max="10" value={form.bhk} onChange={(e) => setForm((p) => ({ ...p, bhk: Number(e.target.value) }))} /></Field>
+            <Field label="Area (sqft)"><input type="number" min="100" max="20000" value={form.area_sqft} onChange={(e) => setForm((p) => ({ ...p, area_sqft: Number(e.target.value) }))} /></Field>
+            <Field label="Bathrooms"><input type="number" min="1" max="10" value={form.bathrooms} onChange={(e) => setForm((p) => ({ ...p, bathrooms: Number(e.target.value) }))} /></Field>
+            <Field label="Balconies"><input type="number" min="0" max="10" value={form.balconies} onChange={(e) => setForm((p) => ({ ...p, balconies: Number(e.target.value) }))} /></Field>
+            <Field label="Age"><select value={form.age} onChange={(e) => setForm((p) => ({ ...p, age: e.target.value }))}>{options.ageCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
+            <Field label="Furnishing"><select value={form.furnishing} onChange={(e) => setForm((p) => ({ ...p, furnishing: e.target.value }))}>{options.furnishingCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
+            <Field label="Facing"><select value={form.facing} onChange={(e) => setForm((p) => ({ ...p, facing: e.target.value }))}>{options.facingCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
+            <Field label="Parking"><select value={form.is_parking} onChange={(e) => setForm((p) => ({ ...p, is_parking: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Pool"><select value={form.is_pool} onChange={(e) => setForm((p) => ({ ...p, is_pool: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Main Road"><select value={form.is_main_road} onChange={(e) => setForm((p) => ({ ...p, is_main_road: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Garden/Park"><select value={form.is_garden_park} onChange={(e) => setForm((p) => ({ ...p, is_garden_park: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Gated"><select value={form.is_gated} onChange={(e) => setForm((p) => ({ ...p, is_gated: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Corner"><select value={form.is_corner} onChange={(e) => setForm((p) => ({ ...p, is_corner: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            {piSegment === 'apartment' ? (
+              <>
+                <Field label="Floor Level"><select value={piFloorLevel} onChange={(e) => setPiFloorLevel(e.target.value)}>{options.floorLevels.map((x) => <option key={x}>{x}</option>)}</select></Field>
+                <Field label="Ground Floor"><select value={piIsGround} onChange={(e) => setPiIsGround(Number(e.target.value))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+                <Field label="Top Floor"><select value={piIsTop} onChange={(e) => setPiIsTop(Number(e.target.value))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+                <Field label="Property Segment"><select value={piPropertySegment} onChange={(e) => setPiPropertySegment(e.target.value)}>{options.aptPropertySegments.map((x) => <option key={x}>{x}</option>)}</select></Field>
+              </>
+            ) : null}
+          </div>
+        </>
+      ) : (
+        <>
+          <h4 style={{ marginTop: 16, marginBottom: 8 }}>Plot Details</h4>
+          <div className="form-grid">
+            <Field label="Plot Area (sqft)"><input type="number" min="100" max="50000" value={form.area_sqft} onChange={(e) => setForm((p) => ({ ...p, area_sqft: Number(e.target.value) }))} /></Field>
+            <Field label="Usage Type"><select value={form.usage_type} onChange={(e) => setForm((p) => ({ ...p, usage_type: e.target.value }))}>{options.plotUsageOptions.map((x) => <option key={x}>{x}</option>)}</select></Field>
+            <Field label="Facing"><select value={form.facing_direction} onChange={(e) => setForm((p) => ({ ...p, facing_direction: e.target.value }))}>{options.plotFacingOptions.map((x) => <option key={x}>{x}</option>)}</select></Field>
+            <Field label="Approach Road Width"><select value={form.road_width_18_plus ? '18m+' : form.road_width_9_to_18m ? '9m to 18m' : 'Upto 9m'} onChange={(e) => {
+              const bucket = e.target.value
+              setForm((p) => ({ ...p, road_width_upto_9m: bucket === 'Upto 9m' ? 1 : 0, road_width_9_to_18m: bucket === '9m to 18m' ? 1 : 0, road_width_18_plus: bucket === '18m+' ? 1 : 0 }))
+            }}>{options.plotRoadWidthOptions.map((x) => <option key={x}>{x}</option>)}</select></Field>
+            <Field label="Park Facing"><select value={form.is_park_facing} onChange={(e) => setForm((p) => ({ ...p, is_park_facing: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Corner Plot"><select value={form.is_corner} onChange={(e) => setForm((p) => ({ ...p, is_corner: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Rectangular"><select value={form.is_rectangular} onChange={(e) => setForm((p) => ({ ...p, is_rectangular: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Gated"><select value={form.is_gated} onChange={(e) => setForm((p) => ({ ...p, is_gated: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Boundary Wall"><select value={form.has_boundary_wall} onChange={(e) => setForm((p) => ({ ...p, has_boundary_wall: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
+            <Field label="Latitude" hint="Auto-filled from locality"><input type="number" step="0.000001" value={form.lat} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
+            <Field label="Longitude" hint="Auto-filled from locality"><input type="number" step="0.000001" value={form.lon} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
+            <Field label="Dist. to MDR (km)" hint="Auto-computed"><input type="number" value={fmtNumber(form.closest_distance_MDR_km, 2)} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
+            <Field label="Dist. to NH (km)" hint="Auto-computed"><input type="number" value={fmtNumber(form.closest_distance_NH_km, 2)} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
+          </div>
+        </>
+      )}
+
+      <button className="btn" style={{ marginTop: 12 }} onClick={onAnalyze} disabled={piLoading || !piListingPrice}>
+        {piLoading ? 'Analysing...' : 'Analyse This Property'}
+      </button>
+
+      {piError ? <p className="error-msg" style={{ marginTop: 12 }}>{piError}</p> : null}
+
+      {piResult ? (
+        <section className="li-results">
+          {/* Headline recommendation */}
+          <div className="pi-recommendation-banner" style={{ borderColor: piResult.recommendationColor, background: piResult.recommendationColor + '18' }}>
+            <div className="pi-rec-score" style={{ color: piResult.recommendationColor }}>{piResult.overallScore.toFixed(0)}</div>
+            <div className="pi-rec-info">
+              <div className="pi-rec-label">Overall Property Score</div>
+              <div className="pi-rec-tag" style={{ background: piResult.recommendationColor }}>{piResult.recommendation}</div>
+              {piResult.metroDistanceKm != null ? (
+                <div className="pi-rec-meta">Nearest metro: <strong>{piResult.metroDistanceKm} km</strong></div>
+              ) : null}
+            </div>
+          </div>
+
+          {/* Valuation summary */}
+          <div className="market-grid" style={{ marginTop: 12 }}>
+            <div className="market-card">
+              <div className="market-card-label">Listing Price</div>
+              <div className="market-card-value">{fmtPrice(piResult.listingPrice)}</div>
+              <div className="market-card-hint">INR {fmtNumber(piResult.listingPpsf, 0)}/sqft</div>
+            </div>
+            <div className="market-card">
+              <div className="market-card-label">Fair Value (Model)</div>
+              <div className="market-card-value">{fmtPrice(piResult.fairValueTotal)}</div>
+              <div className="market-card-hint">INR {fmtNumber(piResult.fairValuePpsf, 0)}/sqft</div>
+            </div>
+            <div className="market-card">
+              <div className="market-card-label">Premium / Discount</div>
+              <div className="market-card-value" style={{ color: piResult.premiumDiscountPct > 5 ? '#c0392b' : piResult.premiumDiscountPct < -5 ? '#2a7d4f' : '#d9892b' }}>
+                {fmtPct(piResult.premiumDiscountPct)}
+              </div>
+              <div className="market-card-hint">{piResult.premiumDiscountPct > 0 ? 'Overpriced vs model' : piResult.premiumDiscountPct < 0 ? 'Underpriced vs model' : 'At fair value'}</div>
+            </div>
+          </div>
+
+          {/* 12 signals */}
+          <h4 className="market-section-title" style={{ marginTop: 20 }}>Intelligence Signals</h4>
+          <div className="xai-drivers pi-signals-grid">
+            {piResult.signals.map((sig) => {
+              const sc = String(sig.score)
+              const col = SIGNAL_COLORS[sc] || SIGNAL_COLORS[0]
+              const barWidth = `${((sig.score + 2) / 4) * 100}%`
+              return (
+                <div key={sig.key} className="xai-driver market-driver-card pi-signal-card" style={{ background: col.bg }}>
+                  <div className="xai-driver-head">
+                    <span className="xai-driver-label">{sig.label}</span>
+                    <span className="xai-driver-badge" style={{ background: col.bar }}>{sig.scoreLabel}</span>
+                  </div>
+                  <div className="xai-bar-track">
+                    <div className="xai-bar-fill" style={{ width: barWidth, background: col.bar }} />
+                    <div className="xai-bar-tick" />
+                  </div>
+                  {sig.value != null ? (
+                    <div className="pi-signal-value">
+                      {typeof sig.value === 'number' ? fmtNumber(sig.value, sig.value < 10 ? 2 : 0) : sig.value}
+                      {' '}<span className="pi-signal-unit">{sig.unit}</span>
+                      {sig.source === 'rent_model' ? <span className="pi-signal-source">rent model</span> : null}
+                      {sig.source === 'benchmark' ? <span className="pi-signal-source pi-signal-source-bench">benchmark</span> : null}
+                    </div>
+                  ) : null}
+                  {sig.monthlyRentEstimate != null ? (
+                    <div className="pi-signal-rent">≈ {fmtPrice(sig.monthlyRentEstimate)}/month</div>
+                  ) : null}
+                  <p className="xai-driver-detail">{sig.detail}</p>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+      ) : null}
+    </>
+  )
+}
+
 function MarketIntelligenceTab({
   miSegment, setMiSegment,
   miCity, setMiCity,
@@ -348,6 +574,7 @@ function MarketIntelligenceTab({
   miSelectedLocality, setMiSelectedLocality,
   miContext, miLoading, miError,
   onLoad,
+  options,
 }) {
   const locality = (miSelectedLocality || miLocalityQuery).trim()
   const segmentOptions = [
@@ -355,7 +582,7 @@ function MarketIntelligenceTab({
     { id: 'builder_floor', label: 'Builder Floor' },
     { id: 'plot', label: 'Plot' },
   ]
-  const cityOptions = ['Delhi', 'Noida', 'Gurgaon', 'Faridabad', 'Ghaziabad', 'Greater Noida', 'Jaipur']
+  const cityOptions = options?.cities ?? defaultOptions.cities
 
   const d = miContext
   const kpis = d?.kpis || {}
@@ -686,6 +913,21 @@ function App() {
   const [miLoading, setMiLoading] = useState(false)
   const [miError, setMiError] = useState('')
 
+  // --- Property Intelligence tab state ---
+  const [piSegment, setPiSegment] = useState('builder-floor')
+  const [piCity, setPiCity] = useState('Delhi')
+  const [piLocalityQuery, setPiLocalityQuery] = useState('')
+  const [piLocalitySuggestions, setPiLocalitySuggestions] = useState([])
+  const [piSelectedLocality, setPiSelectedLocality] = useState('')
+  const [piListingPrice, setPiListingPrice] = useState(8500000)
+  const [piFloorLevel, setPiFloorLevel] = useState('Medium (2nd - 7th)')
+  const [piIsGround, setPiIsGround] = useState(0)
+  const [piIsTop, setPiIsTop] = useState(0)
+  const [piPropertySegment, setPiPropertySegment] = useState('Mid')
+  const [piResult, setPiResult] = useState(null)
+  const [piLoading, setPiLoading] = useState(false)
+  const [piError, setPiError] = useState('')
+
   const chosenLocality = (selectedLocality || localityQuery).trim()
   const forecastLocality = (forecastSelectedLocality || forecastLocalityQuery).trim()
   const activeInsightSegment =
@@ -787,6 +1029,28 @@ function App() {
     return () => clearTimeout(t)
   }, [activeTab, miSegment, miCity, miLocalityQuery])
 
+  // Property intelligence locality suggestions
+  useEffect(() => {
+    if (activeTab !== TAB_KEYS.PI) return
+    const q = piLocalityQuery.trim()
+    if (!q) {
+      setPiLocalitySuggestions([])
+      return
+    }
+    const miSeg = piSegment === 'builder-floor' ? 'builder_floor' : piSegment === 'apartment' ? 'apt' : 'plot'
+    const t = setTimeout(async () => {
+      try {
+        const data = await apiGet(
+          `/market-intelligence/localities?segment=${encodeURIComponent(miSeg)}&city=${encodeURIComponent(piCity)}&query=${encodeURIComponent(q)}&limit=20`,
+        )
+        setPiLocalitySuggestions(data.localities || [])
+      } catch {
+        setPiLocalitySuggestions([])
+      }
+    }, 180)
+    return () => clearTimeout(t)
+  }, [activeTab, piSegment, piCity, piLocalityQuery])
+
   useEffect(() => {
     if (activeTab !== TAB_KEYS.FORECAST) return
     const locality = (forecastSelectedLocality || forecastLocalityQuery).trim()
@@ -862,6 +1126,51 @@ function App() {
     hydrateCircleRate()
   }, [city, chosenLocality, plotForm.usage_type])
 
+  // Auto-fetch circle rate for Property Intelligence tab when locality/city/segment changes
+  useEffect(() => {
+    if (activeTab !== TAB_KEYS.PI) return
+    const piLocality = (piSelectedLocality || piLocalityQuery).trim()
+    if (!piLocality) return
+
+    async function hydratePiCircleRate() {
+      try {
+        const propertyType = piSegment === 'plot' ? plotForm.usage_type : undefined
+        const url = propertyType
+          ? `/circle-rate?city=${encodeURIComponent(piCity)}&locality=${encodeURIComponent(piLocality)}&property_type=${encodeURIComponent(propertyType)}`
+          : `/circle-rate?city=${encodeURIComponent(piCity)}&locality=${encodeURIComponent(piLocality)}`
+        const cr = await apiGet(url)
+        if (cr.value != null) {
+          const val = Number(cr.value)
+          if (piSegment === 'builder-floor') setBfForm((prev) => ({ ...prev, circle_rate: val }))
+          else if (piSegment === 'apartment') setAptForm((prev) => ({ ...prev, circle_rate: val }))
+          else setPlotForm((prev) => ({ ...prev, circle_rate: val }))
+        }
+      } catch {
+        // keep existing value on failure
+      }
+    }
+
+    hydratePiCircleRate()
+  }, [activeTab, piCity, piSelectedLocality, piLocalityQuery, piSegment, plotForm.usage_type])
+
+  // Auto-geocode lat/lon for PI tab when locality is confirmed — all segments need correct coords
+  useEffect(() => {
+    if (!piSelectedLocality || !piCity) return
+
+    async function geocodePiLocality() {
+      try {
+        const data = await apiGet(`/geocode?city=${encodeURIComponent(piCity)}&locality=${encodeURIComponent(piSelectedLocality)}`)
+        if (data.latLon && data.latLon.length === 2) {
+          syncLatLon(Number(data.latLon[0]), Number(data.latLon[1]))
+        }
+      } catch {
+        // keep existing lat/lon on failure
+      }
+    }
+
+    geocodePiLocality()
+  }, [piSelectedLocality, piCity])
+
   useEffect(() => {
     async function updateRoadDistances() {
       if (!plotForm.lat || !plotForm.lon) return
@@ -906,6 +1215,43 @@ function App() {
   const predictBuilderFloor = async (payload = bfForm) => apiPost('/predict/builder-floor', payload)
   const predictApartment = async (payload = aptForm) => apiPost('/predict/apartment', payload)
   const predictPlot = async (payload = plotForm) => apiPost('/predict/plot', payload)
+
+  const analyzeProperty = async () => {
+    if (!piListingPrice || piListingPrice <= 0) {
+      setPiError("Please enter a valid listing price.")
+      return
+    }
+    setPiError('')
+    setPiLoading(true)
+    setPiResult(null)
+    try {
+      const locality = (piSelectedLocality || piLocalityQuery).trim()
+      let endpoint = '/property-intelligence/analyze'
+      let payload = {}
+
+      if (piSegment === 'builder-floor') {
+        endpoint = '/property-intelligence/analyze'
+        payload = { ...bfForm, listing_price: piListingPrice, locality, city: piCity }
+      } else if (piSegment === 'apartment') {
+        endpoint = '/property-intelligence/analyze-apartment'
+        payload = {
+          ...aptForm, listing_price: piListingPrice, locality, city: piCity,
+          floor_level: piFloorLevel, is_ground: piIsGround, is_top: piIsTop,
+          property_segment: piPropertySegment,
+        }
+      } else {
+        endpoint = '/property-intelligence/analyze-plot'
+        payload = { ...plotForm, listing_price: piListingPrice, locality, city: piCity }
+      }
+
+      const data = await apiPost(endpoint, payload)
+      setPiResult(data)
+    } catch (e) {
+      setPiError(`Analysis failed: ${e.message}`)
+    } finally {
+      setPiLoading(false)
+    }
+  }
 
   const loadMarketIntelligence = async () => {
     const locality = (miSelectedLocality || miLocalityQuery).trim()
@@ -1072,7 +1418,7 @@ function App() {
   const bfWhatIfConfig = useMemo(
     () => [
       { key: 'area_sqft', label: 'Area (sqft)', type: 'number', min: 100, max: 20000, step: 50 },
-      { key: 'circle_rate', label: 'Circle Rate', type: 'number', min: 100, max: 100000, step: 100 },
+      { key: 'circle_rate', label: 'Circle Rate', type: 'number', min: 100, step: 100 },
       { key: 'bhk', label: 'BHK', type: 'number', min: 1, max: 10, step: 1 },
       { key: 'bathrooms', label: 'Bathrooms', type: 'number', min: 1, max: 10, step: 1 },
       { key: 'balconies', label: 'Balconies', type: 'number', min: 0, max: 10, step: 1 },
@@ -1103,7 +1449,7 @@ function App() {
   const plotWhatIfConfig = useMemo(
     () => [
       { key: 'area_sqft', label: 'Plot Area (sqft)', type: 'number', min: 100, max: 50000, step: 100 },
-      { key: 'circle_rate', label: 'Circle Rate', type: 'number', min: 100, max: 100000, step: 100 },
+      { key: 'circle_rate', label: 'Circle Rate', type: 'number', min: 100, step: 100 },
       { key: 'usage_type', label: 'Usage Type', type: 'select', options: options.plotUsageOptions },
       { key: 'facing_direction', label: 'Facing Direction', type: 'select', options: options.plotFacingOptions },
       { key: 'road_width_bucket', label: 'Approach Road Width', type: 'select', options: options.plotRoadWidthOptions },
@@ -1374,7 +1720,18 @@ function App() {
       {buyDecision?.decision ? (
         <section className="insight-result">
           <div className="whatif-metrics">
-            <MetricCard label="Buy Recommendation" value={buyDecision.decision.recommendation} />
+            {(() => {
+              const rec = buyDecision.decision.recommendation
+              const recColor = rec === 'Buy' ? '#2a7d4f' : rec === 'Hold / Neutral' ? '#d9892b' : '#c0392b'
+              return (
+                <div className="metric-card">
+                  <div className="metric-label">Buy Recommendation</div>
+                  <div className="metric-value">
+                    <span style={{ background: recColor, color: '#fff', padding: '3px 12px', borderRadius: 4, fontWeight: 700, fontSize: '0.95em' }}>{rec}</span>
+                  </div>
+                </div>
+              )
+            })()}
             <MetricCard label="Decision Score" value={fmtNumber(buyDecision.decision.score, 2)} />
             <MetricCard label="Confidence" value={fmtPct((buyDecision.decision.confidence || 0) * 100, 0)} />
             <MetricCard label="Valuation Gap" value={fmtPct(buyDecision.decision.valuationGapPct, 2)} />
@@ -1546,6 +1903,7 @@ function App() {
             <button className={activeTab === TAB_KEYS.PLOT ? 'active' : ''} onClick={() => setActiveTab(TAB_KEYS.PLOT)}>Plot / Land</button>
             <button className={activeTab === TAB_KEYS.FORECAST ? 'active' : ''} onClick={() => setActiveTab(TAB_KEYS.FORECAST)}>Forecast Intelligence</button>
             <button className={activeTab === TAB_KEYS.MI ? 'active' : ''} onClick={() => setActiveTab(TAB_KEYS.MI)}>Market Intelligence</button>
+            <button className={activeTab === TAB_KEYS.PI ? 'active' : ''} onClick={() => setActiveTab(TAB_KEYS.PI)}>Property Intelligence</button>
           </div>
 
           {activeTab === TAB_KEYS.BF ? (
@@ -1559,7 +1917,7 @@ function App() {
                 <Field label="Age"><select value={bfForm.age} onChange={(e) => setBfForm((p) => ({ ...p, age: e.target.value }))}>{options.ageCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
                 <Field label="Furnishing"><select value={bfForm.furnishing} onChange={(e) => setBfForm((p) => ({ ...p, furnishing: e.target.value }))}>{options.furnishingCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
                 <Field label="Facing"><select value={bfForm.facing} onChange={(e) => setBfForm((p) => ({ ...p, facing: e.target.value }))}>{options.facingCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
-                <Field label="Circle Rate (INR/sqft)"><input type="number" min="100" max="100000" value={bfForm.circle_rate} onChange={(e) => setBfForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} /></Field>
+                <Field label="Circle Rate (INR/sqft)"><input type="number" min="100" value={bfForm.circle_rate} onChange={(e) => setBfForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} /></Field>
                 <Field label="Parking"><select value={bfForm.is_parking} onChange={(e) => setBfForm((p) => ({ ...p, is_parking: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
                 <Field label="Pool"><select value={bfForm.is_pool} onChange={(e) => setBfForm((p) => ({ ...p, is_pool: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
                 <Field label="Main Road"><select value={bfForm.is_main_road} onChange={(e) => setBfForm((p) => ({ ...p, is_main_road: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
@@ -1604,7 +1962,7 @@ function App() {
                 <Field label="Age"><select value={aptForm.age} onChange={(e) => setAptForm((p) => ({ ...p, age: e.target.value }))}>{options.ageCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
                 <Field label="Furnishing"><select value={aptForm.furnishing} onChange={(e) => setAptForm((p) => ({ ...p, furnishing: e.target.value }))}>{options.furnishingCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
                 <Field label="Facing"><select value={aptForm.facing} onChange={(e) => setAptForm((p) => ({ ...p, facing: e.target.value }))}>{options.facingCategories.map((x) => <option key={x}>{x}</option>)}</select></Field>
-                <Field label="Circle Rate (INR/sqft)"><input type="number" min="100" max="100000" value={aptForm.circle_rate} onChange={(e) => setAptForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} /></Field>
+                <Field label="Circle Rate (INR/sqft)"><input type="number" min="100" value={aptForm.circle_rate} onChange={(e) => setAptForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} /></Field>
                 <Field label="Floor Level"><select value={aptForm.floor_level} onChange={(e) => setAptForm((p) => ({ ...p, floor_level: e.target.value }))}>{options.floorLevels.map((x) => <option key={x}>{x}</option>)}</select></Field>
                 <Field label="Ground Floor"><select value={aptForm.is_ground} onChange={(e) => setAptForm((p) => ({ ...p, is_ground: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
                 <Field label="Top Floor"><select value={aptForm.is_top} onChange={(e) => setAptForm((p) => ({ ...p, is_top: Number(e.target.value) }))}><option value="0">No</option><option value="1">Yes</option></select></Field>
@@ -1647,7 +2005,7 @@ function App() {
               <h3>Plot / Land Inputs</h3>
               <div className="form-grid">
                 <Field label="Plot Area (sqft)"><input type="number" min="100" max="50000" value={plotForm.area_sqft} onChange={(e) => setPlotForm((p) => ({ ...p, area_sqft: Number(e.target.value) }))} /></Field>
-                <Field label="Circle Rate (INR/sqft)"><input type="number" min="100" max="100000" value={plotForm.circle_rate} onChange={(e) => setPlotForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} /></Field>
+                <Field label="Circle Rate (INR/sqft)"><input type="number" min="100" value={plotForm.circle_rate} onChange={(e) => setPlotForm((p) => ({ ...p, circle_rate: Number(e.target.value) }))} /></Field>
                 <Field label="Distance to MDR (km)" hint="Major District Road"><input type="number" value={plotForm.closest_distance_MDR_km} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
                 <Field label="Distance to SH (km)" hint="State Highway"><input type="number" value={plotForm.closest_distance_SH_km} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
                 <Field label="Distance to NH (km)" hint="National Highway"><input type="number" value={plotForm.closest_distance_NH_km} readOnly style={{ backgroundColor: '#f5f5f5' }} /></Field>
@@ -1879,6 +2237,42 @@ function App() {
               miLoading={miLoading}
               miError={miError}
               onLoad={loadMarketIntelligence}
+              options={options}
+            />
+          ) : null}
+
+          {activeTab === TAB_KEYS.PI ? (
+            <PropertyIntelligenceTab
+              piSegment={piSegment}
+              setPiSegment={setPiSegment}
+              piCity={piCity}
+              setPiCity={setPiCity}
+              piLocalityQuery={piLocalityQuery}
+              setPiLocalityQuery={setPiLocalityQuery}
+              piLocalitySuggestions={piLocalitySuggestions}
+              piSelectedLocality={piSelectedLocality}
+              setPiSelectedLocality={setPiSelectedLocality}
+              bfForm={bfForm}
+              setBfForm={setBfForm}
+              aptForm={aptForm}
+              setAptForm={setAptForm}
+              plotForm={plotForm}
+              setPlotForm={setPlotForm}
+              piListingPrice={piListingPrice}
+              setPiListingPrice={setPiListingPrice}
+              piFloorLevel={piFloorLevel}
+              setPiFloorLevel={setPiFloorLevel}
+              piIsGround={piIsGround}
+              setPiIsGround={setPiIsGround}
+              piIsTop={piIsTop}
+              setPiIsTop={setPiIsTop}
+              piPropertySegment={piPropertySegment}
+              setPiPropertySegment={setPiPropertySegment}
+              piResult={piResult}
+              piLoading={piLoading}
+              piError={piError}
+              onAnalyze={analyzeProperty}
+              options={options}
             />
           ) : null}
 
