@@ -33,6 +33,7 @@ from real_estate.entity import (
 from real_estate.exception.exception import RealEstateException
 from real_estate.logging.logger import logging
 from real_estate.utils import get_next_model_version, register_model_version
+from real_estate.utils.s3_uploader import upload_artifact_pkls
 
 
 class TrainingPipeline:
@@ -205,6 +206,7 @@ class TrainingPipeline:
             )
 
             logging.info("============ Plot Training Pipeline Finished ============")
+            upload_artifact_pkls(categories=["plot"])
             return plot_model_trainer_artifact
 
         except Exception as e:
@@ -283,6 +285,7 @@ class TrainingPipeline:
             logging.info(f"Promoted apt v{next_version} → canonical: {canonical.model_file_path}")
 
             logging.info("============ Apt Training Pipeline Finished ============")
+            upload_artifact_pkls(categories=["apt"], subcategories=["sell"])
             return artifact
 
         except Exception as e:
@@ -356,6 +359,7 @@ class TrainingPipeline:
             logging.info(f"Promoted bf v{next_version} → canonical: {canonical.model_file_path}")
 
             logging.info("============ BF Training Pipeline Finished ============")
+            upload_artifact_pkls(categories=["bf"], subcategories=["sell"])
             return artifact
 
         except Exception as e:
@@ -389,6 +393,7 @@ class TrainingPipeline:
             logging.info(f"Apt rent training complete: {artifact}")
 
             logging.info("============ Apt Rent Training Pipeline Finished ============")
+            upload_artifact_pkls(categories=["apt"], subcategories=["rent"])
             return artifact
 
         except Exception as e:
@@ -422,6 +427,7 @@ class TrainingPipeline:
             logging.info(f"BF rent training complete: {artifact}")
 
             logging.info("============ BF Rent Training Pipeline Finished ============")
+            upload_artifact_pkls(categories=["bf"], subcategories=["rent"])
             return artifact
 
         except Exception as e:

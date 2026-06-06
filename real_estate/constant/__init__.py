@@ -120,6 +120,12 @@ BF_RENT_VORONOI_FILE_NAME = "bf_rent_vor_kmeans.pkl"
 MODEL_TRAINER_DIR = "model_trainer"
 MODEL_FILE_NAME = "model.pkl"
 
+# ─── S3 upload defaults (can be overridden by env) ──────────
+S3_BUCKET = os.getenv("S3_BUCKET", "real-estate-models")
+S3_PREFIX = os.getenv("S3_PREFIX", "models")
+S3_AUTO_CREATE_BUCKET = os.getenv("S3_AUTO_CREATE_BUCKET", "true").lower() in {"1", "true", "yes"}
+S3_REGION = os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-east-1"
+
 # ─── MongoDB (optional, for future use) ─────────────────────
 MONGODB_URL_KEY = "MONGODB_URL"
 DATABASE_NAME = "real_estate_db"

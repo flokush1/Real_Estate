@@ -10,6 +10,10 @@ from difflib import get_close_matches
 from pathlib import Path
 from typing import Any
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 _startup_logger = logging.getLogger("ncr_api.startup")
 
 import joblib

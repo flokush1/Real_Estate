@@ -7,14 +7,18 @@ import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.ensemble import IsolationForest, RandomForestRegressor
-from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, r2_score
+from sklearn.metrics import (
+    mean_absolute_error,
+    mean_absolute_percentage_error,
+    r2_score,
+)
 from sklearn.model_selection import (
     ParameterGrid,
     RandomizedSearchCV,
     cross_val_score,
     train_test_split,
 )
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler  # kept for potential future use
 
 from real_estate.entity import (
     PlotDataTransformationArtifact,
@@ -37,6 +41,7 @@ except ImportError:
 
 try:
     from real_estate.utils.tb_analysis import log_tb_analysis
+
     HAS_TB_ANALYSIS = True
 except Exception:
     HAS_TB_ANALYSIS = False
@@ -151,9 +156,7 @@ class PlotModelTrainer:
         )
 
         df = df[
-            (df["price_per_sqft"] > 0)
-            & (df["plot_area"] > 0)
-            & (df["circle_rate"] > 0)
+            (df["price_per_sqft"] > 0) & (df["plot_area"] > 0) & (df["circle_rate"] > 0)
         ].copy()
 
         df["ratio"] = df["price_per_sqft"] / df["circle_rate"].replace(0, np.nan)
@@ -162,16 +165,18 @@ class PlotModelTrainer:
         return df
 
     def remove_outliers_split(self, X_train, y_train):
+        # Use voronoi_dist_to_seed instead of raw lat/lon (already dropped by _add_voronoi)
         iso_features = [
-            "latitude",
-            "longitude",
+            "voronoi_dist_to_seed",
             "log_plot_area",
             "circle_rate",
         ]
 
         missing_features = [col for col in iso_features if col not in X_train.columns]
         if missing_features:
-            raise ValueError(f"Missing features for outlier removal: {missing_features}")
+            raise ValueError(
+                f"Missing features for outlier removal: {missing_features}"
+            )
 
         data_for_iso = X_train[iso_features].copy()
         data_for_iso["log_target"] = y_train.values
@@ -196,61 +201,40 @@ class PlotModelTrainer:
         y_clean = y_valid.loc[keep_mask].copy()
         return X_clean, y_clean, iso
 
-    def add_spatial_features(self, X_train, X_test):
-        X_train = X_train.copy()
-        X_test = X_test.copy()
+    @staticmethod
+    def _add_voronoi(
+        X_train: pd.DataFrame,
+        X_test: pd.DataFrame,
+        n_cells: int,
+        seed: int,
+    ) -> tuple:
+        """
+        Fit KMeans on X_train lat/lon ONLY (no leakage) — identical to bf model.
+        Adds voronoi_dist_to_seed + vor_cell_0..N-1 to both.
+        Drops latitude, longitude from both.
+        Returns X_train_aug, X_test_aug, fitted_kmeans.
+        """
+        latlon_tr = X_train[["latitude", "longitude"]].values
+        latlon_te = X_test[["latitude", "longitude"]].values
 
-        scaler = StandardScaler()
-
-        coords_train = X_train[["latitude", "longitude"]]
-        coords_test = X_test[["latitude", "longitude"]]
-
-        scaled_train = scaler.fit_transform(coords_train)
-        scaled_test = scaler.transform(coords_test)
-
-        kmeans = KMeans(
-            n_clusters=self.config.n_clusters,
-            random_state=self.config.random_state,
-            n_init=10,
-        )
-
-        X_train["cluster"] = kmeans.fit_predict(scaled_train)
-        X_test["cluster"] = kmeans.predict(scaled_test)
-
+        kmeans = KMeans(n_clusters=n_cells, random_state=seed, n_init=10)
+        kmeans.fit(latlon_tr)
         centers = kmeans.cluster_centers_
 
-        X_train["dist_to_center"] = np.linalg.norm(
-            scaled_train - centers[X_train["cluster"]],
-            axis=1,
-        )
+        def _apply(X: pd.DataFrame, latlon: np.ndarray) -> pd.DataFrame:
+            X = X.copy()
+            cell_ids = kmeans.predict(latlon)
+            dists = np.sqrt(((latlon - centers[cell_ids]) ** 2).sum(axis=1))
+            X["voronoi_dist_to_seed"] = dists
+            cell_cat = pd.Categorical(cell_ids, categories=list(range(n_cells)))
+            ohe = pd.get_dummies(
+                pd.Series(cell_cat, index=X.index), prefix="vor_cell", dtype=int
+            )
+            X = pd.concat([X, ohe], axis=1)
+            X.drop(columns=["latitude", "longitude"], errors="ignore", inplace=True)
+            return X
 
-        X_test["dist_to_center"] = np.linalg.norm(
-            scaled_test - centers[X_test["cluster"]],
-            axis=1,
-        )
-
-        X_train = pd.get_dummies(
-            X_train,
-            columns=["cluster"],
-            prefix="c",
-            drop_first=False,
-        )
-
-        X_test = pd.get_dummies(
-            X_test,
-            columns=["cluster"],
-            prefix="c",
-            drop_first=False,
-        )
-
-        X_train, X_test = X_train.align(
-            X_test,
-            join="left",
-            axis=1,
-            fill_value=0,
-        )
-
-        return X_train, X_test, kmeans, scaler
+        return _apply(X_train, latlon_tr), _apply(X_test, latlon_te), kmeans
 
     def plot_performance_dashboard(self, y_test, preds, X_test):
         if not HAS_PLOTLY:
@@ -446,8 +430,11 @@ class PlotModelTrainer:
                 random_state=self.config.random_state,
             )
 
-            X_train, X_test, kmeans_model, coord_scaler = self.add_spatial_features(
-                X_train, X_test
+            X_train, X_test, kmeans_model = self._add_voronoi(
+                X_train,
+                X_test,
+                n_cells=self.config.n_clusters,
+                seed=self.config.random_state,
             )
 
             before_rows = len(X_train)
@@ -465,10 +452,12 @@ class PlotModelTrainer:
             )
             baseline_model.fit(X_train, y_train)
 
-            baseline_mae, baseline_mape, baseline_r2, _, _ = self.evaluate_model_on_price_num(
-                baseline_model,
-                X_test,
-                y_test,
+            baseline_mae, baseline_mape, baseline_r2, _, _ = (
+                self.evaluate_model_on_price_num(
+                    baseline_model,
+                    X_test,
+                    y_test,
+                )
             )
             self._emit_info(
                 f"Baseline RF MAE={baseline_mae / 1e7:.4f} Cr, MAPE={baseline_mape * 100:.2f}%, R2={baseline_r2:.4f}"
@@ -506,7 +495,9 @@ class PlotModelTrainer:
 
             self._emit_info(f"Winner for tuning: {best_name}")
 
-            final_model = self.tune_model(best_name, models[best_name], X_train, y_train)
+            final_model = self.tune_model(
+                best_name, models[best_name], X_train, y_train
+            )
 
             final_mae, final_mape, final_r2, _, _ = self.evaluate_model_on_price_num(
                 final_model,
@@ -524,7 +515,11 @@ class PlotModelTrainer:
                 )
                 final_model = baseline_model
                 best_name = "Random Forest"
-                final_mae, final_mape, final_r2 = baseline_mae, baseline_mape, baseline_r2
+                final_mae, final_mape, final_r2 = (
+                    baseline_mae,
+                    baseline_mape,
+                    baseline_r2,
+                )
 
             self._emit_info("=" * 50)
             self._emit_info("FINAL TEST PERFORMANCE")
@@ -540,7 +535,6 @@ class PlotModelTrainer:
             artifacts = {
                 "model": final_model,
                 "kmeans": kmeans_model,
-                "coord_scaler": coord_scaler,
                 "iso_forest": iso_forest,
                 "features": X_train.columns.tolist(),
                 "target": "log_price_per_sqft",
@@ -550,40 +544,61 @@ class PlotModelTrainer:
 
             joblib.dump(artifacts, self.config.model_file_path)
             joblib.dump(X_train.columns.tolist(), self.config.feature_columns_file_path)
+            joblib.dump(
+                kmeans_model, self.config.voronoi_file_path
+            )  # ← saved separately like bf
 
             if HAS_MLFLOW:
                 try:
-                    run_name = f"plot_v{self.config.version}" if self.config.version > 0 else "plot"
+                    run_name = (
+                        f"plot_v{self.config.version}"
+                        if self.config.version > 0
+                        else "plot"
+                    )
                     with mlflow.start_run(run_name=run_name):
-                        mlflow.log_params({
-                            "model_type": best_name,
-                            "version": self.config.version,
-                            "n_clusters": self.config.n_clusters,
-                            "contamination": self.config.contamination,
-                            "test_size": self.config.test_size,
-                            "n_training_rows": after_rows,
-                            "n_features": X_train.shape[1],
-                        })
-                        mlflow.log_metrics({
-                            "mae": float(final_mae),
-                            "mape": float(final_mape),
-                            "r2": float(final_r2),
-                            "baseline_mae": float(baseline_mae),
-                            "baseline_r2": float(baseline_r2),
-                        })
+                        mlflow.log_params(
+                            {
+                                "model_type": best_name,
+                                "version": self.config.version,
+                                "n_clusters": self.config.n_clusters,
+                                "contamination": self.config.contamination,
+                                "test_size": self.config.test_size,
+                                "n_training_rows": after_rows,
+                                "n_features": X_train.shape[1],
+                            }
+                        )
+                        mlflow.log_metrics(
+                            {
+                                "mae": float(final_mae),
+                                "mape": float(final_mape),
+                                "r2": float(final_r2),
+                                "baseline_mae": float(baseline_mae),
+                                "baseline_r2": float(baseline_r2),
+                            }
+                        )
                         for fold_idx, fold_r2 in enumerate(cv_results[best_name]):
                             mlflow.log_metric("cv_r2", float(fold_r2), step=fold_idx)
                         for cand_name, cand_scores in cv_results.items():
                             mlflow.log_metric(
                                 f"cv_r2_{cand_name.lower()}", float(cand_scores.mean())
                             )
-                        mlflow.log_artifact(self.config.model_file_path, artifact_path="model")
-                        mlflow.log_artifact(self.config.feature_columns_file_path, artifact_path="model")
-                        self._emit_info(f"MLflow run logged: {mlflow.active_run().info.run_id}")
+                        mlflow.log_artifact(
+                            self.config.model_file_path, artifact_path="model"
+                        )
+                        mlflow.log_artifact(
+                            self.config.feature_columns_file_path, artifact_path="model"
+                        )
+                        self._emit_info(
+                            f"MLflow run logged: {mlflow.active_run().info.run_id}"
+                        )
                 except Exception as _mlflow_err:
-                    self._emit_warning(f"MLflow logging skipped (non-fatal): {_mlflow_err}")
+                    self._emit_warning(
+                        f"MLflow logging skipped (non-fatal): {_mlflow_err}"
+                    )
 
-            self._emit_info(f"Saved plot model artifact -> {self.config.model_file_path}")
+            self._emit_info(
+                f"Saved plot model artifact -> {self.config.model_file_path}"
+            )
             self._emit_info(
                 f"Saved plot feature columns artifact -> {self.config.feature_columns_file_path}"
             )
@@ -592,51 +607,60 @@ class PlotModelTrainer:
             if HAS_TB_ANALYSIS:
                 try:
                     import os as _os
+
                     tb_dir = _os.path.join(
-                        "artifact", "tensorboard", "plot",
+                        "artifact",
+                        "tensorboard",
+                        "plot",
                         f"v{self.config.version}" if self.config.version > 0 else "v0",
                     )
                     # For plot: target is log_price_per_sqft; back-calc is total price
                     # We pass log-scale arrays and ppsf-equivalent arrays (actual ppsf)
                     plot_test_preds_log = final_model.predict(X_test)
                     actual_ppsf_plot = np.expm1(y_test.values)
-                    pred_ppsf_plot   = np.expm1(plot_test_preds_log)
+                    pred_ppsf_plot = np.expm1(plot_test_preds_log)
                     actual_total_plot, pred_total_plot = (
                         self.get_total_price(y_test, X_test["log_plot_area"]),
-                        self.get_total_price(plot_test_preds_log, X_test["log_plot_area"]),
+                        self.get_total_price(
+                            plot_test_preds_log, X_test["log_plot_area"]
+                        ),
                     )
                     from sklearn.metrics import (
                         mean_absolute_error as _mae_fn,
                         mean_absolute_percentage_error as _mape_fn,
                         r2_score as _r2_fn,
                     )
+
                     log_tb_analysis(
-                        log_dir       = tb_dir,
-                        property_type = "plot",
-                        version       = self.config.version,
-                        final_model   = final_model,
-                        X_train       = X_train,
-                        X_test        = X_test,
-                        y_train       = y_train,
-                        y_test        = y_test.values,
-                        y_pred_log    = plot_test_preds_log,
-                        actual_ppsf   = actual_ppsf_plot,
-                        pred_ppsf     = pred_ppsf_plot,
-                        cv_results    = cv_results,
-                        best_model_name = best_name,
-                        mae     = float(_mae_fn(actual_ppsf_plot, pred_ppsf_plot)),
-                        mape    = float(_mape_fn(actual_ppsf_plot, pred_ppsf_plot)),
-                        r2      = float(_r2_fn(actual_ppsf_plot, pred_ppsf_plot)),
-                        r2_target = float(_r2_fn(y_test.values, plot_test_preds_log)),
+                        log_dir=tb_dir,
+                        property_type="plot",
+                        version=self.config.version,
+                        final_model=final_model,
+                        X_train=X_train,
+                        X_test=X_test,
+                        y_train=y_train,
+                        y_test=y_test.values,
+                        y_pred_log=plot_test_preds_log,
+                        actual_ppsf=actual_ppsf_plot,
+                        pred_ppsf=pred_ppsf_plot,
+                        cv_results=cv_results,
+                        best_model_name=best_name,
+                        mae=float(_mae_fn(actual_ppsf_plot, pred_ppsf_plot)),
+                        mape=float(_mape_fn(actual_ppsf_plot, pred_ppsf_plot)),
+                        r2=float(_r2_fn(actual_ppsf_plot, pred_ppsf_plot)),
+                        r2_target=float(_r2_fn(y_test.values, plot_test_preds_log)),
                     )
                 except Exception as _tb_e:
-                    self._emit_warning(f"TensorBoard analysis skipped (non-fatal): {_tb_e}")
+                    self._emit_warning(
+                        f"TensorBoard analysis skipped (non-fatal): {_tb_e}"
+                    )
 
             self._emit_info("============ Plot Model Training Finished ============")
 
             return PlotModelTrainerArtifact(
                 model_file_path=self.config.model_file_path,
                 feature_columns_file_path=self.config.feature_columns_file_path,
+                voronoi_file_path=self.config.voronoi_file_path,
                 best_model_name=best_name,
                 mae=float(final_mae),
                 mape=float(final_mape),

@@ -20,5 +20,7 @@ uvicorn
 tensorboardX
 Pillow
 scipy
+boto3
+plotly
 
 ##-e.
